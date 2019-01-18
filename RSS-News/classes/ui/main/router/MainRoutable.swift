@@ -17,13 +17,13 @@ protocol MainRoutable {
 extension MainRoutable where Self: RouterType {
     
     func goToMain(animated: Bool = false) {
-//        let viewModel = MainViewModel(session: session, delegate: nil)
-//        let view = StoryboardScene.Main.initialScene.instantiate()
-//        view.viewModel = viewModel
-//        let router = MainRouter(session: session, view: view)
-//        viewModel.router = router
-//        
-//        let rootVC = UINavigationController(rootViewController: view)
-//        AppDelegate.shared.window?.setRootViewController(rootVC, animated: animated, completion: nil)
+        let viewModel = MainViewModel(session: session, delegate: nil)
+        let view = StoryboardScene.Main.initialScene.instantiate()
+        view.viewModel = viewModel
+        let router = MainRouter(session: session, view: view)
+        viewModel.router = router
+
+        let rootVC = UINavigationController(rootViewController: view)
+        AppDelegate.shared.window?.setRootViewController(rootVC, animated: animated, completion: nil)
     }
 }

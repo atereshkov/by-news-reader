@@ -55,6 +55,8 @@ internal extension UIViewController {
 internal enum StoryboardScene {
   internal enum Main: StoryboardType {
     internal static let storyboardName = "Main"
+
+    internal static let initialScene = InitialSceneType<RSS_News.MainView>(storyboard: Main.self)
   }
 }
 
