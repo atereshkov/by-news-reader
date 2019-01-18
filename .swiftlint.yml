@@ -1,0 +1,29 @@
+disabled_rules: # rule identifiers to exclude from running
+  - colon
+  - comma
+  - control_statement
+  - trailing_whitespace
+  - implicit_getter
+  - legacy_constructor
+  - empty_enum_arguments
+opt_in_rules: # some rules are only opt-in
+  - empty_count
+  # swiftlint rules
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+
+todo: warning
+identifier_name:
+  min_length: 2
+line_length:
+  - 250 # warning
+  - 330 # error
+function_parameter_count:
+  - 6
+large_tuple:
+  - 3
+  - 5
+function_body_length:
+  - 50
+  - 100

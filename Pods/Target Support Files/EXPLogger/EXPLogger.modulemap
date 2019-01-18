@@ -1,0 +1,6 @@
+framework module EXPLogger {
+  umbrella header "EXPLogger-umbrella.h"
+
+  export *
+  module * { export * }
+}
