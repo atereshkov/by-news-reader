@@ -1,17 +1,13 @@
 //
-//  AppSkin.swift
+//  BaseViewDelegate.swift
 //  RSS-News
 //
 //  Created by Alexander Tereshkov on 1/19/19.
 //  Copyright © 2019 AT. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-struct AppSkin {
-    
-    static func applyAppearance() {
-        
-    }
+protocol BaseViewDelegate: class {
     
 }

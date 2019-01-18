@@ -1,14 +1,14 @@
-output_dir: Millionaire/resources/generated/
+output_dir: RSS-NEWS/resources/generated/
 strings:
-  paths: 'Millionaire/resources/localization/Localizable.strings'
+  paths: 'RSS-NEWS/resources/localization/en.lproj/Localizable.strings'
   templateName: structured-swift4
   output: strings.swift
 xcassets:
-  paths: ['Millionaire/resources/images/Images.xcassets',
-          'Millionaire/resources/colors/Colors.xcassets']
+  paths: ['RSS-NEWS/resources/images/Images.xcassets',
+          'RSS-NEWS/resources/colors/Colors.xcassets']
   templateName: swift4
   output: assets-images.swift
 storyboards:
-  paths: ['Millionaire/classes/ui/main/view/Main.storyboard']
+  paths: ['RSS-NEWS/classes/ui/main/view/Main.storyboard']
   templateName: swift4
   output: storyboards.swift
