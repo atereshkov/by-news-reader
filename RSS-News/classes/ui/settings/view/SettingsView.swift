@@ -60,7 +60,7 @@ final class SettingsView: BaseView<SettingsViewModel>, UITableViewDelegate, UITa
 private extension SettingsView {
     
     func setupView() {
-        //        navigationItem.backBarButtonTitle = ""
+        navigationItem.backBarButtonTitle = ""
         //        navigationController?.setupCustomBackButton()
     }
     

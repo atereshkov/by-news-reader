@@ -25,7 +25,7 @@ final class CategoriesView: BaseView<CategoriesViewModel> {
 private extension CategoriesView {
     
     func setupView() {
-        //        navigationItem.backBarButtonTitle = ""
+        navigationItem.backBarButtonTitle = ""
         //        navigationController?.setupCustomBackButton()
     }
     

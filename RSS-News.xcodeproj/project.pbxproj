@@ -64,6 +64,7 @@
 		A34B64C921F3936300DACC2F /* SettingsCityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64C821F3936300DACC2F /* SettingsCityRouter.swift */; };
 		A34B64CB21F3938C00DACC2F /* SettingsCityViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64CA21F3938C00DACC2F /* SettingsCityViewModelType.swift */; };
 		A34B64CD21F393A200DACC2F /* SettingsCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64CC21F393A200DACC2F /* SettingsCityViewModel.swift */; };
+		A34B64CF21F3967F00DACC2F /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64CE21F3967F00DACC2F /* UINavigationItem.swift */; };
 		A36DC41821F277E100B0BE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC41721F277E100B0BE72 /* AppDelegate.swift */; };
 		A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DC42021F277E300B0BE72 /* LaunchScreen.storyboard */; };
 		A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43821F2795F00B0BE72 /* Localizable.strings */; };
@@ -145,6 +146,7 @@
 		A34B64C821F3936300DACC2F /* SettingsCityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityRouter.swift; sourceTree = "<group>"; };
 		A34B64CA21F3938C00DACC2F /* SettingsCityViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewModelType.swift; sourceTree = "<group>"; };
 		A34B64CC21F393A200DACC2F /* SettingsCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewModel.swift; sourceTree = "<group>"; };
+		A34B64CE21F3967F00DACC2F /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
 		A36DC41421F277E100B0BE72 /* RSS-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36DC41721F277E100B0BE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A36DC42121F277E300B0BE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -681,6 +683,7 @@
 				A34B647C21F36BF700DACC2F /* UIKit+ThemeColor.swift */,
 				A34B647E21F3723B00DACC2F /* UIKit+Localization.swift */,
 				A34B648021F3725C00DACC2F /* String.swift */,
+				A34B64CE21F3967F00DACC2F /* UINavigationItem.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -887,6 +890,7 @@
 				A34B649F21F37B9900DACC2F /* NetworkManager.swift in Sources */,
 				A34B646121F34B5A00DACC2F /* BookmarksRoutable.swift in Sources */,
 				A34B649921F3744900DACC2F /* CategoriesTabRouter.swift in Sources */,
+				A34B64CF21F3967F00DACC2F /* UINavigationItem.swift in Sources */,
 				A36DC44F21F27B3100B0BE72 /* BaseViewDelegate.swift in Sources */,
 				A34B646321F34B9C00DACC2F /* BookmarksRouter.swift in Sources */,
 				A34B64A921F3862700DACC2F /* SettingsViewModelType.swift in Sources */,

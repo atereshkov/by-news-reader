@@ -25,7 +25,7 @@ final class BookmarksView: BaseView<BookmarksViewModel> {
 private extension BookmarksView {
     
     func setupView() {
-        //        navigationItem.backBarButtonTitle = ""
+        navigationItem.backBarButtonTitle = ""
         //        navigationController?.setupCustomBackButton()
     }
     

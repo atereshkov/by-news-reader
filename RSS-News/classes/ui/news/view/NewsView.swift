@@ -35,7 +35,7 @@ final class NewsView: BaseView<NewsViewModel> {
 private extension NewsView {
     
     func setupView() {
-        //        navigationItem.backBarButtonTitle = ""
+        navigationItem.backBarButtonTitle = ""
         //        navigationController?.setupCustomBackButton()
     }
     

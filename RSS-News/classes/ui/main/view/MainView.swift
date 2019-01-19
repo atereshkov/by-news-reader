@@ -54,7 +54,7 @@ final class MainView: BaseView<MainViewModel> {
 private extension MainView {
     
     func setupView() {
-        //navigationItem.backBarButtonTitle = ""
+        navigationItem.backBarButtonTitle = ""
         //navigationController?.setupCustomBackButton()
         
         tabBar?.delegate = self

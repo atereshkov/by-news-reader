@@ -22,7 +22,7 @@ struct AppSkin {
     }
     
     static func applyAppearance() {
-        
+        UINavigationBar.appearance().theme_tintColor = "Global.NavigationBarBackButtonColor"
     }
     
     static func setup() {
