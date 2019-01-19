@@ -1,5 +1,5 @@
 //
-//  CategoriesView.swift
+//  SettingsTheme.swift
 //  RSS-News
 //
 //  Created by Alexander Tereshkov on 1/19/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CategoriesView: BaseView<CategoriesViewModel> {
+final class SettingsThemeView: BaseView<SettingsThemeViewModel> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,10 @@ final class CategoriesView: BaseView<CategoriesViewModel> {
     
 }
 
-private extension CategoriesView {
+private extension SettingsThemeView {
     
     func setupView() {
-        //        navigationItem.backBarButtonTitle = ""
-        //        navigationController?.setupCustomBackButton()
+        
     }
     
 }

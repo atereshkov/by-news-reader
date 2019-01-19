@@ -47,7 +47,19 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
     // MARK: Actions
     
     func itemSelected(at index: Int) {
-        
+        guard let item = item(for: index) as? MenuListItem else { return }
+        switch item.type {
+        case .city:
+            router?.goToSettingsCity()
+        case .source:
+            break
+        case .about:
+            break
+        case .textSize:
+            break
+        case .theme:
+            router?.goToSettingsTheme()
+        }
     }
     
     func item(for index: Int) -> MenuListItemProtocol? {

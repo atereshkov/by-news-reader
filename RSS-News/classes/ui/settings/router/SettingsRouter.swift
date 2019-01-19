@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SettingsRouterType: RouterType {
+protocol SettingsRouterType: RouterType, SettingsThemeRoutable, SettingsCityRoutable {
     
 }
 

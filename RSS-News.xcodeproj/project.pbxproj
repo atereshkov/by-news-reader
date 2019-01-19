@@ -52,6 +52,18 @@
 		A34B64A921F3862700DACC2F /* SettingsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64A821F3862700DACC2F /* SettingsViewModelType.swift */; };
 		A34B64AB21F3865700DACC2F /* SettingsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64AA21F3865700DACC2F /* SettingsViewState.swift */; };
 		A34B64AD21F3887000DACC2F /* MenuEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64AC21F3887000DACC2F /* MenuEmptyCell.swift */; };
+		A34B64B721F3916E00DACC2F /* SettingsTheme.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34B64B621F3916E00DACC2F /* SettingsTheme.storyboard */; };
+		A34B64B921F3917A00DACC2F /* SettingsCity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34B64B821F3917A00DACC2F /* SettingsCity.storyboard */; };
+		A34B64BB21F3918700DACC2F /* SettingsThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64BA21F3918700DACC2F /* SettingsThemeView.swift */; };
+		A34B64BD21F3918F00DACC2F /* SettingsCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64BC21F3918F00DACC2F /* SettingsCityView.swift */; };
+		A34B64BF21F391A800DACC2F /* SettingsThemeRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64BE21F391A800DACC2F /* SettingsThemeRoutable.swift */; };
+		A34B64C121F391B500DACC2F /* SettingsThemeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64C021F391B500DACC2F /* SettingsThemeRouter.swift */; };
+		A34B64C321F391E000DACC2F /* SettingsThemeViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64C221F391E000DACC2F /* SettingsThemeViewModelType.swift */; };
+		A34B64C521F391EF00DACC2F /* SettingsThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64C421F391EF00DACC2F /* SettingsThemeViewModel.swift */; };
+		A34B64C721F3934000DACC2F /* SettingsCityRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64C621F3934000DACC2F /* SettingsCityRoutable.swift */; };
+		A34B64C921F3936300DACC2F /* SettingsCityRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64C821F3936300DACC2F /* SettingsCityRouter.swift */; };
+		A34B64CB21F3938C00DACC2F /* SettingsCityViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64CA21F3938C00DACC2F /* SettingsCityViewModelType.swift */; };
+		A34B64CD21F393A200DACC2F /* SettingsCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64CC21F393A200DACC2F /* SettingsCityViewModel.swift */; };
 		A36DC41821F277E100B0BE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC41721F277E100B0BE72 /* AppDelegate.swift */; };
 		A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DC42021F277E300B0BE72 /* LaunchScreen.storyboard */; };
 		A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43821F2795F00B0BE72 /* Localizable.strings */; };
@@ -121,6 +133,18 @@
 		A34B64A821F3862700DACC2F /* SettingsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelType.swift; sourceTree = "<group>"; };
 		A34B64AA21F3865700DACC2F /* SettingsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewState.swift; sourceTree = "<group>"; };
 		A34B64AC21F3887000DACC2F /* MenuEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuEmptyCell.swift; sourceTree = "<group>"; };
+		A34B64B621F3916E00DACC2F /* SettingsTheme.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsTheme.storyboard; sourceTree = "<group>"; };
+		A34B64B821F3917A00DACC2F /* SettingsCity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsCity.storyboard; sourceTree = "<group>"; };
+		A34B64BA21F3918700DACC2F /* SettingsThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsThemeView.swift; sourceTree = "<group>"; };
+		A34B64BC21F3918F00DACC2F /* SettingsCityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityView.swift; sourceTree = "<group>"; };
+		A34B64BE21F391A800DACC2F /* SettingsThemeRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsThemeRoutable.swift; sourceTree = "<group>"; };
+		A34B64C021F391B500DACC2F /* SettingsThemeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsThemeRouter.swift; sourceTree = "<group>"; };
+		A34B64C221F391E000DACC2F /* SettingsThemeViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsThemeViewModelType.swift; sourceTree = "<group>"; };
+		A34B64C421F391EF00DACC2F /* SettingsThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsThemeViewModel.swift; sourceTree = "<group>"; };
+		A34B64C621F3934000DACC2F /* SettingsCityRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityRoutable.swift; sourceTree = "<group>"; };
+		A34B64C821F3936300DACC2F /* SettingsCityRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityRouter.swift; sourceTree = "<group>"; };
+		A34B64CA21F3938C00DACC2F /* SettingsCityViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewModelType.swift; sourceTree = "<group>"; };
+		A34B64CC21F393A200DACC2F /* SettingsCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewModel.swift; sourceTree = "<group>"; };
 		A36DC41421F277E100B0BE72 /* RSS-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36DC41721F277E100B0BE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A36DC42121F277E300B0BE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -388,6 +412,80 @@
 			path = viewData;
 			sourceTree = "<group>";
 		};
+		A34B64AE21F390E800DACC2F /* settings-city */ = {
+			isa = PBXGroup;
+			children = (
+				A34B64B121F3911800DACC2F /* router */,
+				A34B64B021F3911300DACC2F /* view */,
+				A34B64AF21F3910E00DACC2F /* viewModel */,
+			);
+			path = "settings-city";
+			sourceTree = "<group>";
+		};
+		A34B64AF21F3910E00DACC2F /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A34B64CA21F3938C00DACC2F /* SettingsCityViewModelType.swift */,
+				A34B64CC21F393A200DACC2F /* SettingsCityViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		A34B64B021F3911300DACC2F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A34B64B821F3917A00DACC2F /* SettingsCity.storyboard */,
+				A34B64BC21F3918F00DACC2F /* SettingsCityView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A34B64B121F3911800DACC2F /* router */ = {
+			isa = PBXGroup;
+			children = (
+				A34B64C621F3934000DACC2F /* SettingsCityRoutable.swift */,
+				A34B64C821F3936300DACC2F /* SettingsCityRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		A34B64B221F3914900DACC2F /* settings-theme */ = {
+			isa = PBXGroup;
+			children = (
+				A34B64B521F3915F00DACC2F /* router */,
+				A34B64B421F3915A00DACC2F /* view */,
+				A34B64B321F3915600DACC2F /* viewModel */,
+			);
+			path = "settings-theme";
+			sourceTree = "<group>";
+		};
+		A34B64B321F3915600DACC2F /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A34B64C221F391E000DACC2F /* SettingsThemeViewModelType.swift */,
+				A34B64C421F391EF00DACC2F /* SettingsThemeViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		A34B64B421F3915A00DACC2F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A34B64B621F3916E00DACC2F /* SettingsTheme.storyboard */,
+				A34B64BA21F3918700DACC2F /* SettingsThemeView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A34B64B521F3915F00DACC2F /* router */ = {
+			isa = PBXGroup;
+			children = (
+				A34B64BE21F391A800DACC2F /* SettingsThemeRoutable.swift */,
+				A34B64C021F391B500DACC2F /* SettingsThemeRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
 		A36DC40B21F277E100B0BE72 = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +548,8 @@
 				A34B645421F34ADB00DACC2F /* categories */,
 				A34B645521F34AE900DACC2F /* bookmarks */,
 				A34B645621F34AFA00DACC2F /* settings */,
+				A34B64B221F3914900DACC2F /* settings-theme */,
+				A34B64AE21F390E800DACC2F /* settings-city */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -665,7 +765,9 @@
 				A34B647721F3656B00DACC2F /* Bookmarks.storyboard in Resources */,
 				A34B647121F3651900DACC2F /* News.storyboard in Resources */,
 				A36DC43B21F2797900B0BE72 /* Images.xcassets in Resources */,
+				A34B64B721F3916E00DACC2F /* SettingsTheme.storyboard in Resources */,
 				A34B644621F3326D00DACC2F /* Paper.plist in Resources */,
+				A34B64B921F3917A00DACC2F /* SettingsCity.storyboard in Resources */,
 				A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */,
 				A34B648B21F3733300DACC2F /* Categories.storyboard in Resources */,
 				A36DC43D21F2798100B0BE72 /* Colors.xcassets in Resources */,
@@ -790,6 +892,7 @@
 				A34B64A921F3862700DACC2F /* SettingsViewModelType.swift in Sources */,
 				A36DC45A21F27BA100B0BE72 /* MainView.swift in Sources */,
 				A34B648321F372CA00DACC2F /* SettingsRoutable.swift in Sources */,
+				A34B64C321F391E000DACC2F /* SettingsThemeViewModelType.swift in Sources */,
 				A34B649121F373D400DACC2F /* CategoriesView.swift in Sources */,
 				A34B644E21F3455200DACC2F /* TabBarItem.swift in Sources */,
 				A34B646921F34C3A00DACC2F /* NewsRoutable.swift in Sources */,
@@ -808,17 +911,22 @@
 				A34B647F21F3723B00DACC2F /* UIKit+Localization.swift in Sources */,
 				A34B646F21F364E900DACC2F /* NewsViewModel.swift in Sources */,
 				A34B649721F3743300DACC2F /* CategoriesRouter.swift in Sources */,
+				A34B64BB21F3918700DACC2F /* SettingsThemeView.swift in Sources */,
 				A34B645321F347FE00DACC2F /* Fonts.swift in Sources */,
 				A36DC44B21F27B1A00B0BE72 /* BaseRouter.swift in Sources */,
 				A34B646D21F3647A00DACC2F /* NewsTabRouter.swift in Sources */,
 				A36DC45821F27B9200B0BE72 /* MainRouter.swift in Sources */,
+				A34B64CB21F3938C00DACC2F /* SettingsCityViewModelType.swift in Sources */,
+				A34B64C721F3934000DACC2F /* SettingsCityRoutable.swift in Sources */,
 				A34B64A721F383E200DACC2F /* MenuItem.swift in Sources */,
 				A36DC45C21F27BAF00B0BE72 /* MainViewModel.swift in Sources */,
 				A34B645021F3459800DACC2F /* TabBarButton.swift in Sources */,
 				A36DC41821F277E100B0BE72 /* AppDelegate.swift in Sources */,
 				A34B64AD21F3887000DACC2F /* MenuEmptyCell.swift in Sources */,
 				A34B647B21F365FB00DACC2F /* BookmarksTabRouter.swift in Sources */,
+				A34B64BD21F3918F00DACC2F /* SettingsCityView.swift in Sources */,
 				A34B643B21F27E2400DACC2F /* storyboards.swift in Sources */,
+				A34B64BF21F391A800DACC2F /* SettingsThemeRoutable.swift in Sources */,
 				A34B647321F3652200DACC2F /* NewsView.swift in Sources */,
 				A36DC44321F27A9900B0BE72 /* AppSkin.swift in Sources */,
 				A34B64A121F37CBC00DACC2F /* PreferenceService.swift in Sources */,
@@ -828,11 +936,15 @@
 				A36DC45421F27B7500B0BE72 /* InitialHomeRouter.swift in Sources */,
 				A34B649321F373FB00DACC2F /* CategoriesViewModel.swift in Sources */,
 				A34B648721F372E500DACC2F /* SettingsTabRouter.swift in Sources */,
+				A34B64C121F391B500DACC2F /* SettingsThemeRouter.swift in Sources */,
 				A36DC44D21F27B2500B0BE72 /* BaseView.swift in Sources */,
 				A34B646B21F34C4500DACC2F /* NewsRouter.swift in Sources */,
+				A34B64C521F391EF00DACC2F /* SettingsThemeViewModel.swift in Sources */,
 				A34B644C21F3451B00DACC2F /* HomeTabBar.swift in Sources */,
 				A34B648121F3725C00DACC2F /* String.swift in Sources */,
+				A34B64CD21F393A200DACC2F /* SettingsCityViewModel.swift in Sources */,
 				A34B647521F3655600DACC2F /* BookmarksView.swift in Sources */,
+				A34B64C921F3936300DACC2F /* SettingsCityRouter.swift in Sources */,
 				A36DC46321F27C0100B0BE72 /* UIWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

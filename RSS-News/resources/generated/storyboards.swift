@@ -78,6 +78,16 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<RSS_News.SettingsView>(storyboard: Settings.self)
   }
+  internal enum SettingsCity: StoryboardType {
+    internal static let storyboardName = "SettingsCity"
+
+    internal static let initialScene = InitialSceneType<RSS_News.SettingsCityView>(storyboard: SettingsCity.self)
+  }
+  internal enum SettingsTheme: StoryboardType {
+    internal static let storyboardName = "SettingsTheme"
+
+    internal static let initialScene = InitialSceneType<RSS_News.SettingsThemeView>(storyboard: SettingsTheme.self)
+  }
 }
 
 internal enum StoryboardSegue {
