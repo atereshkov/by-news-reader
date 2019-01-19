@@ -58,6 +58,7 @@ internal enum Asset {
   internal enum Images {
     internal enum Icons {
       internal static let chevronRight = ImageAsset(name: "chevron-right")
+      internal static let markCheck = ImageAsset(name: "mark-check")
     }
     internal enum Themes {
       internal enum Paper {
@@ -77,6 +78,7 @@ internal enum Asset {
     ]
     internal static let allImages: [ImageAsset] = [
       Icons.chevronRight,
+      Icons.markCheck,
       Themes.Paper.testImgPaper,
       Themes.Red.testImgRed,
       Themes.White.testImgWhite,

@@ -24,6 +24,11 @@ enum AppTheme: String {
             return "Paper"
         }
     }
+    
+    var localized: String {
+        return self.rawValue.localized
+    }
+    
 }
 
 struct AppSkin {
@@ -47,6 +52,7 @@ struct AppSkin {
     }
     
     static func setTheme(_ theme: AppTheme) {
+        PreferenceService.shared.theme = theme.rawValue
         ThemeManager.setTheme(plistName: theme.plistName(), path: .mainBundle)
     }
     

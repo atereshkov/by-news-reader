@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Settings</key>
+	<dict>
+		<key>Theme</key>
+		<dict>
+			<key>CellMarkImageTintColor</key>
+			<string>#000000</string>
+		</dict>
+	</dict>
 	<key>Global</key>
 	<dict>
 		<key>StatusBarStyle</key>

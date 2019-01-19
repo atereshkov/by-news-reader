@@ -65,6 +65,9 @@
 		A34B64CB21F3938C00DACC2F /* SettingsCityViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64CA21F3938C00DACC2F /* SettingsCityViewModelType.swift */; };
 		A34B64CD21F393A200DACC2F /* SettingsCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64CC21F393A200DACC2F /* SettingsCityViewModel.swift */; };
 		A34B64CF21F3967F00DACC2F /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64CE21F3967F00DACC2F /* UINavigationItem.swift */; };
+		A34B64D221F3A5FD00DACC2F /* SettingsThemeViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64D121F3A5FD00DACC2F /* SettingsThemeViewState.swift */; };
+		A34B64D421F3A62500DACC2F /* ThemeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64D321F3A62500DACC2F /* ThemeItem.swift */; };
+		A34B64D721F3A72200DACC2F /* ThemeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64D621F3A72200DACC2F /* ThemeCell.swift */; };
 		A36DC41821F277E100B0BE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC41721F277E100B0BE72 /* AppDelegate.swift */; };
 		A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DC42021F277E300B0BE72 /* LaunchScreen.storyboard */; };
 		A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43821F2795F00B0BE72 /* Localizable.strings */; };
@@ -147,6 +150,9 @@
 		A34B64CA21F3938C00DACC2F /* SettingsCityViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewModelType.swift; sourceTree = "<group>"; };
 		A34B64CC21F393A200DACC2F /* SettingsCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewModel.swift; sourceTree = "<group>"; };
 		A34B64CE21F3967F00DACC2F /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
+		A34B64D121F3A5FD00DACC2F /* SettingsThemeViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsThemeViewState.swift; sourceTree = "<group>"; };
+		A34B64D321F3A62500DACC2F /* ThemeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeItem.swift; sourceTree = "<group>"; };
+		A34B64D621F3A72200DACC2F /* ThemeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCell.swift; sourceTree = "<group>"; };
 		A36DC41421F277E100B0BE72 /* RSS-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36DC41721F277E100B0BE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A36DC42121F277E300B0BE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -456,6 +462,7 @@
 			children = (
 				A34B64B521F3915F00DACC2F /* router */,
 				A34B64B421F3915A00DACC2F /* view */,
+				A34B64D021F3A5ED00DACC2F /* viewData */,
 				A34B64B321F3915600DACC2F /* viewModel */,
 			);
 			path = "settings-theme";
@@ -473,6 +480,7 @@
 		A34B64B421F3915A00DACC2F /* view */ = {
 			isa = PBXGroup;
 			children = (
+				A34B64D521F3A70D00DACC2F /* cell */,
 				A34B64B621F3916E00DACC2F /* SettingsTheme.storyboard */,
 				A34B64BA21F3918700DACC2F /* SettingsThemeView.swift */,
 			);
@@ -486,6 +494,23 @@
 				A34B64C021F391B500DACC2F /* SettingsThemeRouter.swift */,
 			);
 			path = router;
+			sourceTree = "<group>";
+		};
+		A34B64D021F3A5ED00DACC2F /* viewData */ = {
+			isa = PBXGroup;
+			children = (
+				A34B64D121F3A5FD00DACC2F /* SettingsThemeViewState.swift */,
+				A34B64D321F3A62500DACC2F /* ThemeItem.swift */,
+			);
+			path = viewData;
+			sourceTree = "<group>";
+		};
+		A34B64D521F3A70D00DACC2F /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				A34B64D621F3A72200DACC2F /* ThemeCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		A36DC40B21F277E100B0BE72 = {
@@ -892,7 +917,9 @@
 				A34B649921F3744900DACC2F /* CategoriesTabRouter.swift in Sources */,
 				A34B64CF21F3967F00DACC2F /* UINavigationItem.swift in Sources */,
 				A36DC44F21F27B3100B0BE72 /* BaseViewDelegate.swift in Sources */,
+				A34B64D721F3A72200DACC2F /* ThemeCell.swift in Sources */,
 				A34B646321F34B9C00DACC2F /* BookmarksRouter.swift in Sources */,
+				A34B64D421F3A62500DACC2F /* ThemeItem.swift in Sources */,
 				A34B64A921F3862700DACC2F /* SettingsViewModelType.swift in Sources */,
 				A36DC45A21F27BA100B0BE72 /* MainView.swift in Sources */,
 				A34B648321F372CA00DACC2F /* SettingsRoutable.swift in Sources */,
@@ -910,6 +937,7 @@
 				A34B649521F3741A00DACC2F /* CategoriesRoutable.swift in Sources */,
 				A34B643A21F27E2400DACC2F /* assets-images.swift in Sources */,
 				A36DC46021F27BE700B0BE72 /* LoggerService.swift in Sources */,
+				A34B64D221F3A5FD00DACC2F /* SettingsThemeViewState.swift in Sources */,
 				A34B64AB21F3865700DACC2F /* SettingsViewState.swift in Sources */,
 				A34B648F21F3735F00DACC2F /* SettingsViewModel.swift in Sources */,
 				A34B647F21F3723B00DACC2F /* UIKit+Localization.swift in Sources */,

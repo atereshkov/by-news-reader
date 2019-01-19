@@ -17,7 +17,6 @@ class MenuCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //arrowImageView.tintColor = Asset.Colors.MenuTab.menuCellRightArrow.color
     }
     
     func bind(_ item: MenuListItem) {
