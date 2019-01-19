@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol BookmarksViewModelType: ViewModelType {
-    
-}
-
 final class BookmarksViewModel: BaseViewModel<BookmarksRouter>, BookmarksViewModelType {
     
     override init(session: SessionType, delegate: BaseViewDelegate?) {

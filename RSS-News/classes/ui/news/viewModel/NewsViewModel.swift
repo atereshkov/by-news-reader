@@ -7,18 +7,37 @@
 //
 
 import Foundation
-
-protocol NewsViewModelType: ViewModelType {
-    
-}
+import ReactiveSwift
+import FeedKit
 
 final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     
+    private let parseService: ParseServiceProtocol
+    
     override init(session: SessionType, delegate: BaseViewDelegate?) {
+        self.parseService = session.resolve()
         super.init(session: session, delegate: delegate)
         
         setup()
+        parse()
     }
+    
+    private func parse() {
+        parseAction.apply().take(duringLifetimeOf: self).start()
+    }
+    
+    private(set) lazy var parseAction: Action<Void, RSSFeed, ServiceError> = {
+        return Action { [weak self] in
+            guard let strongSelf = self else { return .empty }
+            return strongSelf
+                .parseService
+                .parse()
+                .observe(on: UIScheduler())
+                .on(value: { [weak self] feed in
+                    Swift.print("Feed: \(feed)")
+                })
+        }
+    }()
     
 }
 

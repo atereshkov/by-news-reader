@@ -8,10 +8,6 @@
 
 import Foundation
 
-protocol CategoriesViewModelType: ViewModelType {
-    
-}
-
 final class CategoriesViewModel: BaseViewModel<CategoriesRouter>, CategoriesViewModelType {
     
     override init(session: SessionType, delegate: BaseViewDelegate?) {

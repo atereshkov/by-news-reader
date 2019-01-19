@@ -21,6 +21,10 @@ final class Session: SessionType {
         container.register(NetworkManagerProtocol.self) { resolver -> NetworkManagerProtocol in
             return NetworkManager()
         }.inObjectScope(.container)
+        
+        container.register(ParseServiceProtocol.self) { resolver -> ParseServiceProtocol in
+            return ParseService()
+        }.inObjectScope(.container)
     }
     
     func resolve<T>() -> T {
