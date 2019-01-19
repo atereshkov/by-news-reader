@@ -18,6 +18,8 @@
 	</dict>
 	<key>Menu</key>
 	<dict>
+		<key>CellChevronIconColor</key>
+		<string>#000000</string>
 		<key>CellSeparatorColor</key>
 		<string>#D3D3D3</string>
 	</dict>

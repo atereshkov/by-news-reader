@@ -21,4 +21,14 @@ extension UIView {
         }
     }
     
+    @IBInspectable var themeTintColor: String? {
+        set {
+            guard let strValue = newValue else { return }
+            theme_tintColor = ThemeColorPicker(stringLiteral: strValue)
+        }
+        get {
+            return "\(String(describing: theme_tintColor))"
+        }
+    }
+    
 }

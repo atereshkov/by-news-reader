@@ -30,13 +30,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqn-Dj-GvI">
-                                                    <rect key="frame" x="15" y="11.5" width="259" height="21"/>
+                                                    <rect key="frame" x="15" y="11.5" width="277" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0W-h7-xw3">
-                                                    <rect key="frame" x="284" y="11.5" width="42" height="21"/>
+                                                    <rect key="frame" x="302" y="11.5" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="oGj-v2-2eG"/>
                                                     </constraints>
@@ -44,12 +44,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mim-4C-D6N">
-                                                    <rect key="frame" x="336" y="10" width="24" height="24"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" translatesAutoresizingMaskIntoConstraints="NO" id="mim-4C-D6N">
+                                                    <rect key="frame" x="354" y="17" width="6" height="10"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="24" id="YIM-VH-34i"/>
-                                                        <constraint firstAttribute="height" constant="24" id="qHc-Fw-qsb"/>
+                                                        <constraint firstAttribute="width" constant="6" id="YIM-VH-34i"/>
+                                                        <constraint firstAttribute="height" constant="10" id="qHc-Fw-qsb"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="Menu.CellChevronIconColor"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bih-ky-dHv">
                                                     <rect key="frame" x="0.0" y="43" width="375" height="1"/>
@@ -147,4 +150,7 @@
             <point key="canvasLocation" x="365.60000000000002" y="-162.3688155922039"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chevron-right" width="6" height="10"/>
+    </resources>
 </document>
