@@ -17,6 +17,7 @@ target 'RSS-News' do
   
   # Support
   pod 'EXPLogger', '~> 1.0.3'
+  pod 'SwiftTheme', '~> 0.4'
   
   # Code improvements
   pod 'SwiftLint'

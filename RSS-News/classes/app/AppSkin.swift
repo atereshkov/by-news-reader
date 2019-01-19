@@ -7,11 +7,22 @@
 //
 
 import UIKit
+import SwiftTheme
+
+enum AppTheme: String {
+    case white = "White"
+    case dark = "Dark"
+    case paper = "Paper"
+}
 
 struct AppSkin {
     
     static func applyAppearance() {
         
+    }
+    
+    static func setTheme(_ theme: AppTheme) {
+        ThemeManager.setTheme(plistName: theme.rawValue, path: .mainBundle)
     }
     
 }

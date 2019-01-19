@@ -56,11 +56,25 @@ internal enum Asset {
     internal static let allValues: [AssetType] = allImages
   }
   internal enum Images {
+    internal enum Themes {
+      internal enum Paper {
+        internal static let testImgPaper = ImageAsset(name: "test_img_paper")
+      }
+      internal enum Red {
+        internal static let testImgRed = ImageAsset(name: "test_img_red")
+      }
+      internal enum White {
+        internal static let testImgWhite = ImageAsset(name: "test_img_white")
+      }
+    }
 
     // swiftlint:disable trailing_comma
     internal static let allColors: [ColorAsset] = [
     ]
     internal static let allImages: [ImageAsset] = [
+      Themes.Paper.testImgPaper,
+      Themes.Red.testImgRed,
+      Themes.White.testImgWhite,
     ]
     // swiftlint:enable trailing_comma
     @available(*, deprecated, renamed: "allImages")

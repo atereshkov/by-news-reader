@@ -22,10 +22,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var session: Session?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setupSharedServices()
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         
         AppSkin.applyAppearance()
+        AppSkin.setTheme(.white)
         
         let session = Session()
         self.session = session

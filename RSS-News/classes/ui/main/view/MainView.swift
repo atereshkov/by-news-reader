@@ -8,8 +8,12 @@
 
 import UIKit
 import FeedKit
+import SwiftTheme
 
 final class MainView: BaseView<MainViewModel> {
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var switchVIew: UISwitch!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -41,6 +45,14 @@ final class MainView: BaseView<MainViewModel> {
     
     override func bindViewModel() {
         super.bindViewModel()
+    }
+    
+    @IBAction func switchAction(_ sender: Any) {
+        if switchVIew.isOn {
+            AppSkin.setTheme(.white)
+        } else {
+            AppSkin.setTheme(.dark)
+        }
     }
     
 }

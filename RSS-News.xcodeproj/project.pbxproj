@@ -11,6 +11,9 @@
 		A34B643921F27E2400DACC2F /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B643621F27E2400DACC2F /* strings.swift */; };
 		A34B643A21F27E2400DACC2F /* assets-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B643721F27E2400DACC2F /* assets-images.swift */; };
 		A34B643B21F27E2400DACC2F /* storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B643821F27E2400DACC2F /* storyboards.swift */; };
+		A34B644221F32DD700DACC2F /* Dark.plist in Resources */ = {isa = PBXBuildFile; fileRef = A34B644121F32DD700DACC2F /* Dark.plist */; };
+		A34B644421F32DDD00DACC2F /* White.plist in Resources */ = {isa = PBXBuildFile; fileRef = A34B644321F32DDD00DACC2F /* White.plist */; };
+		A34B644621F3326D00DACC2F /* Paper.plist in Resources */ = {isa = PBXBuildFile; fileRef = A34B644521F3326D00DACC2F /* Paper.plist */; };
 		A36DC41821F277E100B0BE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC41721F277E100B0BE72 /* AppDelegate.swift */; };
 		A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DC42021F277E300B0BE72 /* LaunchScreen.storyboard */; };
 		A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43821F2795F00B0BE72 /* Localizable.strings */; };
@@ -39,6 +42,9 @@
 		A34B643621F27E2400DACC2F /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
 		A34B643721F27E2400DACC2F /* assets-images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "assets-images.swift"; sourceTree = "<group>"; };
 		A34B643821F27E2400DACC2F /* storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyboards.swift; sourceTree = "<group>"; };
+		A34B644121F32DD700DACC2F /* Dark.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Dark.plist; sourceTree = "<group>"; };
+		A34B644321F32DDD00DACC2F /* White.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = White.plist; sourceTree = "<group>"; };
+		A34B644521F3326D00DACC2F /* Paper.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Paper.plist; sourceTree = "<group>"; };
 		A36DC41421F277E100B0BE72 /* RSS-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36DC41721F277E100B0BE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A36DC42121F277E300B0BE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,6 +89,16 @@
 				0E1976B87D0FEEDA6128FD16 /* Pods_RSS_News.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A34B643E21F32D9A00DACC2F /* themes */ = {
+			isa = PBXGroup;
+			children = (
+				A34B644321F32DDD00DACC2F /* White.plist */,
+				A34B644121F32DD700DACC2F /* Dark.plist */,
+				A34B644521F3326D00DACC2F /* Paper.plist */,
+			);
+			path = themes;
 			sourceTree = "<group>";
 		};
 		A36DC40B21F277E100B0BE72 = {
@@ -156,6 +172,7 @@
 		A36DC42F21F278F400B0BE72 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				A34B643E21F32D9A00DACC2F /* themes */,
 				A36DC43121F2790E00B0BE72 /* images */,
 				A36DC43221F2791300B0BE72 /* colors */,
 				A36DC43321F2791B00B0BE72 /* localization */,
@@ -343,8 +360,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */,
+				A34B644421F32DDD00DACC2F /* White.plist in Resources */,
 				A36DC45E21F27BB800B0BE72 /* Main.storyboard in Resources */,
+				A34B644221F32DD700DACC2F /* Dark.plist in Resources */,
 				A36DC43B21F2797900B0BE72 /* Images.xcassets in Resources */,
+				A34B644621F3326D00DACC2F /* Paper.plist in Resources */,
 				A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */,
 				A36DC43D21F2798100B0BE72 /* Colors.xcassets in Resources */,
 			);
@@ -369,6 +389,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -382,6 +403,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
