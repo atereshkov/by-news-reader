@@ -34,6 +34,7 @@ struct AppSkin {
     
     static func applyAppearance() {
         UINavigationBar.appearance().theme_tintColor = "Global.NavigationBarBackButtonColor"
+        UIApplication.shared.theme_setStatusBarStyle("Global.StatusBarStyle", animated: false)
     }
     
     static func setup() {
