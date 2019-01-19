@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
         
         AppSkin.applyAppearance()
-        AppSkin.setTheme(.white)
+        AppSkin.setup()
         
         let session = Session()
         self.session = session

@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Global</key>
+	<dict>
+		<key>backgroundColor</key>
+		<string>#000000</string>
+	</dict>
 	<key>TabBar</key>
 	<dict>
 		<key>TopBorderLineColor</key>
@@ -11,15 +16,15 @@
 		<key>ItemColorDefault</key>
 		<string>#ffd000</string>
 	</dict>
+	<key>Menu</key>
+	<dict>
+		<key>CellSeparatorColor</key>
+		<string>#D3D3D3</string>
+	</dict>
 	<key>Images</key>
 	<dict>
 		<key>Test</key>
 		<string>test_img_white</string>
-	</dict>
-	<key>Global</key>
-	<dict>
-		<key>backgroundColor</key>
-		<string>#000000</string>
 	</dict>
 </dict>
 </plist>

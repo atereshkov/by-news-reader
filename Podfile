@@ -8,6 +8,7 @@ target 'RSS-News' do
   # Pods for RSS-News
 
   # Core
+  pod 'Alamofire', '~> 4.7'
   pod 'ReactiveCocoa', '~> 8.0', :inhibit_warnings => true
   pod 'ReactiveSwift', '~> 4.0', :inhibit_warnings => true
   pod 'Kingfisher', '~> 5.0'

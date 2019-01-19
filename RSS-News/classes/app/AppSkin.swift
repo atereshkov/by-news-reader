@@ -17,8 +17,21 @@ enum AppTheme: String {
 
 struct AppSkin {
     
+    private struct Constants {
+        static let defaultTheme: AppTheme = .white
+    }
+    
     static func applyAppearance() {
         
+    }
+    
+    static func setup() {
+        let userTheme = PreferenceService.shared.theme
+        if let appTheme = AppTheme.init(rawValue: userTheme) {
+            setTheme(appTheme)
+        } else {
+            setTheme(Constants.defaultTheme)
+        }
     }
     
     static func setTheme(_ theme: AppTheme) {

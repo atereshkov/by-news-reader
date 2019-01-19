@@ -18,7 +18,9 @@ final class Session: SessionType {
     private let container = Container()
     
     init() {
-        
+        container.register(NetworkManagerProtocol.self) { resolver -> NetworkManagerProtocol in
+            return NetworkManager()
+        }.inObjectScope(.container)
     }
     
     func resolve<T>() -> T {

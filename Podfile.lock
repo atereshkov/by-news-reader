@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.0)
   - EXPLogger (1.0.3)
   - FeedKit (8.0.0)
   - Kingfisher (5.0.1)
@@ -15,6 +16,7 @@ PODS:
   - Swinject (2.5.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
   - EXPLogger (~> 1.0.3)
   - FeedKit (~> 8.0)
   - Kingfisher (~> 5.0)
@@ -29,6 +31,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - EXPLogger
     - FeedKit
     - Kingfisher
@@ -43,6 +46,7 @@ SPEC REPOS:
     - Swinject
 
 SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   EXPLogger: 206c906c0eb65f1eb679c210adf7029ebf04e10f
   FeedKit: 4a78f07adf7f0a224b904014678f1de82a7ffc21
   Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
@@ -56,6 +60,6 @@ SPEC CHECKSUMS:
   SwiftTheme: 628345b948068a48d330d76dffb1a990ea5f90aa
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
 
-PODFILE CHECKSUM: 24754a8ae8520a94e31003b3b2d18d8009d0ed09
+PODFILE CHECKSUM: 5303756cde47894821d3d0e7e6e2f7b1ffb654dd
 
 COCOAPODS: 1.5.3
