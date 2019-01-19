@@ -10,8 +10,6 @@ import UIKit
 
 final class NewsView: BaseView<NewsViewModel> {
     
-    @IBOutlet weak var switchView: UISwitch!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,21 +20,12 @@ final class NewsView: BaseView<NewsViewModel> {
         super.bindViewModel()
     }
     
-    @IBAction func switchAction(_ sender: Any) {
-        if switchView.isOn {
-            AppSkin.setTheme(.white)
-        } else {
-            AppSkin.setTheme(.dark)
-        }
-    }
-    
 }
 
 private extension NewsView {
     
     func setupView() {
         navigationItem.backBarButtonTitle = ""
-        //        navigationController?.setupCustomBackButton()
     }
     
 }

@@ -26,7 +26,6 @@ private extension BookmarksView {
     
     func setupView() {
         navigationItem.backBarButtonTitle = ""
-        //        navigationController?.setupCustomBackButton()
     }
     
 }

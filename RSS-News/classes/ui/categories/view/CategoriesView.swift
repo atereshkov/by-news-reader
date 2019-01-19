@@ -26,7 +26,6 @@ private extension CategoriesView {
     
     func setupView() {
         navigationItem.backBarButtonTitle = ""
-        //        navigationController?.setupCustomBackButton()
     }
     
 }

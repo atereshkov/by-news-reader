@@ -35,11 +35,16 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
     override func onViewDidLoad() {
         super.onViewDidLoad()
         
-        items.value.append(MenuListItem(title: "Test 1", value: "Test Value", type: .city))
-        items.value.append(MenuListItem(title: "Test 2", value: "Test Value", type: .source, showSeparator: false))
+        let theme = AppSkin.currentThemeName
+        let city = "Grodno"
+        let source = "Test value"
+        let fontSize = "Test value"
+        
+        items.value.append(MenuListItem(title: L10n.Menu.Item.City.title, value: city, type: .city))
+        items.value.append(MenuListItem(title: L10n.Menu.Item.Source.title, value: source, type: .source, showSeparator: false))
         items.value.append(MenuEmptyItem())
-        items.value.append(MenuListItem(title: "Test 3", value: "Test Value", type: .textSize))
-        items.value.append(MenuListItem(title: "Test 4", value: "Test Value", type: .theme, showSeparator: true))
+        items.value.append(MenuListItem(title: L10n.Menu.Item.FontSize.title, value: fontSize, type: .textSize))
+        items.value.append(MenuListItem(title: L10n.Menu.Item.Theme.title, value: theme, type: .theme, showSeparator: true))
         
         updateState?(.reloadItems)
     }

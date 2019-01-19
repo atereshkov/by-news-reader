@@ -61,7 +61,6 @@ private extension SettingsView {
     
     func setupView() {
         navigationItem.backBarButtonTitle = ""
-        //        navigationController?.setupCustomBackButton()
     }
     
 }

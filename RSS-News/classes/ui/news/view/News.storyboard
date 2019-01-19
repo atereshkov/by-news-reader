@@ -25,23 +25,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSj-XL-Jog">
-                                <rect key="frame" x="163" y="100" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switchAction:" destination="oo2-Oo-K47" eventType="valueChanged" id="UJ7-Ui-viK"/>
-                                </connections>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="gSj-XL-Jog" firstAttribute="centerX" secondItem="WQa-H4-lgB" secondAttribute="centerX" id="04d-Ml-M5H"/>
-                            <constraint firstItem="gSj-XL-Jog" firstAttribute="top" secondItem="WQa-H4-lgB" secondAttribute="top" constant="80" id="8Eg-oA-Jov"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WQa-H4-lgB"/>
                     </view>
-                    <connections>
-                        <outlet property="switchView" destination="gSj-XL-Jog" id="Rwh-H8-v7d"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SwR-wM-ifu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

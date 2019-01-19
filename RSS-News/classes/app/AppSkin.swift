@@ -10,9 +10,20 @@ import UIKit
 import SwiftTheme
 
 enum AppTheme: String {
-    case white = "White"
-    case dark = "Dark"
-    case paper = "Paper"
+    case white = "theme.white"
+    case dark = "theme.dark"
+    case paper = "theme.paper"
+    
+    func plistName() -> String {
+        switch self {
+        case .white:
+            return "White"
+        case .dark:
+            return "Dark"
+        case .paper:
+            return "Paper"
+        }
+    }
 }
 
 struct AppSkin {
@@ -35,7 +46,13 @@ struct AppSkin {
     }
     
     static func setTheme(_ theme: AppTheme) {
-        ThemeManager.setTheme(plistName: theme.rawValue, path: .mainBundle)
+        ThemeManager.setTheme(plistName: theme.plistName(), path: .mainBundle)
+    }
+    
+    static var currentThemeName: String {
+        let userTheme = PreferenceService.shared.theme
+        let theme = AppTheme.init(rawValue: userTheme).map { $0.rawValue } ?? Constants.defaultTheme.rawValue
+        return theme.localized
     }
     
 }

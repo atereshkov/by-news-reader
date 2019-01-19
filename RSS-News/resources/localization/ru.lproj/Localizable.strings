@@ -12,3 +12,17 @@
 "main.tab-bar.tab2.title" = "Категории";
 "main.tab-bar.tab3.title" = "Закладки";
 "main.tab-bar.tab4.title" = "Настройки";
+
+// MARK: Menu
+
+"menu.item.city.title" = "Выбор города";
+"menu.item.source.title" = "Источник новостей";
+"menu.item.font-size.title" = "Размер текста";
+"menu.item.theme.title" = "Тема";
+"menu.item.about.title" = "О приложении";
+
+// MARK: Theme
+
+"theme.dark" = "Темная";
+"theme.white" = "Светлая";
+"theme.paper" = "Газета";

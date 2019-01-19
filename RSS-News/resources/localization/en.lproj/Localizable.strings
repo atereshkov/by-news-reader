@@ -12,3 +12,17 @@
 "main.tab-bar.tab2.title" = "CATEGORIES";
 "main.tab-bar.tab3.title" = "BOOKMARKS";
 "main.tab-bar.tab4.title" = "SETTINGS";
+
+// MARK: Menu
+
+"menu.item.city.title" = "Choose city";
+"menu.item.source.title" = "News source";
+"menu.item.font-size.title" = "Font size";
+"menu.item.theme.title" = "Theme";
+"menu.item.about.title" = "About";
+
+// MARK: Theme
+
+"theme.dark" = "Dark";
+"theme.white" = "White";
+"theme.paper" = "Paper";
