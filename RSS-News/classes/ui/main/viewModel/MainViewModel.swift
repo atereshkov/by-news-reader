@@ -9,7 +9,7 @@
 import Foundation
 
 protocol MainViewModelType: ViewModelType {
-    
+    func changeTabAction(to: TabBarItemProtocol, from: TabBarItemProtocol)
 }
 
 final class MainViewModel: BaseViewModel<MainRouter>, MainViewModelType {
@@ -18,6 +18,12 @@ final class MainViewModel: BaseViewModel<MainRouter>, MainViewModelType {
         super.init(session: session, delegate: delegate)
         
         setup()
+    }
+    
+    // MARK: Actions
+    
+    func changeTabAction(to: TabBarItemProtocol, from: TabBarItemProtocol) {
+        router?.changeTab(to: to, from: from)
     }
     
 }

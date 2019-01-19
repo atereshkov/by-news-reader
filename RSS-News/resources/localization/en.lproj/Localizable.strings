@@ -5,3 +5,10 @@
   Created by Alexander Tereshkov on 1/19/19.
   Copyright © 2019 AT. All rights reserved.
 */
+
+// MARK: Main Tab Bar:
+
+"main.tab-bar.tab1.title" = "FEED";
+"main.tab-bar.tab2.title" = "CATEGORIES";
+"main.tab-bar.tab3.title" = "BOOKMARKS";
+"main.tab-bar.tab4.title" = "SETTINGS";

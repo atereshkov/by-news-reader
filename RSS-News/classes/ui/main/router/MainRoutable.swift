@@ -9,9 +9,7 @@
 import UIKit
 
 protocol MainRoutable {
-    
     func goToMain(animated: Bool)
-    
 }
 
 extension MainRoutable where Self: RouterType {
@@ -22,8 +20,12 @@ extension MainRoutable where Self: RouterType {
         view.viewModel = viewModel
         let router = MainRouter(session: session, view: view)
         viewModel.router = router
+        
+        let homeTabBar: HomeTabBarProtocol = HomeTabBarManager(session: session)
+        view.tabBar = homeTabBar
 
         let rootVC = UINavigationController(rootViewController: view)
         AppDelegate.shared.window?.setRootViewController(rootVC, animated: animated, completion: nil)
     }
+    
 }

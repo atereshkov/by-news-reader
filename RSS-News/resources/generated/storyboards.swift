@@ -53,10 +53,20 @@ internal extension UIViewController {
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
 internal enum StoryboardScene {
+  internal enum Bookmarks: StoryboardType {
+    internal static let storyboardName = "Bookmarks"
+
+    internal static let initialScene = InitialSceneType<RSS_News.BookmarksView>(storyboard: Bookmarks.self)
+  }
   internal enum Main: StoryboardType {
     internal static let storyboardName = "Main"
 
     internal static let initialScene = InitialSceneType<RSS_News.MainView>(storyboard: Main.self)
+  }
+  internal enum News: StoryboardType {
+    internal static let storyboardName = "News"
+
+    internal static let initialScene = InitialSceneType<RSS_News.NewsView>(storyboard: News.self)
   }
 }
 

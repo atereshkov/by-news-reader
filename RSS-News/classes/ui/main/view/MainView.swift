@@ -12,8 +12,10 @@ import SwiftTheme
 
 final class MainView: BaseView<MainViewModel> {
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var switchVIew: UISwitch!
+    var tabBar: HomeTabBarProtocol?
+    
+    @IBOutlet weak var tabBarStackView: UIStackView!
+    @IBOutlet weak var containerView: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,21 +49,31 @@ final class MainView: BaseView<MainViewModel> {
         super.bindViewModel()
     }
     
-    @IBAction func switchAction(_ sender: Any) {
-        if switchVIew.isOn {
-            AppSkin.setTheme(.white)
-        } else {
-            AppSkin.setTheme(.dark)
-        }
-    }
-    
 }
 
 private extension MainView {
     
     func setupView() {
-        //        navigationItem.backBarButtonTitle = ""
-        //        navigationController?.setupCustomBackButton()
+        //navigationItem.backBarButtonTitle = ""
+        //navigationController?.setupCustomBackButton()
+        
+        tabBar?.delegate = self
+        tabBar?.initialize()
+    }
+    
+}
+
+extension MainView: HomeTabBarDelegate {
+    
+    func setupTabBar(_ items: [TabBarItemProtocol]) {
+        let buttons = items.map({ $0.button })
+        for button in buttons {
+            tabBarStackView.addArrangedSubview(button)
+        }
+    }
+    
+    func controllerSwitched(to: TabBarItemProtocol, from: TabBarItemProtocol) {
+        viewModel?.changeTabAction(to: to, from: from)
     }
     
 }

@@ -2,6 +2,7 @@ PODS:
   - EXPLogger (1.0.3)
   - FeedKit (8.0.0)
   - Kingfisher (5.0.1)
+  - PinLayout (1.8.6)
   - ReachabilitySwift (4.1.0)
   - ReactiveCocoa (8.0.2):
     - ReactiveSwift (~> 4.0)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - EXPLogger (~> 1.0.3)
   - FeedKit (~> 8.0)
   - Kingfisher (~> 5.0)
+  - PinLayout (~> 1.8)
   - ReachabilitySwift (~> 4.1.0)
   - ReactiveCocoa (~> 8.0)
   - ReactiveSwift (~> 4.0)
@@ -30,6 +32,7 @@ SPEC REPOS:
     - EXPLogger
     - FeedKit
     - Kingfisher
+    - PinLayout
     - ReachabilitySwift
     - ReactiveCocoa
     - ReactiveSwift
@@ -43,6 +46,7 @@ SPEC CHECKSUMS:
   EXPLogger: 206c906c0eb65f1eb679c210adf7029ebf04e10f
   FeedKit: 4a78f07adf7f0a224b904014678f1de82a7ffc21
   Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
+  PinLayout: fe2a2432d6982588e208572005c941aeeae417ab
   ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
   ReactiveCocoa: fbd26e9ba60e98417ee47433e59465a98ed9da0f
   ReactiveSwift: a2bb9ace428a109e9c0209615645d9d286c8c433
@@ -52,6 +56,6 @@ SPEC CHECKSUMS:
   SwiftTheme: 628345b948068a48d330d76dffb1a990ea5f90aa
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
 
-PODFILE CHECKSUM: 97a76fb0b48e587c35ac1e93a78297412a5b2fa2
+PODFILE CHECKSUM: 24754a8ae8520a94e31003b3b2d18d8009d0ed09
 
 COCOAPODS: 1.5.3
