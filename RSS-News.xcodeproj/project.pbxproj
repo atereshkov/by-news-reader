@@ -30,6 +30,9 @@
 		A34B647721F3656B00DACC2F /* Bookmarks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34B647621F3656B00DACC2F /* Bookmarks.storyboard */; };
 		A34B647921F3658A00DACC2F /* BookmarksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B647821F3658A00DACC2F /* BookmarksViewModel.swift */; };
 		A34B647B21F365FB00DACC2F /* BookmarksTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B647A21F365FB00DACC2F /* BookmarksTabRouter.swift */; };
+		A34B647D21F36BF700DACC2F /* UIKit+ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B647C21F36BF700DACC2F /* UIKit+ThemeColor.swift */; };
+		A34B647F21F3723B00DACC2F /* UIKit+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B647E21F3723B00DACC2F /* UIKit+Localization.swift */; };
+		A34B648121F3725C00DACC2F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B648021F3725C00DACC2F /* String.swift */; };
 		A36DC41821F277E100B0BE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC41721F277E100B0BE72 /* AppDelegate.swift */; };
 		A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DC42021F277E300B0BE72 /* LaunchScreen.storyboard */; };
 		A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43821F2795F00B0BE72 /* Localizable.strings */; };
@@ -77,6 +80,9 @@
 		A34B647621F3656B00DACC2F /* Bookmarks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookmarks.storyboard; sourceTree = "<group>"; };
 		A34B647821F3658A00DACC2F /* BookmarksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewModel.swift; sourceTree = "<group>"; };
 		A34B647A21F365FB00DACC2F /* BookmarksTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTabRouter.swift; sourceTree = "<group>"; };
+		A34B647C21F36BF700DACC2F /* UIKit+ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+ThemeColor.swift"; sourceTree = "<group>"; };
+		A34B647E21F3723B00DACC2F /* UIKit+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Localization.swift"; sourceTree = "<group>"; };
+		A34B648021F3725C00DACC2F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		A36DC41421F277E100B0BE72 /* RSS-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36DC41721F277E100B0BE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A36DC42121F277E300B0BE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -475,6 +481,9 @@
 			isa = PBXGroup;
 			children = (
 				A36DC46221F27C0100B0BE72 /* UIWindow.swift */,
+				A34B647C21F36BF700DACC2F /* UIKit+ThemeColor.swift */,
+				A34B647E21F3723B00DACC2F /* UIKit+Localization.swift */,
+				A34B648021F3725C00DACC2F /* String.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -680,10 +689,12 @@
 				A34B646921F34C3A00DACC2F /* NewsRoutable.swift in Sources */,
 				A34B647921F3658A00DACC2F /* BookmarksViewModel.swift in Sources */,
 				A36DC45621F27B8200B0BE72 /* MainRoutable.swift in Sources */,
+				A34B647D21F36BF700DACC2F /* UIKit+ThemeColor.swift in Sources */,
 				A36DC44721F27B0300B0BE72 /* Session.swift in Sources */,
 				A34B643921F27E2400DACC2F /* strings.swift in Sources */,
 				A34B643A21F27E2400DACC2F /* assets-images.swift in Sources */,
 				A36DC46021F27BE700B0BE72 /* LoggerService.swift in Sources */,
+				A34B647F21F3723B00DACC2F /* UIKit+Localization.swift in Sources */,
 				A34B646F21F364E900DACC2F /* NewsViewModel.swift in Sources */,
 				A34B645321F347FE00DACC2F /* Fonts.swift in Sources */,
 				A36DC44B21F27B1A00B0BE72 /* BaseRouter.swift in Sources */,
@@ -702,6 +713,7 @@
 				A36DC44D21F27B2500B0BE72 /* BaseView.swift in Sources */,
 				A34B646B21F34C4500DACC2F /* NewsRouter.swift in Sources */,
 				A34B644C21F3451B00DACC2F /* HomeTabBar.swift in Sources */,
+				A34B648121F3725C00DACC2F /* String.swift in Sources */,
 				A34B647521F3655600DACC2F /* BookmarksView.swift in Sources */,
 				A36DC46321F27C0100B0BE72 /* UIWindow.swift in Sources */,
 			);

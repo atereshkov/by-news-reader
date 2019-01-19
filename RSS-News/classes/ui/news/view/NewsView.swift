@@ -10,6 +10,8 @@ import UIKit
 
 final class NewsView: BaseView<NewsViewModel> {
     
+    @IBOutlet weak var switchView: UISwitch!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -28,6 +30,14 @@ final class NewsView: BaseView<NewsViewModel> {
     
     override func bindViewModel() {
         super.bindViewModel()
+    }
+    
+    @IBAction func switchAction(_ sender: Any) {
+        if switchView.isOn {
+            AppSkin.setTheme(.white)
+        } else {
+            AppSkin.setTheme(.dark)
+        }
     }
     
 }

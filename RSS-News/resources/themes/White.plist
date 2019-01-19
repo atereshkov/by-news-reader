@@ -17,7 +17,7 @@
 	<key>Global</key>
 	<dict>
 		<key>backgroundColor</key>
-		<string>#FFFFFF</string>
+		<string>#000000</string>
 	</dict>
 </dict>
 </plist>
