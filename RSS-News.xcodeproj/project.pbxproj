@@ -33,6 +33,18 @@
 		A34B647D21F36BF700DACC2F /* UIKit+ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B647C21F36BF700DACC2F /* UIKit+ThemeColor.swift */; };
 		A34B647F21F3723B00DACC2F /* UIKit+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B647E21F3723B00DACC2F /* UIKit+Localization.swift */; };
 		A34B648121F3725C00DACC2F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B648021F3725C00DACC2F /* String.swift */; };
+		A34B648321F372CA00DACC2F /* SettingsRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B648221F372CA00DACC2F /* SettingsRoutable.swift */; };
+		A34B648521F372D900DACC2F /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B648421F372D900DACC2F /* SettingsRouter.swift */; };
+		A34B648721F372E500DACC2F /* SettingsTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B648621F372E500DACC2F /* SettingsTabRouter.swift */; };
+		A34B648921F3732B00DACC2F /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34B648821F3732B00DACC2F /* Settings.storyboard */; };
+		A34B648B21F3733300DACC2F /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A34B648A21F3733300DACC2F /* Categories.storyboard */; };
+		A34B648D21F3733E00DACC2F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B648C21F3733E00DACC2F /* SettingsView.swift */; };
+		A34B648F21F3735F00DACC2F /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B648E21F3735F00DACC2F /* SettingsViewModel.swift */; };
+		A34B649121F373D400DACC2F /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B649021F373D400DACC2F /* CategoriesView.swift */; };
+		A34B649321F373FB00DACC2F /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B649221F373FB00DACC2F /* CategoriesViewModel.swift */; };
+		A34B649521F3741A00DACC2F /* CategoriesRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B649421F3741A00DACC2F /* CategoriesRoutable.swift */; };
+		A34B649721F3743300DACC2F /* CategoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B649621F3743300DACC2F /* CategoriesRouter.swift */; };
+		A34B649921F3744900DACC2F /* CategoriesTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B649821F3744900DACC2F /* CategoriesTabRouter.swift */; };
 		A36DC41821F277E100B0BE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC41721F277E100B0BE72 /* AppDelegate.swift */; };
 		A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DC42021F277E300B0BE72 /* LaunchScreen.storyboard */; };
 		A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43821F2795F00B0BE72 /* Localizable.strings */; };
@@ -83,6 +95,18 @@
 		A34B647C21F36BF700DACC2F /* UIKit+ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+ThemeColor.swift"; sourceTree = "<group>"; };
 		A34B647E21F3723B00DACC2F /* UIKit+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Localization.swift"; sourceTree = "<group>"; };
 		A34B648021F3725C00DACC2F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		A34B648221F372CA00DACC2F /* SettingsRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRoutable.swift; sourceTree = "<group>"; };
+		A34B648421F372D900DACC2F /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		A34B648621F372E500DACC2F /* SettingsTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabRouter.swift; sourceTree = "<group>"; };
+		A34B648821F3732B00DACC2F /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		A34B648A21F3733300DACC2F /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
+		A34B648C21F3733E00DACC2F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A34B648E21F3735F00DACC2F /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		A34B649021F373D400DACC2F /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		A34B649221F373FB00DACC2F /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		A34B649421F3741A00DACC2F /* CategoriesRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRoutable.swift; sourceTree = "<group>"; };
+		A34B649621F3743300DACC2F /* CategoriesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRouter.swift; sourceTree = "<group>"; };
+		A34B649821F3744900DACC2F /* CategoriesTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTabRouter.swift; sourceTree = "<group>"; };
 		A36DC41421F277E100B0BE72 /* RSS-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36DC41721F277E100B0BE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A36DC42121F277E300B0BE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -217,6 +241,7 @@
 		A34B645A21F34B1A00DACC2F /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A34B648E21F3735F00DACC2F /* SettingsViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -224,6 +249,8 @@
 		A34B645B21F34B1E00DACC2F /* view */ = {
 			isa = PBXGroup;
 			children = (
+				A34B648821F3732B00DACC2F /* Settings.storyboard */,
+				A34B648C21F3733E00DACC2F /* SettingsView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -231,6 +258,9 @@
 		A34B645C21F34B2300DACC2F /* router */ = {
 			isa = PBXGroup;
 			children = (
+				A34B648221F372CA00DACC2F /* SettingsRoutable.swift */,
+				A34B648421F372D900DACC2F /* SettingsRouter.swift */,
+				A34B648621F372E500DACC2F /* SettingsTabRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -238,6 +268,7 @@
 		A34B645D21F34B2A00DACC2F /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A34B649221F373FB00DACC2F /* CategoriesViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -245,6 +276,8 @@
 		A34B645E21F34B2D00DACC2F /* view */ = {
 			isa = PBXGroup;
 			children = (
+				A34B648A21F3733300DACC2F /* Categories.storyboard */,
+				A34B649021F373D400DACC2F /* CategoriesView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -252,6 +285,9 @@
 		A34B645F21F34B3000DACC2F /* router */ = {
 			isa = PBXGroup;
 			children = (
+				A34B649421F3741A00DACC2F /* CategoriesRoutable.swift */,
+				A34B649621F3743300DACC2F /* CategoriesRouter.swift */,
+				A34B649821F3744900DACC2F /* CategoriesTabRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -562,6 +598,7 @@
 			files = (
 				A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */,
 				A34B644421F32DDD00DACC2F /* White.plist in Resources */,
+				A34B648921F3732B00DACC2F /* Settings.storyboard in Resources */,
 				A36DC45E21F27BB800B0BE72 /* Main.storyboard in Resources */,
 				A34B644221F32DD700DACC2F /* Dark.plist in Resources */,
 				A34B647721F3656B00DACC2F /* Bookmarks.storyboard in Resources */,
@@ -569,6 +606,7 @@
 				A36DC43B21F2797900B0BE72 /* Images.xcassets in Resources */,
 				A34B644621F3326D00DACC2F /* Paper.plist in Resources */,
 				A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */,
+				A34B648B21F3733300DACC2F /* Categories.storyboard in Resources */,
 				A36DC43D21F2798100B0BE72 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,9 +720,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A34B646121F34B5A00DACC2F /* BookmarksRoutable.swift in Sources */,
+				A34B649921F3744900DACC2F /* CategoriesTabRouter.swift in Sources */,
 				A36DC44F21F27B3100B0BE72 /* BaseViewDelegate.swift in Sources */,
 				A34B646321F34B9C00DACC2F /* BookmarksRouter.swift in Sources */,
 				A36DC45A21F27BA100B0BE72 /* MainView.swift in Sources */,
+				A34B648321F372CA00DACC2F /* SettingsRoutable.swift in Sources */,
+				A34B649121F373D400DACC2F /* CategoriesView.swift in Sources */,
 				A34B644E21F3455200DACC2F /* TabBarItem.swift in Sources */,
 				A34B646921F34C3A00DACC2F /* NewsRoutable.swift in Sources */,
 				A34B647921F3658A00DACC2F /* BookmarksViewModel.swift in Sources */,
@@ -692,10 +733,14 @@
 				A34B647D21F36BF700DACC2F /* UIKit+ThemeColor.swift in Sources */,
 				A36DC44721F27B0300B0BE72 /* Session.swift in Sources */,
 				A34B643921F27E2400DACC2F /* strings.swift in Sources */,
+				A34B648D21F3733E00DACC2F /* SettingsView.swift in Sources */,
+				A34B649521F3741A00DACC2F /* CategoriesRoutable.swift in Sources */,
 				A34B643A21F27E2400DACC2F /* assets-images.swift in Sources */,
 				A36DC46021F27BE700B0BE72 /* LoggerService.swift in Sources */,
+				A34B648F21F3735F00DACC2F /* SettingsViewModel.swift in Sources */,
 				A34B647F21F3723B00DACC2F /* UIKit+Localization.swift in Sources */,
 				A34B646F21F364E900DACC2F /* NewsViewModel.swift in Sources */,
+				A34B649721F3743300DACC2F /* CategoriesRouter.swift in Sources */,
 				A34B645321F347FE00DACC2F /* Fonts.swift in Sources */,
 				A36DC44B21F27B1A00B0BE72 /* BaseRouter.swift in Sources */,
 				A34B646D21F3647A00DACC2F /* NewsTabRouter.swift in Sources */,
@@ -708,8 +753,11 @@
 				A34B647321F3652200DACC2F /* NewsView.swift in Sources */,
 				A36DC44321F27A9900B0BE72 /* AppSkin.swift in Sources */,
 				A36DC44121F27A9300B0BE72 /* AppRouter.swift in Sources */,
+				A34B648521F372D900DACC2F /* SettingsRouter.swift in Sources */,
 				A36DC44921F27B0F00B0BE72 /* BaseViewModel.swift in Sources */,
 				A36DC45421F27B7500B0BE72 /* InitialHomeRouter.swift in Sources */,
+				A34B649321F373FB00DACC2F /* CategoriesViewModel.swift in Sources */,
+				A34B648721F372E500DACC2F /* SettingsTabRouter.swift in Sources */,
 				A36DC44D21F27B2500B0BE72 /* BaseView.swift in Sources */,
 				A34B646B21F34C4500DACC2F /* NewsRouter.swift in Sources */,
 				A34B644C21F3451B00DACC2F /* HomeTabBar.swift in Sources */,

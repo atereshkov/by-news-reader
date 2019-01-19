@@ -11,6 +11,8 @@ xcassets:
 storyboards:
   paths: ['RSS-NEWS/classes/ui/main/view/Main.storyboard',
           'RSS-NEWS/classes/ui/news/view/News.storyboard',
-          'RSS-NEWS/classes/ui/bookmarks/view/Bookmarks.storyboard']
+          'RSS-NEWS/classes/ui/bookmarks/view/Bookmarks.storyboard',
+          'RSS-NEWS/classes/ui/categories/view/Categories.storyboard',
+          'RSS-NEWS/classes/ui/settings/view/Settings.storyboard']
   templateName: swift4
   output: storyboards.swift
