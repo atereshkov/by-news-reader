@@ -13,22 +13,22 @@ internal enum L10n {
     internal enum TabBar {
 
       internal enum Tab1 {
-        /// FEED
+        /// Feed
         internal static let title = L10n.tr("Localizable", "main.tab-bar.tab1.title")
       }
 
       internal enum Tab2 {
-        /// CATEGORIES
+        /// Categories
         internal static let title = L10n.tr("Localizable", "main.tab-bar.tab2.title")
       }
 
       internal enum Tab3 {
-        /// BOOKMARKS
+        /// Bookmarks
         internal static let title = L10n.tr("Localizable", "main.tab-bar.tab3.title")
       }
 
       internal enum Tab4 {
-        /// SETTINGS
+        /// Settings
         internal static let title = L10n.tr("Localizable", "main.tab-bar.tab4.title")
       }
     }

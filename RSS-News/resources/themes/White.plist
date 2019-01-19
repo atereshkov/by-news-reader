@@ -24,9 +24,9 @@
 		<key>TopBorderLineColor</key>
 		<string>#D3D3D3</string>
 		<key>ItemColorSelected</key>
-		<string>#800000</string>
+		<string>#FF8C00</string>
 		<key>ItemColorDefault</key>
-		<string>#ffd000</string>
+		<string>#696969</string>
 	</dict>
 	<key>Menu</key>
 	<dict>

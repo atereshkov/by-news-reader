@@ -8,10 +8,10 @@
 
 // MARK: Main Tab Bar:
 
-"main.tab-bar.tab1.title" = "FEED";
-"main.tab-bar.tab2.title" = "CATEGORIES";
-"main.tab-bar.tab3.title" = "BOOKMARKS";
-"main.tab-bar.tab4.title" = "SETTINGS";
+"main.tab-bar.tab1.title" = "Feed";
+"main.tab-bar.tab2.title" = "Categories";
+"main.tab-bar.tab3.title" = "Bookmarks";
+"main.tab-bar.tab4.title" = "Settings";
 
 // MARK: Menu
 
