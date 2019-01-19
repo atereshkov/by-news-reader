@@ -4,6 +4,8 @@
 <dict>
 	<key>TabBar</key>
 	<dict>
+		<key>TopBorderLineColor</key>
+		<string>#D3D3D3</string>
 		<key>ItemColorSelected</key>
 		<string>#800000</string>
 		<key>ItemColorDefault</key>

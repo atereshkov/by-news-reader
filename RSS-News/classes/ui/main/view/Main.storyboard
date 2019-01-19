@@ -31,7 +31,7 @@
                                             <constraint firstAttribute="height" constant="1" id="gua-fA-lT0"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Global.backgroundColor"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="TabBar.TopBorderLineColor"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="uQQ-c1-Jvg">
