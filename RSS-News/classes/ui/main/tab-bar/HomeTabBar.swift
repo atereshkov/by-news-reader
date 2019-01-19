@@ -98,9 +98,9 @@ class HomeTabBarManager: HomeTabBarProtocol {
     func getViews() -> [ViewType] {
         guard let session = session else { return [] }
         let newsView = NewsTabRouter.initializeNewsModule(session: session)
-        let categoriesView = BookmarksTabRouter.initializeBookmarksModule(session: session)
+        let categoriesView = CategoriesTabRouter.initializeCategoriesModule(session: session)
         let bookmarksView = BookmarksTabRouter.initializeBookmarksModule(session: session)
-        let settingsView = BookmarksTabRouter.initializeBookmarksModule(session: session)
+        let settingsView = SettingsTabRouter.initializeSettingsModule(session: session)
         return [newsView, categoriesView, bookmarksView, settingsView]
     }
     
