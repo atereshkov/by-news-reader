@@ -44,7 +44,9 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
         items.value.append(MenuListItem(title: L10n.Menu.Item.Source.title, value: source, type: .source, showSeparator: false))
         items.value.append(MenuEmptyItem())
         items.value.append(MenuListItem(title: L10n.Menu.Item.FontSize.title, value: fontSize, type: .textSize))
-        items.value.append(MenuListItem(title: L10n.Menu.Item.Theme.title, value: theme, type: .theme, showSeparator: true))
+        items.value.append(MenuListItem(title: L10n.Menu.Item.Theme.title, value: theme, type: .theme, showSeparator: false))
+        items.value.append(MenuEmptyItem())
+        items.value.append(MenuListItem(title: L10n.Menu.Item.About.title, value: nil, type: .about, showSeparator: true))
         
         updateState?(.reloadItems)
     }
