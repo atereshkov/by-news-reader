@@ -12,7 +12,6 @@
 		A34B643A21F27E2400DACC2F /* assets-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B643721F27E2400DACC2F /* assets-images.swift */; };
 		A34B643B21F27E2400DACC2F /* storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B643821F27E2400DACC2F /* storyboards.swift */; };
 		A36DC41821F277E100B0BE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC41721F277E100B0BE72 /* AppDelegate.swift */; };
-		A36DC41A21F277E100B0BE72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC41921F277E100B0BE72 /* ViewController.swift */; };
 		A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DC42021F277E300B0BE72 /* LaunchScreen.storyboard */; };
 		A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43821F2795F00B0BE72 /* Localizable.strings */; };
 		A36DC43B21F2797900B0BE72 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43A21F2797900B0BE72 /* Images.xcassets */; };
@@ -42,7 +41,6 @@
 		A34B643821F27E2400DACC2F /* storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyboards.swift; sourceTree = "<group>"; };
 		A36DC41421F277E100B0BE72 /* RSS-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36DC41721F277E100B0BE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A36DC41921F277E100B0BE72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A36DC42121F277E300B0BE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A36DC42321F277E300B0BE72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A36DC43721F2795F00B0BE72 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -225,7 +223,6 @@
 				A36DC45221F27B6800B0BE72 /* router */,
 				A36DC45121F27B6400B0BE72 /* view */,
 				A36DC45021F27B5C00B0BE72 /* viewModel */,
-				A36DC41921F277E100B0BE72 /* ViewController.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -461,7 +458,6 @@
 				A36DC45A21F27BA100B0BE72 /* MainView.swift in Sources */,
 				A36DC45621F27B8200B0BE72 /* MainRoutable.swift in Sources */,
 				A36DC44721F27B0300B0BE72 /* Session.swift in Sources */,
-				A36DC41A21F277E100B0BE72 /* ViewController.swift in Sources */,
 				A34B643921F27E2400DACC2F /* strings.swift in Sources */,
 				A34B643A21F27E2400DACC2F /* assets-images.swift in Sources */,
 				A36DC46021F27BE700B0BE72 /* LoggerService.swift in Sources */,

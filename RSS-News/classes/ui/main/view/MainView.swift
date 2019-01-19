@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FeedKit
 
 final class MainView: BaseView<MainViewModel> {
     
@@ -24,6 +25,18 @@ final class MainView: BaseView<MainViewModel> {
         super.viewDidLoad()
         
         setupView()
+        
+//        let feedURL = URL(string: "https://news.tut.by/rss/geonews/minsk.rss")!
+//        let parser = FeedParser(URL: feedURL)
+//        parser.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in
+//            DispatchQueue.main.async { [weak self] in
+//                guard let feed = result.rssFeed, result.isSuccess else {
+//                    print(result.error)
+//                    return
+//                }
+//                Swift.print(feed.items?.count)
+//            }
+//        }
     }
     
     override func bindViewModel() {
