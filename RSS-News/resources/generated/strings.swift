@@ -9,9 +9,9 @@ import Foundation
 internal enum L10n {
 
   internal enum Category {
-    /// Авто
+    /// Auto
     internal static let auto = L10n.tr("Localizable", "category.auto")
-    /// Спорт
+    /// Sport
     internal static let sport = L10n.tr("Localizable", "category.sport")
   }
 

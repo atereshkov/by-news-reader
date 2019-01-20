@@ -33,5 +33,5 @@
 
 // MARK: Categories
 
-"category.auto" = "Авто";
-"category.sport" = "Спорт";
+"category.auto" = "Auto";
+"category.sport" = "Sport";
