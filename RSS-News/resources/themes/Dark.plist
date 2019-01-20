@@ -44,6 +44,11 @@
 		<key>CellSeparatorColor</key>
 		<string>#D3D3D3</string>
 	</dict>
+	<key>CategoryNews</key>
+	<dict>
+		<key>CellSeparatorColor</key>
+		<string>#D3D3D3</string>
+	</dict>
 	<key>Images</key>
 	<dict>
 		<key>Test</key>
