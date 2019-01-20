@@ -106,6 +106,39 @@ internal enum L10n {
     /// White
     internal static let white = L10n.tr("Localizable", "theme.white")
   }
+
+  internal enum Time {
+    /// %d day ago
+    internal static func dayAgo(_ p1: Int) -> String {
+      return L10n.tr("Localizable", "time.day-ago", p1)
+    }
+    /// %d days ago
+    internal static func daysAgo(_ p1: Int) -> String {
+      return L10n.tr("Localizable", "time.days-ago", p1)
+    }
+    /// %d hr ago
+    internal static func hrAgo(_ p1: Int) -> String {
+      return L10n.tr("Localizable", "time.hr-ago", p1)
+    }
+    /// %d hrs ago
+    internal static func hrsAgo(_ p1: Int) -> String {
+      return L10n.tr("Localizable", "time.hrs-ago", p1)
+    }
+    /// Just now
+    internal static let justNow = L10n.tr("Localizable", "time.just-now")
+    /// %d min ago
+    internal static func minAgo(_ p1: Int) -> String {
+      return L10n.tr("Localizable", "time.min-ago", p1)
+    }
+    /// %d mins ago
+    internal static func minsAgo(_ p1: Int) -> String {
+      return L10n.tr("Localizable", "time.mins-ago", p1)
+    }
+    /// %d secs ago
+    internal static func secsAgo(_ p1: Int) -> String {
+      return L10n.tr("Localizable", "time.secs-ago", p1)
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 

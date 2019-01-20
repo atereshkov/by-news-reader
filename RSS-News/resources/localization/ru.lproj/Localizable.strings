@@ -44,3 +44,14 @@
 "category.realty" = "Недвижимость";
 "category.lady" = "Леди";
 "category.culture" = "Кругозор";
+
+// MARK: Time
+
+"time.just-now" = "Только что";
+"time.secs-ago" = "%d секунд назад";
+"time.min-ago" = "%d минуту назад";
+"time.mins-ago" = "%d минут назад";
+"time.hr-ago" = "%d час назад";
+"time.hrs-ago" = "%d часов назад";
+"time.day-ago" = "%d день назад";
+"time.days-ago" = "%d дней назад";

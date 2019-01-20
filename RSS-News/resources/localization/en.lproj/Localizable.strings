@@ -44,3 +44,14 @@
 "category.realty" = "Realty";
 "category.lady" = "Lady";
 "category.culture" = "Culture";
+
+// MARK: Time
+
+"time.just-now" = "Just now";
+"time.secs-ago" = "%d secs ago";
+"time.min-ago" = "%d min ago";
+"time.mins-ago" = "%d mins ago";
+"time.hr-ago" = "%d hr ago";
+"time.hrs-ago" = "%d hrs ago";
+"time.day-ago" = "%d day ago";
+"time.days-ago" = "%d days ago";

@@ -114,6 +114,7 @@
 		A3860A9921F4F1660030869A /* ResponseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9821F4F1660030869A /* ResponseConverter.swift */; };
 		A3860A9B21F4F16F0030869A /* RSSResponseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9A21F4F16F0030869A /* RSSResponseConverter.swift */; };
 		A3860A9E21F4FD640030869A /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9D21F4FD640030869A /* DateFormatters.swift */; };
+		A3860AA021F500050030869A /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9F21F500050030869A /* DateUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -228,6 +229,7 @@
 		A3860A9821F4F1660030869A /* ResponseConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseConverter.swift; sourceTree = "<group>"; };
 		A3860A9A21F4F16F0030869A /* RSSResponseConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSResponseConverter.swift; sourceTree = "<group>"; };
 		A3860A9D21F4FD640030869A /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		A3860A9F21F500050030869A /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		E9A03B472CB8EE9B0D64AFA5 /* Pods-RSS-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS-News.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSS-News/Pods-RSS-News.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -907,6 +909,7 @@
 			isa = PBXGroup;
 			children = (
 				A3860A9D21F4FD640030869A /* DateFormatters.swift */,
+				A3860A9F21F500050030869A /* DateUtils.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -1193,6 +1196,7 @@
 				A34B64C521F391EF00DACC2F /* SettingsThemeViewModel.swift in Sources */,
 				A34B64DF21F3B79900DACC2F /* NewsProviderItem.swift in Sources */,
 				A34B644C21F3451B00DACC2F /* HomeTabBar.swift in Sources */,
+				A3860AA021F500050030869A /* DateUtils.swift in Sources */,
 				A34B648121F3725C00DACC2F /* String.swift in Sources */,
 				A3860A7821F49B460030869A /* PlistParserService.swift in Sources */,
 				A34B64CD21F393A200DACC2F /* SettingsCityViewModel.swift in Sources */,

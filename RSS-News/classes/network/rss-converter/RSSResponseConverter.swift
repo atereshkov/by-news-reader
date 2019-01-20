@@ -29,8 +29,9 @@ class RSSReponseConverter: ResponseConverter {
                 .filter({ $0.attributes?.type?.contains("image") ?? false })
                 .compactMap({ $0 })
             let iconURL = images?.first?.attributes?.url ?? ""
+            let date = item.pubDate
             
-            let newsItem = CategoryNewsItem(title: title ?? "", iconURL: iconURL)
+            let newsItem = CategoryNewsItem(title: title ?? "", iconURL: iconURL, publishDate: date)
             items.append(newsItem)
         }
         

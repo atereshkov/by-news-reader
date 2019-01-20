@@ -11,6 +11,10 @@ import Kingfisher
 
 class CategoryNewsCell: UITableViewCell {
     
+    private struct Constants {
+        static let fullTimeFormat = "dd-MM-yyyy HH:mm"
+    }
+    
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -22,6 +26,12 @@ class CategoryNewsCell: UITableViewCell {
     
     func update(with item: CategoryNewsItemProtocol) {
         titleLabel.text = item.title
+        if let date = item.publishDate {
+            let timeAgo = DateUtils.timeAgo(from: date, fullTimeFormat: Constants.fullTimeFormat)
+            timeLabel.text = timeAgo
+        } else {
+            timeLabel.text = ""
+        }
         
         if let url = URL(string: item.iconURL) {
             iconImageView.kf.setImage(with: url)
