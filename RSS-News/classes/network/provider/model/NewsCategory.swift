@@ -11,11 +11,13 @@ import Foundation
 protocol NewsCategoryProtocol {
     var name: String { get }
     var url: String { get }
+    var order: Int? { get }
 }
 
 struct NewsCategory: NewsCategoryProtocol {
     
     let name: String
     let url: String
+    let order: Int?
     
 }

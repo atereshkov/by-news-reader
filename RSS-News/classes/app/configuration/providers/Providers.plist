@@ -27,6 +27,8 @@
 		<dict>
 			<key>category.economics</key>
 			<dict>
+				<key>order</key>
+				<integer>1</integer>
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
@@ -34,6 +36,8 @@
 			</dict>
 			<key>category.society</key>
 			<dict>
+				<key>order</key>
+				<integer>2</integer>
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
@@ -41,6 +45,8 @@
 			</dict>
 			<key>category.world</key>
 			<dict>
+				<key>order</key>
+				<integer>3</integer>
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
@@ -48,6 +54,8 @@
 			</dict>
 			<key>category.technology</key>
 			<dict>
+				<key>order</key>
+				<integer>4</integer>
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
@@ -55,6 +63,8 @@
 			</dict>
 			<key>category.accidents</key>
 			<dict>
+				<key>order</key>
+				<integer>5</integer>
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
@@ -62,6 +72,8 @@
 			</dict>
 			<key>category.finance</key>
 			<dict>
+				<key>order</key>
+				<integer>6</integer>
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
@@ -69,6 +81,8 @@
 			</dict>
 			<key>category.realty</key>
 			<dict>
+				<key>order</key>
+				<integer>7</integer>
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
@@ -76,6 +90,8 @@
 			</dict>
 			<key>category.sport</key>
 			<dict>
+				<key>order</key>
+				<integer>8</integer>
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
@@ -83,6 +99,8 @@
 			</dict>
 			<key>category.auto</key>
 			<dict>
+				<key>order</key>
+				<integer>9</integer>
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
@@ -90,6 +108,8 @@
 			</dict>
 			<key>category.lady</key>
 			<dict>
+				<key>order</key>
+				<integer>10</integer>
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
@@ -97,6 +117,8 @@
 			</dict>
 			<key>category.culture</key>
 			<dict>
+				<key>order</key>
+				<integer>11</integer>
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
