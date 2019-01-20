@@ -13,15 +13,14 @@ import Result
 import FeedKit
 
 protocol ParseServiceProtocol {
-    func parse(provider: NewsSourceProviderProtocol) -> SignalProducer<RSSFeed, ServiceError>
+    func parse(providerURL: URL) -> SignalProducer<RSSFeed, ServiceError>
 }
 
 final class ParseService: ParseServiceProtocol {
     
-    func parse(provider: NewsSourceProviderProtocol) -> SignalProducer<RSSFeed, ServiceError> {
-        return SignalProducer { [weak self] observer, _ in
-            let feedURL = URL(string: provider.url)!
-            let parser = FeedParser(URL: feedURL)
+    func parse(providerURL: URL) -> SignalProducer<RSSFeed, ServiceError> {
+        return SignalProducer { observer, _ in
+            let parser = FeedParser(URL: providerURL)
             parser.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in
                 guard let feed = result.rssFeed, result.isSuccess else {
                     observer.send(error: .parseError(result.error))

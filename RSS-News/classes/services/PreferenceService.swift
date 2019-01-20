@@ -11,6 +11,7 @@ import Foundation
 private enum PreferenceKeys: String {
     case initApp = "rss-news.InitializeKeyPreference"
     case theme = "rss-news.Theme"
+    case provider = "rss-news.Provider"
 }
 
 class PreferenceService: NSObject {
@@ -40,6 +41,15 @@ class PreferenceService: NSObject {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: PreferenceKeys.theme.rawValue)
+        }
+    }
+    
+    var provider: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: PreferenceKeys.provider.rawValue)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: PreferenceKeys.provider.rawValue)
         }
     }
     

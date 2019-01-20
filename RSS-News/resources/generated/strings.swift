@@ -65,6 +65,14 @@ internal enum L10n {
     }
   }
 
+  internal enum Provider {
+
+    internal enum TutBy {
+      /// TUT.by
+      internal static let name = L10n.tr("Localizable", "provider.tut-by.name")
+    }
+  }
+
   internal enum Theme {
     /// Dark
     internal static let dark = L10n.tr("Localizable", "theme.dark")

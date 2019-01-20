@@ -27,13 +27,13 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     }
     
     private(set) lazy var parseAction: Action<Void, RSSFeed, ServiceError> = {
-        let provider: NewsSourceProviderProtocol = NewsSourceProvider(url: "https://news.tut.by/rss/geonews/minsk.rss")
+        let url = URL(string: "https://news.tut.by/rss/all.rss")!
         
         return Action { [weak self] in
             guard let strongSelf = self else { return .empty }
             return strongSelf
                 .parseService
-                .parse(provider: provider)
+                .parse(providerURL: url)
                 .observe(on: UIScheduler())
                 .on(value: { [weak self] feed in
                     Swift.print("Feed: \(feed.items?.count)")

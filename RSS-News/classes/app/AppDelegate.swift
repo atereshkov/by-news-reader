@@ -30,6 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppSkin.setup()
         AppSkin.applyAppearance()
         
+        let service: ProvidersServiceProtocol = ProvidersService()
+        let items = service.getProviderItems()
+        
         let session = Session()
         self.session = session
         

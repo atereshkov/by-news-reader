@@ -26,3 +26,7 @@
 "theme.dark" = "Темная";
 "theme.white" = "Светлая";
 "theme.paper" = "Газета";
+
+// MARK: Providers
+
+"provider.tut-by.name" = "TUT.by";

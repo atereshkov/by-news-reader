@@ -26,3 +26,7 @@
 "theme.dark" = "Dark";
 "theme.white" = "White";
 "theme.paper" = "Paper";
+
+// MARK: Providers
+
+"provider.tut-by.name" = "TUT.by";

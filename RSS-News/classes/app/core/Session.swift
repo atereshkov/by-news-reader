@@ -18,11 +18,11 @@ final class Session: SessionType {
     private let container = Container()
     
     init() {
-        container.register(NetworkManagerProtocol.self) { resolver -> NetworkManagerProtocol in
+        container.register(NetworkManagerProtocol.self) { _ -> NetworkManagerProtocol in
             return NetworkManager()
         }.inObjectScope(.container)
         
-        container.register(ParseServiceProtocol.self) { resolver -> ParseServiceProtocol in
+        container.register(ParseServiceProtocol.self) { _ -> ParseServiceProtocol in
             return ParseService()
         }.inObjectScope(.container)
     }

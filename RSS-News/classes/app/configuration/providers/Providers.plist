@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TUT.by</key>
+	<dict>
+		<key>Information</key>
+		<dict/>
+		<key>General</key>
+		<dict>
+			<key>Main</key>
+			<string>https://news.tut.by/rss/index.rss</string>
+			<key>Latest</key>
+			<string>https://news.tut.by/rss/all.rss</string>
+		</dict>
+		<key>Categories</key>
+		<dict>
+			<key>Sport</key>
+			<string>https://news.tut.by/rss/sport.rss</string>
+			<key>Auto</key>
+			<string>https://news.tut.by/rss/auto.rss</string>
+		</dict>
+		<key>Regions</key>
+		<dict/>
+	</dict>
+	<key>Onliner.by</key>
+	<dict>
+		<key>Information</key>
+		<dict/>
+		<key>General</key>
+		<dict>
+			<key>Main</key>
+			<string>https://news.tut.by/rss/index.rss</string>
+			<key>Latest</key>
+			<string>https://news.tut.by/rss/all.rss</string>
+		</dict>
+		<key>Categories</key>
+		<dict/>
+		<key>Regions</key>
+		<dict/>
+	</dict>
+</dict>
+</plist>
