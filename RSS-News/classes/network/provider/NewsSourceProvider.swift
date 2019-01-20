@@ -8,6 +8,12 @@
 
 import Foundation
 
-protocol NewsSourceProvider: class {
+protocol NewsSourceProviderProtocol {
+    var url: String { get }
+}
+
+struct NewsSourceProvider: NewsSourceProviderProtocol {
+    
+    let url: String
     
 }
