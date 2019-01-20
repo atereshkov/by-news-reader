@@ -50,7 +50,8 @@ final class CategoriesViewModel: BaseViewModel<CategoriesRouter>, CategoriesView
     // MARK: Actions
     
     func itemSelected(at index: Int) {
-        
+        guard let item = item(for: index) else { return }
+        router?.goToCategoryNews(item: item)
     }
     
     // MARK: DataSource

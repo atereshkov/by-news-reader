@@ -88,7 +88,7 @@
                         <viewLayoutGuide key="safeArea" id="shE-pl-gaU"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="Bae-jx-kkh" id="wl1-s9-EaT"/>
+                        <outlet property="tableView" destination="Bae-jx-kkh" id="KMH-Y9-6zL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nx9-gO-10b" userLabel="First Responder" sceneMemberID="firstResponder"/>

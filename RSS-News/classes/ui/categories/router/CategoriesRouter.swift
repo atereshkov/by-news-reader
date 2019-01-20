@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol CategoriesRouterType: RouterType {
+protocol CategoriesRouterType: RouterType, CategoryNewsRoutable {
     
 }
 
