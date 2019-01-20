@@ -33,9 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let session = Session()
         self.session = session
         
-        let providerService: ProvidersServiceProtocol = session.resolve()
-        let items = providerService.getProviderItems()
-        
         router = AppRouter(window: window, session: session)
         router?.start()
         

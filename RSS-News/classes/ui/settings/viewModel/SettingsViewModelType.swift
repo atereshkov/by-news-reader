@@ -8,7 +8,6 @@
 
 import Foundation
 import ReactiveSwift
-import ReactiveCocoa
 
 protocol SettingsViewModelType: ViewModelType {
     

@@ -101,6 +101,7 @@
 		A3860A7521F4902E0030869A /* ProvidersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7421F4902E0030869A /* ProvidersService.swift */; };
 		A3860A7821F49B460030869A /* PlistParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7721F49B460030869A /* PlistParserService.swift */; };
 		A3860A7A21F4C37A0030869A /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7921F4C37A0030869A /* CategoryCell.swift */; };
+		A3860A7E21F4D4740030869A /* CategoriesViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7D21F4D4740030869A /* CategoriesViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,6 +203,7 @@
 		A3860A7421F4902E0030869A /* ProvidersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersService.swift; sourceTree = "<group>"; };
 		A3860A7721F49B460030869A /* PlistParserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistParserService.swift; sourceTree = "<group>"; };
 		A3860A7921F4C37A0030869A /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		A3860A7D21F4D4740030869A /* CategoriesViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewState.swift; sourceTree = "<group>"; };
 		E9A03B472CB8EE9B0D64AFA5 /* Pods-RSS-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS-News.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSS-News/Pods-RSS-News.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -258,6 +260,7 @@
 			children = (
 				A34B645F21F34B3000DACC2F /* router */,
 				A34B645E21F34B2D00DACC2F /* view */,
+				A3860A7C21F4D4620030869A /* viewData */,
 				A34B645D21F34B2A00DACC2F /* viewModel */,
 			);
 			path = categories;
@@ -800,6 +803,14 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		A3860A7C21F4D4620030869A /* viewData */ = {
+			isa = PBXGroup;
+			children = (
+				A3860A7D21F4D4740030869A /* CategoriesViewState.swift */,
+			);
+			path = viewData;
+			sourceTree = "<group>";
+		};
 		C4C2E5947F892FC777152D79 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1048,6 +1059,7 @@
 				A36DC41821F277E100B0BE72 /* AppDelegate.swift in Sources */,
 				A34B64AD21F3887000DACC2F /* MenuEmptyCell.swift in Sources */,
 				A34B647B21F365FB00DACC2F /* BookmarksTabRouter.swift in Sources */,
+				A3860A7E21F4D4740030869A /* CategoriesViewState.swift in Sources */,
 				A34B64BD21F3918F00DACC2F /* SettingsCityView.swift in Sources */,
 				A3860A7321F48E0E0030869A /* AppProviderEnum.swift in Sources */,
 				A34B643B21F27E2400DACC2F /* storyboards.swift in Sources */,
