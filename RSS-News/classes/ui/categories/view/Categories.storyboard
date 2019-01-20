@@ -29,30 +29,45 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2GA-CK-MD4">
-                                                    <rect key="frame" x="15" y="10" width="24" height="24"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="24" id="dq9-8s-0tQ"/>
-                                                        <constraint firstAttribute="height" constant="24" id="oDn-Fg-YTP"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coG-9t-uoH">
-                                                    <rect key="frame" x="54" y="11.5" width="306" height="21"/>
+                                                    <rect key="frame" x="15" y="11.5" width="329" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-SU-ggA">
+                                                    <rect key="frame" x="354" y="17" width="6" height="10"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="10" id="AjO-ho-zUh"/>
+                                                        <constraint firstAttribute="width" constant="6" id="xCp-Xv-uZx"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="Categories.CellChevronIconColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKB-Ue-rBt">
+                                                    <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="kfs-Se-f1a"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Categories.CellSeparatorColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="2GA-CK-MD4" firstAttribute="leading" secondItem="qmt-rX-52q" secondAttribute="leading" constant="15" id="2w9-IK-9iO"/>
-                                                <constraint firstItem="coG-9t-uoH" firstAttribute="leading" secondItem="2GA-CK-MD4" secondAttribute="trailing" constant="15" id="92Q-aP-Hu1"/>
+                                                <constraint firstItem="coG-9t-uoH" firstAttribute="leading" secondItem="qmt-rX-52q" secondAttribute="leading" constant="15" id="407-ik-X1Q"/>
+                                                <constraint firstItem="bcq-SU-ggA" firstAttribute="centerY" secondItem="qmt-rX-52q" secondAttribute="centerY" id="5PI-M0-WP8"/>
                                                 <constraint firstItem="coG-9t-uoH" firstAttribute="centerY" secondItem="qmt-rX-52q" secondAttribute="centerY" id="IyP-zd-Eah"/>
-                                                <constraint firstItem="2GA-CK-MD4" firstAttribute="centerY" secondItem="qmt-rX-52q" secondAttribute="centerY" id="eaw-De-umb"/>
-                                                <constraint firstAttribute="trailing" secondItem="coG-9t-uoH" secondAttribute="trailing" constant="15" id="yuq-7Y-2Xa"/>
+                                                <constraint firstAttribute="trailing" secondItem="lKB-Ue-rBt" secondAttribute="trailing" id="beG-Xm-rvb"/>
+                                                <constraint firstAttribute="bottom" secondItem="lKB-Ue-rBt" secondAttribute="bottom" id="df7-Pg-NOX"/>
+                                                <constraint firstItem="lKB-Ue-rBt" firstAttribute="leading" secondItem="qmt-rX-52q" secondAttribute="leading" id="eUc-eo-Vws"/>
+                                                <constraint firstItem="bcq-SU-ggA" firstAttribute="leading" secondItem="coG-9t-uoH" secondAttribute="trailing" constant="10" id="lYR-Se-NfO"/>
+                                                <constraint firstAttribute="trailing" secondItem="bcq-SU-ggA" secondAttribute="trailing" constant="15" id="tUn-qH-UjZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="iconImage" destination="2GA-CK-MD4" id="1GU-R0-oJs"/>
                                             <outlet property="label" destination="coG-9t-uoH" id="cQX-ve-fNW"/>
                                         </connections>
                                     </tableViewCell>
@@ -81,4 +96,7 @@
             <point key="canvasLocation" x="389.60000000000002" y="-133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chevron-right" width="6" height="10"/>
+    </resources>
 </document>

@@ -10,6 +10,13 @@
 			<string>#00FFFF</string>
 		</dict>
 	</dict>
+	<key>Categories</key>
+	<dict>
+		<key>CellChevronIconColor</key>
+		<string>#000000</string>
+		<key>CellSeparatorColor</key>
+		<string>#D3D3D3</string>
+	</dict>
 	<key>Global</key>
 	<dict>
 		<key>StatusBarStyle</key>
