@@ -42,6 +42,7 @@ final class CategoriesViewModel: BaseViewModel<CategoriesRouter>, CategoriesView
         if let categories = providerItem?.categories {
              items.value.append(contentsOf: categories)
         }
+        items.value.sort(by: { $0.order ?? 0 < $1.order ?? 1 })
         
         updateState?(.reloadItems)
     }

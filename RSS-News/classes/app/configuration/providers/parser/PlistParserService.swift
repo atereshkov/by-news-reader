@@ -56,7 +56,7 @@ final class PlistParserService: PlistParserServiceProtocol {
             }
         }
         
-        return categories.sorted(by: { $0.order ?? 0 < $1.order ?? 1 })
+        return categories
     }
     
     private func parseCategory(_ name: String, from json: [String: Any]) -> NewsCategoryProtocol? {
