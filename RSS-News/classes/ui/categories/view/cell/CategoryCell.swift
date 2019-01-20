@@ -10,12 +10,10 @@ import UIKit
 
 class CategoryCell: UITableViewCell {
     
-    @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var label: UILabel!
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        iconImage.image = nil
     }
     
     func update(with item: NewsCategoryProtocol) {

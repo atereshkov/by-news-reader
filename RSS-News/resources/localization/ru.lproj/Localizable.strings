@@ -35,3 +35,12 @@
 
 "category.auto" = "Авто";
 "category.sport" = "Спорт";
+"category.economics" = "Экономика и политика";
+"category.society" = "Общество";
+"category.world" = "В мире";
+"category.technology" = "Технологии";
+"category.accidents" = "Происшествия";
+"category.finance" = "Финансы";
+"category.realty" = "Недвижимость";
+"category.lady" = "Леди";
+"category.culture" = "Кругозор";

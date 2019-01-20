@@ -9,10 +9,28 @@ import Foundation
 internal enum L10n {
 
   internal enum Category {
+    /// Accidents
+    internal static let accidents = L10n.tr("Localizable", "category.accidents")
     /// Auto
     internal static let auto = L10n.tr("Localizable", "category.auto")
+    /// Culture
+    internal static let culture = L10n.tr("Localizable", "category.culture")
+    /// Economics
+    internal static let economics = L10n.tr("Localizable", "category.economics")
+    /// Finance
+    internal static let finance = L10n.tr("Localizable", "category.finance")
+    /// Lady
+    internal static let lady = L10n.tr("Localizable", "category.lady")
+    /// Realty
+    internal static let realty = L10n.tr("Localizable", "category.realty")
+    /// Society
+    internal static let society = L10n.tr("Localizable", "category.society")
     /// Sport
     internal static let sport = L10n.tr("Localizable", "category.sport")
+    /// Technology
+    internal static let technology = L10n.tr("Localizable", "category.technology")
+    /// World
+    internal static let world = L10n.tr("Localizable", "category.world")
   }
 
   internal enum Main {

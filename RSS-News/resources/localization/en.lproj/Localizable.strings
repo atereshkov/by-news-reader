@@ -35,3 +35,12 @@
 
 "category.auto" = "Auto";
 "category.sport" = "Sport";
+"category.economics" = "Economics";
+"category.society" = "Society";
+"category.world" = "World";
+"category.technology" = "Technology";
+"category.accidents" = "Accidents";
+"category.finance" = "Finance";
+"category.realty" = "Realty";
+"category.lady" = "Lady";
+"category.culture" = "Culture";

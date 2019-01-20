@@ -15,10 +15,28 @@
 		</dict>
 		<key>Categories</key>
 		<dict>
+			<key>category.economics</key>
+			<string>https://news.tut.by/rss/economics.rss</string>
+			<key>category.society</key>
+			<string>https://news.tut.by/rss/society.rss</string>
+			<key>category.world</key>
+			<string>https://news.tut.by/rss/world.rss</string>
+			<key>category.technology</key>
+			<string>https://news.tut.by/rss/it.rss</string>
+			<key>category.accidents</key>
+			<string>https://news.tut.by/rss/accidents.rss</string>
+			<key>category.finance</key>
+			<string>https://news.tut.by/rss/finance.rss</string>
+			<key>category.realty</key>
+			<string>https://news.tut.by/rss/realty.rss</string>
 			<key>category.sport</key>
 			<string>https://news.tut.by/rss/sport.rss</string>
 			<key>category.auto</key>
 			<string>https://news.tut.by/rss/auto.rss</string>
+			<key>category.lady</key>
+			<string>https://news.tut.by/rss/lady.rss</string>
+			<key>category.culture</key>
+			<string>https://news.tut.by/rss/culture.rss</string>
 		</dict>
 		<key>Regions</key>
 		<dict/>
