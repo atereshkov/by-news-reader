@@ -26,7 +26,7 @@ class CategoryNewsCell: UITableViewCell {
     
     func update(with item: CategoryNewsItemProtocol) {
         titleLabel.text = item.title
-        if let date = item.publishDate {
+        if let date = item.pubDate {
             let timeAgo = DateUtils.timeAgo(from: date, fullTimeFormat: Constants.fullTimeFormat)
             timeLabel.text = timeAgo
         } else {

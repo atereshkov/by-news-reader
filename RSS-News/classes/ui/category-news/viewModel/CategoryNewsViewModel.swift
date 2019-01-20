@@ -50,7 +50,8 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     // MARK: Actions
     
     func itemSelected(at index: Int) {
-        
+        guard let item = item(for: index), let url = item.link else { return }
+        router?.openLink(url)
     }
     
     // MARK: DataSource

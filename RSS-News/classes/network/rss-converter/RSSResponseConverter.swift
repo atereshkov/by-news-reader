@@ -30,8 +30,9 @@ class RSSReponseConverter: ResponseConverter {
                 .compactMap({ $0 })
             let iconURL = images?.first?.attributes?.url ?? ""
             let date = item.pubDate
+            let link = item.guid?.value
             
-            let newsItem = CategoryNewsItem(title: title ?? "", iconURL: iconURL, publishDate: date)
+            let newsItem = CategoryNewsItem(title: title ?? "", iconURL: iconURL, pubDate: date, link: link)
             items.append(newsItem)
         }
         

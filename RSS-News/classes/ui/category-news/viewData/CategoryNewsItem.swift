@@ -11,13 +11,15 @@ import Foundation
 protocol CategoryNewsItemProtocol {
     var title: String { get }
     var iconURL: String { get }
-    var publishDate: Date? { get }
+    var pubDate: Date? { get }
+    var link: String? { get }
 }
 
 struct CategoryNewsItem: CategoryNewsItemProtocol {
     
     let title: String
     let iconURL: String
-    let publishDate: Date?
+    let pubDate: Date?
+    let link: String?
     
 }
