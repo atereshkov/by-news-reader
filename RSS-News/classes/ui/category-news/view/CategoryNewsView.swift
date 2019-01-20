@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import ReactiveSwift
+import ReactiveCocoa
 
 final class CategoryNewsView: BaseView<CategoryNewsViewModel>, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
+    
+    private var bindDisposable: ScopedDisposable<AnyDisposable>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +24,17 @@ final class CategoryNewsView: BaseView<CategoryNewsViewModel>, UITableViewDelega
     
     override func bindViewModel() {
         super.bindViewModel()
+        guard let viewModel = viewModel else { return }
         
-        viewModel?.updateState = { [weak self] state in
+        let disposable = CompositeDisposable()
+        bindDisposable = ScopedDisposable(disposable)
+        
+        disposable += activityIndicator.reactive.isAnimating <~ viewModel.parseAction.isExecuting
+        disposable += viewModel.screenTitle.producer.startWithValues { [weak self] title in
+            self?.title = title
+        }
+        
+        viewModel.updateState = { [weak self] state in
             DispatchQueue.main.async {
                 switch state {
                 case .reloadItems:
@@ -46,6 +60,11 @@ final class CategoryNewsView: BaseView<CategoryNewsViewModel>, UITableViewDelega
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.itemsCount.value ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let rowHeight: CGFloat = 100.0
+        return rowHeight
     }
     
 }

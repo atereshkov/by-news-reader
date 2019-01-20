@@ -8,6 +8,7 @@
 
 import Foundation
 import ReactiveSwift
+import FeedKit
 
 final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNewsViewModelType {
     
@@ -22,13 +23,19 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     var itemsCount: Property<Int> {
         return items.map { $0.count }
     }
+    var screenTitle: Property<String> {
+        return item.map { $0?.name.localized ?? "" }
+    }
     
-    private let item: NewsCategoryProtocol?
+    private let item: MutableProperty<NewsCategoryProtocol?> = MutableProperty(nil)
+    
+    private let parseService: ParseServiceProtocol
     
     // MARK: Init
     
     init(item: NewsCategoryProtocol, session: SessionType, delegate: BaseViewDelegate?) {
-        self.item = item
+        self.parseService = session.resolve()
+        self.item.value = item
         super.init(session: session, delegate: delegate)
         
         setup()
@@ -37,7 +44,7 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     override func onViewDidLoad() {
         super.onViewDidLoad()
         
-        updateState?(.reloadItems)
+        parseItems()
     }
     
     // MARK: Actions
@@ -51,6 +58,34 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     func item(for index: Int) -> CategoryNewsItemProtocol? {
         guard index >= 0 && index < items.value.count else { return nil }
         return items.value[index]
+    }
+    
+    // MARK: Network
+    
+    private func parseItems() {
+        guard let item = item.value else { return }
+        parseAction.apply(item).take(duringLifetimeOf: self).start()
+    }
+    
+    private(set) lazy var parseAction: Action<NewsCategoryProtocol, RSSFeed, ServiceError> = {
+        return Action { [weak self] item in
+            guard let strongSelf = self else { return .empty }
+            guard let url = URL(string: item.url) else { return .empty }
+            return strongSelf
+                .parseService
+                .parse(providerURL: url)
+                .observe(on: UIScheduler())
+                .on(value: { [weak self] feed in
+                    self?.handleRSSFeedResponse(feed)
+                })
+        }
+    }()
+    
+    private func handleRSSFeedResponse(_ feed: RSSFeed) {
+        let converter = RSSReponseConverter(feed: feed)
+        let convertedItems = converter.getCategoryNews()
+        items.value = convertedItems
+        updateState?(.reloadItems)
     }
     
 }

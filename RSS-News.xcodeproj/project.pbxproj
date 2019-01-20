@@ -111,6 +111,9 @@
 		A3860A9221F4E7210030869A /* CategoryNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9121F4E7210030869A /* CategoryNewsCell.swift */; };
 		A3860A9421F4E7490030869A /* CategoryNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9321F4E7490030869A /* CategoryNewsViewModel.swift */; };
 		A3860A9621F4E7AE0030869A /* CategoryNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9521F4E7AE0030869A /* CategoryNewsItem.swift */; };
+		A3860A9921F4F1660030869A /* ResponseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9821F4F1660030869A /* ResponseConverter.swift */; };
+		A3860A9B21F4F16F0030869A /* RSSResponseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9A21F4F16F0030869A /* RSSResponseConverter.swift */; };
+		A3860A9E21F4FD640030869A /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9D21F4FD640030869A /* DateFormatters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -222,6 +225,9 @@
 		A3860A9121F4E7210030869A /* CategoryNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryNewsCell.swift; sourceTree = "<group>"; };
 		A3860A9321F4E7490030869A /* CategoryNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryNewsViewModel.swift; sourceTree = "<group>"; };
 		A3860A9521F4E7AE0030869A /* CategoryNewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryNewsItem.swift; sourceTree = "<group>"; };
+		A3860A9821F4F1660030869A /* ResponseConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseConverter.swift; sourceTree = "<group>"; };
+		A3860A9A21F4F16F0030869A /* RSSResponseConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSResponseConverter.swift; sourceTree = "<group>"; };
+		A3860A9D21F4FD640030869A /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		E9A03B472CB8EE9B0D64AFA5 /* Pods-RSS-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS-News.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSS-News/Pods-RSS-News.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -432,6 +438,7 @@
 		A34B649B21F37B6A00DACC2F /* network */ = {
 			isa = PBXGroup;
 			children = (
+				A3860A9721F4F1430030869A /* rss-converter */,
 				A34B64DD21F3B78800DACC2F /* provider */,
 				A34B64DA21F3B73800DACC2F /* errors */,
 				A34B649D21F37B8300DACC2F /* endpoints */,
@@ -618,6 +625,7 @@
 				A34B649B21F37B6A00DACC2F /* network */,
 				A36DC42D21F278D200B0BE72 /* ui */,
 				A36DC42E21F278EB00B0BE72 /* services */,
+				A3860A9C21F4FD510030869A /* utils */,
 				A36DC46121F27BF200B0BE72 /* extensions */,
 			);
 			path = classes;
@@ -886,6 +894,23 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		A3860A9721F4F1430030869A /* rss-converter */ = {
+			isa = PBXGroup;
+			children = (
+				A3860A9821F4F1660030869A /* ResponseConverter.swift */,
+				A3860A9A21F4F16F0030869A /* RSSResponseConverter.swift */,
+			);
+			path = "rss-converter";
+			sourceTree = "<group>";
+		};
+		A3860A9C21F4FD510030869A /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A3860A9D21F4FD640030869A /* DateFormatters.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		C4C2E5947F892FC777152D79 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1108,6 +1133,7 @@
 				A34B644E21F3455200DACC2F /* TabBarItem.swift in Sources */,
 				A34B646921F34C3A00DACC2F /* NewsRoutable.swift in Sources */,
 				A34B647921F3658A00DACC2F /* BookmarksViewModel.swift in Sources */,
+				A3860A9B21F4F16F0030869A /* RSSResponseConverter.swift in Sources */,
 				A36DC45621F27B8200B0BE72 /* MainRoutable.swift in Sources */,
 				A34B647D21F36BF700DACC2F /* UIKit+ThemeColor.swift in Sources */,
 				A36DC44721F27B0300B0BE72 /* Session.swift in Sources */,
@@ -1128,6 +1154,7 @@
 				A34B64BB21F3918700DACC2F /* SettingsThemeView.swift in Sources */,
 				A34B645321F347FE00DACC2F /* Fonts.swift in Sources */,
 				A36DC44B21F27B1A00B0BE72 /* BaseRouter.swift in Sources */,
+				A3860A9921F4F1660030869A /* ResponseConverter.swift in Sources */,
 				A34B646D21F3647A00DACC2F /* NewsTabRouter.swift in Sources */,
 				A36DC45821F27B9200B0BE72 /* MainRouter.swift in Sources */,
 				A34B64CB21F3938C00DACC2F /* SettingsCityViewModelType.swift in Sources */,
@@ -1151,6 +1178,7 @@
 				A36DC44121F27A9300B0BE72 /* AppRouter.swift in Sources */,
 				A34B64E521F3BAE400DACC2F /* BookmarksViewModelType.swift in Sources */,
 				A34B648521F372D900DACC2F /* SettingsRouter.swift in Sources */,
+				A3860A9E21F4FD640030869A /* DateFormatters.swift in Sources */,
 				A36DC44921F27B0F00B0BE72 /* BaseViewModel.swift in Sources */,
 				A36DC45421F27B7500B0BE72 /* InitialHomeRouter.swift in Sources */,
 				A34B649321F373FB00DACC2F /* CategoriesViewModel.swift in Sources */,

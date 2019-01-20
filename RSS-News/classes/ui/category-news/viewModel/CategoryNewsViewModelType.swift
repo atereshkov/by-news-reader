@@ -26,6 +26,8 @@ protocol CategoryNewsViewModelType: ViewModelType {
     
     // MARK: DataSources
     
+    var screenTitle: Property<String> { get }
+    
     func item(for index: Int) -> CategoryNewsItemProtocol?
     
 }

@@ -2,13 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Settings</key>
+	<key>Global</key>
 	<dict>
-		<key>Theme</key>
-		<dict>
-			<key>CellMarkImageTintColor</key>
-			<string>#00FFFF</string>
-		</dict>
+		<key>StatusBarStyle</key>
+		<string>UIStatusBarStyleDefault</string>
+		<key>NavigationBarBackButtonColor</key>
+		<string>#FFFFFF</string>
+		<key>ListActivityIndicatorColor</key>
+		<string>#FF8C00</string>
+		<key>backgroundColor</key>
+		<string>#FF0000</string>
 	</dict>
 	<key>Categories</key>
 	<dict>
@@ -17,14 +20,13 @@
 		<key>CellSeparatorColor</key>
 		<string>#D3D3D3</string>
 	</dict>
-	<key>Global</key>
+	<key>Settings</key>
 	<dict>
-		<key>StatusBarStyle</key>
-		<string>UIStatusBarStyleDefault</string>
-		<key>NavigationBarBackButtonColor</key>
-		<string>#FFFFFF</string>
-		<key>backgroundColor</key>
-		<string>#FF0000</string>
+		<key>Theme</key>
+		<dict>
+			<key>CellMarkImageTintColor</key>
+			<string>#00FFFF</string>
+		</dict>
 	</dict>
 	<key>TabBar</key>
 	<dict>

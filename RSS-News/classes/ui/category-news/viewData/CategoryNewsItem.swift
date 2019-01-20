@@ -11,6 +11,7 @@ import Foundation
 protocol CategoryNewsItemProtocol {
     var title: String { get }
     var iconURL: String { get }
+    //var publishDate: 
 }
 
 struct CategoryNewsItem: CategoryNewsItemProtocol {

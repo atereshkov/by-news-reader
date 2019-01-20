@@ -8,6 +8,8 @@
 		<string>UIStatusBarStyleLightContent</string>
 		<key>NavigationBarBackButtonColor</key>
 		<string>#D3D3D3</string>
+		<key>ListActivityIndicatorColor</key>
+		<string>#FF8C00</string>
 		<key>backgroundColor</key>
 		<string>#FF0000</string>
 	</dict>
