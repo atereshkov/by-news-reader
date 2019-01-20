@@ -51,8 +51,7 @@ final class PlistParserService: PlistParserServiceProtocol {
         if let categoriesJson = json["Categories"] as? [String: Any] {
             for categoryJsonItem in categoriesJson {
                 let catName = categoryJsonItem.key
-                guard let catUrl = categoryJsonItem.value as? String else { continue }
-                let categoryItem = NewsCategory(name: catName, url: catUrl)
+                guard let categoryItem = parseCategory(catName, from: categoriesJson) else { continue }
                 categories.append(categoryItem)
             }
         }
@@ -61,9 +60,9 @@ final class PlistParserService: PlistParserServiceProtocol {
     }
     
     private func parseCategory(_ name: String, from json: [String: Any]) -> NewsCategoryProtocol? {
-        guard let catName = json.first(where: { $0.key == name })?.key else { return nil }
-        guard let catUrl = json.first(where: { $0.key == name })?.value as? String else { return nil }
-        let category: NewsCategoryProtocol = NewsCategory(name: catName, url: catUrl)
+        guard let categoryJson = json[name] as? [String: Any] else { return nil }
+        guard let catUrl = categoryJson["url"] as? String else { return nil }
+        let category: NewsCategoryProtocol = NewsCategory(name: name, url: catUrl)
         return category
     }
     

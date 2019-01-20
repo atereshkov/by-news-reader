@@ -9,34 +9,99 @@
 		<key>General</key>
 		<dict>
 			<key>Main</key>
-			<string>https://news.tut.by/rss/index.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/index.rss</string>
+			</dict>
 			<key>Latest</key>
-			<string>https://news.tut.by/rss/all.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/all.rss</string>
+			</dict>
 		</dict>
 		<key>Categories</key>
 		<dict>
 			<key>category.economics</key>
-			<string>https://news.tut.by/rss/economics.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/economics.rss</string>
+			</dict>
 			<key>category.society</key>
-			<string>https://news.tut.by/rss/society.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/society.rss</string>
+			</dict>
 			<key>category.world</key>
-			<string>https://news.tut.by/rss/world.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/world.rss</string>
+			</dict>
 			<key>category.technology</key>
-			<string>https://news.tut.by/rss/it.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/it.rss</string>
+			</dict>
 			<key>category.accidents</key>
-			<string>https://news.tut.by/rss/accidents.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/accidents.rss</string>
+			</dict>
 			<key>category.finance</key>
-			<string>https://news.tut.by/rss/finance.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/finance.rss</string>
+			</dict>
 			<key>category.realty</key>
-			<string>https://news.tut.by/rss/realty.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/realty.rss</string>
+			</dict>
 			<key>category.sport</key>
-			<string>https://news.tut.by/rss/sport.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/sport.rss</string>
+			</dict>
 			<key>category.auto</key>
-			<string>https://news.tut.by/rss/auto.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/auto.rss</string>
+			</dict>
 			<key>category.lady</key>
-			<string>https://news.tut.by/rss/lady.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/lady.rss</string>
+			</dict>
 			<key>category.culture</key>
-			<string>https://news.tut.by/rss/culture.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://news.tut.by/rss/culture.rss</string>
+			</dict>
 		</dict>
 		<key>Regions</key>
 		<dict/>
