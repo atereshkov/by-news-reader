@@ -30,11 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppSkin.setup()
         AppSkin.applyAppearance()
         
-        let service: ProvidersServiceProtocol = ProvidersService()
-        let items = service.getProviderItems()
-        
         let session = Session()
         self.session = session
+        
+        let providerService: ProvidersServiceProtocol = session.resolve()
+        let items = providerService.getProviderItems()
         
         router = AppRouter(window: window, session: session)
         router?.start()

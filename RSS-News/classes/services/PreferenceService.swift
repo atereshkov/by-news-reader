@@ -44,9 +44,9 @@ class PreferenceService: NSObject {
         }
     }
     
-    var provider: Int {
+    var provider: String {
         get {
-            return UserDefaults.standard.integer(forKey: PreferenceKeys.provider.rawValue)
+            return UserDefaults.standard.string(forKey: PreferenceKeys.provider.rawValue) ?? ""
         }
         set {
             UserDefaults.standard.set(newValue, forKey: PreferenceKeys.provider.rawValue)

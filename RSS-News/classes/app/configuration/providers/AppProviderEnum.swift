@@ -8,7 +8,9 @@
 
 import Foundation
 
-enum AppProviderEnum: Int {
-    case tutBy
-    case onlinerBy
+enum AppProviderEnum: String {
+    // rawValue should be uniq and the same as in Providers.plist
+    
+    case tutBy = "TUT.by"
+    case onlinerBy = "Onliner.by"
 }

@@ -8,6 +8,13 @@ import Foundation
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 internal enum L10n {
 
+  internal enum Category {
+    /// Авто
+    internal static let auto = L10n.tr("Localizable", "category.auto")
+    /// Спорт
+    internal static let sport = L10n.tr("Localizable", "category.sport")
+  }
+
   internal enum Main {
 
     internal enum TabBar {

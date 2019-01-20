@@ -15,9 +15,9 @@
 		</dict>
 		<key>Categories</key>
 		<dict>
-			<key>Sport</key>
+			<key>category.sport</key>
 			<string>https://news.tut.by/rss/sport.rss</string>
-			<key>Auto</key>
+			<key>category.auto</key>
 			<string>https://news.tut.by/rss/auto.rss</string>
 		</dict>
 		<key>Regions</key>

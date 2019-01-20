@@ -30,3 +30,8 @@
 // MARK: Providers
 
 "provider.tut-by.name" = "TUT.by";
+
+// MARK: Categories
+
+"category.auto" = "Авто";
+"category.sport" = "Спорт";

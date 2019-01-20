@@ -25,6 +25,17 @@ final class Session: SessionType {
         container.register(ParseServiceProtocol.self) { _ -> ParseServiceProtocol in
             return ParseService()
         }.inObjectScope(.container)
+        
+        container.register(PlistParserServiceProtocol.self) { _ -> PlistParserServiceProtocol in
+            return PlistParserService()
+        }.inObjectScope(.container)
+        
+        container.register(ProvidersServiceProtocol.self) { resolver -> ProvidersServiceProtocol in
+            guard let plistParserService = resolver.resolve(PlistParserServiceProtocol.self) else {
+                fatalError("PlistParserServiceProtocol is not registered")
+            }
+            return ProvidersService(plistParserService)
+        }.inObjectScope(.container)
     }
     
     func resolve<T>() -> T {
