@@ -18,7 +18,7 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     
     // MARK: Properties
     
-    var items: MutableProperty<[CategoryNewsItemProtocol]> = MutableProperty([])
+    var items: MutableProperty<[NewsItemProtocol]> = MutableProperty([])
     
     var itemsCount: Property<Int> {
         return items.map { $0.count }
@@ -60,7 +60,7 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     
     // MARK: DataSource
     
-    func item(for index: Int) -> CategoryNewsItemProtocol? {
+    func item(for index: Int) -> NewsItemProtocol? {
         guard index >= 0 && index < items.value.count else { return nil }
         return items.value[index]
     }
@@ -93,7 +93,7 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     
     private func handleRSSFeedResponse(_ feed: RSSFeed) {
         let converter = RSSReponseConverter(feed: feed)
-        let convertedItems = converter.getCategoryNews()
+        let convertedItems = converter.getNewsItems()
         items.value = convertedItems
         updateState?(.reloadItems)
     }

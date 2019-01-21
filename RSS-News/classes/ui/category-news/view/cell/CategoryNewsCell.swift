@@ -24,7 +24,7 @@ class CategoryNewsCell: UITableViewCell {
         iconImageView.image = nil
     }
     
-    func update(with item: CategoryNewsItemProtocol) {
+    func update(with item: NewsItemProtocol) {
         titleLabel.text = item.title
         if let date = item.pubDate {
             let timeAgo = DateUtils.timeAgo(from: date, fullTimeFormat: Constants.fullTimeFormat)

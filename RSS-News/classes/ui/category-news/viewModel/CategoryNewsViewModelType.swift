@@ -22,7 +22,7 @@ protocol CategoryNewsViewModelType: ViewModelType {
     
     // MARK: Properies
     
-    var items: MutableProperty<[CategoryNewsItemProtocol]> { get }
+    var items: MutableProperty<[NewsItemProtocol]> { get }
     var itemsCount: Property<Int> { get }
     
     // MARK: DataSources
@@ -30,6 +30,6 @@ protocol CategoryNewsViewModelType: ViewModelType {
     var screenTitle: Property<String> { get }
     
     func detailView(for index: Int) -> ViewType?
-    func item(for index: Int) -> CategoryNewsItemProtocol?
+    func item(for index: Int) -> NewsItemProtocol?
     
 }

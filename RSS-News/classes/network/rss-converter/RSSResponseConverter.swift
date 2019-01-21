@@ -19,9 +19,9 @@ class RSSReponseConverter: ResponseConverter {
     
     // MARK: API
     
-    func getCategoryNews() -> [CategoryNewsItemProtocol] {
+    func getNewsItems() -> [NewsItemProtocol] {
         guard let feed = feed, let feedItems = feed.items else { return [] }
-        var items: [CategoryNewsItemProtocol] = []
+        var items: [NewsItemProtocol] = []
         
         for item in feedItems {
             let title = item.title
@@ -32,7 +32,7 @@ class RSSReponseConverter: ResponseConverter {
             let date = item.pubDate
             let link = item.guid?.value
             
-            let newsItem = CategoryNewsItem(title: title ?? "", iconURL: iconURL, pubDate: date, link: link)
+            let newsItem = NewsItem(title: title ?? "", iconURL: iconURL, pubDate: date, link: link)
             items.append(newsItem)
         }
         
