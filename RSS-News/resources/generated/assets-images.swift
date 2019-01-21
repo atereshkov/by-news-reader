@@ -45,9 +45,29 @@ internal struct ColorAsset {
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal enum Colors {
+    internal enum Themes {
+      internal enum Dark {
+        internal enum Global {
+          internal static let listActivityIndicator = ColorAsset(name: "ListActivityIndicator")
+        }
+      }
+      internal enum Paper {
+        internal enum Global {
+          internal static let listActivityIndicator = ColorAsset(name: "ListActivityIndicator")
+        }
+      }
+      internal enum White {
+        internal enum Global {
+          internal static let listActivityIndicator = ColorAsset(name: "ListActivityIndicator")
+        }
+      }
+    }
 
     // swiftlint:disable trailing_comma
     internal static let allColors: [ColorAsset] = [
+      Themes.Dark.Global.listActivityIndicator,
+      Themes.Paper.Global.listActivityIndicator,
+      Themes.White.Global.listActivityIndicator,
     ]
     internal static let allImages: [ImageAsset] = [
     ]

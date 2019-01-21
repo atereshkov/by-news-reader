@@ -60,7 +60,7 @@ final class SettingsThemeViewModel: BaseViewModel<SettingsThemeRouter>, Settings
     
     func isSelected(_ index: Int) -> Bool {
         guard let item = item(for: index) else { return false }
-        return AppSkin.currentThemeName == item.title
+        return AppSkin.currentTheme.localized == item.title
     }
     
 }

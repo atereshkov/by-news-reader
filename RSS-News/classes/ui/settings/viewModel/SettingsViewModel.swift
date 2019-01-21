@@ -35,7 +35,7 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
     override func onViewDidLoad() {
         super.onViewDidLoad()
         
-        let theme = AppSkin.currentThemeName
+        let theme = AppSkin.currentTheme.localized
         let city = "Grodno"
         let source = "Test value"
         let fontSize = "Test value"

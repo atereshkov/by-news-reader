@@ -25,6 +25,30 @@ final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailView
         super.onViewDidLoad()
     }
     
+    // MARK: Properties
+    
+    var itemURL: URLRequest? {
+        guard let link = item.value?.link else { return nil }
+        guard let url = URL(string: link) else { return nil }
+        return URLRequest(url: url)
+    }
+    
+    var viewTitle: String? {
+        return item.value?.title
+    }
+    
+    var isLoading: MutableProperty<Bool> = MutableProperty(false)
+    
+    // MARK: Actions
+    
+    func webViewDidFailLoad(error: Error) {
+        
+    }
+    
+    func webViewLoadingDidChange(_ isLoading: Bool) {
+        self.isLoading.value = isLoading
+    }
+    
 }
 
 private extension NewsDetailViewModel {

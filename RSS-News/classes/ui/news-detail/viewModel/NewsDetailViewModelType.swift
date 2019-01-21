@@ -12,4 +12,16 @@ import ReactiveCocoa
 
 protocol NewsDetailViewModelType: ViewModelType {
     
+    // MARK: Actions
+    
+    func webViewLoadingDidChange(_ isLoading: Bool)
+    func webViewDidFailLoad(error: Error)
+    
+    // MARK: Datasource
+    
+    var itemURL: URLRequest? { get }
+    var viewTitle: String? { get }
+    
+    var isLoading: MutableProperty<Bool> { get }
+    
 }

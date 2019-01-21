@@ -56,10 +56,10 @@ struct AppSkin {
         ThemeManager.setTheme(plistName: theme.plistName(), path: .mainBundle)
     }
     
-    static var currentThemeName: String {
+    static var currentTheme: AppTheme {
         let userTheme = PreferenceService.shared.theme
-        let theme = AppTheme.init(rawValue: userTheme).map { $0.rawValue } ?? Constants.defaultTheme.rawValue
-        return theme.localized
+        let theme = AppTheme.init(rawValue: userTheme) ?? Constants.defaultTheme
+        return theme
     }
     
 }
