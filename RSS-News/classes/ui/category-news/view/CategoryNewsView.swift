@@ -72,10 +72,13 @@ final class CategoryNewsView: BaseView<CategoryNewsViewModel>, UITableViewDelega
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
         guard let detailView = viewModel?.detailView(for: indexPath.row) else { return nil }
+        if let cell = tableView.cellForRow(at: indexPath) {
+            previewingContext.sourceRect = cell.frame
+        }
         return detailView
     }
     
-    public func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         viewModel?.previewPopAction(view: viewControllerToCommit)
     }
     
@@ -86,7 +89,9 @@ private extension CategoryNewsView {
     func setupView() {
         navigationItem.backBarButtonTitle = ""
         
-        registerForPreviewing(with: self, sourceView: tableView)
+        if (traitCollection.forceTouchCapability == .available) {
+            registerForPreviewing(with: self, sourceView: tableView)
+        }
     }
     
 }

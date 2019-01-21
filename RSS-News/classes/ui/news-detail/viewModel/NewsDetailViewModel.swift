@@ -41,6 +41,14 @@ final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailView
     
     // MARK: Actions
     
+    func addToBookmarksAction() {
+        
+    }
+    
+    func removeFromBookmarksAction() {
+        
+    }
+    
     func webViewDidFailLoad(error: Error) {
         
     }

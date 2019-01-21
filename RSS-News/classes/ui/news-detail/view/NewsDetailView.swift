@@ -52,6 +52,20 @@ final class NewsDetailView: BaseView<NewsDetailViewModel>, WKNavigationDelegate,
         return nil
     }
     
+    override var previewActionItems: [UIPreviewActionItem] {
+        let addToBookmarksTitle = L10n.News.Preview.Action.addToBookmarks
+        let addToBookmarksAction = UIPreviewAction(title: addToBookmarksTitle, style: .default) { [weak self] (_, _) in
+            self?.viewModel?.addToBookmarksAction()
+        }
+        
+        let removeFromBookmarksTitle = L10n.News.Preview.Action.removeFromBookmarks
+        let removeFromBookmarksAction = UIPreviewAction(title: removeFromBookmarksTitle, style: .destructive) { [weak self] (_, _) in
+            self?.viewModel?.removeFromBookmarksAction()
+        }
+        
+        return [addToBookmarksAction, removeFromBookmarksAction]
+    }
+    
 }
 
 private extension NewsDetailView {

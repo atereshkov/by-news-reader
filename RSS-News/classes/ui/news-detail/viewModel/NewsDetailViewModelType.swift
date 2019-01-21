@@ -14,6 +14,9 @@ protocol NewsDetailViewModelType: ViewModelType {
     
     // MARK: Actions
     
+    func addToBookmarksAction()
+    func removeFromBookmarksAction()
+    
     func webViewLoadingDidChange(_ isLoading: Bool)
     func webViewDidFailLoad(error: Error)
     

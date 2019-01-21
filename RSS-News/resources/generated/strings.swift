@@ -90,6 +90,19 @@ internal enum L10n {
     }
   }
 
+  internal enum News {
+
+    internal enum Preview {
+
+      internal enum Action {
+        /// Add to bookmarks
+        internal static let addToBookmarks = L10n.tr("Localizable", "news.preview.action.add-to-bookmarks")
+        /// Remove from bookmarks
+        internal static let removeFromBookmarks = L10n.tr("Localizable", "news.preview.action.remove-from-bookmarks")
+      }
+    }
+  }
+
   internal enum Provider {
 
     internal enum TutBy {

@@ -55,3 +55,8 @@
 "time.hrs-ago" = "%d hrs ago";
 "time.day-ago" = "%d day ago";
 "time.days-ago" = "%d days ago";
+
+// MARK: News Details
+
+"news.preview.action.add-to-bookmarks" = "Add to Bookmarks";
+"news.preview.action.remove-from-bookmarks" = "Remove from Bookmarks";

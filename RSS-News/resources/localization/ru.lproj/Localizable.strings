@@ -55,3 +55,6 @@
 "time.hrs-ago" = "%d часов назад";
 "time.day-ago" = "%d день назад";
 "time.days-ago" = "%d дней назад";
+
+"news.preview.action.add-to-bookmarks" = "Добавить в закладки";
+"news.preview.action.remove-from-bookmarks" = "Удалить из закладок";
