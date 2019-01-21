@@ -9,13 +9,13 @@
 import UIKit
 
 protocol PopTouchNewsDetailRouterProtocol: class {
-    static func initializeView(session: SessionType) -> ViewType
+    static func initializeView(session: SessionType, item: NewsItemProtocol) -> ViewType
 }
 
 class PopTouchNewsDetailRouter: PopTouchNewsDetailRouterProtocol {
     
-    class func initializeView(session: SessionType) -> UIViewController {
-        let viewModel = NewsDetailViewModel(session: session, delegate: nil)
+    class func initializeView(session: SessionType, item: NewsItemProtocol) -> UIViewController {
+        let viewModel = NewsDetailViewModel(session: session, delegate: nil, item: item)
         let view = StoryboardScene.NewsDetail.initialScene.instantiate()
         view.viewModel = viewModel
         let router = NewsDetailRouter(session: session, view: view)

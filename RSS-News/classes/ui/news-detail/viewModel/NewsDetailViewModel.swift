@@ -12,7 +12,10 @@ import ReactiveCocoa
 
 final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailViewModelType {
     
-    override init(session: SessionType, delegate: BaseViewDelegate?) {
+    private let item: MutableProperty<NewsItemProtocol?> = MutableProperty(nil)
+    
+    init(session: SessionType, delegate: BaseViewDelegate?, item: NewsItemProtocol) {
+        self.item.value = item
         super.init(session: session, delegate: delegate)
         
         setup()

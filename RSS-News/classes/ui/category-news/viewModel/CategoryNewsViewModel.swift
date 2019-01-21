@@ -51,7 +51,7 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     
     func itemSelected(at index: Int) {
         guard let item = item(for: index) else { return }
-        router?.goToNewsDetail()
+        router?.goToNewsDetail(item: item)
     }
     
     func previewPopAction(view: ViewType) {
@@ -66,7 +66,8 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     }
     
     func detailView(for index: Int) -> ViewType? {
-        let view = PopTouchNewsDetailRouter.initializeView(session: session)
+        guard let item = item(for: index) else { return nil }
+        let view = PopTouchNewsDetailRouter.initializeView(session: session, item: item)
         return view
     }
     
