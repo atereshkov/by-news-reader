@@ -10,7 +10,7 @@ import UIKit
 import ReactiveSwift
 import ReactiveCocoa
 
-final class CategoryNewsView: BaseView<CategoryNewsViewModel>, UITableViewDelegate, UITableViewDataSource {
+final class CategoryNewsView: BaseView<CategoryNewsViewModel>, UITableViewDelegate, UITableViewDataSource, UIViewControllerPreviewingDelegate {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
@@ -67,12 +67,26 @@ final class CategoryNewsView: BaseView<CategoryNewsViewModel>, UITableViewDelega
         return rowHeight
     }
     
+    // MARK: UIViewControllerPreviewingDelegate
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        guard let indexPath = tableView.indexPathForRow(at: location) else { return nil }
+        guard let detailView = viewModel?.detailView(for: indexPath.row) else { return nil }
+        return detailView
+    }
+    
+    public func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        viewModel?.previewPopAction(view: viewControllerToCommit)
+    }
+    
 }
 
 private extension CategoryNewsView {
     
     func setupView() {
         navigationItem.backBarButtonTitle = ""
+        
+        registerForPreviewing(with: self, sourceView: tableView)
     }
     
 }

@@ -50,8 +50,12 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     // MARK: Actions
     
     func itemSelected(at index: Int) {
-        guard let item = item(for: index), let url = item.link else { return }
-        router?.openLink(url)
+        guard let item = item(for: index) else { return }
+        router?.goToNewsDetail()
+    }
+    
+    func previewPopAction(view: ViewType) {
+        router?.goTo(view)
     }
     
     // MARK: DataSource
@@ -59,6 +63,11 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     func item(for index: Int) -> CategoryNewsItemProtocol? {
         guard index >= 0 && index < items.value.count else { return nil }
         return items.value[index]
+    }
+    
+    func detailView(for index: Int) -> ViewType? {
+        let view = PopTouchNewsDetailRouter.initializeView(session: session)
+        return view
     }
     
     // MARK: Network

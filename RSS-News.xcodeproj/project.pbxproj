@@ -115,6 +115,13 @@
 		A3860A9B21F4F16F0030869A /* RSSResponseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9A21F4F16F0030869A /* RSSResponseConverter.swift */; };
 		A3860A9E21F4FD640030869A /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9D21F4FD640030869A /* DateFormatters.swift */; };
 		A3860AA021F500050030869A /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A9F21F500050030869A /* DateUtils.swift */; };
+		A3860AA721F6399A0030869A /* NewsDetailRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860AA621F6399A0030869A /* NewsDetailRoutable.swift */; };
+		A3860AA921F639BD0030869A /* NewsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860AA821F639BD0030869A /* NewsDetailRouter.swift */; };
+		A3860AAB21F639D30030869A /* NewsDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3860AAA21F639D30030869A /* NewsDetail.storyboard */; };
+		A3860AAD21F639DC0030869A /* NewsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860AAC21F639DC0030869A /* NewsDetailView.swift */; };
+		A3860AAF21F639F00030869A /* NewsDetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860AAE21F639F00030869A /* NewsDetailViewModelType.swift */; };
+		A3860AB121F63A050030869A /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860AB021F63A050030869A /* NewsDetailViewModel.swift */; };
+		A3860AB321F63D1E0030869A /* PopTouchNewsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860AB221F63D1E0030869A /* PopTouchNewsDetailRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -230,6 +237,13 @@
 		A3860A9A21F4F16F0030869A /* RSSResponseConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSResponseConverter.swift; sourceTree = "<group>"; };
 		A3860A9D21F4FD640030869A /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		A3860A9F21F500050030869A /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		A3860AA621F6399A0030869A /* NewsDetailRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailRoutable.swift; sourceTree = "<group>"; };
+		A3860AA821F639BD0030869A /* NewsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailRouter.swift; sourceTree = "<group>"; };
+		A3860AAA21F639D30030869A /* NewsDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsDetail.storyboard; sourceTree = "<group>"; };
+		A3860AAC21F639DC0030869A /* NewsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailView.swift; sourceTree = "<group>"; };
+		A3860AAE21F639F00030869A /* NewsDetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModelType.swift; sourceTree = "<group>"; };
+		A3860AB021F63A050030869A /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
+		A3860AB221F63D1E0030869A /* PopTouchNewsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTouchNewsDetailRouter.swift; sourceTree = "<group>"; };
 		E9A03B472CB8EE9B0D64AFA5 /* Pods-RSS-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS-News.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSS-News/Pods-RSS-News.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -652,6 +666,7 @@
 				A36DC44521F27AB500B0BE72 /* launchscreen */,
 				A36DC44421F27AAD00B0BE72 /* main */,
 				A34B646421F34C1B00DACC2F /* news */,
+				A3860AA121F639460030869A /* news-detail */,
 				A34B645421F34ADB00DACC2F /* categories */,
 				A3860A7F21F4E5B70030869A /* category-news */,
 				A34B645521F34AE900DACC2F /* bookmarks */,
@@ -914,6 +929,52 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		A3860AA121F639460030869A /* news-detail */ = {
+			isa = PBXGroup;
+			children = (
+				A3860AA521F639550030869A /* router */,
+				A3860AA421F639540030869A /* view */,
+				A3860AA321F639530030869A /* viewData */,
+				A3860AA221F639510030869A /* viewModel */,
+			);
+			path = "news-detail";
+			sourceTree = "<group>";
+		};
+		A3860AA221F639510030869A /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A3860AB021F63A050030869A /* NewsDetailViewModel.swift */,
+				A3860AAE21F639F00030869A /* NewsDetailViewModelType.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		A3860AA321F639530030869A /* viewData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewData;
+			sourceTree = "<group>";
+		};
+		A3860AA421F639540030869A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A3860AAC21F639DC0030869A /* NewsDetailView.swift */,
+				A3860AAA21F639D30030869A /* NewsDetail.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A3860AA521F639550030869A /* router */ = {
+			isa = PBXGroup;
+			children = (
+				A3860AA621F6399A0030869A /* NewsDetailRoutable.swift */,
+				A3860AA821F639BD0030869A /* NewsDetailRouter.swift */,
+				A3860AB221F63D1E0030869A /* PopTouchNewsDetailRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
 		C4C2E5947F892FC777152D79 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -986,6 +1047,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3860AAB21F639D30030869A /* NewsDetail.storyboard in Resources */,
 				A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */,
 				A34B644421F32DDD00DACC2F /* White.plist in Resources */,
 				A34B648921F3732B00DACC2F /* Settings.storyboard in Resources */,
@@ -1158,11 +1220,13 @@
 				A34B645321F347FE00DACC2F /* Fonts.swift in Sources */,
 				A36DC44B21F27B1A00B0BE72 /* BaseRouter.swift in Sources */,
 				A3860A9921F4F1660030869A /* ResponseConverter.swift in Sources */,
+				A3860AB321F63D1E0030869A /* PopTouchNewsDetailRouter.swift in Sources */,
 				A34B646D21F3647A00DACC2F /* NewsTabRouter.swift in Sources */,
 				A36DC45821F27B9200B0BE72 /* MainRouter.swift in Sources */,
 				A34B64CB21F3938C00DACC2F /* SettingsCityViewModelType.swift in Sources */,
 				A3860A8721F4E6810030869A /* CategoryNewsRouter.swift in Sources */,
 				A34B64C721F3934000DACC2F /* SettingsCityRoutable.swift in Sources */,
+				A3860AB121F63A050030869A /* NewsDetailViewModel.swift in Sources */,
 				A34B64A721F383E200DACC2F /* MenuItem.swift in Sources */,
 				A36DC45C21F27BAF00B0BE72 /* MainViewModel.swift in Sources */,
 				A34B645021F3459800DACC2F /* TabBarButton.swift in Sources */,
@@ -1188,6 +1252,8 @@
 				A3860A9621F4E7AE0030869A /* CategoryNewsItem.swift in Sources */,
 				A34B648721F372E500DACC2F /* SettingsTabRouter.swift in Sources */,
 				A34B64C121F391B500DACC2F /* SettingsThemeRouter.swift in Sources */,
+				A3860AA721F6399A0030869A /* NewsDetailRoutable.swift in Sources */,
+				A3860AA921F639BD0030869A /* NewsDetailRouter.swift in Sources */,
 				A3860A9221F4E7210030869A /* CategoryNewsCell.swift in Sources */,
 				A36DC44D21F27B2500B0BE72 /* BaseView.swift in Sources */,
 				A3860A7A21F4C37A0030869A /* CategoryCell.swift in Sources */,
@@ -1203,9 +1269,11 @@
 				A3860A8D21F4E6F10030869A /* CategoryNewsViewModelType.swift in Sources */,
 				A34B647521F3655600DACC2F /* BookmarksView.swift in Sources */,
 				A34B64C921F3936300DACC2F /* SettingsCityRouter.swift in Sources */,
+				A3860AAD21F639DC0030869A /* NewsDetailView.swift in Sources */,
 				A36DC46321F27C0100B0BE72 /* UIWindow.swift in Sources */,
 				A34B64E121F3BA0D00DACC2F /* NewsViewModelType.swift in Sources */,
 				A3860A7121F48A710030869A /* AppProvider.swift in Sources */,
+				A3860AAF21F639F00030869A /* NewsDetailViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

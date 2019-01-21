@@ -14,6 +14,7 @@ protocol CategoryNewsViewModelType: ViewModelType {
     // MARK: Actions
     
     func itemSelected(at index: Int)
+    func previewPopAction(view: ViewType)
     
     // MARK: Callbacks
     
@@ -28,6 +29,7 @@ protocol CategoryNewsViewModelType: ViewModelType {
     
     var screenTitle: Property<String> { get }
     
+    func detailView(for index: Int) -> ViewType?
     func item(for index: Int) -> CategoryNewsItemProtocol?
     
 }
