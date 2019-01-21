@@ -16,6 +16,11 @@ final class NewsView: BaseView<NewsViewModel> {
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.topItem?.title = L10n.Feed.title
+    }
+    
     override func bindViewModel() {
         super.bindViewModel()
     }

@@ -58,3 +58,19 @@
 
 "news.preview.action.add-to-bookmarks" = "Добавить в закладки";
 "news.preview.action.remove-from-bookmarks" = "Удалить из закладок";
+
+// MARK: Settings Screen
+
+"settings.title" = "Настройки";
+
+// MARK: Bookmarks Screen
+
+"bookmarks.title" = "Закладки";
+
+// MARK: Categories Screen
+
+"categories.title" = "Категории";
+
+// MARK: Feed Screen
+
+"feed.title" = "Лента";

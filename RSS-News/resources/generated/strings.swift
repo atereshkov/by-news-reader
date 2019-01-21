@@ -8,6 +8,16 @@ import Foundation
 // swiftlint:disable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 internal enum L10n {
 
+  internal enum Bookmarks {
+    /// Bookmarks
+    internal static let title = L10n.tr("Localizable", "bookmarks.title")
+  }
+
+  internal enum Categories {
+    /// Categories
+    internal static let title = L10n.tr("Localizable", "categories.title")
+  }
+
   internal enum Category {
     /// Accidents
     internal static let accidents = L10n.tr("Localizable", "category.accidents")
@@ -31,6 +41,11 @@ internal enum L10n {
     internal static let technology = L10n.tr("Localizable", "category.technology")
     /// World
     internal static let world = L10n.tr("Localizable", "category.world")
+  }
+
+  internal enum Feed {
+    /// Feed
+    internal static let title = L10n.tr("Localizable", "feed.title")
   }
 
   internal enum Main {
@@ -95,9 +110,9 @@ internal enum L10n {
     internal enum Preview {
 
       internal enum Action {
-        /// Add to bookmarks
+        /// Add to Bookmarks
         internal static let addToBookmarks = L10n.tr("Localizable", "news.preview.action.add-to-bookmarks")
-        /// Remove from bookmarks
+        /// Remove from Bookmarks
         internal static let removeFromBookmarks = L10n.tr("Localizable", "news.preview.action.remove-from-bookmarks")
       }
     }
@@ -109,6 +124,11 @@ internal enum L10n {
       /// TUT.by
       internal static let name = L10n.tr("Localizable", "provider.tut-by.name")
     }
+  }
+
+  internal enum Settings {
+    /// Settings
+    internal static let title = L10n.tr("Localizable", "settings.title")
   }
 
   internal enum Theme {

@@ -16,6 +16,11 @@ final class BookmarksView: BaseView<BookmarksViewModel> {
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.topItem?.title = L10n.Bookmarks.title
+    }
+    
     override func bindViewModel() {
         super.bindViewModel()
     }

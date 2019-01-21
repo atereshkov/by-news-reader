@@ -17,6 +17,11 @@ final class CategoriesView: BaseView<CategoriesViewModel>, UITableViewDelegate, 
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.topItem?.title = L10n.Categories.title
+    }
+    
     override func bindViewModel() {
         super.bindViewModel()
         

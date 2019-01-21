@@ -60,3 +60,19 @@
 
 "news.preview.action.add-to-bookmarks" = "Add to Bookmarks";
 "news.preview.action.remove-from-bookmarks" = "Remove from Bookmarks";
+
+// MARK: Settings Screen
+
+"settings.title" = "Settings";
+
+// MARK: Bookmarks Screen
+
+"bookmarks.title" = "Bookmarks";
+
+// MARK: Categories Screen
+
+"categories.title" = "Categories";
+
+// MARK: Feed Screen
+
+"feed.title" = "Feed";

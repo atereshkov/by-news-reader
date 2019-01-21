@@ -18,6 +18,11 @@ final class SettingsView: BaseView<SettingsViewModel>, UITableViewDelegate, UITa
         setupView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.navigationBar.topItem?.title = L10n.Settings.title
+    }
+    
     override func bindViewModel() {
         super.bindViewModel()
         
