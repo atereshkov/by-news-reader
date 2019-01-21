@@ -18,7 +18,7 @@
 		<key>CellChevronIconColor</key>
 		<string>#000000</string>
 		<key>CellSeparatorColor</key>
-		<string>#D3D3D3</string>
+		<string>#e6e6e6</string>
 	</dict>
 	<key>Settings</key>
 	<dict>
@@ -31,7 +31,7 @@
 	<key>TabBar</key>
 	<dict>
 		<key>TopBorderLineColor</key>
-		<string>#D3D3D3</string>
+		<string>#e6e6e6</string>
 		<key>ItemColorSelected</key>
 		<string>#FF8C00</string>
 		<key>ItemColorDefault</key>
@@ -47,7 +47,7 @@
 	<key>CategoryNews</key>
 	<dict>
 		<key>CellSeparatorColor</key>
-		<string>#D3D3D3</string>
+		<string>#e6e6e6</string>
 	</dict>
 	<key>Images</key>
 	<dict>
