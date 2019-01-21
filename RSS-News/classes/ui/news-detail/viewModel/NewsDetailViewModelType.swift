@@ -27,4 +27,6 @@ protocol NewsDetailViewModelType: ViewModelType {
     
     var isLoading: MutableProperty<Bool> { get }
     
+    var previewActionItems: [UIPreviewActionItem] { get }
+    
 }
