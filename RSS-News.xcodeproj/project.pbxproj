@@ -96,6 +96,11 @@
 		A36DC46321F27C0100B0BE72 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC46221F27C0100B0BE72 /* UIWindow.swift */; };
 		A37EF3FA21F66E5800691912 /* NewsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF3F921F66E5800691912 /* NewsViewState.swift */; };
 		A37EF3FD21F6706600691912 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF3FC21F6706600691912 /* NewsCell.swift */; };
+		A37EF40121F674F200691912 /* DGElasticPullToRefreshConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF40021F674F200691912 /* DGElasticPullToRefreshConstants.swift */; };
+		A37EF40321F6750400691912 /* DGElasticPullToRefreshExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF40221F6750400691912 /* DGElasticPullToRefreshExtensions.swift */; };
+		A37EF40521F6754F00691912 /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF40421F6754F00691912 /* DGElasticPullToRefreshLoadingView.swift */; };
+		A37EF40721F6756000691912 /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF40621F6756000691912 /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
+		A37EF40921F6757200691912 /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF40821F6757200691912 /* DGElasticPullToRefreshView.swift */; };
 		A3860A6821F46BE70030869A /* NewsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A6721F46BE70030869A /* NewsCategory.swift */; };
 		A3860A6E21F48A500030869A /* Providers.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3860A6D21F48A500030869A /* Providers.plist */; };
 		A3860A7121F48A710030869A /* AppProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7021F48A710030869A /* AppProvider.swift */; };
@@ -220,6 +225,11 @@
 		A36DC46221F27C0100B0BE72 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		A37EF3F921F66E5800691912 /* NewsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewState.swift; sourceTree = "<group>"; };
 		A37EF3FC21F6706600691912 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		A37EF40021F674F200691912 /* DGElasticPullToRefreshConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshConstants.swift; sourceTree = "<group>"; };
+		A37EF40221F6750400691912 /* DGElasticPullToRefreshExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshExtensions.swift; sourceTree = "<group>"; };
+		A37EF40421F6754F00691912 /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
+		A37EF40621F6756000691912 /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
+		A37EF40821F6757200691912 /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
 		A3860A6721F46BE70030869A /* NewsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCategory.swift; sourceTree = "<group>"; };
 		A3860A6D21F48A500030869A /* Providers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Providers.plist; sourceTree = "<group>"; };
 		A3860A7021F48A710030869A /* AppProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProvider.swift; sourceTree = "<group>"; };
@@ -669,6 +679,7 @@
 		A36DC42D21F278D200B0BE72 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				A37EF3FE21F674C800691912 /* view */,
 				A34B645121F347F700DACC2F /* common */,
 				A36DC44521F27AB500B0BE72 /* launchscreen */,
 				A36DC44421F27AAD00B0BE72 /* main */,
@@ -831,6 +842,26 @@
 				A37EF3FC21F6706600691912 /* NewsCell.swift */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		A37EF3FE21F674C800691912 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A37EF3FF21F674D400691912 /* ElasticPullToRefresh */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A37EF3FF21F674D400691912 /* ElasticPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				A37EF40021F674F200691912 /* DGElasticPullToRefreshConstants.swift */,
+				A37EF40221F6750400691912 /* DGElasticPullToRefreshExtensions.swift */,
+				A37EF40421F6754F00691912 /* DGElasticPullToRefreshLoadingView.swift */,
+				A37EF40621F6756000691912 /* DGElasticPullToRefreshLoadingViewCircle.swift */,
+				A37EF40821F6757200691912 /* DGElasticPullToRefreshView.swift */,
+			);
+			path = ElasticPullToRefresh;
 			sourceTree = "<group>";
 		};
 		A3860A6C21F46F7D0030869A /* model */ = {
@@ -1209,6 +1240,7 @@
 			files = (
 				A34B649F21F37B9900DACC2F /* NetworkManager.swift in Sources */,
 				A34B646121F34B5A00DACC2F /* BookmarksRoutable.swift in Sources */,
+				A37EF40721F6756000691912 /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,
 				A34B649921F3744900DACC2F /* CategoriesTabRouter.swift in Sources */,
 				A34B64CF21F3967F00DACC2F /* UINavigationItem.swift in Sources */,
 				A36DC44F21F27B3100B0BE72 /* BaseViewDelegate.swift in Sources */,
@@ -1224,6 +1256,7 @@
 				A34B648321F372CA00DACC2F /* SettingsRoutable.swift in Sources */,
 				A34B64C321F391E000DACC2F /* SettingsThemeViewModelType.swift in Sources */,
 				A34B64D921F3B70E00DACC2F /* ParseService.swift in Sources */,
+				A37EF40921F6757200691912 /* DGElasticPullToRefreshView.swift in Sources */,
 				A3860A7521F4902E0030869A /* ProvidersService.swift in Sources */,
 				A34B649121F373D400DACC2F /* CategoriesView.swift in Sources */,
 				A34B644E21F3455200DACC2F /* TabBarItem.swift in Sources */,
@@ -1233,8 +1266,10 @@
 				A36DC45621F27B8200B0BE72 /* MainRoutable.swift in Sources */,
 				A34B647D21F36BF700DACC2F /* UIKit+ThemeColor.swift in Sources */,
 				A36DC44721F27B0300B0BE72 /* Session.swift in Sources */,
+				A37EF40521F6754F00691912 /* DGElasticPullToRefreshLoadingView.swift in Sources */,
 				A34B64A421F382C800DACC2F /* MenuCell.swift in Sources */,
 				A34B643921F27E2400DACC2F /* strings.swift in Sources */,
+				A37EF40121F674F200691912 /* DGElasticPullToRefreshConstants.swift in Sources */,
 				A34B648D21F3733E00DACC2F /* SettingsView.swift in Sources */,
 				A34B649521F3741A00DACC2F /* CategoriesRoutable.swift in Sources */,
 				A34B643A21F27E2400DACC2F /* assets-images.swift in Sources */,
@@ -1270,6 +1305,7 @@
 				A34B643B21F27E2400DACC2F /* storyboards.swift in Sources */,
 				A34B64BF21F391A800DACC2F /* SettingsThemeRoutable.swift in Sources */,
 				A34B647321F3652200DACC2F /* NewsView.swift in Sources */,
+				A37EF40321F6750400691912 /* DGElasticPullToRefreshExtensions.swift in Sources */,
 				A36DC44321F27A9900B0BE72 /* AppSkin.swift in Sources */,
 				A34B64E321F3BACE00DACC2F /* CategoriesViewModelType.swift in Sources */,
 				A34B64A121F37CBC00DACC2F /* PreferenceService.swift in Sources */,
