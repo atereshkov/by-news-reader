@@ -94,6 +94,8 @@
 		A36DC45E21F27BB800B0BE72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DC45D21F27BB800B0BE72 /* Main.storyboard */; };
 		A36DC46021F27BE700B0BE72 /* LoggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC45F21F27BE700B0BE72 /* LoggerService.swift */; };
 		A36DC46321F27C0100B0BE72 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC46221F27C0100B0BE72 /* UIWindow.swift */; };
+		A37EF3FA21F66E5800691912 /* NewsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF3F921F66E5800691912 /* NewsViewState.swift */; };
+		A37EF3FD21F6706600691912 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF3FC21F6706600691912 /* NewsCell.swift */; };
 		A3860A6821F46BE70030869A /* NewsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A6721F46BE70030869A /* NewsCategory.swift */; };
 		A3860A6E21F48A500030869A /* Providers.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3860A6D21F48A500030869A /* Providers.plist */; };
 		A3860A7121F48A710030869A /* AppProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7021F48A710030869A /* AppProvider.swift */; };
@@ -216,6 +218,8 @@
 		A36DC45D21F27BB800B0BE72 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A36DC45F21F27BE700B0BE72 /* LoggerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerService.swift; sourceTree = "<group>"; };
 		A36DC46221F27C0100B0BE72 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
+		A37EF3F921F66E5800691912 /* NewsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewState.swift; sourceTree = "<group>"; };
+		A37EF3FC21F6706600691912 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		A3860A6721F46BE70030869A /* NewsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCategory.swift; sourceTree = "<group>"; };
 		A3860A6D21F48A500030869A /* Providers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Providers.plist; sourceTree = "<group>"; };
 		A3860A7021F48A710030869A /* AppProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProvider.swift; sourceTree = "<group>"; };
@@ -418,6 +422,7 @@
 			children = (
 				A34B646721F34C2A00DACC2F /* router */,
 				A34B646621F34C2600DACC2F /* view */,
+				A37EF3F821F66E3B00691912 /* viewData */,
 				A34B646521F34C2100DACC2F /* viewModel */,
 			);
 			path = news;
@@ -435,6 +440,7 @@
 		A34B646621F34C2600DACC2F /* view */ = {
 			isa = PBXGroup;
 			children = (
+				A37EF3FB21F6705F00691912 /* cell */,
 				A34B647221F3652200DACC2F /* NewsView.swift */,
 				A34B647021F3651900DACC2F /* News.storyboard */,
 			);
@@ -809,6 +815,22 @@
 				A34B64CE21F3967F00DACC2F /* UINavigationItem.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		A37EF3F821F66E3B00691912 /* viewData */ = {
+			isa = PBXGroup;
+			children = (
+				A37EF3F921F66E5800691912 /* NewsViewState.swift */,
+			);
+			path = viewData;
+			sourceTree = "<group>";
+		};
+		A37EF3FB21F6705F00691912 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				A37EF3FC21F6706600691912 /* NewsCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		A3860A6C21F46F7D0030869A /* model */ = {
@@ -1195,6 +1217,7 @@
 				A34B64D721F3A72200DACC2F /* ThemeCell.swift in Sources */,
 				A34B646321F34B9C00DACC2F /* BookmarksRouter.swift in Sources */,
 				A34B64D421F3A62500DACC2F /* ThemeItem.swift in Sources */,
+				A37EF3FD21F6706600691912 /* NewsCell.swift in Sources */,
 				A34B64DC21F3B74200DACC2F /* ServiceError.swift in Sources */,
 				A34B64A921F3862700DACC2F /* SettingsViewModelType.swift in Sources */,
 				A36DC45A21F27BA100B0BE72 /* MainView.swift in Sources */,
@@ -1274,6 +1297,7 @@
 				A34B648121F3725C00DACC2F /* String.swift in Sources */,
 				A3860A7821F49B460030869A /* PlistParserService.swift in Sources */,
 				A34B64CD21F393A200DACC2F /* SettingsCityViewModel.swift in Sources */,
+				A37EF3FA21F66E5800691912 /* NewsViewState.swift in Sources */,
 				A3860A8D21F4E6F10030869A /* CategoryNewsViewModelType.swift in Sources */,
 				A34B647521F3655600DACC2F /* BookmarksView.swift in Sources */,
 				A34B64C921F3936300DACC2F /* SettingsCityRouter.swift in Sources */,

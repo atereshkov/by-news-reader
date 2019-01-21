@@ -82,16 +82,18 @@ final class CategoryNewsView: BaseView<CategoryNewsViewModel>, UITableViewDelega
         viewModel?.previewPopAction(view: viewControllerToCommit)
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        if (traitCollection.forceTouchCapability == .available) {
+            registerForPreviewing(with: self, sourceView: tableView)
+        }
+    }
+    
 }
 
 private extension CategoryNewsView {
     
     func setupView() {
         navigationItem.backBarButtonTitle = ""
-        
-        if (traitCollection.forceTouchCapability == .available) {
-            registerForPreviewing(with: self, sourceView: tableView)
-        }
     }
     
 }

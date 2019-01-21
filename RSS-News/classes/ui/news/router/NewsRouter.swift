@@ -8,10 +8,14 @@
 
 import Foundation
 
-protocol NewsRouterType: RouterType {
-    
+protocol NewsRouterType: RouterType, NewsDetailRoutable {
+    func goTo(_ view: ViewType)
 }
 
 final class NewsRouter: BaseRouter, NewsRouterType {
+    
+    func goTo(_ view: ViewType) {
+        self.view?.navigationController?.pushViewController(view, animated: true)
+    }
     
 }
