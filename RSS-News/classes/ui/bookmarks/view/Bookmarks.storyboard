@@ -115,7 +115,7 @@
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="bookmarks.list.empty"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="Bookmarks.EmptyListTextColor"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="Bookmarks.EmptyListFontColor"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
