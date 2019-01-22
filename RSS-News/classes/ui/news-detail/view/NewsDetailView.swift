@@ -31,7 +31,7 @@ final class NewsDetailView: BaseView<NewsDetailViewModel>, WKNavigationDelegate,
         guard let viewModel = viewModel else { return }
         
         activityIndicator.reactive.isAnimating <~ viewModel.isLoading
-        webView.reactive.isHidden <~ viewModel.isLoading
+        //webView.reactive.isHidden <~ viewModel.isLoading
         
         guard let itemURL = viewModel.itemURL else { return }
         webView.load(itemURL)
