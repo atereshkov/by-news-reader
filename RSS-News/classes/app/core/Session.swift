@@ -22,6 +22,10 @@ final class Session: SessionType {
             return NetworkManager()
         }.inObjectScope(.container)
         
+        container.register(RealmServiceProtocol.self) { _ -> RealmServiceProtocol in
+            return RealmService()
+        }.inObjectScope(.container)
+        
         container.register(ParseServiceProtocol.self) { _ -> ParseServiceProtocol in
             return ParseService()
         }.inObjectScope(.container)

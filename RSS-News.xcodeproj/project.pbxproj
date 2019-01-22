@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4FA99947CF8B4639C1175259 /* Pods_RSS_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1976B87D0FEEDA6128FD16 /* Pods_RSS_News.framework */; };
+		A3128D9821F79DDB00F0BFDC /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9721F79DDB00F0BFDC /* RealmService.swift */; };
+		A3128D9C21F7A1D300F0BFDC /* RealmNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9B21F7A1D300F0BFDC /* RealmNewsItem.swift */; };
 		A34B643921F27E2400DACC2F /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B643621F27E2400DACC2F /* strings.swift */; };
 		A34B643A21F27E2400DACC2F /* assets-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B643721F27E2400DACC2F /* assets-images.swift */; };
 		A34B643B21F27E2400DACC2F /* storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B643821F27E2400DACC2F /* storyboards.swift */; };
@@ -134,6 +136,8 @@
 /* Begin PBXFileReference section */
 		0E1976B87D0FEEDA6128FD16 /* Pods_RSS_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSS_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1028F8A0B44004AC55A23D /* Pods-RSS-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS-News.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSS-News/Pods-RSS-News.release.xcconfig"; sourceTree = "<group>"; };
+		A3128D9721F79DDB00F0BFDC /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		A3128D9B21F7A1D300F0BFDC /* RealmNewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNewsItem.swift; sourceTree = "<group>"; };
 		A34B643621F27E2400DACC2F /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
 		A34B643721F27E2400DACC2F /* assets-images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "assets-images.swift"; sourceTree = "<group>"; };
 		A34B643821F27E2400DACC2F /* storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyboards.swift; sourceTree = "<group>"; };
@@ -279,6 +283,22 @@
 				0E1976B87D0FEEDA6128FD16 /* Pods_RSS_News.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3128D9921F7A1C500F0BFDC /* db */ = {
+			isa = PBXGroup;
+			children = (
+				A3128D9A21F7A1CB00F0BFDC /* models */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		A3128D9A21F7A1CB00F0BFDC /* models */ = {
+			isa = PBXGroup;
+			children = (
+				A3128D9B21F7A1D300F0BFDC /* RealmNewsItem.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		A34B643E21F32D9A00DACC2F /* themes */ = {
@@ -655,6 +675,7 @@
 			isa = PBXGroup;
 			children = (
 				A36DC42C21F278CD00B0BE72 /* app */,
+				A3128D9921F7A1C500F0BFDC /* db */,
 				A34B649B21F37B6A00DACC2F /* network */,
 				A36DC42D21F278D200B0BE72 /* ui */,
 				A36DC42E21F278EB00B0BE72 /* services */,
@@ -700,6 +721,7 @@
 			children = (
 				A36DC45F21F27BE700B0BE72 /* LoggerService.swift */,
 				A34B64A021F37CBC00DACC2F /* PreferenceService.swift */,
+				A3128D9721F79DDB00F0BFDC /* RealmService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -1148,6 +1170,8 @@
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
@@ -1164,6 +1188,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
@@ -1249,6 +1275,7 @@
 				A34B64D721F3A72200DACC2F /* ThemeCell.swift in Sources */,
 				A34B646321F34B9C00DACC2F /* BookmarksRouter.swift in Sources */,
 				A34B64D421F3A62500DACC2F /* ThemeItem.swift in Sources */,
+				A3128D9C21F7A1D300F0BFDC /* RealmNewsItem.swift in Sources */,
 				A37EF3FD21F6706600691912 /* NewsCell.swift in Sources */,
 				A34B64DC21F3B74200DACC2F /* ServiceError.swift in Sources */,
 				A34B64A921F3862700DACC2F /* SettingsViewModelType.swift in Sources */,
@@ -1317,6 +1344,7 @@
 				A36DC45421F27B7500B0BE72 /* InitialHomeRouter.swift in Sources */,
 				A34B649321F373FB00DACC2F /* CategoriesViewModel.swift in Sources */,
 				A3860A9621F4E7AE0030869A /* NewsItem.swift in Sources */,
+				A3128D9821F79DDB00F0BFDC /* RealmService.swift in Sources */,
 				A34B648721F372E500DACC2F /* SettingsTabRouter.swift in Sources */,
 				A34B64C121F391B500DACC2F /* SettingsThemeRouter.swift in Sources */,
 				A3860AA721F6399A0030869A /* NewsDetailRoutable.swift in Sources */,

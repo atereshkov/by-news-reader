@@ -43,7 +43,7 @@ open class DGElasticPullToRefreshView: UIView {
             } else if newValue == .loading && actionHandler != nil {
                 actionHandler()
             } else if newValue == .animatingToStopped {
-                resetScrollViewContentInset(shouldAddObserverWhenFinished: true, animated: true, completion: { [weak self] () -> () in self?.state = .stopped })
+                resetScrollViewContentInset(shouldAddObserverWhenFinished: true, animated: true, completion: { [weak self] () -> Void in self?.state = .stopped })
             } else if newValue == .stopped {
                 loadingView?.stopLoading()
             }
@@ -247,7 +247,7 @@ open class DGElasticPullToRefreshView: UIView {
         }
     }
     
-    fileprivate func resetScrollViewContentInset(shouldAddObserverWhenFinished: Bool, animated: Bool, completion: (() -> ())?) {
+    fileprivate func resetScrollViewContentInset(shouldAddObserverWhenFinished: Bool, animated: Bool, completion: (() -> Void)?) {
         guard let scrollView = scrollView() else { return }
         
         var contentInset = scrollView.contentInset
@@ -281,11 +281,9 @@ open class DGElasticPullToRefreshView: UIView {
         }
     }
     
-    fileprivate func animateBounce()
-    {
+    fileprivate func animateBounce() {
         guard let scrollView = scrollView() else { return }
         if (!self.observing) { return }
-        
         
         resetScrollViewContentInset(shouldAddObserverWhenFinished: false, animated: false, completion: nil)
         

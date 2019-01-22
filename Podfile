@@ -15,6 +15,7 @@ target 'RSS-News' do
   pod 'ReachabilitySwift', '~> 4.1.0'
   pod 'Swinject', '~> 2.5'
   pod 'FeedKit', '~> 8.0'
+  pod 'RealmSwift', '~> 3.0'
   
   # Support
   pod 'EXPLogger', '~> 1.0.3'

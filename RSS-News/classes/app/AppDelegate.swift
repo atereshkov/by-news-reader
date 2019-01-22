@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,12 +37,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         router = AppRouter(window: window, session: session)
         router?.start()
         
+        configureRealm()
+        
         return true
     }
     
     private func setupSharedServices() {
         // Debug logger setup
         LoggerService.shared.initialize()
+    }
+    
+    private func configureRealm() {
+        let version: UInt64 = 1
+        Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: version)
     }
 
 }
