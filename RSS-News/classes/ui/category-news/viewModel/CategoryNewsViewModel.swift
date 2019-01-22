@@ -51,7 +51,7 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     
     func itemSelected(at index: Int) {
         guard let item = item(for: index) else { return }
-        router?.goToNewsDetail(item: item)
+        router?.goToNewsDetail(item: item, delegate: self)
     }
     
     func previewPopAction(view: ViewType) {
@@ -67,7 +67,7 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     
     func detailView(for index: Int) -> ViewType? {
         guard let item = item(for: index) else { return nil }
-        let view = PopTouchNewsDetailRouter.initializeView(session: session, item: item)
+        let view = PopTouchNewsDetailRouter.initializeView(session: session, item: item, delegate: self)
         return view
     }
     
@@ -105,6 +105,18 @@ private extension CategoryNewsViewModel {
     
     func setup() {
         
+    }
+    
+}
+
+extension CategoryNewsViewModel: NewsDetailViewDelegate {
+    
+    func addedToBookmarks(_ item: NewsItemProtocol) {
+        parseItems()
+    }
+    
+    func removedFromBookmarks(_ item: NewsItemProtocol) {
+        parseItems()
     }
     
 }

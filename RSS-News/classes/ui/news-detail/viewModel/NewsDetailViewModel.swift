@@ -67,11 +67,13 @@ final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailView
     func addToBookmarksAction() {
         guard let item = item.value else { return }
         realmService.addBookmarks([item])
+        (delegate as? NewsDetailViewDelegate)?.addedToBookmarks(item)
     }
     
     func removeFromBookmarksAction() {
         guard let item = item.value else { return }
         realmService.removeBookmarks([item])
+        (delegate as? NewsDetailViewDelegate)?.removedFromBookmarks(item)
     }
     
     func webViewDidFailLoad(error: Error) {

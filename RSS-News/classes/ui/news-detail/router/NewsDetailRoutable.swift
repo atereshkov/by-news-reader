@@ -9,13 +9,13 @@
 import UIKit
 
 protocol NewsDetailRoutable {
-    func goToNewsDetail(item: NewsItemProtocol)
+    func goToNewsDetail(item: NewsItemProtocol, delegate: NewsDetailViewDelegate?)
 }
 
 extension NewsDetailRoutable where Self: RouterType {
     
-    func goToNewsDetail(item: NewsItemProtocol) {
-        let viewModel = NewsDetailViewModel(session: session, delegate: nil, item: item)
+    func goToNewsDetail(item: NewsItemProtocol, delegate: NewsDetailViewDelegate?) {
+        let viewModel = NewsDetailViewModel(session: session, delegate: delegate, item: item)
         let view = StoryboardScene.NewsDetail.initialScene.instantiate()
         view.viewModel = viewModel
         let router = NewsDetailRouter(session: session, view: view)

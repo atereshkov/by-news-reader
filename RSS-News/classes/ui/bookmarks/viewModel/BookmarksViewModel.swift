@@ -44,7 +44,7 @@ final class BookmarksViewModel: BaseViewModel<BookmarksRouter>, BookmarksViewMod
     
     func itemSelected(at index: Int) {
         guard let item = item(for: index) else { return }
-        router?.goToNewsDetail(item: item)
+        router?.goToNewsDetail(item: item, delegate: self)
     }
     
     func isBookmarked(_ index: Int) -> Bool {
@@ -65,7 +65,7 @@ final class BookmarksViewModel: BaseViewModel<BookmarksRouter>, BookmarksViewMod
     
     func detailView(for index: Int) -> ViewType? {
         guard let item = item(for: index) else { return nil }
-        let view = PopTouchNewsDetailRouter.initializeView(session: session, item: item)
+        let view = PopTouchNewsDetailRouter.initializeView(session: session, item: item, delegate: self)
         return view
     }
     
@@ -85,6 +85,18 @@ private extension BookmarksViewModel {
     
     func setup() {
         
+    }
+    
+}
+
+extension BookmarksViewModel: NewsDetailViewDelegate {
+    
+    func addedToBookmarks(_ item: NewsItemProtocol) {
+        fetchItems()
+    }
+    
+    func removedFromBookmarks(_ item: NewsItemProtocol) {
+        fetchItems()
     }
     
 }

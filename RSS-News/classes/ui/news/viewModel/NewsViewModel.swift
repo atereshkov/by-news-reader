@@ -37,14 +37,14 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
         super.init(session: session, delegate: delegate)
         
         setup()
-        parse()
+        parseItems()
     }
     
     // MARK: Actions
     
     func itemSelected(at index: Int) {
         guard let item = item(for: index) else { return }
-        router?.goToNewsDetail(item: item)
+        router?.goToNewsDetail(item: item, delegate: self)
     }
     
     func isBookmarked(_ index: Int) -> Bool {
@@ -57,7 +57,7 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     }
     
     func pullToRefreshAction() {
-        parse()
+        parseItems()
     }
     
     // MARK: DataSource
@@ -69,13 +69,13 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     
     func detailView(for index: Int) -> ViewType? {
         guard let item = item(for: index) else { return nil }
-        let view = PopTouchNewsDetailRouter.initializeView(session: session, item: item)
+        let view = PopTouchNewsDetailRouter.initializeView(session: session, item: item, delegate: self)
         return view
     }
     
     // MARK: Private
     
-    private func parse() {
+    private func parseItems() {
         parseAction.apply().take(duringLifetimeOf: self).start()
     }
     
@@ -107,6 +107,18 @@ private extension NewsViewModel {
     
     func setup() {
         
+    }
+    
+}
+
+extension NewsViewModel: NewsDetailViewDelegate {
+    
+    func addedToBookmarks(_ item: NewsItemProtocol) {
+        parseItems()
+    }
+    
+    func removedFromBookmarks(_ item: NewsItemProtocol) {
+        parseItems()
     }
     
 }
