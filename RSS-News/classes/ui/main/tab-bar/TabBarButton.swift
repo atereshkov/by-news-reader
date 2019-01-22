@@ -13,7 +13,7 @@ import SwiftTheme
 
 class TabBarButton: UIControl {
     
-    @IBInspectable var topInset: CGFloat = 7 {
+    @IBInspectable var topInset: CGFloat = 3 {
         didSet {
             invalidateIntrinsicContentSize()
             setNeedsLayout()

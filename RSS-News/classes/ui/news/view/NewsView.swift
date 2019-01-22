@@ -21,19 +21,7 @@ final class NewsView: BaseView<NewsViewModel>, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         
         setupView()
-        
-        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.tintColor = UIColor(red: 247/255.0, green: 221/255.0, blue: 130/255.0, alpha: 1.0)
-        
-        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: {
-                self?.tableView.dg_stopLoading()
-            })
-        }, loadingView: loadingView)
-        
-        let pullToRefreshFillColor = UIColor(red: 74/255.0, green: 196/255.0, blue: 192/255.0, alpha: 1.0)
-        tableView.dg_setPullToRefreshFillColor(pullToRefreshFillColor)
-        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+        setupPullToRefresh()
     }
     
     deinit {
@@ -53,7 +41,10 @@ final class NewsView: BaseView<NewsViewModel>, UITableViewDelegate, UITableViewD
         let disposable = CompositeDisposable()
         bindDisposable = ScopedDisposable(disposable)
         
-        disposable += activityIndicator.reactive.isAnimating <~ viewModel.parseAction.isExecuting
+        disposable += activityIndicator.reactive.isAnimating <~ viewModel.isLoading
+        disposable += viewModel.isLoading.producer.startWithValues({ [weak self] showProgress in
+            self?.showLoading(showProgress)
+        })
         
         viewModel.updateState = { [weak self] state in
             DispatchQueue.main.async {
@@ -115,6 +106,27 @@ private extension NewsView {
     
     func setupView() {
         navigationItem.backBarButtonTitle = ""
+    }
+    
+    func setupPullToRefresh() {
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = UIColor(red: 247/255.0, green: 221/255.0, blue: 130/255.0, alpha: 1.0)
+        
+        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            self?.viewModel?.pullToRefreshAction()
+        }, loadingView: loadingView)
+        
+        let pullToRefreshFillColor = UIColor(red: 74/255.0, green: 196/255.0, blue: 192/255.0, alpha: 1.0)
+        tableView.dg_setPullToRefreshFillColor(pullToRefreshFillColor)
+        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+    }
+    
+    func showLoading(_ loading: Bool) {
+        if loading {
+            
+        } else {
+            tableView.dg_stopLoading()
+        }
     }
     
 }

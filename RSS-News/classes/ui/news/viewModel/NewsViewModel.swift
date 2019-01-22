@@ -18,13 +18,15 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     
     // MARK: Properties
     
+    var isLoading: Property<Bool> {
+        return parseAction.isExecuting
+    }
+    
     var items: MutableProperty<[NewsItemProtocol]> = MutableProperty([])
     
     var itemsCount: Property<Int> {
         return items.map { $0.count }
     }
-    
-    private let item: MutableProperty<NewsCategoryProtocol?> = MutableProperty(nil)
     
     private let parseService: ParseServiceProtocol
     
@@ -45,6 +47,10 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     
     func previewPopAction(view: ViewType) {
         router?.goTo(view)
+    }
+    
+    func pullToRefreshAction() {
+        parse()
     }
     
     // MARK: DataSource

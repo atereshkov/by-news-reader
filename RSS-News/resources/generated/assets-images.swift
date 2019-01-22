@@ -79,6 +79,12 @@ internal enum Asset {
     internal enum Icons {
       internal static let chevronRight = ImageAsset(name: "chevron-right")
       internal static let markCheck = ImageAsset(name: "mark-check")
+      internal enum TabBar {
+        internal static let bookmarks = ImageAsset(name: "bookmarks")
+        internal static let categories = ImageAsset(name: "categories")
+        internal static let feed = ImageAsset(name: "feed")
+        internal static let settings = ImageAsset(name: "settings")
+      }
     }
     internal enum Themes {
       internal enum Paper {
@@ -91,7 +97,6 @@ internal enum Asset {
         internal static let testImgWhite = ImageAsset(name: "test_img_white")
       }
     }
-    internal static let tab = ImageAsset(name: "tab")
 
     // swiftlint:disable trailing_comma
     internal static let allColors: [ColorAsset] = [
@@ -99,10 +104,13 @@ internal enum Asset {
     internal static let allImages: [ImageAsset] = [
       Icons.chevronRight,
       Icons.markCheck,
+      Icons.TabBar.bookmarks,
+      Icons.TabBar.categories,
+      Icons.TabBar.feed,
+      Icons.TabBar.settings,
       Themes.Paper.testImgPaper,
       Themes.Red.testImgRed,
       Themes.White.testImgWhite,
-      tab,
     ]
     // swiftlint:enable trailing_comma
     @available(*, deprecated, renamed: "allImages")

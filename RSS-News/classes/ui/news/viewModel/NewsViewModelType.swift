@@ -16,6 +16,7 @@ protocol NewsViewModelType: ViewModelType {
     
     func itemSelected(at index: Int)
     func previewPopAction(view: ViewType)
+    func pullToRefreshAction()
     
     // MARK: Callbacks
     
@@ -27,6 +28,8 @@ protocol NewsViewModelType: ViewModelType {
     var itemsCount: Property<Int> { get }
     
     // MARK: DataSources
+    
+    var isLoading: Property<Bool> { get }
     
     func detailView(for index: Int) -> ViewType?
     func item(for index: Int) -> NewsItemProtocol?

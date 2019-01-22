@@ -66,22 +66,22 @@ class HomeTabBarManager: HomeTabBarProtocol {
     func getButtons() -> [UIControl] {
         var buttons: [UIControl] = []
         let btn1 = TabBarButton(frame: .zero)
-        btn1.image = Asset.Images.tab.image
+        btn1.image = Asset.Images.Icons.TabBar.feed.image
         btn1.text = L10n.Main.TabBar.Tab1.title
         btn1.sizeToFit()
         buttons.append(btn1)
         let btn2 = TabBarButton(frame: .zero)
-        btn2.image = Asset.Images.tab.image
+        btn2.image = Asset.Images.Icons.TabBar.categories.image
         btn2.text = L10n.Main.TabBar.Tab2.title
         btn2.sizeToFit()
         buttons.append(btn2)
         let btn3 = TabBarButton(frame: .zero)
-        btn3.image = Asset.Images.tab.image
+        btn3.image = Asset.Images.Icons.TabBar.bookmarks.image
         btn3.text = L10n.Main.TabBar.Tab3.title
         btn3.sizeToFit()
         buttons.append(btn3)
         let btn4 = TabBarButton(frame: .zero)
-        btn4.image = Asset.Images.tab.image
+        btn4.image = Asset.Images.Icons.TabBar.settings.image
         btn4.text = L10n.Main.TabBar.Tab4.title
         btn4.sizeToFit()
         buttons.append(btn4)
