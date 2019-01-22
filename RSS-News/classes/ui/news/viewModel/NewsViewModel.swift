@@ -29,8 +29,10 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     }
     
     private let parseService: ParseServiceProtocol
+    private let realmService: RealmServiceProtocol
     
     override init(session: SessionType, delegate: BaseViewDelegate?) {
+        self.realmService = session.resolve()
         self.parseService = session.resolve()
         super.init(session: session, delegate: delegate)
         
@@ -43,6 +45,11 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     func itemSelected(at index: Int) {
         guard let item = item(for: index) else { return }
         router?.goToNewsDetail(item: item)
+    }
+    
+    func isBookmarked(_ index: Int) -> Bool {
+        guard let item = item(for: index) else { return false }
+        return realmService.isBookmarked(item)
     }
     
     func previewPopAction(view: ViewType) {

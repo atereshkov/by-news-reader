@@ -14,7 +14,7 @@ protocol RealmServiceProtocol {
     func allBookmarks() -> Results<RealmNewsItem>
     func newsItem(with url: String) -> RealmNewsItem?
     
-    func isBookmarked(url: String) -> Bool
+    func isBookmarked(_ item: NewsItemProtocol) -> Bool
     
     func addBookmarks(_ items: [NewsItemProtocol])
     func removeBookmarks(_ items: [NewsItemProtocol])
@@ -22,7 +22,7 @@ protocol RealmServiceProtocol {
 
 class RealmService: RealmServiceProtocol {
     
-    var realm: Realm {
+    private var realm: Realm {
         // swiftlint:disable force_try
         return try! Realm()
         // swiftlint:enable force_try
@@ -32,7 +32,7 @@ class RealmService: RealmServiceProtocol {
         return realm.isInWriteTransaction
     }
     
-    func writeTransaction(_ block: @escaping ((Realm) -> Void)) {
+    private func writeTransaction(_ block: @escaping ((Realm) -> Void)) {
         let realm = self.realm
         do {
             try realm.write {
@@ -59,8 +59,8 @@ extension RealmService {
         return realm.object(ofType: RealmNewsItem.self, forPrimaryKey: url)
     }
     
-    func isBookmarked(url: String) -> Bool {
-        guard let item = newsItem(with: url) else { return false }
+    func isBookmarked(_ item: NewsItemProtocol) -> Bool {
+        guard let url = item.link, let item = newsItem(with: url) else { return false }
         return item.isBookmarked
     }
     

@@ -13,9 +13,11 @@ import ReactiveCocoa
 final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailViewModelType {
     
     private let item: MutableProperty<NewsItemProtocol?> = MutableProperty(nil)
+    private let realmService: RealmServiceProtocol
     
     init(session: SessionType, delegate: BaseViewDelegate?, item: NewsItemProtocol) {
         self.item.value = item
+        self.realmService = session.resolve()
         super.init(session: session, delegate: delegate)
         
         setup()
@@ -28,17 +30,24 @@ final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailView
     // MARK: Properties
     
     var previewActionItems: [UIPreviewActionItem] {
-        let addToBookmarksTitle = L10n.News.Preview.Action.addToBookmarks
-        let addToBookmarksAction = UIPreviewAction(title: addToBookmarksTitle, style: .default) { [weak self] (_, _) in
-            self?.addToBookmarksAction()
+        guard let item = item.value else { return [] }
+        var items: [UIPreviewActionItem] = []
+        
+        if !realmService.isBookmarked(item) {
+            let addToBookmarksTitle = L10n.News.Preview.Action.addToBookmarks
+            let addToBookmarksAction = UIPreviewAction(title: addToBookmarksTitle, style: .default) { [weak self] (_, _) in
+                self?.addToBookmarksAction()
+            }
+            items.append(addToBookmarksAction)
+        } else {
+            let removeFromBookmarksTitle = L10n.News.Preview.Action.removeFromBookmarks
+            let removeFromBookmarksAction = UIPreviewAction(title: removeFromBookmarksTitle, style: .destructive) { [weak self] (_, _) in
+                self?.removeFromBookmarksAction()
+            }
+            items.append(removeFromBookmarksAction)
         }
         
-        let removeFromBookmarksTitle = L10n.News.Preview.Action.removeFromBookmarks
-        let removeFromBookmarksAction = UIPreviewAction(title: removeFromBookmarksTitle, style: .destructive) { [weak self] (_, _) in
-            self?.removeFromBookmarksAction()
-        }
-        
-        return [addToBookmarksAction, removeFromBookmarksAction]
+        return items
     }
     
     var itemURL: URLRequest? {
@@ -56,11 +65,13 @@ final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailView
     // MARK: Actions
     
     func addToBookmarksAction() {
-        
+        guard let item = item.value else { return }
+        realmService.addBookmarks([item])
     }
     
     func removeFromBookmarksAction() {
-        
+        guard let item = item.value else { return }
+        realmService.removeBookmarks([item])
     }
     
     func webViewDidFailLoad(error: Error) {

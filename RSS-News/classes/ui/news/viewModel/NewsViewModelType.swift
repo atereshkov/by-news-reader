@@ -33,5 +33,6 @@ protocol NewsViewModelType: ViewModelType {
     
     func detailView(for index: Int) -> ViewType?
     func item(for index: Int) -> NewsItemProtocol?
+    func isBookmarked(_ index: Int) -> Bool
     
 }

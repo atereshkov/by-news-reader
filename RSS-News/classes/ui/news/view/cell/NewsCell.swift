@@ -15,6 +15,7 @@ class NewsCell: UITableViewCell {
         static let fullTimeFormat = "dd-MM-yyyy HH:mm"
     }
     
+    @IBOutlet weak var bookmarkIcon: UIImageView!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -22,10 +23,13 @@ class NewsCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         iconImageView.image = nil
+        bookmarkIcon.isHidden = true
     }
     
-    func update(with item: NewsItemProtocol) {
+    func update(with item: NewsItemProtocol, bookmarked: Bool) {
         titleLabel.text = item.title
+        bookmarkIcon.isHidden = !bookmarked
+        
         if let date = item.pubDate {
             let timeAgo = DateUtils.timeAgo(from: date, fullTimeFormat: Constants.fullTimeFormat)
             timeLabel.text = timeAgo
