@@ -11,6 +11,11 @@ internal enum L10n {
   internal enum Bookmarks {
     /// Bookmarks
     internal static let title = L10n.tr("Localizable", "bookmarks.title")
+
+    internal enum List {
+      /// You don't have any bookmarks yet.
+      internal static let empty = L10n.tr("Localizable", "bookmarks.list.empty")
+    }
   }
 
   internal enum Categories {

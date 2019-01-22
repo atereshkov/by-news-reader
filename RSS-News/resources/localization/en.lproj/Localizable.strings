@@ -68,6 +68,7 @@
 // MARK: Bookmarks Screen
 
 "bookmarks.title" = "Bookmarks";
+"bookmarks.list.empty" = "You don't have any bookmarks yet.";
 
 // MARK: Categories Screen
 

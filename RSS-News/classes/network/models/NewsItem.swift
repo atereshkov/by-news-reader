@@ -23,3 +23,12 @@ struct NewsItem: NewsItemProtocol {
     let link: String?
     
 }
+
+extension NewsItem {
+    
+    static func from(item: RealmNewsItem) -> NewsItemProtocol {
+        let newsItem = NewsItem(title: item.title, iconURL: item.iconURL, pubDate: item.pubDate, link: item.link)
+        return newsItem
+    }
+    
+}

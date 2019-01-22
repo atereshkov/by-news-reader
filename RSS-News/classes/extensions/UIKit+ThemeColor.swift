@@ -32,3 +32,17 @@ extension UIView {
     }
     
 }
+
+extension UILabel {
+    
+    @IBInspectable var themeTextColor: String? {
+        set {
+            guard let strValue = newValue else { return }
+            theme_textColor = ThemeColorPicker(stringLiteral: strValue)
+        }
+        get {
+            return "\(String(describing: theme_textColor))"
+        }
+    }
+    
+}
