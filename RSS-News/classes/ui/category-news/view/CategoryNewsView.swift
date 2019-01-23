@@ -54,7 +54,8 @@ final class CategoryNewsView: BaseView<CategoryNewsViewModel>, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let item = viewModel?.item(for: indexPath.row) else { return UITableViewCell() }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell") as? NewsCell else { return UITableViewCell() }
-        cell.update(with: item, bookmarked: false)
+        let bookmarked = viewModel?.isBookmarked(indexPath.row) ?? false
+        cell.update(with: item, bookmarked: bookmarked)
         return cell
     }
     

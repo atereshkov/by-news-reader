@@ -30,11 +30,13 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     private let item: MutableProperty<NewsCategoryProtocol?> = MutableProperty(nil)
     
     private let parseService: ParseServiceProtocol
+    private let realmService: RealmServiceProtocol
     
     // MARK: Init
     
     init(item: NewsCategoryProtocol, session: SessionType, delegate: BaseViewDelegate?) {
         self.parseService = session.resolve()
+        self.realmService = session.resolve()
         self.item.value = item
         super.init(session: session, delegate: delegate)
         
@@ -69,6 +71,11 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
         guard let item = item(for: index) else { return nil }
         let view = PopTouchNewsDetailRouter.initializeView(session: session, item: item, delegate: self)
         return view
+    }
+    
+    func isBookmarked(_ index: Int) -> Bool {
+        guard let item = item(for: index) else { return false }
+        return realmService.isBookmarked(item)
     }
     
     // MARK: Network

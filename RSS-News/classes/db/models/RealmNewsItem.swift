@@ -51,11 +51,11 @@ extension RealmNewsItem {
 }
 
 enum RealmNewsItemOrder {
-    case favoriteDate
+    case bookmarkDate
     
     var ordering: (RealmNewsItem, RealmNewsItem) -> Bool {
         switch self {
-        case .favoriteDate:
+        case .bookmarkDate:
             return { $0.bookmarkDate > $1.bookmarkDate }
         }
     }

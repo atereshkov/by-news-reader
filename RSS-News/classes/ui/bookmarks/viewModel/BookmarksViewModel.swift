@@ -74,6 +74,7 @@ final class BookmarksViewModel: BaseViewModel<BookmarksRouter>, BookmarksViewMod
     private func fetchItems() {
         items.value = realmService
             .allBookmarks()
+            .sorted(by: .bookmarkDate)
             .map({ NewsItem.from(item: $0) })
         
         updateState?(.reloadItems)
