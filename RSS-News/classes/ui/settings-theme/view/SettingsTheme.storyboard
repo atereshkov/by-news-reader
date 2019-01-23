@@ -38,7 +38,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mark-check" translatesAutoresizingMaskIntoConstraints="NO" id="R1E-y4-N20">
                                                     <rect key="frame" x="336" y="10" width="24" height="24"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="Settings.Theme.CellMarkImageTintColor"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="SettingsTheme.Cell.MarkImageTintColor"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                             </subviews>

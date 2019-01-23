@@ -51,7 +51,7 @@
                                                         <constraint firstAttribute="height" constant="10" id="qHc-Fw-qsb"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="Menu.CellChevronIconColor"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="Menu.Cell.ChevronIconColor"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bih-ky-dHv">
@@ -61,7 +61,7 @@
                                                         <constraint firstAttribute="height" constant="1" id="ITu-0X-Ef9"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Menu.CellSeparatorColor"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Menu.Cell.SeparatorColor"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -102,7 +102,7 @@
                                                         <constraint firstAttribute="height" constant="1" id="5AP-Qn-jpZ"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Menu.CellSeparatorColor"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Menu.Cell.SeparatorColor"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKg-1M-oin">
@@ -112,7 +112,7 @@
                                                         <constraint firstAttribute="height" constant="1" id="LrZ-Ze-KJA"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Menu.CellSeparatorColor"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Menu.Cell.SeparatorColor"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>

@@ -64,7 +64,7 @@
                                                         <constraint firstAttribute="height" constant="1" id="KiF-cQ-G1F"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="CategoryNews.CellSeparatorColor"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="CategoryNews.Cell.SeparatorColor"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmarked" translatesAutoresizingMaskIntoConstraints="NO" id="Li7-HA-dOh">

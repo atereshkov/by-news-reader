@@ -42,7 +42,7 @@
                                                         <constraint firstAttribute="width" constant="6" id="xCp-Xv-uZx"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="Categories.CellChevronIconColor"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="Categories.Cell.ChevronIconColor"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKB-Ue-rBt">
@@ -52,7 +52,7 @@
                                                         <constraint firstAttribute="height" constant="1" id="kfs-Se-f1a"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Categories.CellSeparatorColor"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Categories.Cell.SeparatorColor"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>

@@ -64,7 +64,7 @@
                                                         <constraint firstAttribute="height" constant="1" id="twv-ng-Bgn"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="CategoryNews.CellSeparatorColor"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="CategoryNews.Cell.SeparatorColor"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmarked" translatesAutoresizingMaskIntoConstraints="NO" id="kVt-Bj-ihW">

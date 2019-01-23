@@ -25,22 +25,20 @@
 	</dict>
 	<key>Categories</key>
 	<dict>
+		<key>Cell</key>
+		<dict>
+			<key>SeparatorColor</key>
+			<string>#e6e6e6</string>
+			<key>ChevronIconColor</key>
+			<string>#000000</string>
+		</dict>
 		<key>BackgroundColor</key>
 		<string>#FFFFFF</string>
-		<key>CellChevronIconColor</key>
-		<string>#000000</string>
-		<key>CellSeparatorColor</key>
-		<string>#e6e6e6</string>
 	</dict>
 	<key>Settings</key>
 	<dict>
 		<key>BackgroundColor</key>
 		<string>#FFFFFF</string>
-		<key>Theme</key>
-		<dict>
-			<key>CellMarkImageTintColor</key>
-			<string>#000000</string>
-		</dict>
 	</dict>
 	<key>TabBar</key>
 	<dict>
@@ -53,20 +51,31 @@
 	</dict>
 	<key>Menu</key>
 	<dict>
-		<key>CellChevronIconColor</key>
-		<string>#000000</string>
-		<key>CellSeparatorColor</key>
-		<string>#e6e6e6</string>
+		<key>Cell</key>
+		<dict>
+			<key>SeparatorColor</key>
+			<string>#e6e6e6</string>
+			<key>ChevronIconColor</key>
+			<string>#000000</string>
+		</dict>
 	</dict>
 	<key>SettingsTheme</key>
 	<dict>
+		<key>Cell</key>
+		<dict>
+			<key>MarkImageTintColor</key>
+			<string>#000000</string>
+		</dict>
 		<key>BackgroundColor</key>
 		<string>#FFFFFF</string>
 	</dict>
 	<key>CategoryNews</key>
 	<dict>
-		<key>CellSeparatorColor</key>
-		<string>#e6e6e6</string>
+		<key>Cell</key>
+		<dict>
+			<key>SeparatorColor</key>
+			<string>#e6e6e6</string>
+		</dict>
 	</dict>
 	<key>Images</key>
 	<dict>
