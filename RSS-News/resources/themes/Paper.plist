@@ -16,7 +16,7 @@
 		<key>Cell</key>
 		<dict>
 			<key>PublishDateLabelColor</key>
-			<string>#D3D3D3</string>
+			<string>#333333</string>
 			<key>SeparatorColor</key>
 			<string>#e6e6e6</string>
 			<key>TitleColor</key>
@@ -32,7 +32,7 @@
 			<key>SeparatorColor</key>
 			<string>#e6e6e6</string>
 			<key>PublishDateLabelColor</key>
-			<string>#D3D3D3</string>
+			<string>#333333</string>
 			<key>TitleColor</key>
 			<string>#000000</string>
 		</dict>
@@ -106,7 +106,7 @@
 			<key>TitleColor</key>
 			<string>#EDEDED</string>
 			<key>PublishDateLabelColor</key>
-			<string>#D3D3D3</string>
+			<string>#333333</string>
 			<key>SeparatorColor</key>
 			<string>#D3D3D3</string>
 		</dict>
