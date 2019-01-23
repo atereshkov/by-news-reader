@@ -12,11 +12,9 @@
 		<key>StatusBarStyle</key>
 		<string>UIStatusBarStyleDefault</string>
 		<key>NavigationBarBackButtonColor</key>
-		<string>#000000</string>
+		<string>#FFFFFF</string>
 		<key>ListActivityIndicatorColor</key>
 		<string>#FF8C00</string>
-		<key>backgroundColor</key>
-		<string>#000000</string>
 	</dict>
 	<key>Categories</key>
 	<dict>
@@ -38,7 +36,7 @@
 		<key>TopBorderLineColor</key>
 		<string>#D3D3D3</string>
 		<key>ItemColorSelected</key>
-		<string>#FF8C00</string>
+		<string>#62A0CD</string>
 		<key>ItemColorDefault</key>
 		<string>#696969</string>
 	</dict>

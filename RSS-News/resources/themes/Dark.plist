@@ -15,8 +15,6 @@
 		<string>#D3D3D3</string>
 		<key>ListActivityIndicatorColor</key>
 		<string>#FF8C00</string>
-		<key>backgroundColor</key>
-		<string>#FF0000</string>
 	</dict>
 	<key>Categories</key>
 	<dict>
@@ -38,7 +36,7 @@
 		<key>TopBorderLineColor</key>
 		<string>#e6e6e6</string>
 		<key>ItemColorSelected</key>
-		<string>#FF8C00</string>
+		<string>#62A0CD</string>
 		<key>ItemColorDefault</key>
 		<string>#696969</string>
 	</dict>

@@ -117,7 +117,7 @@ private extension NewsView {
             self?.viewModel?.pullToRefreshAction()
         }, loadingView: loadingView)
         
-        let pullToRefreshFillColor = UIColor(red: 74/255.0, green: 196/255.0, blue: 192/255.0, alpha: 1.0)
+        let pullToRefreshFillColor = UIColor(red: 98/255.0, green: 160/255.0, blue: 205/255.0, alpha: 1.0)
         tableView.dg_setPullToRefreshFillColor(pullToRefreshFillColor)
         tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
     }

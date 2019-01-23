@@ -39,7 +39,7 @@ struct AppSkin {
     
     static func applyAppearance() {
         UINavigationBar.appearance().theme_tintColor = "Global.NavigationBarBackButtonColor"
-        UINavigationBar.appearance().barTintColor = UIColor(red: 74/255.0, green: 196/255.0, blue: 192/255.0, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = UIColor(red: 98/255.0, green: 160/255.0, blue: 205/255.0, alpha: 1.0)
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [.font: Fonts.navBarTitle.uiFont, .foregroundColor: UIColor.white]
