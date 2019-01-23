@@ -50,12 +50,18 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="CategoryNews.Cell.PublishDateLabelColor"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBh-HW-T3V">
                                                     <rect key="frame" x="100" y="10" width="265" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="CategoryNews.Cell.TitleColor"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAG-0c-2Ay">
                                                     <rect key="frame" x="0.0" y="99" width="375" height="1"/>
@@ -91,6 +97,9 @@
                                                 <constraint firstItem="oEj-Dr-KpU" firstAttribute="leading" secondItem="5Yv-nh-Hgc" secondAttribute="leading" constant="10" id="tEC-6S-JPP"/>
                                                 <constraint firstItem="SBh-HW-T3V" firstAttribute="top" secondItem="oEj-Dr-KpU" secondAttribute="top" id="tJg-JK-hrX"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="CategoryNews.BackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="bookmarkIcon" destination="220-kc-QGP" id="ASw-Id-U4y"/>
@@ -100,6 +109,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="CategoryNews.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="xyc-yK-2Av" id="JrS-YV-1hj"/>
                                     <outlet property="delegate" destination="xyc-yK-2Av" id="idx-ww-XSy"/>
@@ -120,6 +132,9 @@
                             <constraint firstItem="mce-4d-Ymt" firstAttribute="centerY" secondItem="kwz-bG-Ap3" secondAttribute="centerY" id="wpE-Ys-ihx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hvp-Ed-haJ"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="CategoryNews.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="mce-4d-Ymt" id="dFX-S6-pLa"/>

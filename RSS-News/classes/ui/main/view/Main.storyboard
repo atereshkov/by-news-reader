@@ -36,6 +36,9 @@
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="uQQ-c1-Jvg">
                                         <rect key="frame" x="30" y="1" width="315" height="48"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="TabBar.BackgroundColor"/>
+                                        </userDefinedRuntimeAttributes>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,6 +52,9 @@
                                     <constraint firstItem="yV3-Np-g0A" firstAttribute="leading" secondItem="bnU-TC-fj0" secondAttribute="leading" id="ge6-fT-UeG"/>
                                     <constraint firstItem="uQQ-c1-Jvg" firstAttribute="top" secondItem="yV3-Np-g0A" secondAttribute="bottom" id="ms4-nd-E4J"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="TabBar.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

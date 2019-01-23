@@ -13,11 +13,29 @@
 	</dict>
 	<key>Feed</key>
 	<dict>
+		<key>Cell</key>
+		<dict>
+			<key>PublishDateLabelColor</key>
+			<string>#D3D3D3</string>
+			<key>SeparatorColor</key>
+			<string>#e6e6e6</string>
+			<key>TitleColor</key>
+			<string>#000000</string>
+		</dict>
 		<key>BackgroundColor</key>
 		<string>#EFEFEF</string>
 	</dict>
 	<key>Bookmarks</key>
 	<dict>
+		<key>Cell</key>
+		<dict>
+			<key>SeparatorColor</key>
+			<string>#e6e6e6</string>
+			<key>PublishDateLabelColor</key>
+			<string>#D3D3D3</string>
+			<key>TitleColor</key>
+			<string>#000000</string>
+		</dict>
 		<key>BackgroundColor</key>
 		<string>#EFEFEF</string>
 		<key>EmptyListFontColor</key>
@@ -27,6 +45,8 @@
 	<dict>
 		<key>Cell</key>
 		<dict>
+			<key>TitleColor</key>
+			<string>#000000</string>
 			<key>SeparatorColor</key>
 			<string>#e6e6e6</string>
 			<key>ChevronIconColor</key>
@@ -42,6 +62,8 @@
 	</dict>
 	<key>TabBar</key>
 	<dict>
+		<key>BackgroundColor</key>
+		<string>#FFFFFF</string>
 		<key>TopBorderLineColor</key>
 		<string>#e6e6e6</string>
 		<key>ItemColorSelected</key>
@@ -53,6 +75,10 @@
 	<dict>
 		<key>Cell</key>
 		<dict>
+			<key>ItemValueColor</key>
+			<string>#000000</string>
+			<key>ItemTitleColor</key>
+			<string>#000000</string>
 			<key>SeparatorColor</key>
 			<string>#e6e6e6</string>
 			<key>ChevronIconColor</key>
@@ -63,16 +89,24 @@
 	<dict>
 		<key>Cell</key>
 		<dict>
+			<key>TitleColor</key>
+			<string>#000000</string>
 			<key>MarkImageTintColor</key>
-			<string>#00FFFF</string>
+			<string>#D3D3D3</string>
 		</dict>
 		<key>BackgroundColor</key>
 		<string>#EFEFEF</string>
 	</dict>
 	<key>CategoryNews</key>
 	<dict>
+		<key>BackgroundColor</key>
+		<string>#EFEFEF</string>
 		<key>Cell</key>
 		<dict>
+			<key>TitleColor</key>
+			<string>#EDEDED</string>
+			<key>PublishDateLabelColor</key>
+			<string>#D3D3D3</string>
 			<key>SeparatorColor</key>
 			<string>#D3D3D3</string>
 		</dict>

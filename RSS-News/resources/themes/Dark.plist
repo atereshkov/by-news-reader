@@ -13,13 +13,31 @@
 	</dict>
 	<key>Feed</key>
 	<dict>
+		<key>Cell</key>
+		<dict>
+			<key>PublishDateLabelColor</key>
+			<string>#bababa</string>
+			<key>SeparatorColor</key>
+			<string>#363636</string>
+			<key>TitleColor</key>
+			<string>#EDEDED</string>
+		</dict>
 		<key>BackgroundColor</key>
-		<string>#5C5C5C</string>
+		<string>#424242</string>
 	</dict>
 	<key>Bookmarks</key>
 	<dict>
+		<key>Cell</key>
+		<dict>
+			<key>SeparatorColor</key>
+			<string>#363636</string>
+			<key>PublishDateLabelColor</key>
+			<string>#bababa</string>
+			<key>TitleColor</key>
+			<string>#EDEDED</string>
+		</dict>
 		<key>BackgroundColor</key>
-		<string>#5C5C5C</string>
+		<string>#424242</string>
 		<key>EmptyListFontColor</key>
 		<string>#D3D3D3</string>
 	</dict>
@@ -27,54 +45,70 @@
 	<dict>
 		<key>Cell</key>
 		<dict>
+			<key>TitleColor</key>
+			<string>#EDEDED</string>
 			<key>SeparatorColor</key>
-			<string>#e6e6e6</string>
+			<string>#363636</string>
 			<key>ChevronIconColor</key>
-			<string>#000000</string>
+			<string>#EDEDED</string>
 		</dict>
 		<key>BackgroundColor</key>
-		<string>#5C5C5C</string>
+		<string>#424242</string>
 	</dict>
 	<key>Settings</key>
 	<dict>
 		<key>BackgroundColor</key>
-		<string>#5C5C5C</string>
+		<string>#424242</string>
 	</dict>
 	<key>TabBar</key>
 	<dict>
+		<key>BackgroundColor</key>
+		<string>#4f4f4f</string>
 		<key>TopBorderLineColor</key>
-		<string>#e6e6e6</string>
+		<string>#434343</string>
 		<key>ItemColorSelected</key>
-		<string>#62A0CD</string>
+		<string>#d4d4d4</string>
 		<key>ItemColorDefault</key>
-		<string>#696969</string>
+		<string>#adadad</string>
 	</dict>
 	<key>Menu</key>
 	<dict>
 		<key>Cell</key>
 		<dict>
+			<key>ItemValueColor</key>
+			<string>#EDEDED</string>
+			<key>ItemTitleColor</key>
+			<string>#EDEDED</string>
 			<key>SeparatorColor</key>
-			<string>#D3D3D3</string>
+			<string>#363636</string>
 			<key>ChevronIconColor</key>
-			<string>#000000</string>
+			<string>#EDEDED</string>
 		</dict>
 	</dict>
 	<key>SettingsTheme</key>
 	<dict>
 		<key>Cell</key>
 		<dict>
+			<key>TitleColor</key>
+			<string>#EDEDED</string>
 			<key>MarkImageTintColor</key>
-			<string>#FFFF00</string>
+			<string>#D3D3D3</string>
 		</dict>
 		<key>BackgroundColor</key>
-		<string>#5C5C5C</string>
+		<string>#424242</string>
 	</dict>
 	<key>CategoryNews</key>
 	<dict>
+		<key>BackgroundColor</key>
+		<string>#424242</string>
 		<key>Cell</key>
 		<dict>
+			<key>TitleColor</key>
+			<string>#EDEDED</string>
+			<key>PublishDateLabelColor</key>
+			<string>#bababa</string>
 			<key>SeparatorColor</key>
-			<string>#e6e6e6</string>
+			<string>#363636</string>
 		</dict>
 	</dict>
 	<key>Images</key>
