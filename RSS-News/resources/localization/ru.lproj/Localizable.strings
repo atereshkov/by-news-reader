@@ -74,3 +74,11 @@
 // MARK: Feed Screen
 
 "feed.title" = "Лента";
+
+// MARK: Settings City
+
+"settings-city.title" = "Город";
+
+// MARK: Settings Theme
+
+"settings-theme.title" = "Темв";

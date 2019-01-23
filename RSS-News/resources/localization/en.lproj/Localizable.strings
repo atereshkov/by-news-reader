@@ -77,3 +77,11 @@
 // MARK: Feed Screen
 
 "feed.title" = "Feed";
+
+// MARK: Settings City
+
+"settings-city.title" = "City";
+
+// MARK: Settings Theme
+
+"settings-theme.title" = "Theme";

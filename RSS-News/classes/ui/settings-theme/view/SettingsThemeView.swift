@@ -55,7 +55,7 @@ final class SettingsThemeView: BaseView<SettingsThemeViewModel>, UITableViewDele
 private extension SettingsThemeView {
     
     func setupView() {
-        
+        title = L10n.SettingsTheme.title
     }
     
 }

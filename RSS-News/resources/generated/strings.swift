@@ -136,6 +136,16 @@ internal enum L10n {
     internal static let title = L10n.tr("Localizable", "settings.title")
   }
 
+  internal enum SettingsCity {
+    /// City
+    internal static let title = L10n.tr("Localizable", "settings-city.title")
+  }
+
+  internal enum SettingsTheme {
+    /// Theme
+    internal static let title = L10n.tr("Localizable", "settings-theme.title")
+  }
+
   internal enum Theme {
     /// Dark
     internal static let dark = L10n.tr("Localizable", "theme.dark")

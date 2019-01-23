@@ -25,7 +25,7 @@ final class SettingsCityView: BaseView<SettingsCityViewModel> {
 private extension SettingsCityView {
     
     func setupView() {
-        title = "Test"
+        title = L10n.SettingsCity.title
     }
     
 }
