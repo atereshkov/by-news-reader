@@ -15,7 +15,7 @@
 
 // MARK: Menu
 
-"menu.item.city.title" = "Выбор города";
+"menu.item.city.title" = "Город";
 "menu.item.source.title" = "Источник новостей";
 "menu.item.font-size.title" = "Размер текста";
 "menu.item.theme.title" = "Тема";

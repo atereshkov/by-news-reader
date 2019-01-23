@@ -89,7 +89,7 @@ internal enum L10n {
       }
 
       internal enum City {
-        /// Choose city
+        /// City
         internal static let title = L10n.tr("Localizable", "menu.item.city.title")
       }
 

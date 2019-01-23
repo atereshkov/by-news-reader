@@ -15,7 +15,7 @@
 
 // MARK: Menu
 
-"menu.item.city.title" = "Choose city";
+"menu.item.city.title" = "City";
 "menu.item.source.title" = "News source";
 "menu.item.font-size.title" = "Font size";
 "menu.item.theme.title" = "Theme";
