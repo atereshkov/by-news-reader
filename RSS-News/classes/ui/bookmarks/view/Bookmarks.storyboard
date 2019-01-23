@@ -58,7 +58,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8Q-tu-l9V">
-                                                    <rect key="frame" x="0.0" y="98.5" width="375" height="1"/>
+                                                    <rect key="frame" x="0.0" y="99" width="375" height="1"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="KiF-cQ-G1F"/>
@@ -68,7 +68,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmarked" translatesAutoresizingMaskIntoConstraints="NO" id="Li7-HA-dOh">
-                                                    <rect key="frame" x="347" y="73.5" width="18" height="18"/>
+                                                    <rect key="frame" x="347" y="74" width="18" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="18" id="PqV-az-i3s"/>
                                                         <constraint firstAttribute="height" constant="18" id="p1X-Lp-g2x"/>
@@ -91,6 +91,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="H8Q-tu-l9V" secondAttribute="trailing" id="uc0-kw-kVj"/>
                                                 <constraint firstItem="fn6-yj-9NC" firstAttribute="centerY" secondItem="PX0-Nb-gDd" secondAttribute="centerY" id="vCk-Ic-IZg"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Bookmarks.BackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="bookmarkIcon" destination="Li7-HA-dOh" id="XNV-cp-Lcr"/>
@@ -100,6 +103,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Bookmarks.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="2ac-wy-P6C" id="LCr-CN-cyz"/>
                                     <outlet property="delegate" destination="2ac-wy-P6C" id="gnA-mr-wra"/>
@@ -139,6 +145,9 @@
                             <constraint firstItem="Vdh-9h-eAL" firstAttribute="leading" secondItem="l1L-Fx-xpD" secondAttribute="leading" id="zQT-Kd-Mje"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="l1L-Fx-xpD"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Bookmarks.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="emptyView" destination="frP-N7-6fV" id="TOG-Fs-xMR"/>

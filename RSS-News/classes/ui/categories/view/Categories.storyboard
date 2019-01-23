@@ -66,12 +66,18 @@
                                                 <constraint firstItem="bcq-SU-ggA" firstAttribute="leading" secondItem="coG-9t-uoH" secondAttribute="trailing" constant="10" id="lYR-Se-NfO"/>
                                                 <constraint firstAttribute="trailing" secondItem="bcq-SU-ggA" secondAttribute="trailing" constant="15" id="tUn-qH-UjZ"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Categories.BackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="label" destination="coG-9t-uoH" id="cQX-ve-fNW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Categories.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="0W1-dB-JxZ" id="ZXz-Xp-8ra"/>
                                     <outlet property="delegate" destination="0W1-dB-JxZ" id="ZuD-NF-b8F"/>
@@ -86,6 +92,9 @@
                             <constraint firstItem="Bae-jx-kkh" firstAttribute="leading" secondItem="shE-pl-gaU" secondAttribute="leading" id="MtA-WJ-NY1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="shE-pl-gaU"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Categories.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Bae-jx-kkh" id="KMH-Y9-6zL"/>

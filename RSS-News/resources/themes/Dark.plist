@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Bookmarks</key>
-	<dict>
-		<key>EmptyListFontColor</key>
-		<string>#D3D3D3</string>
-	</dict>
 	<key>Global</key>
 	<dict>
 		<key>StatusBarStyle</key>
@@ -16,8 +11,22 @@
 		<key>ListActivityIndicatorColor</key>
 		<string>#FF8C00</string>
 	</dict>
+	<key>Feed</key>
+	<dict>
+		<key>BackgroundColor</key>
+		<string>#5C5C5C</string>
+	</dict>
+	<key>Bookmarks</key>
+	<dict>
+		<key>BackgroundColor</key>
+		<string>#5C5C5C</string>
+		<key>EmptyListFontColor</key>
+		<string>#D3D3D3</string>
+	</dict>
 	<key>Categories</key>
 	<dict>
+		<key>BackgroundColor</key>
+		<string>#5C5C5C</string>
 		<key>CellChevronIconColor</key>
 		<string>#000000</string>
 		<key>CellSeparatorColor</key>
@@ -25,6 +34,8 @@
 	</dict>
 	<key>Settings</key>
 	<dict>
+		<key>BackgroundColor</key>
+		<string>#5C5C5C</string>
 		<key>Theme</key>
 		<dict>
 			<key>CellMarkImageTintColor</key>

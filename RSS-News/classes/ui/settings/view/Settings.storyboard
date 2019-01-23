@@ -77,6 +77,9 @@
                                                 <constraint firstItem="mim-4C-D6N" firstAttribute="centerY" secondItem="1Xk-Oa-eGx" secondAttribute="centerY" id="uWJ-FS-F42"/>
                                                 <constraint firstItem="mim-4C-D6N" firstAttribute="leading" secondItem="x0W-h7-xw3" secondAttribute="trailing" constant="10" id="z6g-NJ-B2D"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Settings.BackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="arrowImageView" destination="mim-4C-D6N" id="Nb9-hd-qoC"/>
@@ -126,6 +129,9 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Settings.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="WgO-0e-gua" id="3Ag-0N-LHs"/>
                                     <outlet property="delegate" destination="WgO-0e-gua" id="ZPa-lo-FDf"/>
@@ -140,6 +146,9 @@
                             <constraint firstItem="QFq-y7-WW5" firstAttribute="top" secondItem="B4y-SZ-rf9" secondAttribute="top" id="yEB-f9-LCB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B4y-SZ-rf9"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Settings.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="QFq-y7-WW5" id="Vxp-hm-5fw"/>

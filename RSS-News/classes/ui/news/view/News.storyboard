@@ -91,6 +91,9 @@
                                                 <constraint firstItem="aNg-EA-aAJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sT5-ng-KuP" secondAttribute="bottom" constant="2" id="s6b-Xp-Njq"/>
                                                 <constraint firstItem="sT5-ng-KuP" firstAttribute="leading" secondItem="hni-gt-OgD" secondAttribute="trailing" constant="10" id="yT9-Qg-dGO"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Feed.BackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="bookmarkIcon" destination="kVt-Bj-ihW" id="pRM-Ry-KdF"/>
@@ -100,6 +103,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Feed.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="oo2-Oo-K47" id="rt6-PB-S8K"/>
                                     <outlet property="delegate" destination="oo2-Oo-K47" id="Z0x-oB-6eS"/>
@@ -120,6 +126,9 @@
                             <constraint firstItem="5dP-Nv-N6a" firstAttribute="leading" secondItem="WQa-H4-lgB" secondAttribute="leading" id="zwn-av-3pR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WQa-H4-lgB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Feed.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="1NM-Jp-tmG" id="4mc-zJ-zhe"/>
