@@ -51,6 +51,7 @@ final class SettingsThemeViewModel: BaseViewModel<SettingsThemeRouter>, Settings
         
         AppSkin.setTheme(newTheme)
         updateState?(.reloadItems)
+        (delegate as? SettingsThemeViewDelegate)?.themeChanged(to: newTheme)
     }
     
     func item(for index: Int) -> ThemeItemProtocol? {

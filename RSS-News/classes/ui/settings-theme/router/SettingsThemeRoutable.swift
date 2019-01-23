@@ -9,13 +9,13 @@
 import UIKit
 
 protocol SettingsThemeRoutable {
-    func goToSettingsTheme()
+    func goToSettingsTheme(delegate: SettingsThemeViewDelegate?)
 }
 
 extension SettingsThemeRoutable where Self: RouterType {
     
-    func goToSettingsTheme() {
-        let viewModel = SettingsThemeViewModel(session: session, delegate: nil)
+    func goToSettingsTheme(delegate: SettingsThemeViewDelegate?) {
+        let viewModel = SettingsThemeViewModel(session: session, delegate: delegate)
         let view = StoryboardScene.SettingsTheme.initialScene.instantiate()
         view.viewModel = viewModel
         let router = SettingsThemeRouter(session: session, view: view)

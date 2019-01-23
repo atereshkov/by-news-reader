@@ -35,20 +35,7 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
     override func onViewDidLoad() {
         super.onViewDidLoad()
         
-        let theme = AppSkin.currentTheme.localized
-        let city = "Grodno"
-        let source = "Test value"
-        let fontSize = "Test value"
-        
-        items.value.append(MenuListItem(title: L10n.Menu.Item.City.title, value: city, type: .city))
-        items.value.append(MenuListItem(title: L10n.Menu.Item.Source.title, value: source, type: .source, showSeparator: false))
-        items.value.append(MenuEmptyItem())
-        items.value.append(MenuListItem(title: L10n.Menu.Item.FontSize.title, value: fontSize, type: .textSize))
-        items.value.append(MenuListItem(title: L10n.Menu.Item.Theme.title, value: theme, type: .theme, showSeparator: false))
-        items.value.append(MenuEmptyItem())
-        items.value.append(MenuListItem(title: L10n.Menu.Item.About.title, value: nil, type: .about, showSeparator: true))
-        
-        updateState?(.reloadItems)
+        fetchSettings()
     }
     
     // MARK: Actions
@@ -65,7 +52,7 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
         case .textSize:
             break
         case .theme:
-            router?.goToSettingsTheme()
+            router?.goToSettingsTheme(delegate: self)
         }
     }
     
@@ -74,12 +61,40 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
         return items.value[index]
     }
     
+    // MARK: Private
+    
+    private func fetchSettings() {
+        let theme = AppSkin.currentTheme.localized
+        let city = "Grodno"
+        let source = "All"
+        let fontSize = "Standard"
+        
+        items.value.removeAll()
+        items.value.append(MenuListItem(title: L10n.Menu.Item.City.title, value: city, type: .city))
+        items.value.append(MenuListItem(title: L10n.Menu.Item.Source.title, value: source, type: .source, showSeparator: false))
+        items.value.append(MenuEmptyItem())
+        items.value.append(MenuListItem(title: L10n.Menu.Item.FontSize.title, value: fontSize, type: .textSize))
+        items.value.append(MenuListItem(title: L10n.Menu.Item.Theme.title, value: theme, type: .theme, showSeparator: false))
+        items.value.append(MenuEmptyItem())
+        items.value.append(MenuListItem(title: L10n.Menu.Item.About.title, value: nil, type: .about, showSeparator: true))
+        
+        updateState?(.reloadItems)
+    }
+    
 }
 
 private extension SettingsViewModel {
     
     func setup() {
         
+    }
+    
+}
+
+extension SettingsViewModel: SettingsThemeViewDelegate {
+    
+    func themeChanged(to: AppTheme) {
+        fetchSettings()
     }
     
 }

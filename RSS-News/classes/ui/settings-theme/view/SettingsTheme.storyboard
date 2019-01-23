@@ -48,6 +48,9 @@
                                                 <constraint firstItem="ETC-fA-kQ5" firstAttribute="leading" secondItem="F45-Bn-Rqj" secondAttribute="leading" constant="15" id="eSX-yY-bXc"/>
                                                 <constraint firstItem="R1E-y4-N20" firstAttribute="centerY" secondItem="F45-Bn-Rqj" secondAttribute="centerY" id="urc-Ii-4Ex"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsTheme.BackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="leftLabel" destination="ETC-fA-kQ5" id="uzN-Ap-NPT"/>
@@ -55,6 +58,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsTheme.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="UQk-ex-4rU" id="R7i-JC-byK"/>
                                     <outlet property="delegate" destination="UQk-ex-4rU" id="g1Z-0v-klT"/>
@@ -69,6 +75,9 @@
                             <constraint firstItem="s3W-MG-5x2" firstAttribute="trailing" secondItem="MHt-wd-SQF" secondAttribute="trailing" id="fA4-Qk-yVc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s3W-MG-5x2"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsTheme.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="MHt-wd-SQF" id="HKZ-8r-DWx"/>

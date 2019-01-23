@@ -58,6 +58,11 @@
 		<key>CellSeparatorColor</key>
 		<string>#D3D3D3</string>
 	</dict>
+	<key>SettingsTheme</key>
+	<dict>
+		<key>BackgroundColor</key>
+		<string>#5C5C5C</string>
+	</dict>
 	<key>CategoryNews</key>
 	<dict>
 		<key>CellSeparatorColor</key>
