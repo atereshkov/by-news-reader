@@ -12,8 +12,16 @@ import ReactiveCocoa
 
 final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailViewModelType {
     
+    // MARK: Callbacks
+    
+    var bookmarkStateChanged: ((Bool) -> Void)?
+    
+    // MARK: Properties
+    
     private let item: MutableProperty<NewsItemProtocol?> = MutableProperty(nil)
     private let realmService: RealmServiceProtocol
+    
+    // MARK: Lifecycle
     
     init(session: SessionType, delegate: BaseViewDelegate?, item: NewsItemProtocol) {
         self.item.value = item
@@ -59,20 +67,40 @@ final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailView
     var viewTitle: String? {
         return item.value?.title
     }
+    var isItemInBookmarks: Bool {
+        guard let item = item.value else { return false }
+        return realmService.isBookmarked(item)
+    }
     
     var isLoading: MutableProperty<Bool> = MutableProperty(false)
     
     // MARK: Actions
     
+    func shareAction() {
+        guard let shareLink = item.value?.link else { return }
+        router?.share(link: shareLink, sender: nil)
+    }
+    
+    func bookmarkAction() {
+        guard let item = item.value else { return }
+        if !realmService.isBookmarked(item) {
+            addToBookmarksAction()
+        } else {
+            removeFromBookmarksAction()
+        }
+    }
+    
     func addToBookmarksAction() {
         guard let item = item.value else { return }
         realmService.addBookmarks([item])
+        bookmarkStateChanged?(true)
         (delegate as? NewsDetailViewDelegate)?.addedToBookmarks(item)
     }
     
     func removeFromBookmarksAction() {
         guard let item = item.value else { return }
         realmService.removeBookmarks([item])
+        bookmarkStateChanged?(false)
         (delegate as? NewsDetailViewDelegate)?.removedFromBookmarks(item)
     }
     

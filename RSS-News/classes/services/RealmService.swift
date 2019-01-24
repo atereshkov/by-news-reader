@@ -72,8 +72,15 @@ extension RealmService {
     }
     
     func removeBookmarks(_ items: [NewsItemProtocol]) {
+        var itemsToRemove: [RealmNewsItem] = []
+        for item in items {
+            guard let url = item.link else { continue }
+            let realmItem = realm.object(ofType: RealmNewsItem.self, forPrimaryKey: url)
+            guard let rmItem = realmItem else { continue }
+            itemsToRemove.append(rmItem)
+        }
         writeTransaction { realm in
-            realm.delete(realm.objects(RealmNewsItem.self))
+            realm.delete(itemsToRemove)
         }
     }
     

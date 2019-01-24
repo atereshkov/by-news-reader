@@ -33,6 +33,10 @@ final class NewsDetailView: BaseView<NewsDetailViewModel>, WKNavigationDelegate,
         activityIndicator.reactive.isAnimating <~ viewModel.isLoading
         //webView.reactive.isHidden <~ viewModel.isLoading
         
+        viewModel.bookmarkStateChanged = { [weak self] isBookmarked in
+            self?.addRightBarButtons(isBookmarked: isBookmarked)
+        }
+        
         guard let itemURL = viewModel.itemURL else { return }
         webView.load(itemURL)
     }
@@ -65,6 +69,26 @@ private extension NewsDetailView {
         
         webView.navigationDelegate = self
         webView.uiDelegate = self
+        
+        let isItemInBookmarks = viewModel?.isItemInBookmarks ?? false
+        addRightBarButtons(isBookmarked: isItemInBookmarks)
+    }
+    
+    func addRightBarButtons(isBookmarked: Bool) {
+        let shareButton: UIBarButtonItem = .shareButton { [weak self] in
+            self?.viewModel?.shareAction()
+        }
+        var bookmarkButton: UIBarButtonItem = UIBarButtonItem()
+        if isBookmarked {
+            bookmarkButton = .bookmarkedButton { [weak self] in
+                self?.viewModel?.bookmarkAction()
+            }
+        } else {
+            bookmarkButton = .bookmarkEmptyButton { [weak self] in
+                self?.viewModel?.bookmarkAction()
+            }
+        }
+        navigationItem.rightBarButtonItems = [shareButton, .spacer(), bookmarkButton]
     }
     
     func setupObservers() {

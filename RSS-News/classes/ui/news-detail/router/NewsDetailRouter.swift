@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol NewsDetailRouterType: RouterType {
+protocol NewsDetailRouterType: RouterType, ShareRoutable {
     
 }
 

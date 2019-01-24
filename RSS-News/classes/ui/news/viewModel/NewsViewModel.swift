@@ -114,11 +114,11 @@ private extension NewsViewModel {
 extension NewsViewModel: NewsDetailViewDelegate {
     
     func addedToBookmarks(_ item: NewsItemProtocol) {
-        parseItems()
+        updateState?(.reloadItems)
     }
     
     func removedFromBookmarks(_ item: NewsItemProtocol) {
-        parseItems()
+        updateState?(.reloadItems)
     }
     
 }

@@ -77,9 +77,12 @@ internal enum Asset {
   }
   internal enum Images {
     internal enum Icons {
+      internal static let bookmarkEmpty = ImageAsset(name: "bookmark-empty")
+      internal static let bookmarkedNavbar = ImageAsset(name: "bookmarked-navbar")
       internal static let bookmarked = ImageAsset(name: "bookmarked")
       internal static let chevronRight = ImageAsset(name: "chevron-right")
       internal static let markCheck = ImageAsset(name: "mark-check")
+      internal static let share = ImageAsset(name: "share")
       internal enum TabBar {
         internal static let bookmarks = ImageAsset(name: "bookmarks")
         internal static let categories = ImageAsset(name: "categories")
@@ -103,9 +106,12 @@ internal enum Asset {
     internal static let allColors: [ColorAsset] = [
     ]
     internal static let allImages: [ImageAsset] = [
+      Icons.bookmarkEmpty,
+      Icons.bookmarkedNavbar,
       Icons.bookmarked,
       Icons.chevronRight,
       Icons.markCheck,
+      Icons.share,
       Icons.TabBar.bookmarks,
       Icons.TabBar.categories,
       Icons.TabBar.feed,

@@ -12,8 +12,14 @@ import ReactiveCocoa
 
 protocol NewsDetailViewModelType: ViewModelType {
     
+    // MARK: Callbacks
+    
+    var bookmarkStateChanged: ((_ isBookmarked: Bool) -> Void)? { get set }
+    
     // MARK: Actions
     
+    func shareAction()
+    func bookmarkAction()
     func addToBookmarksAction()
     func removeFromBookmarksAction()
     
@@ -24,6 +30,7 @@ protocol NewsDetailViewModelType: ViewModelType {
     
     var itemURL: URLRequest? { get }
     var viewTitle: String? { get }
+    var isItemInBookmarks: Bool { get }
     
     var isLoading: MutableProperty<Bool> { get }
     
