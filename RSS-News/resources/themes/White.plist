@@ -4,12 +4,15 @@
 <dict>
 	<key>Global</key>
 	<dict>
-		<key>StatusBarStyle</key>
-		<string>UIStatusBarStyleDefault</string>
 		<key>NavigationBarButtonsColor</key>
 		<string>#FFFFFF</string>
 		<key>ListActivityIndicatorColor</key>
 		<string>#FF8C00</string>
+	</dict>
+	<key>Main</key>
+	<dict>
+		<key>BackgroundColor</key>
+		<string>#FFFFFF</string>
 	</dict>
 	<key>Feed</key>
 	<dict>

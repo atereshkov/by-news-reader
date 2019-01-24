@@ -66,6 +66,7 @@
 // MARK: Bookmarks Screen
 
 "bookmarks.title" = "Закладки";
+"bookmarks.list.empty" = "Список Ваших закладок пуст.";
 
 // MARK: Categories Screen
 

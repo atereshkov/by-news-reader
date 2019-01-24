@@ -43,8 +43,6 @@ struct AppSkin {
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [.font: Fonts.navBarTitle.uiFont, .foregroundColor: UIColor.white]
-        
-        UIApplication.shared.theme_setStatusBarStyle("Global.StatusBarStyle", animated: false)
     }
     
     static func setup() {

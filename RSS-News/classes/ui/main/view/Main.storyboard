@@ -68,6 +68,9 @@
                             <constraint firstItem="xwM-mQ-jRj" firstAttribute="top" secondItem="sTj-RJ-rha" secondAttribute="top" id="zSo-AI-TEe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sTj-RJ-rha"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Main.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="xwM-mQ-jRj" id="6MM-3y-Ebk"/>
