@@ -15,7 +15,7 @@
 
 // MARK: Menu
 
-"menu.item.city.title" = "City";
+"menu.item.region.title" = "Region";
 "menu.item.source.title" = "News source";
 "menu.item.font-size.title" = "Font size";
 "menu.item.theme.title" = "Theme";
@@ -64,6 +64,9 @@
 // MARK: Settings Screen
 
 "settings.title" = "Settings";
+"settings.font.default" = "Default";
+"settings.font.small" = "Small";
+"settings.font.large" = "Large";
 
 // MARK: Bookmarks Screen
 
@@ -80,7 +83,7 @@
 
 // MARK: Settings City
 
-"settings-city.title" = "City";
+"settings-city.title" = "News region";
 
 // MARK: Settings Theme
 

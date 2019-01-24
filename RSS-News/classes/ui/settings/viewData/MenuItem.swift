@@ -9,7 +9,7 @@
 import Foundation
 
 enum MenuListItemType: Int {
-    case city
+    case region
     case source
     case textSize
     case theme

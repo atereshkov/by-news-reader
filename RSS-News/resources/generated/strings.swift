@@ -88,14 +88,14 @@ internal enum L10n {
         internal static let title = L10n.tr("Localizable", "menu.item.about.title")
       }
 
-      internal enum City {
-        /// City
-        internal static let title = L10n.tr("Localizable", "menu.item.city.title")
-      }
-
       internal enum FontSize {
         /// Font size
         internal static let title = L10n.tr("Localizable", "menu.item.font-size.title")
+      }
+
+      internal enum Region {
+        /// Region
+        internal static let title = L10n.tr("Localizable", "menu.item.region.title")
       }
 
       internal enum Source {
@@ -134,10 +134,19 @@ internal enum L10n {
   internal enum Settings {
     /// Settings
     internal static let title = L10n.tr("Localizable", "settings.title")
+
+    internal enum Font {
+      /// Default
+      internal static let `default` = L10n.tr("Localizable", "settings.font.default")
+      /// Large
+      internal static let large = L10n.tr("Localizable", "settings.font.large")
+      /// Small
+      internal static let small = L10n.tr("Localizable", "settings.font.small")
+    }
   }
 
   internal enum SettingsCity {
-    /// City
+    /// News region
     internal static let title = L10n.tr("Localizable", "settings-city.title")
   }
 

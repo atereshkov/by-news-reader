@@ -43,7 +43,7 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
     func itemSelected(at index: Int) {
         guard let item = item(for: index) as? MenuListItem else { return }
         switch item.type {
-        case .city:
+        case .region:
             router?.goToSettingsCity()
         case .source:
             break
@@ -65,15 +65,14 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
     
     private func fetchSettings() {
         let theme = AppSkin.currentTheme.localized
-        let city = "Grodno"
-        let source = "All"
-        let fontSize = "Standard"
+        let source = L10n.Provider.TutBy.name
+        let region = "Беларусь"
         
         items.value.removeAll()
-        items.value.append(MenuListItem(title: L10n.Menu.Item.City.title, value: city, type: .city))
+        items.value.append(MenuListItem(title: L10n.Menu.Item.Region.title, value: region, type: .region))
         items.value.append(MenuListItem(title: L10n.Menu.Item.Source.title, value: source, type: .source, showSeparator: false))
         items.value.append(MenuEmptyItem())
-        items.value.append(MenuListItem(title: L10n.Menu.Item.FontSize.title, value: fontSize, type: .textSize))
+        //items.value.append(MenuListItem(title: L10n.Menu.Item.FontSize.title, value: fontSize, type: .textSize))
         items.value.append(MenuListItem(title: L10n.Menu.Item.Theme.title, value: theme, type: .theme, showSeparator: false))
         items.value.append(MenuEmptyItem())
         items.value.append(MenuListItem(title: L10n.Menu.Item.About.title, value: nil, type: .about, showSeparator: true))

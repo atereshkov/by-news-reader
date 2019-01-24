@@ -15,7 +15,7 @@
 
 // MARK: Menu
 
-"menu.item.city.title" = "Город";
+"menu.item.region.title" = "Регион";
 "menu.item.source.title" = "Источник новостей";
 "menu.item.font-size.title" = "Размер текста";
 "menu.item.theme.title" = "Тема";
@@ -62,6 +62,9 @@
 // MARK: Settings Screen
 
 "settings.title" = "Настройки";
+"settings.font.default" = "Default";
+"settings.font.small" = "Small";
+"settings.font.large" = "Large";
 
 // MARK: Bookmarks Screen
 
@@ -78,7 +81,7 @@
 
 // MARK: Settings City
 
-"settings-city.title" = "Город";
+"settings-city.title" = "Выбор региона";
 
 // MARK: Settings Theme
 
