@@ -65,7 +65,7 @@ final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailView
     }
     
     var viewTitle: String? {
-        return item.value?.title
+        return item.value?.category ?? item.value?.title
     }
     var isItemInBookmarks: Bool {
         guard let item = item.value else { return false }

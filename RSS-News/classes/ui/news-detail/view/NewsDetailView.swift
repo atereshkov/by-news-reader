@@ -96,10 +96,10 @@ private extension NewsDetailView {
             guard let newValue = change.newValue else { return }
             self?.viewModel?.webViewLoadingDidChange(newValue)
         }
-        self.webViewTitleObserver = webView.observe(\.title, options: [.new]) { [weak self] (_, change) in
-            guard let newTitle = change.newValue else { return }
-            self?.title = newTitle
-        }
+//        self.webViewTitleObserver = webView.observe(\.title, options: [.new]) { [weak self] (_, change) in
+//            guard let newTitle = change.newValue else { return }
+//            self?.title = newTitle
+//        }
     }
     
 }
