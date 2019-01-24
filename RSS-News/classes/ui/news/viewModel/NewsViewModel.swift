@@ -42,6 +42,10 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     
     // MARK: Actions
     
+    func viewDidAppear() {
+        updateState?(.reloadItems) // reload bookmarks state
+    }
+    
     func itemSelected(at index: Int) {
         guard let item = item(for: index) else { return }
         router?.goToNewsDetail(item: item, delegate: self)

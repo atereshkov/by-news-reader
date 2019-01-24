@@ -30,6 +30,7 @@ final class NewsView: BaseView<NewsViewModel>, UITableViewDelegate, UITableViewD
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        viewModel?.viewDidAppear()
         navigationController?.navigationBar.topItem?.title = L10n.Feed.title
     }
     

@@ -18,6 +18,8 @@ protocol NewsViewModelType: ViewModelType {
     func previewPopAction(view: ViewType)
     func pullToRefreshAction()
     
+    func viewDidAppear()
+    
     // MARK: Callbacks
     
     var updateState: ((_ state: NewsViewState) -> Void)? { get set }
