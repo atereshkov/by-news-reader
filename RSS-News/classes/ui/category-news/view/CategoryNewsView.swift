@@ -20,6 +20,11 @@ final class CategoryNewsView: BaseView<CategoryNewsViewModel>, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupPullToRefresh()
+    }
+    
+    deinit {
+        tableView.dg_removePullToRefresh()
     }
     
     override func bindViewModel() {
@@ -29,7 +34,10 @@ final class CategoryNewsView: BaseView<CategoryNewsViewModel>, UITableViewDelega
         let disposable = CompositeDisposable()
         bindDisposable = ScopedDisposable(disposable)
         
-        disposable += activityIndicator.reactive.isAnimating <~ viewModel.parseAction.isExecuting
+        disposable += activityIndicator.reactive.isAnimating <~ viewModel.isLoading
+        disposable += viewModel.isLoading.producer.startWithValues({ [weak self] showProgress in
+            self?.showLoading(showProgress)
+        })
         disposable += viewModel.screenTitle.producer.startWithValues { [weak self] title in
             self?.title = title
         }
@@ -95,6 +103,27 @@ private extension CategoryNewsView {
     
     func setupView() {
         navigationItem.backBarButtonTitle = ""
+    }
+    
+    func setupPullToRefresh() {
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = UIColor(red: 247/255.0, green: 221/255.0, blue: 130/255.0, alpha: 1.0)
+        
+        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            self?.viewModel?.pullToRefreshAction()
+            }, loadingView: loadingView)
+        
+        let pullToRefreshFillColor = UIColor(red: 98/255.0, green: 160/255.0, blue: 205/255.0, alpha: 1.0)
+        tableView.dg_setPullToRefreshFillColor(pullToRefreshFillColor)
+        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+    }
+    
+    func showLoading(_ loading: Bool) {
+        if loading {
+            
+        } else {
+            tableView.dg_stopLoading()
+        }
     }
     
 }

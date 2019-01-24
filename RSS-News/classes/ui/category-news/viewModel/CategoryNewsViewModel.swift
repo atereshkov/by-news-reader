@@ -26,6 +26,9 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     var screenTitle: Property<String> {
         return item.map { $0?.name.localized ?? "" }
     }
+    var isLoading: Property<Bool> {
+        return parseAction.isExecuting
+    }
     
     private let item: MutableProperty<NewsCategoryProtocol?> = MutableProperty(nil)
     
@@ -58,6 +61,10 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     
     func previewPopAction(view: ViewType) {
         router?.goTo(view)
+    }
+    
+    func pullToRefreshAction() {
+        parseItems()
     }
     
     // MARK: DataSource
