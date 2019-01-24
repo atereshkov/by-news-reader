@@ -6,7 +6,7 @@
 	<dict>
 		<key>StatusBarStyle</key>
 		<string>UIStatusBarStyleDefault</string>
-		<key>NavigationBarBackButtonColor</key>
+		<key>NavigationBarButtonsColor</key>
 		<string>#FFFFFF</string>
 		<key>ListActivityIndicatorColor</key>
 		<string>#FF8C00</string>

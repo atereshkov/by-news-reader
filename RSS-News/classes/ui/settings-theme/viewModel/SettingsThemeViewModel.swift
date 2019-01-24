@@ -35,10 +35,10 @@ final class SettingsThemeViewModel: BaseViewModel<SettingsThemeRouter>, Settings
     override func onViewDidLoad() {
         super.onViewDidLoad()
         
-        let theme1 = ThemeItem(id: AppTheme.dark.rawValue, title: AppTheme.dark.localized)
-        let theme2 = ThemeItem(id: AppTheme.white.rawValue, title: AppTheme.white.localized)
-        let theme3 = ThemeItem(id: AppTheme.paper.rawValue, title: AppTheme.paper.localized)
-        items.value.append(contentsOf: [theme1, theme2, theme3])
+        let theme1 = ThemeItem(id: AppTheme.white.rawValue, title: AppTheme.white.localized)
+        let theme2 = ThemeItem(id: AppTheme.dark.rawValue, title: AppTheme.dark.localized)
+        //let theme3 = ThemeItem(id: AppTheme.paper.rawValue, title: AppTheme.paper.localized)
+        items.value.append(contentsOf: [theme1, theme2])
         
         updateState?(.reloadItems)
     }
