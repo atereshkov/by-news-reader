@@ -19,8 +19,8 @@ extension UIBarButtonItem {
     }
     
     static func shareButton(_ action: @escaping () -> Void) -> UIBarButtonItem {
-        let shareImage = Asset.Images.Icons.share.image
-        return button(image: shareImage, action: action)
+        let img = Asset.Images.Icons.share.image
+        return button(image: img, action: action)
     }
     
     static func bookmarkedButton(_ action: @escaping () -> Void) -> UIBarButtonItem {
@@ -30,6 +30,11 @@ extension UIBarButtonItem {
     
     static func bookmarkEmptyButton(_ action: @escaping () -> Void) -> UIBarButtonItem {
         let img = Asset.Images.Icons.bookmarkEmpty.image
+        return button(image: img, action: action)
+    }
+    
+    static func informationButton(_ action: @escaping () -> Void) -> UIBarButtonItem {
+        let img = Asset.Images.Icons.informationNavbar.image
         return button(image: img, action: action)
     }
     

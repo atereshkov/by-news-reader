@@ -10,4 +10,8 @@ import Foundation
 
 protocol SettingsCityViewModelType: ViewModelType {
     
+    // MARK: Actions
+    
+    func informationButtonAction()
+    
 }

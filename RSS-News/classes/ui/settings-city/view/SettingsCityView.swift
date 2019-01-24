@@ -26,6 +26,11 @@ private extension SettingsCityView {
     
     func setupView() {
         title = L10n.SettingsCity.title
+        
+        let infoButton: UIBarButtonItem = .informationButton { [weak self] in
+            self?.viewModel?.informationButtonAction()
+        }
+        navigationItem.rightBarButtonItem = infoButton
     }
     
 }

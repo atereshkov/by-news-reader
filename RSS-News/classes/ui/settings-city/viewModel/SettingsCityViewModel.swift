@@ -24,6 +24,12 @@ final class SettingsCityViewModel: BaseViewModel<SettingsCityRouter>, SettingsCi
         super.onViewDidLoad()
     }
     
+    // MARK: Actions
+    
+    func informationButtonAction() {
+        
+    }
+    
 }
 
 private extension SettingsCityViewModel {

@@ -81,6 +81,7 @@ internal enum Asset {
       internal static let bookmarkedNavbar = ImageAsset(name: "bookmarked-navbar")
       internal static let bookmarked = ImageAsset(name: "bookmarked")
       internal static let chevronRight = ImageAsset(name: "chevron-right")
+      internal static let informationNavbar = ImageAsset(name: "information-navbar")
       internal static let markCheck = ImageAsset(name: "mark-check")
       internal static let share = ImageAsset(name: "share")
       internal enum TabBar {
@@ -110,6 +111,7 @@ internal enum Asset {
       Icons.bookmarkedNavbar,
       Icons.bookmarked,
       Icons.chevronRight,
+      Icons.informationNavbar,
       Icons.markCheck,
       Icons.share,
       Icons.TabBar.bookmarks,
