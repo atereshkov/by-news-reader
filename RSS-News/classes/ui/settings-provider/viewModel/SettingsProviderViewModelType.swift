@@ -14,6 +14,7 @@ protocol SettingsProviderViewModelType: ViewModelType {
     
     // MARK: Actions
     
+    func informationButtonAction()
     func itemSelected(at index: Int)
     
     // MARK: Callbacks

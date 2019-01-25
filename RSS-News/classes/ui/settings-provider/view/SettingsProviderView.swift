@@ -56,6 +56,11 @@ private extension SettingsProviderView {
     
     func setupView() {
         title = L10n.SettingsProvider.title
+        
+        let infoButton: UIBarButtonItem = .informationButton { [weak self] in
+            self?.viewModel?.informationButtonAction()
+        }
+        navigationItem.rightBarButtonItem = infoButton
     }
     
 }

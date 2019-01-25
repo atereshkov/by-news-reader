@@ -46,6 +46,10 @@ final class SettingsProviderViewModel: BaseViewModel<SettingsProviderRouter>, Se
     
     // MARK: Actions
     
+    func informationButtonAction() {
+        
+    }
+    
     func itemSelected(at index: Int) {
         guard let item = item(for: index) else { return }
         guard let newProvider = AppProviderEnum(rawValue: item.name) else { return }
