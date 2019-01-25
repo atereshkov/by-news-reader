@@ -28,16 +28,19 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
         return items.map { $0.count }
     }
     
+    private var provider: NewsProviderItemProtocol?
+    
     private let parseService: ParseServiceProtocol
     private let realmService: RealmServiceProtocol
+    private let providerService: ProvidersServiceProtocol
     
     override init(session: SessionType, delegate: BaseViewDelegate?) {
         self.realmService = session.resolve()
         self.parseService = session.resolve()
+        self.providerService = session.resolve()
         super.init(session: session, delegate: delegate)
         
         setup()
-        parseItems()
     }
     
     // MARK: Actions
@@ -61,7 +64,8 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     }
     
     func pullToRefreshAction() {
-        parseItems()
+        guard let provider = provider else { return }
+        parseItems(provider: provider)
     }
     
     // MARK: DataSource
@@ -79,14 +83,13 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     
     // MARK: Private
     
-    private func parseItems() {
-        parseAction.apply().take(duringLifetimeOf: self).start()
+    private func parseItems(provider: NewsProviderItemProtocol) {
+        guard let url = URL(string: provider.main.url) else { return }
+        parseAction.apply(url).take(duringLifetimeOf: self).start()
     }
     
-    private(set) lazy var parseAction: Action<Void, RSSFeed, ServiceError> = {
-        let url = URL(string: "https://news.tut.by/rss/all.rss")!
-        
-        return Action { [weak self] in
+    private(set) lazy var parseAction: Action<URL, RSSFeed, ServiceError> = {
+        return Action { [weak self] url in
             guard let strongSelf = self else { return .empty }
             return strongSelf
                 .parseService
@@ -110,7 +113,11 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
 private extension NewsViewModel {
     
     func setup() {
+        let currentProvider = AppProvider.currentProvider
+        provider = providerService.getProviderItem(currentProvider)
         
+        guard let provider = provider else { return }
+        parseItems(provider: provider)
     }
     
 }
