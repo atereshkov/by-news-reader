@@ -25,11 +25,17 @@ class RSSReponseConverter: ResponseConverter {
         
         for item in feedItems {
             let title = item.title
-            let images = getImages(item: item)
-            let iconURL = images.first?.attributes?.url ?? ""
             let date = item.pubDate
             let link = item.guid?.value
             let category = item.categories?.first?.value
+            
+            let images = getImages(item: item)
+            var iconURL = images.first?.attributes?.url ?? ""
+            
+            if images.isEmpty {
+                let thumbnails = getThumbnails(item: item)
+                iconURL = thumbnails.first?.attributes?.url ?? ""
+            }
             
             let newsItem = NewsItem(title: title ?? "", iconURL: iconURL, pubDate: date, link: link, category: category)
             items.append(newsItem)
@@ -43,6 +49,11 @@ class RSSReponseConverter: ResponseConverter {
             .filter({ $0.attributes?.type?.contains("image") ?? false })
             .compactMap({ $0 })
         return images ?? []
+    }
+    
+    private func getThumbnails(item: RSSFeedItem) -> [MediaThumbnail] {
+        let thumbnails = item.media?.mediaThumbnails
+        return thumbnails ?? []
     }
     
 }
