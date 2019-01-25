@@ -46,7 +46,7 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
         case .region:
             router?.goToSettingsCity()
         case .source:
-            break
+            router?.goToSettingsProvider(delegate: self)
         case .about:
             break
         case .textSize:
@@ -65,7 +65,7 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
     
     private func fetchSettings() {
         let theme = AppSkin.currentTheme.localized
-        let source = L10n.Provider.TutBy.name
+        let source = AppProvider.currentProvider.rawValue
         let region = "Беларусь"
         
         items.value.removeAll()
@@ -93,6 +93,14 @@ private extension SettingsViewModel {
 extension SettingsViewModel: SettingsThemeViewDelegate {
     
     func themeChanged(to: AppTheme) {
+        fetchSettings()
+    }
+    
+}
+
+extension SettingsViewModel: SettingsProviderViewDelegate {
+    
+    func providerChanged(to: NewsProviderItemProtocol) {
         fetchSettings()
     }
     

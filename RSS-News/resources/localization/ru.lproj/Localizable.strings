@@ -88,3 +88,7 @@
 // MARK: Settings Theme
 
 "settings-theme.title" = "Выбор темы";
+
+// MARK: Settings Provider
+
+"settings-provider.title" = "Источники новостей";

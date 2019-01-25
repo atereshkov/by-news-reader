@@ -90,3 +90,7 @@
 // MARK: Settings Theme
 
 "settings-theme.title" = "Theme";
+
+// MARK: Settings Provider
+
+"settings-provider.title" = "News provider";

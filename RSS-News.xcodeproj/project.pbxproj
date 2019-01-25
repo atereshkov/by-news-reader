@@ -139,6 +139,15 @@
 		A3EC156121FBB62200D29489 /* RegionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC156021FBB62200D29489 /* RegionItem.swift */; };
 		A3EC156321FBB68F00D29489 /* SettingsCityViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC156221FBB68F00D29489 /* SettingsCityViewDelegate.swift */; };
 		A3EC156621FBB80E00D29489 /* RegionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC156521FBB80E00D29489 /* RegionCell.swift */; };
+		A3EC156F21FBBC2600D29489 /* SettingsProviderRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC156E21FBBC2600D29489 /* SettingsProviderRoutable.swift */; };
+		A3EC157121FBBC5900D29489 /* SettingsProviderRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC157021FBBC5900D29489 /* SettingsProviderRouter.swift */; };
+		A3EC157321FBBC7300D29489 /* ProviderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC157221FBBC7300D29489 /* ProviderCell.swift */; };
+		A3EC157521FBBC9400D29489 /* SettingsProviderViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC157421FBBC9400D29489 /* SettingsProviderViewState.swift */; };
+		A3EC157721FBBCA100D29489 /* SettingsProvider.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EC157621FBBCA100D29489 /* SettingsProvider.storyboard */; };
+		A3EC157921FBBCB500D29489 /* SettingsProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC157821FBBCB500D29489 /* SettingsProviderView.swift */; };
+		A3EC157B21FBBCC800D29489 /* SettingsProviderViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC157A21FBBCC800D29489 /* SettingsProviderViewDelegate.swift */; };
+		A3EC157D21FBBD0400D29489 /* SettingsProviderViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC157C21FBBD0400D29489 /* SettingsProviderViewModelType.swift */; };
+		A3EC157F21FBBD1600D29489 /* SettingsProviderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC157E21FBBD1600D29489 /* SettingsProviderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -278,6 +287,15 @@
 		A3EC156021FBB62200D29489 /* RegionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionItem.swift; sourceTree = "<group>"; };
 		A3EC156221FBB68F00D29489 /* SettingsCityViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewDelegate.swift; sourceTree = "<group>"; };
 		A3EC156521FBB80E00D29489 /* RegionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionCell.swift; sourceTree = "<group>"; };
+		A3EC156E21FBBC2600D29489 /* SettingsProviderRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProviderRoutable.swift; sourceTree = "<group>"; };
+		A3EC157021FBBC5900D29489 /* SettingsProviderRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProviderRouter.swift; sourceTree = "<group>"; };
+		A3EC157221FBBC7300D29489 /* ProviderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderCell.swift; sourceTree = "<group>"; };
+		A3EC157421FBBC9400D29489 /* SettingsProviderViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProviderViewState.swift; sourceTree = "<group>"; };
+		A3EC157621FBBCA100D29489 /* SettingsProvider.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsProvider.storyboard; sourceTree = "<group>"; };
+		A3EC157821FBBCB500D29489 /* SettingsProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProviderView.swift; sourceTree = "<group>"; };
+		A3EC157A21FBBCC800D29489 /* SettingsProviderViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProviderViewDelegate.swift; sourceTree = "<group>"; };
+		A3EC157C21FBBD0400D29489 /* SettingsProviderViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProviderViewModelType.swift; sourceTree = "<group>"; };
+		A3EC157E21FBBD1600D29489 /* SettingsProviderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProviderViewModel.swift; sourceTree = "<group>"; };
 		E9A03B472CB8EE9B0D64AFA5 /* Pods-RSS-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS-News.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSS-News/Pods-RSS-News.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -748,6 +766,7 @@
 				A3860A7F21F4E5B70030869A /* category-news */,
 				A34B645521F34AE900DACC2F /* bookmarks */,
 				A34B645621F34AFA00DACC2F /* settings */,
+				A3EC156721FBBBE700D29489 /* settings-provider */,
 				A34B64B221F3914900DACC2F /* settings-theme */,
 				A34B64AE21F390E800DACC2F /* settings-city */,
 			);
@@ -1106,6 +1125,62 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		A3EC156721FBBBE700D29489 /* settings-provider */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC156D21FBBC1700D29489 /* router */,
+				A3EC156B21FBBC0D00D29489 /* view */,
+				A3EC156A21FBBC0700D29489 /* viewData */,
+				A3EC156921FBBC0000D29489 /* viewModel */,
+			);
+			path = "settings-provider";
+			sourceTree = "<group>";
+		};
+		A3EC156921FBBC0000D29489 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC157E21FBBD1600D29489 /* SettingsProviderViewModel.swift */,
+				A3EC157C21FBBD0400D29489 /* SettingsProviderViewModelType.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		A3EC156A21FBBC0700D29489 /* viewData */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC157421FBBC9400D29489 /* SettingsProviderViewState.swift */,
+			);
+			path = viewData;
+			sourceTree = "<group>";
+		};
+		A3EC156B21FBBC0D00D29489 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC156C21FBBC1300D29489 /* cell */,
+				A3EC157821FBBCB500D29489 /* SettingsProviderView.swift */,
+				A3EC157621FBBCA100D29489 /* SettingsProvider.storyboard */,
+				A3EC157A21FBBCC800D29489 /* SettingsProviderViewDelegate.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A3EC156C21FBBC1300D29489 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC157221FBBC7300D29489 /* ProviderCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		A3EC156D21FBBC1700D29489 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC156E21FBBC2600D29489 /* SettingsProviderRoutable.swift */,
+				A3EC157021FBBC5900D29489 /* SettingsProviderRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
 		C4C2E5947F892FC777152D79 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1184,6 +1259,7 @@
 				A34B648921F3732B00DACC2F /* Settings.storyboard in Resources */,
 				A36DC45E21F27BB800B0BE72 /* Main.storyboard in Resources */,
 				A34B644221F32DD700DACC2F /* Dark.plist in Resources */,
+				A3EC157721FBBCA100D29489 /* SettingsProvider.storyboard in Resources */,
 				A34B647721F3656B00DACC2F /* Bookmarks.storyboard in Resources */,
 				A34B647121F3651900DACC2F /* News.storyboard in Resources */,
 				A36DC43B21F2797900B0BE72 /* Images.xcassets in Resources */,
@@ -1364,16 +1440,19 @@
 				A34B64BB21F3918700DACC2F /* SettingsThemeView.swift in Sources */,
 				A34B645321F347FE00DACC2F /* Fonts.swift in Sources */,
 				A36DC44B21F27B1A00B0BE72 /* BaseRouter.swift in Sources */,
+				A3EC157F21FBBD1600D29489 /* SettingsProviderViewModel.swift in Sources */,
 				A3860A9921F4F1660030869A /* ResponseConverter.swift in Sources */,
 				A3860AB321F63D1E0030869A /* PopTouchNewsDetailRouter.swift in Sources */,
 				A34B646D21F3647A00DACC2F /* NewsTabRouter.swift in Sources */,
 				A36DC45821F27B9200B0BE72 /* MainRouter.swift in Sources */,
+				A3EC157121FBBC5900D29489 /* SettingsProviderRouter.swift in Sources */,
 				A34B64CB21F3938C00DACC2F /* SettingsCityViewModelType.swift in Sources */,
 				A3860A8721F4E6810030869A /* CategoryNewsRouter.swift in Sources */,
 				A3EC156321FBB68F00D29489 /* SettingsCityViewDelegate.swift in Sources */,
 				A34B64C721F3934000DACC2F /* SettingsCityRoutable.swift in Sources */,
 				A33BCFFA21F8FB8300FB6F98 /* SettingsThemeViewDelegate.swift in Sources */,
 				A3860AB121F63A050030869A /* NewsDetailViewModel.swift in Sources */,
+				A3EC157D21FBBD0400D29489 /* SettingsProviderViewModelType.swift in Sources */,
 				A34B64A721F383E200DACC2F /* MenuItem.swift in Sources */,
 				A36DC45C21F27BAF00B0BE72 /* MainViewModel.swift in Sources */,
 				A34B645021F3459800DACC2F /* TabBarButton.swift in Sources */,
@@ -1386,11 +1465,15 @@
 				A34B643B21F27E2400DACC2F /* storyboards.swift in Sources */,
 				A34B64BF21F391A800DACC2F /* SettingsThemeRoutable.swift in Sources */,
 				A34B647321F3652200DACC2F /* NewsView.swift in Sources */,
+				A3EC157B21FBBCC800D29489 /* SettingsProviderViewDelegate.swift in Sources */,
 				A37EF40321F6750400691912 /* DGElasticPullToRefreshExtensions.swift in Sources */,
 				A36DC44321F27A9900B0BE72 /* AppSkin.swift in Sources */,
 				A34B64E321F3BACE00DACC2F /* CategoriesViewModelType.swift in Sources */,
 				A34B64A121F37CBC00DACC2F /* PreferenceService.swift in Sources */,
 				A36DC44121F27A9300B0BE72 /* AppRouter.swift in Sources */,
+				A3EC157521FBBC9400D29489 /* SettingsProviderViewState.swift in Sources */,
+				A3EC156F21FBBC2600D29489 /* SettingsProviderRoutable.swift in Sources */,
+				A3EC157321FBBC7300D29489 /* ProviderCell.swift in Sources */,
 				A34B64E521F3BAE400DACC2F /* BookmarksViewModelType.swift in Sources */,
 				A34B648521F372D900DACC2F /* SettingsRouter.swift in Sources */,
 				A3860A9E21F4FD640030869A /* DateFormatters.swift in Sources */,
@@ -1426,6 +1509,7 @@
 				A3860A7121F48A710030869A /* AppProvider.swift in Sources */,
 				A3EC156121FBB62200D29489 /* RegionItem.swift in Sources */,
 				A3860AAF21F639F00030869A /* NewsDetailViewModelType.swift in Sources */,
+				A3EC157921FBBCB500D29489 /* SettingsProviderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
