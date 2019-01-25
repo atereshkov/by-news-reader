@@ -135,12 +135,59 @@
 		<key>General</key>
 		<dict>
 			<key>Main</key>
-			<string>https://news.tut.by/rss/index.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://www.onliner.by/feed</string>
+			</dict>
 			<key>Latest</key>
-			<string>https://news.tut.by/rss/all.rss</string>
+			<dict>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://www.onliner.by/feed</string>
+			</dict>
 		</dict>
 		<key>Categories</key>
-		<dict/>
+		<dict>
+			<key>category.people-society</key>
+			<dict>
+				<key>order</key>
+				<integer>1</integer>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://people.onliner.by/feed</string>
+			</dict>
+			<key>category.technology</key>
+			<dict>
+				<key>order</key>
+				<integer>2</integer>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://tech.onliner.by/feed</string>
+			</dict>
+			<key>category.auto</key>
+			<dict>
+				<key>order</key>
+				<integer>3</integer>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://auto.onliner.by/feed</string>
+			</dict>
+			<key>category.realt</key>
+			<dict>
+				<key>order</key>
+				<integer>4</integer>
+				<key>icon</key>
+				<string></string>
+				<key>url</key>
+				<string>https://realt.onliner.by/feed</string>
+			</dict>
+		</dict>
 		<key>Regions</key>
 		<dict/>
 	</dict>

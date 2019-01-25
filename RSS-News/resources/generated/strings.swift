@@ -36,6 +36,10 @@ internal enum L10n {
     internal static let finance = L10n.tr("Localizable", "category.finance")
     /// Lady
     internal static let lady = L10n.tr("Localizable", "category.lady")
+    /// People and society
+    internal static let peopleSociety = L10n.tr("Localizable", "category.people-society")
+    /// Realty
+    internal static let realt = L10n.tr("Localizable", "category.realt")
     /// Realty
     internal static let realty = L10n.tr("Localizable", "category.realty")
     /// Society
