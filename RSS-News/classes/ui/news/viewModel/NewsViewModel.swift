@@ -84,7 +84,7 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     // MARK: Private
     
     private func parseItems(provider: NewsProviderItemProtocol) {
-        guard let url = URL(string: provider.main.url) else { return }
+        guard let url = URL(string: provider.latest.url) else { return }
         parseAction.apply(url).take(duringLifetimeOf: self).start()
     }
     

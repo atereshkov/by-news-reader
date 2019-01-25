@@ -9,9 +9,13 @@
 import Foundation
 
 protocol SettingsCityRouterType: RouterType {
-    
+    func goBack(animated: Bool)
 }
 
 final class SettingsCityRouter: BaseRouter, SettingsCityRouterType {
+    
+    func goBack(animated: Bool) {
+        self.navigationController?.popViewController(animated: animated)
+    }
     
 }

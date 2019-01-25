@@ -99,6 +99,18 @@
 			<string>#000000</string>
 		</dict>
 	</dict>
+	<key>SettingsCity</key>
+	<dict>
+		<key>Cell</key>
+		<dict>
+			<key>TitleColor</key>
+			<string>#000000</string>
+			<key>MarkImageTintColor</key>
+			<string>#000000</string>
+		</dict>
+		<key>BackgroundColor</key>
+		<string>#FFFFFF</string>
+	</dict>
 	<key>SettingsTheme</key>
 	<dict>
 		<key>Cell</key>

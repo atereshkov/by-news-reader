@@ -99,6 +99,18 @@
 			<string>#EDEDED</string>
 		</dict>
 	</dict>
+	<key>SettingsCity</key>
+	<dict>
+		<key>Cell</key>
+		<dict>
+			<key>TitleColor</key>
+			<string>#EDEDED</string>
+			<key>MarkImageTintColor</key>
+			<string>#D3D3D3</string>
+		</dict>
+		<key>BackgroundColor</key>
+		<string>#424242</string>
+	</dict>
 	<key>SettingsTheme</key>
 	<dict>
 		<key>Cell</key>
