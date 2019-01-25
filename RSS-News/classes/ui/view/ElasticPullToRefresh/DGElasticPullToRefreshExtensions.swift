@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectiveC
+import SwiftTheme
 
 // MARK: -
 // MARK: (NSObject) Extension
@@ -101,8 +102,16 @@ public extension UIScrollView {
         pullToRefreshView?.backgroundColor = color
     }
     
+    public func dg_setPullToRefreshBackgroundColor(_ themedColor: ThemeColorPicker) {
+        pullToRefreshView?.theme_backgroundColor = themedColor
+    }
+    
     public func dg_setPullToRefreshFillColor(_ color: UIColor) {
         pullToRefreshView?.fillColor = color
+    }
+    
+    public func dg_setPullToRefreshFillColor(_ themedColor: ThemeCGColorPicker) {
+        pullToRefreshView?.themedFillColor = themedColor
     }
     
     public func dg_stopLoading() {

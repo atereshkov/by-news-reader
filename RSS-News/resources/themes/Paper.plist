@@ -4,10 +4,14 @@
 <dict>
 	<key>Global</key>
 	<dict>
+		<key>NavigationBarBackgroundColor</key>
+		<string>#62A0CD</string>
 		<key>NavigationBarButtonsColor</key>
 		<string>#FFFFFF</string>
 		<key>ListActivityIndicatorColor</key>
 		<string>#FF8C00</string>
+		<key>PullToRefreshLoadingCircleColor</key>
+		<string>#f7dd82</string>
 	</dict>
 	<key>Main</key>
 	<dict>
@@ -16,6 +20,13 @@
 	</dict>
 	<key>Feed</key>
 	<dict>
+		<key>PullToRefresh</key>
+		<dict>
+			<key>FillColor</key>
+			<string>#62A0CD</string>
+			<key>BackgroundColor</key>
+			<string>#FFFFFF</string>
+		</dict>
 		<key>Cell</key>
 		<dict>
 			<key>PublishDateLabelColor</key>
@@ -102,6 +113,13 @@
 	</dict>
 	<key>CategoryNews</key>
 	<dict>
+		<key>PullToRefresh</key>
+		<dict>
+			<key>FillColor</key>
+			<string>#62A0CD</string>
+			<key>BackgroundColor</key>
+			<string>#FFFFFF</string>
+		</dict>
 		<key>BackgroundColor</key>
 		<string>#EFEFEF</string>
 		<key>Cell</key>

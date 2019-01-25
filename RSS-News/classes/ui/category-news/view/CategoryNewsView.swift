@@ -107,15 +107,14 @@ private extension CategoryNewsView {
     
     func setupPullToRefresh() {
         let loadingView = DGElasticPullToRefreshLoadingViewCircle()
-        loadingView.tintColor = UIColor(red: 247/255.0, green: 221/255.0, blue: 130/255.0, alpha: 1.0)
+        loadingView.theme_tintColor = "Global.PullToRefreshLoadingCircleColor"
         
         tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
             self?.viewModel?.pullToRefreshAction()
             }, loadingView: loadingView)
         
-        let pullToRefreshFillColor = UIColor(red: 98/255.0, green: 160/255.0, blue: 205/255.0, alpha: 1.0)
-        tableView.dg_setPullToRefreshFillColor(pullToRefreshFillColor)
-        tableView.dg_setPullToRefreshBackgroundColor(tableView.backgroundColor!)
+        tableView.dg_setPullToRefreshFillColor("CategoryNews.PullToRefresh.FillColor")
+        tableView.dg_setPullToRefreshBackgroundColor("CategoryNews.PullToRefresh.BackgroundColor")
     }
     
     func showLoading(_ loading: Bool) {

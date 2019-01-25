@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftTheme
 
 // MARK: -
 // MARK: DGElasticPullToRefreshState
@@ -83,7 +84,17 @@ open class DGElasticPullToRefreshView: UIView {
         }
     }
     
-    var fillColor: UIColor = .clear { didSet { shapeLayer.fillColor = fillColor.cgColor } }
+    var fillColor: UIColor = .clear {
+        didSet {
+            shapeLayer.fillColor = fillColor.cgColor
+        }
+    }
+    
+    var themedFillColor: ThemeCGColorPicker = "" {
+        didSet {
+            shapeLayer.theme_fillColor = themedFillColor
+        }
+    }
     
     // MARK: Views
     
