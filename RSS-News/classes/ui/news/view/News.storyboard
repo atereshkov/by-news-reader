@@ -127,6 +127,7 @@
                                         <nil key="highlightedColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="no-internet.view.list"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="NoInternetView.List.TitleColor"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>

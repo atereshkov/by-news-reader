@@ -13,6 +13,14 @@
 		<key>PullToRefreshLoadingCircleColor</key>
 		<string>#f7dd82</string>
 	</dict>
+	<key>NoInternetView</key>
+	<dict>
+		<key>List</key>
+		<dict>
+			<key>TitleColor</key>
+			<string>#000000</string>
+		</dict>
+	</dict>
 	<key>Main</key>
 	<dict>
 		<key>BackgroundColor</key>
