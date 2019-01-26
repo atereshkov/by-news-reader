@@ -23,10 +23,11 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     }
     
     var items: MutableProperty<[NewsItemProtocol]> = MutableProperty([])
-    
     var itemsCount: Property<Int> {
         return items.map { $0.count }
     }
+    
+    private var bindDisposable: ScopedDisposable<AnyDisposable>?
     
     private var provider: NewsProviderItemProtocol?
     
@@ -113,11 +114,12 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
 private extension NewsViewModel {
     
     func setup() {
-        providerService.delegate = self
-        provider = providerService.getCurrentProviderItem()
+        let disposable = CompositeDisposable()
+        bindDisposable = ScopedDisposable(disposable)
         
-        guard let provider = provider else { return }
-        parseItems(provider: provider)
+        disposable += providerService.currentProvider.producer.startWithValues({ [weak self] provider in
+            self?.providerChanged(to: provider)
+        })
     }
     
 }
@@ -134,7 +136,7 @@ extension NewsViewModel: NewsDetailViewDelegate {
     
 }
 
-extension NewsViewModel: ProvidersServiceDelegate {
+extension NewsViewModel {
     
     func providerChanged(to provider: AppProviderEnum) {
         self.provider = providerService.getCurrentProviderItem()

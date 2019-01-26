@@ -761,6 +761,7 @@
 			children = (
 				A36DC43E21F2798F00B0BE72 /* core */,
 				A36DC43F21F2799400B0BE72 /* configuration */,
+				A3860A6F21F48A5B0030869A /* providers */,
 				A36DC41721F277E100B0BE72 /* AppDelegate.swift */,
 				A36DC44021F27A9300B0BE72 /* AppRouter.swift */,
 				A36DC44221F27A9900B0BE72 /* AppSkin.swift */,
@@ -861,7 +862,6 @@
 		A36DC43F21F2799400B0BE72 /* configuration */ = {
 			isa = PBXGroup;
 			children = (
-				A3860A6F21F48A5B0030869A /* providers */,
 			);
 			path = configuration;
 			sourceTree = "<group>";

@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import ReactiveSwift
+import ReactiveCocoa
 
 protocol ProvidersServiceProtocol {
     func getProviderItems(_ plistName: String) -> [NewsProviderItemProtocol]
@@ -14,6 +16,5 @@ protocol ProvidersServiceProtocol {
     func getCurrentProviderItem() -> NewsProviderItemProtocol?
     func changeProvider(to provider: AppProviderEnum)
     
-    var currentProvider: AppProviderEnum { get }
-    var delegate: ProvidersServiceDelegate? { get set }
+    var currentProvider: Property<AppProviderEnum> { get }
 }

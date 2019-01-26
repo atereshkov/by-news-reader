@@ -18,10 +18,11 @@ final class CategoriesViewModel: BaseViewModel<CategoriesRouter>, CategoriesView
     // MARK: Properties
     
     var items: MutableProperty<[NewsCategoryProtocol]> = MutableProperty([])
-    
     var itemsCount: Property<Int> {
         return items.map { $0.count }
     }
+    
+    private var bindDisposable: ScopedDisposable<AnyDisposable>?
     
     private var providerService: ProvidersServiceProtocol
     
@@ -36,9 +37,6 @@ final class CategoriesViewModel: BaseViewModel<CategoriesRouter>, CategoriesView
     
     override func onViewDidLoad() {
         super.onViewDidLoad()
-        
-        guard let providerItem = providerService.getCurrentProviderItem() else { return }
-        setupItems(with: providerItem)
     }
     
     // MARK: Actions
@@ -60,7 +58,12 @@ final class CategoriesViewModel: BaseViewModel<CategoriesRouter>, CategoriesView
 private extension CategoriesViewModel {
     
     func setup() {
-        providerService.delegate = self
+        let disposable = CompositeDisposable()
+        bindDisposable = ScopedDisposable(disposable)
+        
+        disposable += providerService.currentProvider.producer.startWithValues({ [weak self] provider in
+            self?.providerChanged(to: provider)
+        })
     }
     
     func setupItems(with provider: NewsProviderItemProtocol) {
@@ -71,7 +74,7 @@ private extension CategoriesViewModel {
     
 }
 
-extension CategoriesViewModel: ProvidersServiceDelegate {
+extension CategoriesViewModel {
     
     func providerChanged(to provider: AppProviderEnum) {
         guard let providerItem = providerService.getProviderItem(provider) else { return }

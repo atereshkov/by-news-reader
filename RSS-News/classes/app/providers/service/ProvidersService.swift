@@ -7,10 +7,8 @@
 //
 
 import Foundation
-
-protocol ProvidersServiceDelegate: class {
-    func providerChanged(to provider: AppProviderEnum)
-}
+import ReactiveSwift
+import ReactiveCocoa
 
 final class ProvidersService: ProvidersServiceProtocol {
     
@@ -19,7 +17,7 @@ final class ProvidersService: ProvidersServiceProtocol {
         static let providerListFileName = "Providers"
     }
     
-    weak var delegate: ProvidersServiceDelegate?
+    private var provider: MutableProperty<AppProviderEnum> = MutableProperty(Constants.defaulProvider)
     
     private let plistParserService: PlistParserServiceProtocol
     
@@ -28,6 +26,10 @@ final class ProvidersService: ProvidersServiceProtocol {
     }
     
     // MARK: Provider DataSources
+    
+    var currentProvider: Property<AppProviderEnum> {
+        return Property(provider)
+    }
     
     func getProviderItems(_ plistName: String = Constants.providerListFileName) -> [NewsProviderItemProtocol] {
         guard let path = Bundle.main.path(forResource: plistName, ofType: "plist") else { return [] }
@@ -44,20 +46,14 @@ final class ProvidersService: ProvidersServiceProtocol {
     }
     
     func getCurrentProviderItem() -> NewsProviderItemProtocol? {
-        return getProviderItem(currentProvider)
+        return getProviderItem(currentProvider.value)
     }
     
     // MARK: Interaction
     
-    var currentProvider: AppProviderEnum {
-        let userProvider = PreferenceService.shared.provider
-        let provider = AppProviderEnum.init(rawValue: userProvider) ?? Constants.defaulProvider
-        return provider
-    }
-    
     func changeProvider(to provider: AppProviderEnum) {
         PreferenceService.shared.provider = provider.rawValue
-        delegate?.providerChanged(to: provider)
+        self.provider.value = provider
     }
     
 }

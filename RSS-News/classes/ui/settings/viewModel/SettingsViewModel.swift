@@ -68,7 +68,7 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
     
     private func fetchSettings() {
         let theme = AppSkin.currentTheme.localized
-        let source = providerService.currentProvider.rawValue
+        let source = providerService.currentProvider.value.rawValue
         let region = "Беларусь"
         
         items.value.removeAll()

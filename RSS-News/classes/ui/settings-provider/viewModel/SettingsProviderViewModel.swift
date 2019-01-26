@@ -66,7 +66,7 @@ final class SettingsProviderViewModel: BaseViewModel<SettingsProviderRouter>, Se
     
     func isSelected(_ index: Int) -> Bool {
         guard let item = item(for: index) else { return false }
-        return providerService.currentProvider.rawValue == item.name
+        return providerService.currentProvider.value.rawValue == item.name
     }
     
 }
