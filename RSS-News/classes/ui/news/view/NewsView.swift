@@ -12,6 +12,7 @@ import ReactiveCocoa
 
 final class NewsView: BaseView<NewsViewModel>, UITableViewDelegate, UITableViewDataSource, UIViewControllerPreviewingDelegate {
     
+    @IBOutlet weak var noInternetView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -43,6 +44,8 @@ final class NewsView: BaseView<NewsViewModel>, UITableViewDelegate, UITableViewD
         bindDisposable = ScopedDisposable(disposable)
         
         disposable += activityIndicator.reactive.isAnimating <~ viewModel.isLoading
+        disposable += noInternetView.reactive.isHidden <~ viewModel.noInternetViewIsHidden
+        disposable += tableView.reactive.isHidden <~ viewModel.tableViewIsHidden
         disposable += viewModel.isLoading.producer.startWithValues({ [weak self] showProgress in
             self?.showLoading(showProgress)
         })

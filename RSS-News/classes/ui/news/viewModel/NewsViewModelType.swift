@@ -32,6 +32,9 @@ protocol NewsViewModelType: ViewModelType {
     // MARK: DataSources
     
     var isLoading: Property<Bool> { get }
+    var isInternetReachable: MutableProperty<Bool> { get }
+    var noInternetViewIsHidden: Property<Bool> { get }
+    var tableViewIsHidden: Property<Bool> { get }
     
     func detailView(for index: Int) -> ViewType?
     func item(for index: Int) -> NewsItemProtocol?

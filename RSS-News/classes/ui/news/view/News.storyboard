@@ -117,6 +117,27 @@
                                     <outlet property="delegate" destination="oo2-Oo-K47" id="Z0x-oB-6eS"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6z5-E5-4fa">
+                                <rect key="frame" x="20" y="268.5" width="335" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aas-b3-cmV">
+                                        <rect key="frame" x="0.0" y="66.5" width="335" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="no-internet.view.list"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Aas-b3-cmV" firstAttribute="leading" secondItem="6z5-E5-4fa" secondAttribute="leading" id="Dxr-tz-HWq"/>
+                                    <constraint firstAttribute="height" constant="150" id="HMz-iJ-ezH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aas-b3-cmV" secondAttribute="trailing" id="mA8-FU-iqR"/>
+                                    <constraint firstItem="Aas-b3-cmV" firstAttribute="centerY" secondItem="6z5-E5-4fa" secondAttribute="centerY" id="nUS-v4-BhQ"/>
+                                </constraints>
+                            </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1NM-Jp-tmG">
                                 <rect key="frame" x="169" y="325" width="37" height="37"/>
                                 <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,7 +147,10 @@
                         <constraints>
                             <constraint firstItem="WQa-H4-lgB" firstAttribute="trailing" secondItem="5dP-Nv-N6a" secondAttribute="trailing" id="2wu-Zq-vPK"/>
                             <constraint firstItem="WQa-H4-lgB" firstAttribute="bottom" secondItem="5dP-Nv-N6a" secondAttribute="bottom" id="Es7-D5-YgN"/>
+                            <constraint firstItem="WQa-H4-lgB" firstAttribute="trailing" secondItem="6z5-E5-4fa" secondAttribute="trailing" constant="20" id="IBL-6R-34W"/>
+                            <constraint firstItem="6z5-E5-4fa" firstAttribute="leading" secondItem="WQa-H4-lgB" secondAttribute="leading" constant="20" id="QDU-PO-gpZ"/>
                             <constraint firstItem="5dP-Nv-N6a" firstAttribute="top" secondItem="WQa-H4-lgB" secondAttribute="top" id="XB7-eL-z1o"/>
+                            <constraint firstItem="6z5-E5-4fa" firstAttribute="centerY" secondItem="WQa-H4-lgB" secondAttribute="centerY" id="dbV-0J-dip"/>
                             <constraint firstItem="1NM-Jp-tmG" firstAttribute="centerY" secondItem="5dP-Nv-N6a" secondAttribute="centerY" id="jRG-HL-RaT"/>
                             <constraint firstItem="1NM-Jp-tmG" firstAttribute="centerX" secondItem="5dP-Nv-N6a" secondAttribute="centerX" id="zHJ-wx-Mpy"/>
                             <constraint firstItem="5dP-Nv-N6a" firstAttribute="leading" secondItem="WQa-H4-lgB" secondAttribute="leading" id="zwn-av-3pR"/>
@@ -138,6 +162,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="1NM-Jp-tmG" id="4mc-zJ-zhe"/>
+                        <outlet property="noInternetView" destination="6z5-E5-4fa" id="Zya-0k-Chf"/>
                         <outlet property="tableView" destination="5dP-Nv-N6a" id="B27-kZ-q9S"/>
                     </connections>
                 </viewController>

@@ -26,6 +26,10 @@ final class Session: SessionType {
             return RealmService()
         }.inObjectScope(.container)
         
+        container.register(ReachabilityServiceProtocol.self) { _ -> ReachabilityServiceProtocol in
+            return ReachabilityService()
+        }.inObjectScope(.container)
+        
         container.register(ParseServiceProtocol.self) { _ -> ParseServiceProtocol in
             return ParseService()
         }.inObjectScope(.container)

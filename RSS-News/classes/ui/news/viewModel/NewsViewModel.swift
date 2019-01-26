@@ -18,6 +18,23 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     
     // MARK: Properties
     
+    var noInternetViewIsHidden: Property<Bool> {
+        let isHidden = Property.combineLatest(isLoading, isInternetReachable).map { (isLoading, isInternetReachable) in
+            return isLoading == true || isInternetReachable
+        }
+        return isHidden
+    }
+    var tableViewIsHidden: Property<Bool> {
+        let isHidden = Property.combineLatest(isInternetReachable, isLoading).map { (isInternetReachable, isLoading) in
+            return !isInternetReachable || isLoading
+        }
+        return isHidden
+    }
+    
+    var isInternetReachable: MutableProperty<Bool> {
+        return reachabilityService.isReachable
+    }
+    
     var isLoading: Property<Bool> {
         return parseAction.isExecuting
     }
@@ -31,6 +48,7 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     
     private var provider: NewsProviderItemProtocol?
     
+    private let reachabilityService: ReachabilityServiceProtocol
     private let parseService: ParseServiceProtocol
     private let realmService: RealmServiceProtocol
     private var providerService: ProvidersServiceProtocol
@@ -39,6 +57,7 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
         self.realmService = session.resolve()
         self.parseService = session.resolve()
         self.providerService = session.resolve()
+        self.reachabilityService = session.resolve()
         super.init(session: session, delegate: delegate)
         
         setup()
@@ -119,6 +138,11 @@ private extension NewsViewModel {
         
         disposable += providerService.currentProvider.producer.startWithValues({ [weak self] provider in
             self?.providerChanged(to: provider)
+        })
+        disposable += reachabilityService.isReachable.producer.startWithValues({ [weak self] isReachable in
+            DispatchQueue.main.async { [weak self] in
+                self?.isInternetReachable.value = isReachable
+            }
         })
     }
     

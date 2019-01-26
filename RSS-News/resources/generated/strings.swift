@@ -135,6 +135,14 @@ internal enum L10n {
     }
   }
 
+  internal enum NoInternet {
+
+    internal enum View {
+      /// No Internet connection
+      internal static let list = L10n.tr("Localizable", "no-internet.view.list")
+    }
+  }
+
   internal enum Provider {
 
     internal enum TutBy {

@@ -96,3 +96,7 @@
 // MARK: Initial Settings
 
 "initial-settings.nav-bar.skip" = "Пропустить";
+
+// MARK: No Internet View
+
+"no-internet.view.list" = "Отсутствует соединение с Интернетом";
