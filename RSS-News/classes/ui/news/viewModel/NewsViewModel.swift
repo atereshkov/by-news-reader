@@ -32,7 +32,7 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     
     private let parseService: ParseServiceProtocol
     private let realmService: RealmServiceProtocol
-    private let providerService: ProvidersServiceProtocol
+    private var providerService: ProvidersServiceProtocol
     
     override init(session: SessionType, delegate: BaseViewDelegate?) {
         self.realmService = session.resolve()
@@ -113,9 +113,8 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
 private extension NewsViewModel {
     
     func setup() {
-        AppProvider.delegate = self
-        let currentProvider = AppProvider.currentProvider
-        provider = providerService.getProviderItem(currentProvider)
+        providerService.delegate = self
+        provider = providerService.getCurrentProviderItem()
         
         guard let provider = provider else { return }
         parseItems(provider: provider)
@@ -135,11 +134,10 @@ extension NewsViewModel: NewsDetailViewDelegate {
     
 }
 
-extension NewsViewModel: AppProviderDelegate {
+extension NewsViewModel: ProvidersServiceDelegate {
     
     func providerChanged(to provider: AppProviderEnum) {
-        let currentProvider = AppProvider.currentProvider
-        self.provider = providerService.getProviderItem(currentProvider)
+        self.provider = providerService.getCurrentProviderItem()
         
         guard let actualProvider = self.provider else { return }
         parseItems(provider: actualProvider)

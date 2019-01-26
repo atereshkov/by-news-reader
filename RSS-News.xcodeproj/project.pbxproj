@@ -110,7 +110,6 @@
 		A37EF40921F6757200691912 /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF40821F6757200691912 /* DGElasticPullToRefreshView.swift */; };
 		A3860A6821F46BE70030869A /* NewsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A6721F46BE70030869A /* NewsCategory.swift */; };
 		A3860A6E21F48A500030869A /* Providers.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3860A6D21F48A500030869A /* Providers.plist */; };
-		A3860A7121F48A710030869A /* AppProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7021F48A710030869A /* AppProvider.swift */; };
 		A3860A7321F48E0E0030869A /* AppProviderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7221F48E0E0030869A /* AppProviderEnum.swift */; };
 		A3860A7521F4902E0030869A /* ProvidersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7421F4902E0030869A /* ProvidersService.swift */; };
 		A3860A7821F49B460030869A /* PlistParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7721F49B460030869A /* PlistParserService.swift */; };
@@ -155,6 +154,8 @@
 		A3EC158F21FC45B200D29489 /* InitialSettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC158E21FC45B200D29489 /* InitialSettingsRouter.swift */; };
 		A3EC159121FC45BA00D29489 /* InitialSettingsRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159021FC45BA00D29489 /* InitialSettingsRoutable.swift */; };
 		A3EC159321FC471600D29489 /* StartInitialSettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159221FC471600D29489 /* StartInitialSettingsRouter.swift */; };
+		A3EC159721FC669A00D29489 /* ProvidersServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159621FC669A00D29489 /* ProvidersServiceProtocol.swift */; };
+		A3EC159921FC66B500D29489 /* ProviderServiceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159821FC66B500D29489 /* ProviderServiceExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -265,7 +266,6 @@
 		A37EF40821F6757200691912 /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
 		A3860A6721F46BE70030869A /* NewsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCategory.swift; sourceTree = "<group>"; };
 		A3860A6D21F48A500030869A /* Providers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Providers.plist; sourceTree = "<group>"; };
-		A3860A7021F48A710030869A /* AppProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProvider.swift; sourceTree = "<group>"; };
 		A3860A7221F48E0E0030869A /* AppProviderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProviderEnum.swift; sourceTree = "<group>"; };
 		A3860A7421F4902E0030869A /* ProvidersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersService.swift; sourceTree = "<group>"; };
 		A3860A7721F49B460030869A /* PlistParserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistParserService.swift; sourceTree = "<group>"; };
@@ -310,6 +310,8 @@
 		A3EC158E21FC45B200D29489 /* InitialSettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingsRouter.swift; sourceTree = "<group>"; };
 		A3EC159021FC45BA00D29489 /* InitialSettingsRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingsRoutable.swift; sourceTree = "<group>"; };
 		A3EC159221FC471600D29489 /* StartInitialSettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInitialSettingsRouter.swift; sourceTree = "<group>"; };
+		A3EC159621FC669A00D29489 /* ProvidersServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersServiceProtocol.swift; sourceTree = "<group>"; };
+		A3EC159821FC66B500D29489 /* ProviderServiceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderServiceExtensions.swift; sourceTree = "<group>"; };
 		E9A03B472CB8EE9B0D64AFA5 /* Pods-RSS-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS-News.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSS-News/Pods-RSS-News.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -971,11 +973,10 @@
 		A3860A6F21F48A5B0030869A /* providers */ = {
 			isa = PBXGroup;
 			children = (
+				A3EC159421FC667B00D29489 /* service */,
+				A3EC159521FC668500D29489 /* model */,
 				A3860A7621F49B300030869A /* parser */,
 				A3860A6D21F48A500030869A /* Providers.plist */,
-				A3860A7421F4902E0030869A /* ProvidersService.swift */,
-				A3860A7021F48A710030869A /* AppProvider.swift */,
-				A3860A7221F48E0E0030869A /* AppProviderEnum.swift */,
 			);
 			path = providers;
 			sourceTree = "<group>";
@@ -1232,6 +1233,24 @@
 				A3EC159221FC471600D29489 /* StartInitialSettingsRouter.swift */,
 			);
 			path = router;
+			sourceTree = "<group>";
+		};
+		A3EC159421FC667B00D29489 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				A3860A7421F4902E0030869A /* ProvidersService.swift */,
+				A3EC159621FC669A00D29489 /* ProvidersServiceProtocol.swift */,
+				A3EC159821FC66B500D29489 /* ProviderServiceExtensions.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		A3EC159521FC668500D29489 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A3860A7221F48E0E0030869A /* AppProviderEnum.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		C4C2E5947F892FC777152D79 /* Pods */ = {
@@ -1508,6 +1527,7 @@
 				A34B64C721F3934000DACC2F /* SettingsCityRoutable.swift in Sources */,
 				A33BCFFA21F8FB8300FB6F98 /* SettingsThemeViewDelegate.swift in Sources */,
 				A3860AB121F63A050030869A /* NewsDetailViewModel.swift in Sources */,
+				A3EC159921FC66B500D29489 /* ProviderServiceExtensions.swift in Sources */,
 				A3EC157D21FBBD0400D29489 /* SettingsProviderViewModelType.swift in Sources */,
 				A34B64A721F383E200DACC2F /* MenuItem.swift in Sources */,
 				A36DC45C21F27BAF00B0BE72 /* MainViewModel.swift in Sources */,
@@ -1532,6 +1552,7 @@
 				A3EC157521FBBC9400D29489 /* SettingsProviderViewState.swift in Sources */,
 				A3EC156F21FBBC2600D29489 /* SettingsProviderRoutable.swift in Sources */,
 				A3EC157321FBBC7300D29489 /* ProviderCell.swift in Sources */,
+				A3EC159721FC669A00D29489 /* ProvidersServiceProtocol.swift in Sources */,
 				A34B64E521F3BAE400DACC2F /* BookmarksViewModelType.swift in Sources */,
 				A34B648521F372D900DACC2F /* SettingsRouter.swift in Sources */,
 				A3860A9E21F4FD640030869A /* DateFormatters.swift in Sources */,
@@ -1566,7 +1587,6 @@
 				A3860AAD21F639DC0030869A /* NewsDetailView.swift in Sources */,
 				A36DC46321F27C0100B0BE72 /* UIWindow.swift in Sources */,
 				A34B64E121F3BA0D00DACC2F /* NewsViewModelType.swift in Sources */,
-				A3860A7121F48A710030869A /* AppProvider.swift in Sources */,
 				A3EC156121FBB62200D29489 /* RegionItem.swift in Sources */,
 				A3860AAF21F639F00030869A /* NewsDetailViewModelType.swift in Sources */,
 				A3EC157921FBBCB500D29489 /* SettingsProviderView.swift in Sources */,

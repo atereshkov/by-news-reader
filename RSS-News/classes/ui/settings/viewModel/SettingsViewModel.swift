@@ -24,9 +24,12 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
         return items.map { $0.count }
     }
     
+    private let providerService: ProvidersServiceProtocol
+    
     // MARK: Init
     
     override init(session: SessionType, delegate: BaseViewDelegate?) {
+        self.providerService = session.resolve()
         super.init(session: session, delegate: delegate)
         
         setup()
@@ -65,7 +68,7 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
     
     private func fetchSettings() {
         let theme = AppSkin.currentTheme.localized
-        let source = AppProvider.currentProvider.rawValue
+        let source = providerService.currentProvider.rawValue
         let region = "Беларусь"
         
         items.value.removeAll()

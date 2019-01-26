@@ -23,7 +23,7 @@ final class CategoriesViewModel: BaseViewModel<CategoriesRouter>, CategoriesView
         return items.map { $0.count }
     }
     
-    private let providerService: ProvidersServiceProtocol
+    private var providerService: ProvidersServiceProtocol
     
     // MARK: Init
     
@@ -37,8 +37,7 @@ final class CategoriesViewModel: BaseViewModel<CategoriesRouter>, CategoriesView
     override func onViewDidLoad() {
         super.onViewDidLoad()
         
-        let provider = AppProvider.currentProvider
-        guard let providerItem = providerService.getProviderItem(provider) else { return }
+        guard let providerItem = providerService.getCurrentProviderItem() else { return }
         setupItems(with: providerItem)
     }
     
@@ -61,7 +60,7 @@ final class CategoriesViewModel: BaseViewModel<CategoriesRouter>, CategoriesView
 private extension CategoriesViewModel {
     
     func setup() {
-        AppProvider.delegate = self
+        providerService.delegate = self
     }
     
     func setupItems(with provider: NewsProviderItemProtocol) {
@@ -72,7 +71,7 @@ private extension CategoriesViewModel {
     
 }
 
-extension CategoriesViewModel: AppProviderDelegate {
+extension CategoriesViewModel: ProvidersServiceDelegate {
     
     func providerChanged(to provider: AppProviderEnum) {
         guard let providerItem = providerService.getProviderItem(provider) else { return }

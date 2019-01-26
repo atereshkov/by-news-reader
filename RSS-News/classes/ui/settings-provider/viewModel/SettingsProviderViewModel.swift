@@ -54,7 +54,7 @@ final class SettingsProviderViewModel: BaseViewModel<SettingsProviderRouter>, Se
         guard let item = item(for: index) else { return }
         guard let newProvider = AppProviderEnum(rawValue: item.name) else { return }
         
-        AppProvider.changeProvider(to: newProvider)
+        providerService.changeProvider(to: newProvider)
         updateState?(.reloadItems)
         (delegate as? SettingsProviderViewDelegate)?.providerChanged(to: item)
     }
@@ -66,7 +66,7 @@ final class SettingsProviderViewModel: BaseViewModel<SettingsProviderRouter>, Se
     
     func isSelected(_ index: Int) -> Bool {
         guard let item = item(for: index) else { return false }
-        return AppProvider.currentProvider.rawValue == item.name
+        return providerService.currentProvider.rawValue == item.name
     }
     
 }
