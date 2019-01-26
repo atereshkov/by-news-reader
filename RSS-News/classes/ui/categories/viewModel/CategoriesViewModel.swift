@@ -38,13 +38,8 @@ final class CategoriesViewModel: BaseViewModel<CategoriesRouter>, CategoriesView
         super.onViewDidLoad()
         
         let provider = AppProvider.currentProvider
-        let providerItem = providerService.getProviderItem(provider)
-        if let categories = providerItem?.categories {
-             items.value.append(contentsOf: categories)
-        }
-        items.value.sort(by: { $0.order ?? 0 < $1.order ?? 1 })
-        
-        updateState?(.reloadItems)
+        guard let providerItem = providerService.getProviderItem(provider) else { return }
+        setupItems(with: providerItem)
     }
     
     // MARK: Actions
@@ -66,7 +61,22 @@ final class CategoriesViewModel: BaseViewModel<CategoriesRouter>, CategoriesView
 private extension CategoriesViewModel {
     
     func setup() {
-        
+        AppProvider.delegate = self
+    }
+    
+    func setupItems(with provider: NewsProviderItemProtocol) {
+        items.value = provider.categories
+        items.value.sort(by: { $0.order ?? 0 < $1.order ?? 1 })
+        updateState?(.reloadItems)
+    }
+    
+}
+
+extension CategoriesViewModel: AppProviderDelegate {
+    
+    func providerChanged(to provider: AppProviderEnum) {
+        guard let providerItem = providerService.getProviderItem(provider) else { return }
+        setupItems(with: providerItem)
     }
     
 }

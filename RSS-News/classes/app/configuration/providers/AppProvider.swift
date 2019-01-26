@@ -8,7 +8,13 @@
 
 import Foundation
 
-struct AppProvider {
+protocol AppProviderDelegate: class {
+    func providerChanged(to provider: AppProviderEnum)
+}
+
+final class AppProvider {
+    
+    static weak var delegate: AppProviderDelegate?
     
     struct Constants {
         static let defaulProvider: AppProviderEnum = .tutBy
@@ -22,6 +28,7 @@ struct AppProvider {
     
     static func changeProvider(to provider: AppProviderEnum) {
         PreferenceService.shared.provider = provider.rawValue
+        delegate?.providerChanged(to: provider)
     }
     
 }

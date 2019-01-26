@@ -113,6 +113,7 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
 private extension NewsViewModel {
     
     func setup() {
+        AppProvider.delegate = self
         let currentProvider = AppProvider.currentProvider
         provider = providerService.getProviderItem(currentProvider)
         
@@ -130,6 +131,18 @@ extension NewsViewModel: NewsDetailViewDelegate {
     
     func removedFromBookmarks(_ item: NewsItemProtocol) {
         updateState?(.reloadItems)
+    }
+    
+}
+
+extension NewsViewModel: AppProviderDelegate {
+    
+    func providerChanged(to provider: AppProviderEnum) {
+        let currentProvider = AppProvider.currentProvider
+        self.provider = providerService.getProviderItem(currentProvider)
+        
+        guard let actualProvider = self.provider else { return }
+        parseItems(provider: actualProvider)
     }
     
 }
