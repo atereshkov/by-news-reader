@@ -18,6 +18,21 @@ extension UIBarButtonItem {
         return positiveSpacer
     }
     
+    static func rightTextBtn(title: String, _ action: @escaping () -> Void) -> UIBarButtonItem {
+        let button = UIButton(type: .system)
+        button.setTitle(title, for: .normal)
+        //button.setTitleColor(Asset.Colors.Common.NavBar.navBarRightTitle.color, for: .normal)
+        button.titleLabel?.font = Fonts.navBarRightButton.uiFont
+        button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 0)
+        button.sizeToFit()
+        button.reactive
+            .controlEvents(.touchUpInside).take(duringLifetimeOf: button)
+            .observeValues { _ in
+                action()
+        }
+        return UIBarButtonItem(customView: button)
+    }
+    
     static func shareButton(_ action: @escaping () -> Void) -> UIBarButtonItem {
         let img = Asset.Images.Icons.share.image
         return button(image: img, action: action)

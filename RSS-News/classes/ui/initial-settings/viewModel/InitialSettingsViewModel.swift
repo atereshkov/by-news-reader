@@ -16,6 +16,10 @@ final class InitialSettingsViewModel: BaseViewModel<InitialSettingsRouter>, Init
         setup()
     }
     
+    func skipAction() {
+        router?.goToMain(animated: false)
+    }
+    
 }
 
 private extension InitialSettingsViewModel {

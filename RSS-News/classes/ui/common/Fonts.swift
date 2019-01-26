@@ -12,6 +12,7 @@ enum Fonts {
     
     case tabBarButton
     case navBarTitle
+    case navBarRightButton
     
     case custom(name: String, size: CGFloat)
     
@@ -23,6 +24,8 @@ enum Fonts {
             return UIFont(name: "Arial", size: 9)!
         case .navBarTitle:
             return UIFont(name: "Arial", size: 17)!
+        case .navBarRightButton:
+            return UIFont(name: "Arial", size: 16)!
         }
     }
     

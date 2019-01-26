@@ -57,6 +57,14 @@ internal enum L10n {
     internal static let title = L10n.tr("Localizable", "feed.title")
   }
 
+  internal enum InitialSettings {
+
+    internal enum NavBar {
+      /// Skip
+      internal static let skip = L10n.tr("Localizable", "initial-settings.nav-bar.skip")
+    }
+  }
+
   internal enum Main {
 
     internal enum TabBar {

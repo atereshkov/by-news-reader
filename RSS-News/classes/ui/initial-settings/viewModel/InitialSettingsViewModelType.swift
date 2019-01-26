@@ -10,4 +10,8 @@ import Foundation
 
 protocol InitialSettingsViewModelType: ViewModelType {
     
+    // MARK: Actions
+    
+    func skipAction()
+    
 }

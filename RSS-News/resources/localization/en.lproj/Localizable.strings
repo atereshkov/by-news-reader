@@ -94,3 +94,7 @@
 // MARK: Settings Provider
 
 "settings-provider.title" = "News provider";
+
+// MARK: Initial Settings
+
+"initial-settings.nav-bar.skip" = "Skip";
