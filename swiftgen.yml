@@ -18,6 +18,7 @@ storyboards:
           'RSS-NEWS/classes/ui/settings-theme/view/SettingsTheme.storyboard',
           'RSS-NEWS/classes/ui/category-news/view/CategoryNews.storyboard',
           'RSS-NEWS/classes/ui/news-detail/view/NewsDetail.storyboard',
-          'RSS-NEWS/classes/ui/settings-provider/view/SettingsProvider.storyboard']
+          'RSS-NEWS/classes/ui/settings-provider/view/SettingsProvider.storyboard',
+          'RSS-NEWS/classes/ui/initial-settings/view/InitialSettings.storyboard']
   templateName: swift4
   output: storyboards.swift

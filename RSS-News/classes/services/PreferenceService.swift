@@ -12,6 +12,8 @@ private enum PreferenceKeys: String {
     case initApp = "rss-news.InitializeKeyPreference"
     case theme = "rss-news.Theme"
     case provider = "rss-news.Provider"
+    
+    case onboardingPassed = "rss-news.OnboardingPassed"
 }
 
 class PreferenceService: NSObject {
@@ -50,6 +52,15 @@ class PreferenceService: NSObject {
         }
         set {
             UserDefaults.standard.set(newValue, forKey: PreferenceKeys.provider.rawValue)
+        }
+    }
+    
+    var initialSetupPassed: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: PreferenceKeys.onboardingPassed.rawValue)
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: PreferenceKeys.onboardingPassed.rawValue)
         }
     }
     

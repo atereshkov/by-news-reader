@@ -29,8 +29,11 @@ final class AppRouter: AppRouterProtocol {
     }
     
     func start() {
-        //guard let session = session else { return }
-        goToMain(animated: false)
+        if PreferenceService.shared.initialSetupPassed {
+            goToMain(animated: false)
+        } else {
+            goToInitialSettings(animated: false)
+        }
     }
     
     // Use MainRouable instead if accessing from ViewModel router
@@ -42,6 +45,17 @@ final class AppRouter: AppRouterProtocol {
         
         let router = InitialMainRouter(session: session, view: vc)
         router.goToMain(animated: animated)
+    }
+    
+    // Use InitialSettingsRoutable instead if accessing from ViewModel router
+    func goToInitialSettings(animated: Bool) {
+        guard let session = session else { return }
+        let vc = UIViewController()
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
+        
+        let router = StartInitialSettingsRouter(session: session, view: vc)
+        router.goToInitialSettings(animated: animated)
     }
     
 }
