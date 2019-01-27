@@ -166,6 +166,12 @@
 		A3EC15AD21FE59CB00D29489 /* SettingsIPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EC15AC21FE59CB00D29489 /* SettingsIPad.storyboard */; };
 		A3EC15AF21FE5C6A00D29489 /* SettingsThemeIPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EC15AE21FE5C6A00D29489 /* SettingsThemeIPad.storyboard */; };
 		A3EC15B121FE5CDD00D29489 /* SettingsProviderIPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EC15B021FE5CDD00D29489 /* SettingsProviderIPad.storyboard */; };
+		A3EC15B721FE5EBB00D29489 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EC15B621FE5EBB00D29489 /* About.storyboard */; };
+		A3EC15B921FE5ECA00D29489 /* AboutViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC15B821FE5ECA00D29489 /* AboutViewModelType.swift */; };
+		A3EC15BB21FE5ED300D29489 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC15BA21FE5ED300D29489 /* AboutViewModel.swift */; };
+		A3EC15BD21FE5EE700D29489 /* AboutRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC15BC21FE5EE700D29489 /* AboutRoutable.swift */; };
+		A3EC15BF21FE5EF800D29489 /* AboutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC15BE21FE5EF800D29489 /* AboutRouter.swift */; };
+		A3EC15C121FE5F4200D29489 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC15C021FE5F4200D29489 /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -332,6 +338,12 @@
 		A3EC15AC21FE59CB00D29489 /* SettingsIPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsIPad.storyboard; sourceTree = "<group>"; };
 		A3EC15AE21FE5C6A00D29489 /* SettingsThemeIPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsThemeIPad.storyboard; sourceTree = "<group>"; };
 		A3EC15B021FE5CDD00D29489 /* SettingsProviderIPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsProviderIPad.storyboard; sourceTree = "<group>"; };
+		A3EC15B621FE5EBB00D29489 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		A3EC15B821FE5ECA00D29489 /* AboutViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModelType.swift; sourceTree = "<group>"; };
+		A3EC15BA21FE5ED300D29489 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
+		A3EC15BC21FE5EE700D29489 /* AboutRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRoutable.swift; sourceTree = "<group>"; };
+		A3EC15BE21FE5EF800D29489 /* AboutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutRouter.swift; sourceTree = "<group>"; };
+		A3EC15C021FE5F4200D29489 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		E9A03B472CB8EE9B0D64AFA5 /* Pods-RSS-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS-News.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSS-News/Pods-RSS-News.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -812,6 +824,7 @@
 				A3EC156721FBBBE700D29489 /* settings-provider */,
 				A34B64B221F3914900DACC2F /* settings-theme */,
 				A34B64AE21F390E800DACC2F /* settings-city */,
+				A3EC15B221FE5E8B00D29489 /* about */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -1283,6 +1296,43 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		A3EC15B221FE5E8B00D29489 /* about */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC15B521FE5EA400D29489 /* router */,
+				A3EC15B421FE5EA100D29489 /* view */,
+				A3EC15B321FE5E9F00D29489 /* viewModel */,
+			);
+			path = about;
+			sourceTree = "<group>";
+		};
+		A3EC15B321FE5E9F00D29489 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC15BA21FE5ED300D29489 /* AboutViewModel.swift */,
+				A3EC15B821FE5ECA00D29489 /* AboutViewModelType.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		A3EC15B421FE5EA100D29489 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC15C021FE5F4200D29489 /* AboutView.swift */,
+				A3EC15B621FE5EBB00D29489 /* About.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A3EC15B521FE5EA400D29489 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC15BC21FE5EE700D29489 /* AboutRoutable.swift */,
+				A3EC15BE21FE5EF800D29489 /* AboutRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
 		C4C2E5947F892FC777152D79 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1377,6 +1427,7 @@
 				A34B644621F3326D00DACC2F /* Paper.plist in Resources */,
 				A34B64B921F3917A00DACC2F /* SettingsCity.storyboard in Resources */,
 				A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */,
+				A3EC15B721FE5EBB00D29489 /* About.storyboard in Resources */,
 				A3EC158D21FC45A900D29489 /* InitialSettings.storyboard in Resources */,
 				A34B648B21F3733300DACC2F /* Categories.storyboard in Resources */,
 				A3EC15AF21FE5C6A00D29489 /* SettingsThemeIPad.storyboard in Resources */,
@@ -1500,6 +1551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A34B649F21F37B9900DACC2F /* NetworkManager.swift in Sources */,
+				A3EC15BF21FE5EF800D29489 /* AboutRouter.swift in Sources */,
 				A34B646121F34B5A00DACC2F /* BookmarksRoutable.swift in Sources */,
 				A3EC158F21FC45B200D29489 /* InitialSettingsRouter.swift in Sources */,
 				A37EF40721F6756000691912 /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */,
@@ -1535,6 +1587,7 @@
 				A34B647D21F36BF700DACC2F /* UIKit+ThemeColor.swift in Sources */,
 				A36DC44721F27B0300B0BE72 /* Session.swift in Sources */,
 				A37EF40521F6754F00691912 /* DGElasticPullToRefreshLoadingView.swift in Sources */,
+				A3EC15B921FE5ECA00D29489 /* AboutViewModelType.swift in Sources */,
 				A34B64A421F382C800DACC2F /* MenuCell.swift in Sources */,
 				A34B643921F27E2400DACC2F /* strings.swift in Sources */,
 				A37EF40121F674F200691912 /* DGElasticPullToRefreshConstants.swift in Sources */,
@@ -1576,6 +1629,7 @@
 				A34B647B21F365FB00DACC2F /* BookmarksTabRouter.swift in Sources */,
 				A3860A7E21F4D4740030869A /* CategoriesViewState.swift in Sources */,
 				A3EC159321FC471600D29489 /* StartInitialSettingsRouter.swift in Sources */,
+				A3EC15BB21FE5ED300D29489 /* AboutViewModel.swift in Sources */,
 				A34B64BD21F3918F00DACC2F /* SettingsCityView.swift in Sources */,
 				A3860A7321F48E0E0030869A /* AppProviderEnum.swift in Sources */,
 				A34B643B21F27E2400DACC2F /* storyboards.swift in Sources */,
@@ -1600,6 +1654,7 @@
 				A34B649321F373FB00DACC2F /* CategoriesViewModel.swift in Sources */,
 				A3EC158721FC458900D29489 /* InitialSettingsViewModelType.swift in Sources */,
 				A3860A9621F4E7AE0030869A /* NewsItem.swift in Sources */,
+				A3EC15C121FE5F4200D29489 /* AboutView.swift in Sources */,
 				A3EC159F21FCADBE00D29489 /* ReachabilityService.swift in Sources */,
 				A3128D9821F79DDB00F0BFDC /* RealmService.swift in Sources */,
 				A34B648721F372E500DACC2F /* SettingsTabRouter.swift in Sources */,
@@ -1624,6 +1679,7 @@
 				A3128D9F21F7AEBE00F0BFDC /* BookmarksViewState.swift in Sources */,
 				A34B647521F3655600DACC2F /* BookmarksView.swift in Sources */,
 				A34B64C921F3936300DACC2F /* SettingsCityRouter.swift in Sources */,
+				A3EC15BD21FE5EE700D29489 /* AboutRoutable.swift in Sources */,
 				A3860AAD21F639DC0030869A /* NewsDetailView.swift in Sources */,
 				A36DC46321F27C0100B0BE72 /* UIWindow.swift in Sources */,
 				A34B64E121F3BA0D00DACC2F /* NewsViewModelType.swift in Sources */,

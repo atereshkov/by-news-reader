@@ -51,7 +51,7 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
         case .source:
             router?.goToSettingsProvider(delegate: self)
         case .about:
-            break
+            router?.goToAbout()
         case .textSize:
             break
         case .theme:

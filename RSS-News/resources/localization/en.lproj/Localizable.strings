@@ -111,3 +111,7 @@
 // MARK: Launch Screen
 
 "launch-screen.title" = "Belarus News";
+
+// MARK: About Screen
+
+"about.title" = "About";

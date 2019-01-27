@@ -109,3 +109,7 @@
 // MARK: Launch Screen
 
 "launch-screen.title" = "Новости Беларуси и Мира";
+
+// MARK: About Screen
+
+"about.title" = "О приложении";
