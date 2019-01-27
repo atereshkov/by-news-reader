@@ -16,11 +16,19 @@ extension SettingsThemeRoutable where Self: RouterType {
     
     func goToSettingsTheme(delegate: SettingsThemeViewDelegate?) {
         let viewModel = SettingsThemeViewModel(session: session, delegate: delegate)
-        let view = StoryboardScene.SettingsTheme.initialScene.instantiate()
+        let view = self.targetView
         view.viewModel = viewModel
         let router = SettingsThemeRouter(session: session, view: view)
         viewModel.router = router
         self.view?.navigationController?.pushViewController(view, animated: true)
+    }
+    
+    private var targetView: SettingsThemeView {
+        if UIDevice.isPad {
+            return StoryboardScene.SettingsThemeIPad.initialScene.instantiate()
+        } else {
+            return StoryboardScene.SettingsTheme.initialScene.instantiate()
+        }
     }
     
 }

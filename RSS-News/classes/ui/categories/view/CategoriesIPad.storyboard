@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="taf-oj-ZQn">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Categories View-->
+        <scene sceneID="riw-FY-1O1">
+            <objects>
+                <viewController id="taf-oj-ZQn" customClass="CategoriesView" customModule="RSS_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D3G-aA-z2a">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hTT-5N-IYa">
+                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="CategoryCell" id="5gP-DX-kpV" customClass="CategoryCell" customModule="RSS_News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5gP-DX-kpV" id="NvU-j3-hwU">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkD-UM-KbP">
+                                                    <rect key="frame" x="15" y="10.5" width="329" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="Categories.Cell.TitleColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" translatesAutoresizingMaskIntoConstraints="NO" id="Ppu-KO-BbM">
+                                                    <rect key="frame" x="354" y="17" width="6" height="10"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="6" id="BBw-bY-7we"/>
+                                                        <constraint firstAttribute="height" constant="10" id="C4y-v4-bVw"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="Categories.Cell.ChevronIconColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvt-w9-fzq">
+                                                    <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="Bgc-ZW-vD0"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Categories.Cell.SeparatorColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ppu-KO-BbM" firstAttribute="centerY" secondItem="NvU-j3-hwU" secondAttribute="centerY" id="Kbk-Iu-eql"/>
+                                                <constraint firstItem="lkD-UM-KbP" firstAttribute="centerY" secondItem="NvU-j3-hwU" secondAttribute="centerY" id="TWM-9d-BZh"/>
+                                                <constraint firstItem="xvt-w9-fzq" firstAttribute="leading" secondItem="NvU-j3-hwU" secondAttribute="leading" id="Y1T-kN-Jdy"/>
+                                                <constraint firstAttribute="trailing" secondItem="xvt-w9-fzq" secondAttribute="trailing" id="YVF-49-ip4"/>
+                                                <constraint firstItem="Ppu-KO-BbM" firstAttribute="leading" secondItem="lkD-UM-KbP" secondAttribute="trailing" constant="10" id="djC-q5-pk5"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ppu-KO-BbM" secondAttribute="trailing" constant="15" id="lBA-TB-mgI"/>
+                                                <constraint firstAttribute="bottom" secondItem="xvt-w9-fzq" secondAttribute="bottom" id="s7U-Cj-CUP"/>
+                                                <constraint firstItem="lkD-UM-KbP" firstAttribute="leading" secondItem="NvU-j3-hwU" secondAttribute="leading" constant="15" id="y7h-6O-b2q"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Categories.BackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="lkD-UM-KbP" id="Ovi-84-nIW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Categories.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="taf-oj-ZQn" id="nXf-MJ-qi5"/>
+                                    <outlet property="delegate" destination="taf-oj-ZQn" id="he8-Qz-QOe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hTT-5N-IYa" firstAttribute="top" secondItem="N42-3y-2HY" secondAttribute="top" id="Te3-bd-hMf"/>
+                            <constraint firstItem="hTT-5N-IYa" firstAttribute="leading" secondItem="N42-3y-2HY" secondAttribute="leading" id="kg6-zD-h0q"/>
+                            <constraint firstItem="N42-3y-2HY" firstAttribute="bottom" secondItem="hTT-5N-IYa" secondAttribute="bottom" id="pKD-9m-nfJ"/>
+                            <constraint firstItem="N42-3y-2HY" firstAttribute="trailing" secondItem="hTT-5N-IYa" secondAttribute="trailing" id="ukK-0C-t7F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N42-3y-2HY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Categories.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="hTT-5N-IYa" id="l1x-er-QUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oer-p4-7Bt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="389.60000000000002" y="-133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron-right" width="6" height="10"/>
+    </resources>
+</document>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lla-md-KNO">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings Provider View-->
+        <scene sceneID="e41-TW-GOh">
+            <objects>
+                <viewController id="lla-md-KNO" customClass="SettingsProviderView" customModule="RSS_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M1j-JO-1V6">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="veQ-WU-ssh">
+                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ProviderCell" id="MaX-IL-30a" customClass="ProviderCell" customModule="RSS_News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MaX-IL-30a" id="a5i-E2-Ldh">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMo-9t-tcA">
+                                                    <rect key="frame" x="15" y="10.5" width="46.5" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="SettingsProvider.Cell.TitleColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mark-check" translatesAutoresizingMaskIntoConstraints="NO" id="Hex-8I-aHo">
+                                                    <rect key="frame" x="729" y="10" width="24" height="24"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="SettingsProvider.Cell.MarkImageTintColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hex-8I-aHo" firstAttribute="centerY" secondItem="a5i-E2-Ldh" secondAttribute="centerY" id="4Yy-sD-Rmt"/>
+                                                <constraint firstItem="dMo-9t-tcA" firstAttribute="centerY" secondItem="a5i-E2-Ldh" secondAttribute="centerY" id="J8T-ua-OaD"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hex-8I-aHo" secondAttribute="trailing" constant="15" id="Yjj-h4-iXA"/>
+                                                <constraint firstItem="dMo-9t-tcA" firstAttribute="leading" secondItem="a5i-E2-Ldh" secondAttribute="leading" constant="15" id="i3M-Si-Crt"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsProvider.BackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftLabel" destination="dMo-9t-tcA" id="Wbo-qa-Ryi"/>
+                                            <outlet property="markImageView" destination="Hex-8I-aHo" id="Yd2-Tu-XUV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsProvider.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="lla-md-KNO" id="KHQ-mZ-tE7"/>
+                                    <outlet property="delegate" destination="lla-md-KNO" id="XOz-Px-voj"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bde-nK-dpe" firstAttribute="trailing" secondItem="veQ-WU-ssh" secondAttribute="trailing" id="Dww-m0-fpW"/>
+                            <constraint firstItem="bde-nK-dpe" firstAttribute="bottom" secondItem="veQ-WU-ssh" secondAttribute="bottom" id="TqW-KE-mHh"/>
+                            <constraint firstItem="bde-nK-dpe" firstAttribute="top" secondItem="veQ-WU-ssh" secondAttribute="top" id="dMQ-he-roJ"/>
+                            <constraint firstItem="veQ-WU-ssh" firstAttribute="leading" secondItem="bde-nK-dpe" secondAttribute="leading" id="sUu-Df-Vu3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bde-nK-dpe"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsProvider.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="veQ-WU-ssh" id="PPp-2J-7ZU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJS-G6-47d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="-218"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mark-check" width="24" height="24"/>
+    </resources>
+</document>

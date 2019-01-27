@@ -16,11 +16,19 @@ extension CategoryNewsRoutable where Self: RouterType {
     
     func goToCategoryNews(item: NewsCategoryProtocol) {
         let viewModel = CategoryNewsViewModel(item: item, session: session, delegate: nil)
-        let view = StoryboardScene.CategoryNews.initialScene.instantiate()
+        let view = self.targetView
         view.viewModel = viewModel
         let router = CategoryNewsRouter(session: session, view: view)
         viewModel.router = router
         self.view?.navigationController?.pushViewController(view, animated: true)
+    }
+    
+    private var targetView: CategoryNewsView {
+        if UIDevice.isPad {
+            return StoryboardScene.CategoryNewsIPad.initialScene.instantiate()
+        } else {
+            return StoryboardScene.CategoryNews.initialScene.instantiate()
+        }
     }
     
 }

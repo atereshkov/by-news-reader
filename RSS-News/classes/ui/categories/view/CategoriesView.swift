@@ -53,6 +53,11 @@ final class CategoriesView: BaseView<CategoriesViewModel>, UITableViewDelegate, 
         return viewModel?.itemsCount.value ?? 0
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let rowHeight: CGFloat = UIDevice.isPhone ? 44.0 : 60
+        return rowHeight
+    }
+    
 }
 
 private extension CategoriesView {

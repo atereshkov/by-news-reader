@@ -50,6 +50,11 @@ final class SettingsProviderView: BaseView<SettingsProviderViewModel>, UITableVi
         return viewModel?.itemsCount.value ?? 0
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let rowHeight: CGFloat = UIDevice.isPhone ? 44.0 : 55
+        return rowHeight
+    }
+    
 }
 
 private extension SettingsProviderView {

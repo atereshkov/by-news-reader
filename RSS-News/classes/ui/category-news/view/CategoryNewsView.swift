@@ -72,7 +72,7 @@ final class CategoryNewsView: BaseView<CategoryNewsViewModel>, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let rowHeight: CGFloat = 100.0
+        let rowHeight: CGFloat = UIDevice.isPhone ? 100.0 : 160
         return rowHeight
     }
     

@@ -58,15 +58,30 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<RSS_News.BookmarksView>(storyboard: Bookmarks.self)
   }
+  internal enum BookmarksIPad: StoryboardType {
+    internal static let storyboardName = "BookmarksIPad"
+
+    internal static let initialScene = InitialSceneType<RSS_News.BookmarksView>(storyboard: BookmarksIPad.self)
+  }
   internal enum Categories: StoryboardType {
     internal static let storyboardName = "Categories"
 
     internal static let initialScene = InitialSceneType<RSS_News.CategoriesView>(storyboard: Categories.self)
   }
+  internal enum CategoriesIPad: StoryboardType {
+    internal static let storyboardName = "CategoriesIPad"
+
+    internal static let initialScene = InitialSceneType<RSS_News.CategoriesView>(storyboard: CategoriesIPad.self)
+  }
   internal enum CategoryNews: StoryboardType {
     internal static let storyboardName = "CategoryNews"
 
     internal static let initialScene = InitialSceneType<RSS_News.CategoryNewsView>(storyboard: CategoryNews.self)
+  }
+  internal enum CategoryNewsIPad: StoryboardType {
+    internal static let storyboardName = "CategoryNewsIPad"
+
+    internal static let initialScene = InitialSceneType<RSS_News.CategoryNewsView>(storyboard: CategoryNewsIPad.self)
   }
   internal enum InitialSettings: StoryboardType {
     internal static let storyboardName = "InitialSettings"
@@ -78,6 +93,11 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<RSS_News.MainView>(storyboard: Main.self)
   }
+  internal enum MainIPad: StoryboardType {
+    internal static let storyboardName = "MainIPad"
+
+    internal static let initialScene = InitialSceneType<RSS_News.MainView>(storyboard: MainIPad.self)
+  }
   internal enum News: StoryboardType {
     internal static let storyboardName = "News"
 
@@ -87,6 +107,11 @@ internal enum StoryboardScene {
     internal static let storyboardName = "NewsDetail"
 
     internal static let initialScene = InitialSceneType<RSS_News.NewsDetailView>(storyboard: NewsDetail.self)
+  }
+  internal enum NewsIPad: StoryboardType {
+    internal static let storyboardName = "NewsIPad"
+
+    internal static let initialScene = InitialSceneType<RSS_News.NewsView>(storyboard: NewsIPad.self)
   }
   internal enum Settings: StoryboardType {
     internal static let storyboardName = "Settings"
@@ -98,15 +123,30 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<RSS_News.SettingsCityView>(storyboard: SettingsCity.self)
   }
+  internal enum SettingsIPad: StoryboardType {
+    internal static let storyboardName = "SettingsIPad"
+
+    internal static let initialScene = InitialSceneType<RSS_News.SettingsView>(storyboard: SettingsIPad.self)
+  }
   internal enum SettingsProvider: StoryboardType {
     internal static let storyboardName = "SettingsProvider"
 
     internal static let initialScene = InitialSceneType<RSS_News.SettingsProviderView>(storyboard: SettingsProvider.self)
   }
+  internal enum SettingsProviderIPad: StoryboardType {
+    internal static let storyboardName = "SettingsProviderIPad"
+
+    internal static let initialScene = InitialSceneType<RSS_News.SettingsProviderView>(storyboard: SettingsProviderIPad.self)
+  }
   internal enum SettingsTheme: StoryboardType {
     internal static let storyboardName = "SettingsTheme"
 
     internal static let initialScene = InitialSceneType<RSS_News.SettingsThemeView>(storyboard: SettingsTheme.self)
+  }
+  internal enum SettingsThemeIPad: StoryboardType {
+    internal static let storyboardName = "SettingsThemeIPad"
+
+    internal static let initialScene = InitialSceneType<RSS_News.SettingsThemeView>(storyboard: SettingsThemeIPad.self)
   }
 }
 

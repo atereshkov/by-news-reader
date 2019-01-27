@@ -16,7 +16,7 @@ extension MainRoutable where Self: RouterType {
     
     func goToMain(animated: Bool = false) {
         let viewModel = MainViewModel(session: session, delegate: nil)
-        let view = StoryboardScene.Main.initialScene.instantiate()
+        let view = self.targetView
         view.viewModel = viewModel
         let router = MainRouter(session: session, view: view)
         viewModel.router = router
@@ -26,6 +26,14 @@ extension MainRoutable where Self: RouterType {
 
         let rootVC = UINavigationController(rootViewController: view)
         AppDelegate.shared.window?.setRootViewController(rootVC, animated: animated, completion: nil)
+    }
+    
+    private var targetView: MainView {
+        if UIDevice.isPad {
+            return StoryboardScene.MainIPad.initialScene.instantiate()
+        } else {
+            return StoryboardScene.Main.initialScene.instantiate()
+        }
     }
     
 }

@@ -16,11 +16,19 @@ extension SettingsProviderRoutable where Self: RouterType {
     
     func goToSettingsProvider(delegate: SettingsProviderViewDelegate?) {
         let viewModel = SettingsProviderViewModel(session: session, delegate: delegate)
-        let view = StoryboardScene.SettingsProvider.initialScene.instantiate()
+        let view = self.targetView
         view.viewModel = viewModel
         let router = SettingsProviderRouter(session: session, view: view)
         viewModel.router = router
         self.view?.navigationController?.pushViewController(view, animated: true)
+    }
+    
+    private var targetView: SettingsProviderView {
+        if UIDevice.isPad {
+            return StoryboardScene.SettingsProviderIPad.initialScene.instantiate()
+        } else {
+            return StoryboardScene.SettingsProvider.initialScene.instantiate()
+        }
     }
     
 }

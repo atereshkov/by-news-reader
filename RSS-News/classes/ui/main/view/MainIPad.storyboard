@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XQs-wj-Aub">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View-->
+        <scene sceneID="YVI-xV-AK2">
+            <objects>
+                <viewController id="XQs-wj-Aub" customClass="MainView" customModule="RSS_News" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZIl-fu-ltN">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ckI-Fw-apJ">
+                                <rect key="frame" x="0.0" y="20" width="768" height="954"/>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mE8-7t-z3G">
+                                <rect key="frame" x="0.0" y="974" width="768" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8K-XO-Zpp">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="wbe-Du-hoO"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="TabBar.TopBorderLineColor"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="z0f-CG-YYx">
+                                        <rect key="frame" x="60" y="1" width="648" height="48"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="TabBar.BackgroundColor"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="o8K-XO-Zpp" firstAttribute="top" secondItem="mE8-7t-z3G" secondAttribute="top" id="7b8-yg-zgm"/>
+                                    <constraint firstItem="z0f-CG-YYx" firstAttribute="top" secondItem="o8K-XO-Zpp" secondAttribute="bottom" id="GCz-ho-B26"/>
+                                    <constraint firstAttribute="bottom" secondItem="z0f-CG-YYx" secondAttribute="bottom" constant="1" id="LBi-P1-gJo"/>
+                                    <constraint firstItem="z0f-CG-YYx" firstAttribute="leading" secondItem="mE8-7t-z3G" secondAttribute="leading" constant="60" id="Lao-gL-0qc"/>
+                                    <constraint firstAttribute="trailing" secondItem="z0f-CG-YYx" secondAttribute="trailing" constant="60" id="pfJ-Le-gdH"/>
+                                    <constraint firstItem="o8K-XO-Zpp" firstAttribute="leading" secondItem="mE8-7t-z3G" secondAttribute="leading" id="sMl-T1-naK"/>
+                                    <constraint firstAttribute="height" constant="50" id="y7d-qA-aM4"/>
+                                    <constraint firstAttribute="trailing" secondItem="o8K-XO-Zpp" secondAttribute="trailing" id="yxa-hK-0IJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="TabBar.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mE8-7t-z3G" firstAttribute="top" secondItem="ckI-Fw-apJ" secondAttribute="bottom" id="5Eg-Nz-cd0"/>
+                            <constraint firstItem="BEX-Xw-xOD" firstAttribute="bottom" secondItem="mE8-7t-z3G" secondAttribute="bottom" id="OtC-jd-0vd"/>
+                            <constraint firstItem="BEX-Xw-xOD" firstAttribute="trailing" secondItem="ckI-Fw-apJ" secondAttribute="trailing" id="XkT-6L-wj9"/>
+                            <constraint firstItem="BEX-Xw-xOD" firstAttribute="trailing" secondItem="mE8-7t-z3G" secondAttribute="trailing" id="Ysw-Mw-bmg"/>
+                            <constraint firstItem="ckI-Fw-apJ" firstAttribute="leading" secondItem="BEX-Xw-xOD" secondAttribute="leading" id="ZgO-xe-qVC"/>
+                            <constraint firstItem="mE8-7t-z3G" firstAttribute="leading" secondItem="BEX-Xw-xOD" secondAttribute="leading" id="jK6-0B-jed"/>
+                            <constraint firstItem="ckI-Fw-apJ" firstAttribute="top" secondItem="BEX-Xw-xOD" secondAttribute="top" id="vjx-Nw-3hG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BEX-Xw-xOD"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Main.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="ckI-Fw-apJ" id="Pux-xL-lVa"/>
+                        <outlet property="tabBarStackView" destination="z0f-CG-YYx" id="R5A-le-3sD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1d-DO-4Gp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="336.80000000000001" y="-272.11394302848578"/>
+        </scene>
+    </scenes>
+</document>

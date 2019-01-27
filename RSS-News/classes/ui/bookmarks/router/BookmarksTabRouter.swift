@@ -16,7 +16,7 @@ class BookmarksTabRouter: BookmarksTabRouterProtocol {
     
     class func initializeBookmarksModule(session: SessionType) -> UIViewController {
         let viewModel = BookmarksViewModel(session: session, delegate: nil)
-        let view = StoryboardScene.Bookmarks.initialScene.instantiate()
+        let view = UIDevice.isPhone ? StoryboardScene.Bookmarks.initialScene.instantiate() : StoryboardScene.BookmarksIPad.initialScene.instantiate()
         view.viewModel = viewModel
         let router = BookmarksRouter(session: session, view: view)
         viewModel.router = router

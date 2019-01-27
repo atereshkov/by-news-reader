@@ -16,7 +16,7 @@ class CategoriesTabRouter: CategoriesTabRouterProtocol {
     
     class func initializeCategoriesModule(session: SessionType) -> UIViewController {
         let viewModel = CategoriesViewModel(session: session, delegate: nil)
-        let view = StoryboardScene.Categories.initialScene.instantiate()
+        let view = UIDevice.isPhone ? StoryboardScene.Categories.initialScene.instantiate() : StoryboardScene.CategoriesIPad.initialScene.instantiate()
         view.viewModel = viewModel
         let router = CategoriesRouter(session: session, view: view)
         viewModel.router = router

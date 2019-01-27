@@ -16,7 +16,7 @@ class NewsTabRouter: NewsTabRouterProtocol {
     
     class func initializeNewsModule(session: SessionType) -> UIViewController {
         let viewModel = NewsViewModel(session: session, delegate: nil)
-        let view = StoryboardScene.News.initialScene.instantiate()
+        let view = UIDevice.isPad ? StoryboardScene.NewsIPad.initialScene.instantiate() : StoryboardScene.News.initialScene.instantiate()
         view.viewModel = viewModel
         let router = NewsRouter(session: session, view: view)
         viewModel.router = router

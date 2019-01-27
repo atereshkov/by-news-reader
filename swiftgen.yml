@@ -10,15 +10,23 @@ xcassets:
   output: assets-images.swift
 storyboards:
   paths: ['RSS-NEWS/classes/ui/main/view/Main.storyboard',
+          'RSS-NEWS/classes/ui/main/view/MainIPad.storyboard',
           'RSS-NEWS/classes/ui/news/view/News.storyboard',
+          'RSS-NEWS/classes/ui/news/view/NewsIPad.storyboard',
           'RSS-NEWS/classes/ui/bookmarks/view/Bookmarks.storyboard',
+          'RSS-NEWS/classes/ui/bookmarks/view/BookmarksIPad.storyboard',
           'RSS-NEWS/classes/ui/categories/view/Categories.storyboard',
+          'RSS-NEWS/classes/ui/categories/view/CategoriesIPad.storyboard',
           'RSS-NEWS/classes/ui/settings/view/Settings.storyboard',
+          'RSS-NEWS/classes/ui/settings/view/SettingsIPad.storyboard',
           'RSS-NEWS/classes/ui/settings-city/view/SettingsCity.storyboard',
           'RSS-NEWS/classes/ui/settings-theme/view/SettingsTheme.storyboard',
+          'RSS-NEWS/classes/ui/settings-theme/view/SettingsThemeIPad.storyboard',
           'RSS-NEWS/classes/ui/category-news/view/CategoryNews.storyboard',
+          'RSS-NEWS/classes/ui/category-news/view/CategoryNewsIPad.storyboard',
           'RSS-NEWS/classes/ui/news-detail/view/NewsDetail.storyboard',
           'RSS-NEWS/classes/ui/settings-provider/view/SettingsProvider.storyboard',
+          'RSS-NEWS/classes/ui/settings-provider/view/SettingsProviderIPad.storyboard',
           'RSS-NEWS/classes/ui/initial-settings/view/InitialSettings.storyboard']
   templateName: swift4
   output: storyboards.swift
