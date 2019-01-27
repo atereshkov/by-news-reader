@@ -102,6 +102,8 @@ internal enum Asset {
         internal static let testImgWhite = ImageAsset(name: "test_img_white")
       }
     }
+    internal static let flag = ImageAsset(name: "flag")
+    internal static let launchscreen = ImageAsset(name: "launchscreen")
 
     // swiftlint:disable trailing_comma
     internal static let allColors: [ColorAsset] = [
@@ -121,6 +123,8 @@ internal enum Asset {
       Themes.Paper.testImgPaper,
       Themes.Red.testImgRed,
       Themes.White.testImgWhite,
+      flag,
+      launchscreen,
     ]
     // swiftlint:enable trailing_comma
     @available(*, deprecated, renamed: "allImages")

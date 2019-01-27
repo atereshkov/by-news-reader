@@ -65,6 +65,11 @@ internal enum L10n {
     }
   }
 
+  internal enum LaunchScreen {
+    /// Belarus News
+    internal static let title = L10n.tr("Localizable", "launch-screen.title")
+  }
+
   internal enum Main {
 
     internal enum TabBar {

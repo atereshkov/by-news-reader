@@ -102,3 +102,7 @@
 // MARK: No Internet View
 
 "no-internet.view.list" = "No Internet connection";
+
+// MARK: Launch Screen
+
+"launch-screen.title" = "Belarus News";

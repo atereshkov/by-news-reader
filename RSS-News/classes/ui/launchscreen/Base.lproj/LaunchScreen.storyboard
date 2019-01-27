@@ -18,15 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Launch Screen is coming!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZu-UI-Yz0">
-                                <rect key="frame" x="89" y="323" width="197" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="07Z-rU-KIo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новости Беларуси и Мира" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1k-a1-Rc8">
+                                <rect key="frame" x="10" y="190" width="355" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="07Z-rU-KIo" secondAttribute="trailing" id="JYI-sJ-VUG"/>
+                            <constraint firstItem="T1k-a1-Rc8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="PrP-0T-fcs"/>
+                            <constraint firstItem="07Z-rU-KIo" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="We5-aL-AhS"/>
+                            <constraint firstItem="T1k-a1-Rc8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="cal-rt-x3p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T1k-a1-Rc8" secondAttribute="trailing" constant="10" id="hlE-81-VWj"/>
+                            <constraint firstItem="07Z-rU-KIo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tOw-u0-QEf"/>
+                            <constraint firstAttribute="bottom" secondItem="07Z-rU-KIo" secondAttribute="bottom" id="z2B-Zq-EZ6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -35,4 +46,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="flag" width="2000" height="1000"/>
+    </resources>
 </document>

@@ -100,3 +100,7 @@
 // MARK: No Internet View
 
 "no-internet.view.list" = "Отсутствует соединение с Интернетом";
+
+// MARK: Launch Screen
+
+"launch-screen.title" = "Новости Беларуси и Мира";
