@@ -157,7 +157,7 @@
 		A3EC159721FC669A00D29489 /* ProvidersServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159621FC669A00D29489 /* ProvidersServiceProtocol.swift */; };
 		A3EC159921FC66B500D29489 /* ProviderServiceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159821FC66B500D29489 /* ProviderServiceExtensions.swift */; };
 		A3EC159F21FCADBE00D29489 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159E21FCADBE00D29489 /* ReachabilityService.swift */; };
-		A3EC15A121FE55A800D29489 /* UserDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC15A021FE55A800D29489 /* UserDevice.swift */; };
+		A3EC15A121FE55A800D29489 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC15A021FE55A800D29489 /* UIDevice.swift */; };
 		A3EC15A321FE563500D29489 /* MainIPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EC15A221FE563500D29489 /* MainIPad.storyboard */; };
 		A3EC15A521FE575D00D29489 /* NewsIPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EC15A421FE575D00D29489 /* NewsIPad.storyboard */; };
 		A3EC15A721FE58F500D29489 /* BookmarksIPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EC15A621FE58F500D29489 /* BookmarksIPad.storyboard */; };
@@ -329,7 +329,7 @@
 		A3EC159621FC669A00D29489 /* ProvidersServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersServiceProtocol.swift; sourceTree = "<group>"; };
 		A3EC159821FC66B500D29489 /* ProviderServiceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderServiceExtensions.swift; sourceTree = "<group>"; };
 		A3EC159E21FCADBE00D29489 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
-		A3EC15A021FE55A800D29489 /* UserDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDevice.swift; sourceTree = "<group>"; };
+		A3EC15A021FE55A800D29489 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		A3EC15A221FE563500D29489 /* MainIPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainIPad.storyboard; sourceTree = "<group>"; };
 		A3EC15A421FE575D00D29489 /* NewsIPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsIPad.storyboard; sourceTree = "<group>"; };
 		A3EC15A621FE58F500D29489 /* BookmarksIPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookmarksIPad.storyboard; sourceTree = "<group>"; };
@@ -961,7 +961,7 @@
 				A34B648021F3725C00DACC2F /* String.swift */,
 				A34B64CE21F3967F00DACC2F /* UINavigationItem.swift */,
 				A346E42021FA31C50009C3C9 /* UIBarButtonItem.swift */,
-				A3EC15A021FE55A800D29489 /* UserDevice.swift */,
+				A3EC15A021FE55A800D29489 /* UIDevice.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -1575,7 +1575,7 @@
 				A34B64D921F3B70E00DACC2F /* ParseService.swift in Sources */,
 				A37EF40921F6757200691912 /* DGElasticPullToRefreshView.swift in Sources */,
 				A3860A7521F4902E0030869A /* ProvidersService.swift in Sources */,
-				A3EC15A121FE55A800D29489 /* UserDevice.swift in Sources */,
+				A3EC15A121FE55A800D29489 /* UIDevice.swift in Sources */,
 				A34B649121F373D400DACC2F /* CategoriesView.swift in Sources */,
 				A34B644E21F3455200DACC2F /* TabBarItem.swift in Sources */,
 				A346E41F21FA2FBD0009C3C9 /* ShareRoutable.swift in Sources */,

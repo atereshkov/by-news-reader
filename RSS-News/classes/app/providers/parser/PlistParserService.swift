@@ -40,8 +40,9 @@ final class PlistParserService: PlistParserServiceProtocol {
         guard let generalJson = jsonItem["General"] as? [String: Any] else { return nil }
         guard let main = parseCategory("Main", from: generalJson) else { return nil }
         guard let latest = parseCategory("Latest", from: generalJson) else { return nil }
+        let order = jsonItem["order"] as? Int
         
-        let providerItem = NewsProviderItem(name: item, categories: categories, main: main, latest: latest)
+        let providerItem = NewsProviderItem(name: item, categories: categories, main: main, latest: latest, order: order)
         return providerItem
     }
     

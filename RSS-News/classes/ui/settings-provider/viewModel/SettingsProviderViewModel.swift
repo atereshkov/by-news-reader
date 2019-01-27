@@ -38,7 +38,9 @@ final class SettingsProviderViewModel: BaseViewModel<SettingsProviderRouter>, Se
     override func onViewDidLoad() {
         super.onViewDidLoad()
         
-        let providers = providerService.getProviderItems()
+        let providers = providerService
+            .getProviderItems()
+            .sorted(by: { $0.order ?? 0 < $1.order ?? 1 })
         items.value.append(contentsOf: providers)
         
         updateState?(.reloadItems)
