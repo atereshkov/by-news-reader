@@ -46,6 +46,11 @@
 "category.culture" = "Кругозор";
 "category.people-society" = "Люди и общество";
 "category.realt" = "Недвижимость";
+"category.main" = "Главное";
+"category.politics" = "Политика";
+"category.health" = "Здоровье";
+"category.education" = "Образование";
+"category.radio" = "Радио";
 
 // MARK: Time
 

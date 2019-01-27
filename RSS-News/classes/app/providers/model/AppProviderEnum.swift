@@ -13,6 +13,8 @@ enum AppProviderEnum: String {
     
     case tutBy = "TUT.by"
     case onlinerBy = "Onliner.by"
+    case beltaBy = "Belta.by"
+    case sputnikBy = "Sputnik.by"
     
     var localized: String {
         return self.rawValue.localized

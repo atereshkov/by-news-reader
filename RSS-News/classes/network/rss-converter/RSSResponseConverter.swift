@@ -24,10 +24,10 @@ class RSSReponseConverter: ResponseConverter {
         var items: [NewsItemProtocol] = []
         
         for item in feedItems {
-            let title = item.title
+            let title = item.title?.trim()
             let date = item.pubDate
             let link = item.guid?.value
-            let category = item.categories?.first?.value
+            let category = item.categories?.first?.value?.trim()
             
             let images = getImages(item: item)
             var iconURL = images.first?.attributes?.url ?? ""
@@ -35,6 +35,9 @@ class RSSReponseConverter: ResponseConverter {
             if images.isEmpty {
                 let thumbnails = getThumbnails(item: item)
                 iconURL = thumbnails.first?.attributes?.url ?? ""
+            }
+            if iconURL.isEmpty {
+                iconURL = getEnclosure(item: item)?.attributes?.url ?? ""
             }
             
             let newsItem = NewsItem(title: title ?? "", iconURL: iconURL, pubDate: date, link: link, category: category)
@@ -54,6 +57,11 @@ class RSSReponseConverter: ResponseConverter {
     private func getThumbnails(item: RSSFeedItem) -> [MediaThumbnail] {
         let thumbnails = item.media?.mediaThumbnails
         return thumbnails ?? []
+    }
+    
+    private func getEnclosure(item: RSSFeedItem) -> RSSFeedItemEnclosure? {
+        let enclosure = item.enclosure
+        return enclosure
     }
     
 }

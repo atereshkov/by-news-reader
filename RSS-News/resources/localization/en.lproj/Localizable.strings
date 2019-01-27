@@ -46,6 +46,11 @@
 "category.culture" = "Culture";
 "category.people-society" = "People and society";
 "category.realt" = "Realty";
+"category.main" = "Main";
+"category.politics" = "Politics";
+"category.health" = "Health";
+"category.education" = "Education";
+"category.radio" = "Radio";
 
 // MARK: Time
 

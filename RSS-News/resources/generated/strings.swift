@@ -32,12 +32,22 @@ internal enum L10n {
     internal static let culture = L10n.tr("Localizable", "category.culture")
     /// Economics
     internal static let economics = L10n.tr("Localizable", "category.economics")
+    /// Education
+    internal static let education = L10n.tr("Localizable", "category.education")
     /// Finance
     internal static let finance = L10n.tr("Localizable", "category.finance")
+    /// Health
+    internal static let health = L10n.tr("Localizable", "category.health")
     /// Lady
     internal static let lady = L10n.tr("Localizable", "category.lady")
+    /// Main
+    internal static let main = L10n.tr("Localizable", "category.main")
     /// People and society
     internal static let peopleSociety = L10n.tr("Localizable", "category.people-society")
+    /// Politics
+    internal static let politics = L10n.tr("Localizable", "category.politics")
+    /// Radio
+    internal static let radio = L10n.tr("Localizable", "category.radio")
     /// Realty
     internal static let realt = L10n.tr("Localizable", "category.realt")
     /// Realty
