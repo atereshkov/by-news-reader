@@ -137,15 +137,17 @@
 	</dict>
 	<key>SettingsTheme</key>
 	<dict>
-		<key>Cell</key>
+		<key>Switch</key>
 		<dict>
-			<key>SeparatorColor</key>
-			<string>#e6e6e6</string>
-			<key>TitleColor</key>
-			<string>#000000</string>
-			<key>MarkImageTintColor</key>
-			<string>#000000</string>
+			<key>TintColor</key>
+			<string>#D3D3D3</string>
+			<key>OnTintColor</key>
+			<string>#FFFFFF</string>
+			<key>ThumbColor</key>
+			<string>#62A0CD</string>
 		</dict>
+		<key>ThemeLabelColor</key>
+		<string>#000000</string>
 		<key>BackgroundColor</key>
 		<string>#FFFFFF</string>
 	</dict>

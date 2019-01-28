@@ -18,77 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MHt-wd-SQF">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ThemeCell" id="8nn-Ty-pza" customClass="ThemeCell" customModule="RSS_News" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8nn-Ty-pza" id="F45-Bn-Rqj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETC-fA-kQ5">
-                                                    <rect key="frame" x="15" y="11.5" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="SettingsTheme.Cell.TitleColor"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mark-check" translatesAutoresizingMaskIntoConstraints="NO" id="R1E-y4-N20">
-                                                    <rect key="frame" x="336" y="10" width="24" height="24"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="SettingsTheme.Cell.MarkImageTintColor"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEE-D5-fmj">
-                                                    <rect key="frame" x="0.0" y="43" width="375" height="1"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="sJk-tB-yVi"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsTheme.Cell.SeparatorColor"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ETC-fA-kQ5" firstAttribute="centerY" secondItem="F45-Bn-Rqj" secondAttribute="centerY" id="52E-gC-n28"/>
-                                                <constraint firstAttribute="trailing" secondItem="kEE-D5-fmj" secondAttribute="trailing" id="KdI-UR-Hrx"/>
-                                                <constraint firstAttribute="trailing" secondItem="R1E-y4-N20" secondAttribute="trailing" constant="15" id="LAO-bY-pkn"/>
-                                                <constraint firstItem="ETC-fA-kQ5" firstAttribute="leading" secondItem="F45-Bn-Rqj" secondAttribute="leading" constant="15" id="eSX-yY-bXc"/>
-                                                <constraint firstItem="kEE-D5-fmj" firstAttribute="leading" secondItem="F45-Bn-Rqj" secondAttribute="leading" id="gy5-SO-gvo"/>
-                                                <constraint firstItem="R1E-y4-N20" firstAttribute="centerY" secondItem="F45-Bn-Rqj" secondAttribute="centerY" id="urc-Ii-4Ex"/>
-                                                <constraint firstAttribute="bottom" secondItem="kEE-D5-fmj" secondAttribute="bottom" id="zbE-hR-BZT"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsTheme.BackgroundColor"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="leftLabel" destination="ETC-fA-kQ5" id="uzN-Ap-NPT"/>
-                                            <outlet property="markImageView" destination="R1E-y4-N20" id="Nkc-QZ-dqq"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsTheme.BackgroundColor"/>
-                                </userDefinedRuntimeAttributes>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zTs-Lf-dzy">
+                                <rect key="frame" x="311" y="35" width="51" height="31"/>
+                                <color key="onTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="UQk-ex-4rU" id="R7i-JC-byK"/>
-                                    <outlet property="delegate" destination="UQk-ex-4rU" id="g1Z-0v-klT"/>
+                                    <action selector="themeSwitchValueChanged:" destination="UQk-ex-4rU" eventType="valueChanged" id="Xtx-H8-tc0"/>
                                 </connections>
-                            </tableView>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adq-1M-qt5">
+                                <rect key="frame" x="15" y="40" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="theme.dark"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="SettingsTheme.ThemeLabelColor"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MHt-wd-SQF" firstAttribute="leading" secondItem="s3W-MG-5x2" secondAttribute="leading" id="Z7J-x8-XMg"/>
-                            <constraint firstItem="s3W-MG-5x2" firstAttribute="bottom" secondItem="MHt-wd-SQF" secondAttribute="bottom" id="eqk-mN-BpJ"/>
-                            <constraint firstItem="MHt-wd-SQF" firstAttribute="top" secondItem="s3W-MG-5x2" secondAttribute="top" id="f3X-e6-bUR"/>
-                            <constraint firstItem="s3W-MG-5x2" firstAttribute="trailing" secondItem="MHt-wd-SQF" secondAttribute="trailing" id="fA4-Qk-yVc"/>
+                            <constraint firstItem="adq-1M-qt5" firstAttribute="leading" secondItem="s3W-MG-5x2" secondAttribute="leading" constant="15" id="KY0-yk-S6z"/>
+                            <constraint firstItem="adq-1M-qt5" firstAttribute="centerY" secondItem="zTs-Lf-dzy" secondAttribute="centerY" id="Ntg-Er-tZG"/>
+                            <constraint firstItem="s3W-MG-5x2" firstAttribute="trailing" secondItem="zTs-Lf-dzy" secondAttribute="trailing" constant="15" id="ToN-o9-VN1"/>
+                            <constraint firstItem="zTs-Lf-dzy" firstAttribute="top" secondItem="s3W-MG-5x2" secondAttribute="top" constant="15" id="eeA-DM-Nu3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s3W-MG-5x2"/>
                         <userDefinedRuntimeAttributes>
@@ -96,7 +49,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="MHt-wd-SQF" id="HKZ-8r-DWx"/>
+                        <outlet property="themeSwitch" destination="zTs-Lf-dzy" id="uuG-4g-Llk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vq6-zu-Wwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,7 +57,4 @@
             <point key="canvasLocation" x="368.80000000000001" y="-219.04047976011995"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="mark-check" width="24" height="24"/>
-    </resources>
 </document>

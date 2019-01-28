@@ -18,77 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="khw-B0-WkY">
-                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ThemeCell" id="QFn-Xs-HrE" customClass="ThemeCell" customModule="RSS_News" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="768" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QFn-Xs-HrE" id="89t-sN-0vg">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeY-Wj-l5n">
-                                                    <rect key="frame" x="15" y="10.5" width="46.5" height="23"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="SettingsTheme.Cell.TitleColor"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mark-check" translatesAutoresizingMaskIntoConstraints="NO" id="v3h-am-fVD">
-                                                    <rect key="frame" x="729" y="10" width="24" height="24"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="SettingsTheme.Cell.MarkImageTintColor"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bR-VA-MDh">
-                                                    <rect key="frame" x="0.0" y="43" width="768" height="1"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="tAt-Ot-cK3"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsTheme.Cell.SeparatorColor"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="LeY-Wj-l5n" firstAttribute="leading" secondItem="89t-sN-0vg" secondAttribute="leading" constant="15" id="Aj3-V0-OVa"/>
-                                                <constraint firstAttribute="bottom" secondItem="5bR-VA-MDh" secondAttribute="bottom" id="K8J-gv-cuJ"/>
-                                                <constraint firstItem="5bR-VA-MDh" firstAttribute="leading" secondItem="89t-sN-0vg" secondAttribute="leading" id="WrW-5A-TiR"/>
-                                                <constraint firstItem="LeY-Wj-l5n" firstAttribute="centerY" secondItem="89t-sN-0vg" secondAttribute="centerY" id="Z1O-tl-dFH"/>
-                                                <constraint firstItem="v3h-am-fVD" firstAttribute="centerY" secondItem="89t-sN-0vg" secondAttribute="centerY" id="gbD-2S-Kn1"/>
-                                                <constraint firstAttribute="trailing" secondItem="v3h-am-fVD" secondAttribute="trailing" constant="15" id="iwt-py-LSK"/>
-                                                <constraint firstAttribute="trailing" secondItem="5bR-VA-MDh" secondAttribute="trailing" id="x1g-fB-Fhb"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsTheme.BackgroundColor"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="leftLabel" destination="LeY-Wj-l5n" id="FqL-KT-Ecg"/>
-                                            <outlet property="markImageView" destination="v3h-am-fVD" id="NVh-xO-MTH"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCn-Zb-zeG">
+                                <rect key="frame" x="20" y="45" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsTheme.BackgroundColor"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="theme.dark"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="SettingsTheme.ThemeLabelColor"/>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="dataSource" destination="9I1-aC-E6x" id="noK-RA-pDW"/>
-                                    <outlet property="delegate" destination="9I1-aC-E6x" id="W2t-GL-jsl"/>
-                                </connections>
-                            </tableView>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ylt-9v-T67">
+                                <rect key="frame" x="699" y="40" width="51" height="31"/>
+                                <color key="onTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Wa5-jK-oG9" firstAttribute="trailing" secondItem="khw-B0-WkY" secondAttribute="trailing" id="0j9-sg-1Is"/>
-                            <constraint firstItem="khw-B0-WkY" firstAttribute="top" secondItem="Wa5-jK-oG9" secondAttribute="top" id="AbU-a7-fXw"/>
-                            <constraint firstItem="khw-B0-WkY" firstAttribute="leading" secondItem="Wa5-jK-oG9" secondAttribute="leading" id="Kot-TY-PKN"/>
-                            <constraint firstItem="Wa5-jK-oG9" firstAttribute="bottom" secondItem="khw-B0-WkY" secondAttribute="bottom" id="ViT-NB-rqK"/>
+                            <constraint firstItem="dCn-Zb-zeG" firstAttribute="centerY" secondItem="ylt-9v-T67" secondAttribute="centerY" id="EYr-qE-HcC"/>
+                            <constraint firstItem="Wa5-jK-oG9" firstAttribute="trailing" secondItem="ylt-9v-T67" secondAttribute="trailing" constant="20" id="MHj-jV-sSt"/>
+                            <constraint firstItem="ylt-9v-T67" firstAttribute="top" secondItem="Wa5-jK-oG9" secondAttribute="top" constant="20" id="RVA-sh-jWl"/>
+                            <constraint firstItem="dCn-Zb-zeG" firstAttribute="leading" secondItem="Wa5-jK-oG9" secondAttribute="leading" constant="20" id="wUj-Ze-vHe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wa5-jK-oG9"/>
                         <userDefinedRuntimeAttributes>
@@ -96,7 +46,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="khw-B0-WkY" id="oDB-Lg-8pG"/>
+                        <outlet property="themeSwitch" destination="ylt-9v-T67" id="FDy-GD-hPQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LV-gu-zra" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,7 +54,4 @@
             <point key="canvasLocation" x="368.80000000000001" y="-219.04047976011995"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="mark-check" width="24" height="24"/>
-    </resources>
 </document>

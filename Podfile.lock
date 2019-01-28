@@ -29,7 +29,7 @@ DEPENDENCIES:
   - ReachabilitySwift (~> 4.1.0)
   - ReactiveCocoa (~> 8.0)
   - ReactiveSwift (~> 4.0)
-  - RealmSwift
+  - RealmSwift (~> 3.0)
   - SwiftGen (~> 5.3)
   - SwiftLint
   - SwiftTheme (~> 0.4)
@@ -70,6 +70,6 @@ SPEC CHECKSUMS:
   SwiftTheme: 628345b948068a48d330d76dffb1a990ea5f90aa
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
 
-PODFILE CHECKSUM: d4aaa1cc90d3f4bd0574d09fef3c6974e6d4b5f1
+PODFILE CHECKSUM: 111dcd4784e8ae5d10b107c8e7fdea5c08de82d2
 
 COCOAPODS: 1.5.3
