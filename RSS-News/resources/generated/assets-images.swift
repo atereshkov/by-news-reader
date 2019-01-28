@@ -83,6 +83,7 @@ internal enum Asset {
       internal static let chevronRight = ImageAsset(name: "chevron-right")
       internal static let informationNavbar = ImageAsset(name: "information-navbar")
       internal static let markCheck = ImageAsset(name: "mark-check")
+      internal static let settings = ImageAsset(name: "settings")
       internal static let share = ImageAsset(name: "share")
       internal enum TabBar {
         internal static let bookmarks = ImageAsset(name: "bookmarks")
@@ -119,6 +120,7 @@ internal enum Asset {
       Icons.chevronRight,
       Icons.informationNavbar,
       Icons.markCheck,
+      Icons.settings,
       Icons.share,
       Icons.TabBar.bookmarks,
       Icons.TabBar.categories,
