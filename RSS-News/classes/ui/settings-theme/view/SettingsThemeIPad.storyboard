@@ -44,12 +44,25 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="SettingsTheme.Cell.MarkImageTintColor"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bR-VA-MDh">
+                                                    <rect key="frame" x="0.0" y="43" width="768" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="tAt-Ot-cK3"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsTheme.Cell.SeparatorColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="LeY-Wj-l5n" firstAttribute="leading" secondItem="89t-sN-0vg" secondAttribute="leading" constant="15" id="Aj3-V0-OVa"/>
+                                                <constraint firstAttribute="bottom" secondItem="5bR-VA-MDh" secondAttribute="bottom" id="K8J-gv-cuJ"/>
+                                                <constraint firstItem="5bR-VA-MDh" firstAttribute="leading" secondItem="89t-sN-0vg" secondAttribute="leading" id="WrW-5A-TiR"/>
                                                 <constraint firstItem="LeY-Wj-l5n" firstAttribute="centerY" secondItem="89t-sN-0vg" secondAttribute="centerY" id="Z1O-tl-dFH"/>
                                                 <constraint firstItem="v3h-am-fVD" firstAttribute="centerY" secondItem="89t-sN-0vg" secondAttribute="centerY" id="gbD-2S-Kn1"/>
                                                 <constraint firstAttribute="trailing" secondItem="v3h-am-fVD" secondAttribute="trailing" constant="15" id="iwt-py-LSK"/>
+                                                <constraint firstAttribute="trailing" secondItem="5bR-VA-MDh" secondAttribute="trailing" id="x1g-fB-Fhb"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsTheme.BackgroundColor"/>

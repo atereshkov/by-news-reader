@@ -44,9 +44,22 @@
                                                         <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="SettingsProvider.Cell.MarkImageTintColor"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MON-JN-2wz">
+                                                    <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="fu6-YA-tvQ"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsProvider.Cell.SeparatorColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="MON-JN-2wz" secondAttribute="bottom" id="2Qa-JD-Yok"/>
+                                                <constraint firstItem="MON-JN-2wz" firstAttribute="leading" secondItem="pWP-8a-rvi" secondAttribute="leading" id="8Ah-Ws-y3a"/>
                                                 <constraint firstItem="AMD-Bq-iUd" firstAttribute="centerY" secondItem="pWP-8a-rvi" secondAttribute="centerY" id="KCu-0u-M6F"/>
+                                                <constraint firstAttribute="trailing" secondItem="MON-JN-2wz" secondAttribute="trailing" id="Ymb-oW-pvY"/>
                                                 <constraint firstItem="AMD-Bq-iUd" firstAttribute="leading" secondItem="pWP-8a-rvi" secondAttribute="leading" constant="15" id="eqO-oW-vtf"/>
                                                 <constraint firstItem="RWe-Jk-4ok" firstAttribute="centerY" secondItem="pWP-8a-rvi" secondAttribute="centerY" id="fby-ZU-cse"/>
                                                 <constraint firstAttribute="trailing" secondItem="RWe-Jk-4ok" secondAttribute="trailing" constant="15" id="rmX-53-bp7"/>
