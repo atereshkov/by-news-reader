@@ -29,6 +29,9 @@ protocol CategoryNewsViewModelType: ViewModelType {
     // MARK: DataSources
     
     var isLoading: Property<Bool> { get }
+    var isInternetReachable: MutableProperty<Bool> { get }
+    var noInternetViewIsHidden: Property<Bool> { get }
+    var tableViewIsHidden: Property<Bool> { get }
     var screenTitle: Property<String> { get }
     
     func detailView(for index: Int) -> ViewType?

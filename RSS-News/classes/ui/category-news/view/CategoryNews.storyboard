@@ -117,6 +117,28 @@
                                     <outlet property="delegate" destination="xyc-yK-2Av" id="idx-ww-XSy"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNo-7B-ii8">
+                                <rect key="frame" x="20" y="268.5" width="335" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2z-GG-yj8">
+                                        <rect key="frame" x="0.0" y="66.5" width="335" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="no-internet.view.list"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="NoInternetView.List.TitleColor"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="l2z-GG-yj8" firstAttribute="centerY" secondItem="WNo-7B-ii8" secondAttribute="centerY" id="9K5-S6-00b"/>
+                                    <constraint firstAttribute="trailing" secondItem="l2z-GG-yj8" secondAttribute="trailing" id="JZG-yB-rRW"/>
+                                    <constraint firstItem="l2z-GG-yj8" firstAttribute="leading" secondItem="WNo-7B-ii8" secondAttribute="leading" id="hnf-OD-nEl"/>
+                                    <constraint firstAttribute="height" constant="150" id="xau-Xa-7QZ"/>
+                                </constraints>
+                            </view>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mce-4d-Ymt">
                                 <rect key="frame" x="169" y="325" width="37" height="37"/>
                                 <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,7 +150,10 @@
                             <constraint firstItem="mce-4d-Ymt" firstAttribute="centerX" secondItem="kwz-bG-Ap3" secondAttribute="centerX" id="IW0-2E-l2i"/>
                             <constraint firstItem="kwz-bG-Ap3" firstAttribute="leading" secondItem="Hvp-Ed-haJ" secondAttribute="leading" id="J7A-Bu-4xC"/>
                             <constraint firstItem="Hvp-Ed-haJ" firstAttribute="trailing" secondItem="kwz-bG-Ap3" secondAttribute="trailing" id="MqD-PK-aha"/>
+                            <constraint firstItem="Hvp-Ed-haJ" firstAttribute="trailing" secondItem="WNo-7B-ii8" secondAttribute="trailing" constant="20" id="Ojt-6Y-Ryy"/>
                             <constraint firstItem="kwz-bG-Ap3" firstAttribute="top" secondItem="Hvp-Ed-haJ" secondAttribute="top" id="cg2-A0-OW2"/>
+                            <constraint firstItem="WNo-7B-ii8" firstAttribute="leading" secondItem="Hvp-Ed-haJ" secondAttribute="leading" constant="20" id="hzt-a4-Cx8"/>
+                            <constraint firstItem="WNo-7B-ii8" firstAttribute="centerY" secondItem="Hvp-Ed-haJ" secondAttribute="centerY" id="lk5-j7-R8f"/>
                             <constraint firstItem="mce-4d-Ymt" firstAttribute="centerY" secondItem="kwz-bG-Ap3" secondAttribute="centerY" id="wpE-Ys-ihx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hvp-Ed-haJ"/>
@@ -138,6 +163,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="mce-4d-Ymt" id="dFX-S6-pLa"/>
+                        <outlet property="noInternetView" destination="WNo-7B-ii8" id="R3B-DX-kPa"/>
                         <outlet property="tableView" destination="kwz-bG-Ap3" id="7qO-ib-dvI"/>
                     </connections>
                 </viewController>

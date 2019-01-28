@@ -18,6 +18,23 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     
     // MARK: Properties
     
+    var noInternetViewIsHidden: Property<Bool> {
+        let isHidden = Property.combineLatest(isLoading, isInternetReachable).map { (isLoading, isInternetReachable) in
+            return isLoading == true || isInternetReachable
+        }
+        return isHidden
+    }
+    var tableViewIsHidden: Property<Bool> {
+        let isHidden = Property.combineLatest(isInternetReachable, isLoading).map { (isInternetReachable, isLoading) in
+            return !isInternetReachable || isLoading
+        }
+        return isHidden
+    }
+    
+    var isInternetReachable: MutableProperty<Bool> {
+        return reachabilityService.isReachable
+    }
+    
     var items: MutableProperty<[NewsItemProtocol]> = MutableProperty([])
     
     var itemsCount: Property<Int> {
@@ -34,12 +51,14 @@ final class CategoryNewsViewModel: BaseViewModel<CategoryNewsRouter>, CategoryNe
     
     private let parseService: ParseServiceProtocol
     private let realmService: RealmServiceProtocol
+    private let reachabilityService: ReachabilityServiceProtocol
     
     // MARK: Init
     
     init(item: NewsCategoryProtocol, session: SessionType, delegate: BaseViewDelegate?) {
         self.parseService = session.resolve()
         self.realmService = session.resolve()
+        self.reachabilityService = session.resolve()
         self.item.value = item
         super.init(session: session, delegate: delegate)
         
