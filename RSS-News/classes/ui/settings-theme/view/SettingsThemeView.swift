@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RAMPaperSwitch
 
 final class SettingsThemeView: BaseView<SettingsThemeViewModel> {
     
