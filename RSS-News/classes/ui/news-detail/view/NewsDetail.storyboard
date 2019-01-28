@@ -35,7 +35,7 @@
                         <constraints>
                             <constraint firstItem="hWB-1e-RUF" firstAttribute="centerX" secondItem="k8S-x6-VLJ" secondAttribute="centerX" id="C1t-sj-vfA"/>
                             <constraint firstItem="k8S-x6-VLJ" firstAttribute="leading" secondItem="seE-mb-TKh" secondAttribute="leading" id="RUI-yp-w7H"/>
-                            <constraint firstItem="seE-mb-TKh" firstAttribute="bottom" secondItem="k8S-x6-VLJ" secondAttribute="bottom" id="YhV-pM-F7r"/>
+                            <constraint firstAttribute="bottom" secondItem="k8S-x6-VLJ" secondAttribute="bottom" id="YhV-pM-F7r"/>
                             <constraint firstItem="seE-mb-TKh" firstAttribute="trailing" secondItem="k8S-x6-VLJ" secondAttribute="trailing" id="f3Y-2m-PZT"/>
                             <constraint firstItem="k8S-x6-VLJ" firstAttribute="top" secondItem="seE-mb-TKh" secondAttribute="top" id="fhv-21-rz4"/>
                             <constraint firstItem="hWB-1e-RUF" firstAttribute="centerY" secondItem="k8S-x6-VLJ" secondAttribute="centerY" id="j09-HR-Fl9"/>
