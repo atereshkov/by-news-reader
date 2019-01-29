@@ -109,6 +109,7 @@ internal enum Asset {
       }
     }
     internal static let flag = ImageAsset(name: "flag")
+    internal static let noImageRound = ImageAsset(name: "no-image-round")
 
     // swiftlint:disable trailing_comma
     internal static let allColors: [ColorAsset] = [
@@ -131,6 +132,7 @@ internal enum Asset {
       Themes.Red.testImgRed,
       Themes.White.testImgWhite,
       flag,
+      noImageRound,
     ]
     // swiftlint:enable trailing_comma
     @available(*, deprecated, renamed: "allImages")

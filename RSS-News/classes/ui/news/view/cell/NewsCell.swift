@@ -39,6 +39,8 @@ class NewsCell: UITableViewCell {
         
         if let url = URL(string: item.iconURL) {
             iconImageView.kf.setImage(with: url)
+        } else {
+            iconImageView.image = Asset.Images.noImageRound.image
         }
     }
     
