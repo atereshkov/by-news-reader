@@ -7,8 +7,22 @@
 //
 
 import Foundation
+import ReactiveSwift
+import ReactiveCocoa
 
 final class AboutViewModel: BaseViewModel<AboutRouter>, AboutViewModelType {
+    
+    // MARK: Callbacks
+    
+    var updateState: ((AboutViewState) -> Void)?
+    
+    // MARK: Properties
+    
+    var items: MutableProperty<[AboutListItemProtocol]> = MutableProperty([])
+    
+    var itemsCount: Property<Int> {
+        return items.map { $0.count }
+    }
     
     // MARK: Init
     
@@ -20,6 +34,17 @@ final class AboutViewModel: BaseViewModel<AboutRouter>, AboutViewModelType {
     
     override func onViewDidLoad() {
         super.onViewDidLoad()
+        
+        items.value.append(AboutTitleItem(title: L10n.About.Information.About.title))
+        items.value.append(AboutListItem(text: L10n.About.Information.About.text, showSeparator: false))
+        items.value.append(AboutTitleItem(title: "Test"))
+        
+        updateState?(.reloadItems)
+    }
+    
+    func item(for index: Int) -> AboutListItemProtocol? {
+        guard index >= 0 && index < items.value.count else { return nil }
+        return items.value[index]
     }
     
 }

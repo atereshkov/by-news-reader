@@ -113,3 +113,6 @@
 // MARK: About Screen
 
 "about.title" = "О приложении";
+"about.information.about.title" = "Приложение";
+"about.information.about.text" = "Новости Беларуси - приложение-агрегатор новостей с белорусских информационных порталов и агенств.";
+"about.information.copyright" = "© 2019";

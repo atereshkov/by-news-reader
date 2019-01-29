@@ -11,6 +11,18 @@ internal enum L10n {
   internal enum About {
     /// About
     internal static let title = L10n.tr("Localizable", "about.title")
+
+    internal enum Information {
+      /// © 2019
+      internal static let copyright = L10n.tr("Localizable", "about.information.copyright")
+
+      internal enum About {
+        /// Новости Беларуси - приложение-агрегатор новостей с белорусских информационных порталов и агенств.
+        internal static let text = L10n.tr("Localizable", "about.information.about.text")
+        /// About
+        internal static let title = L10n.tr("Localizable", "about.information.about.title")
+      }
+    }
   }
 
   internal enum Bookmarks {

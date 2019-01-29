@@ -77,6 +77,14 @@
 		<key>BackgroundColor</key>
 		<string>#FFFFFF</string>
 	</dict>
+	<key>About</key>
+	<dict>
+		<key>Cell</key>
+		<dict>
+			<key>SeparatorColor</key>
+			<string>#e6e6e6</string>
+		</dict>
+	</dict>
 	<key>Settings</key>
 	<dict>
 		<key>BackgroundColor</key>

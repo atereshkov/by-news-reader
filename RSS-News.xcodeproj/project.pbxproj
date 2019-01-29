@@ -134,6 +134,10 @@
 		A3860AAF21F639F00030869A /* NewsDetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860AAE21F639F00030869A /* NewsDetailViewModelType.swift */; };
 		A3860AB121F63A050030869A /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860AB021F63A050030869A /* NewsDetailViewModel.swift */; };
 		A3860AB321F63D1E0030869A /* PopTouchNewsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860AB221F63D1E0030869A /* PopTouchNewsDetailRouter.swift */; };
+		A3A5304C22004353003A8725 /* AboutViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A5304B22004353003A8725 /* AboutViewState.swift */; };
+		A3A5304E22004365003A8725 /* AboutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A5304D22004365003A8725 /* AboutItem.swift */; };
+		A3A53051220047D3003A8725 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A53050220047D3003A8725 /* AboutCell.swift */; };
+		A3A530532200480B003A8725 /* AboutTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A530522200480B003A8725 /* AboutTitleCell.swift */; };
 		A3EC155F21FBB5E800D29489 /* SettingsCityViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC155E21FBB5E800D29489 /* SettingsCityViewState.swift */; };
 		A3EC156121FBB62200D29489 /* RegionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC156021FBB62200D29489 /* RegionItem.swift */; };
 		A3EC156321FBB68F00D29489 /* SettingsCityViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC156221FBB68F00D29489 /* SettingsCityViewDelegate.swift */; };
@@ -306,6 +310,10 @@
 		A3860AAE21F639F00030869A /* NewsDetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModelType.swift; sourceTree = "<group>"; };
 		A3860AB021F63A050030869A /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
 		A3860AB221F63D1E0030869A /* PopTouchNewsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTouchNewsDetailRouter.swift; sourceTree = "<group>"; };
+		A3A5304B22004353003A8725 /* AboutViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewState.swift; sourceTree = "<group>"; };
+		A3A5304D22004365003A8725 /* AboutItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutItem.swift; sourceTree = "<group>"; };
+		A3A53050220047D3003A8725 /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
+		A3A530522200480B003A8725 /* AboutTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTitleCell.swift; sourceTree = "<group>"; };
 		A3EC155E21FBB5E800D29489 /* SettingsCityViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewState.swift; sourceTree = "<group>"; };
 		A3EC156021FBB62200D29489 /* RegionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionItem.swift; sourceTree = "<group>"; };
 		A3EC156221FBB68F00D29489 /* SettingsCityViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewDelegate.swift; sourceTree = "<group>"; };
@@ -1166,6 +1174,24 @@
 			path = models;
 			sourceTree = "<group>";
 		};
+		A3A5304A22004336003A8725 /* viewData */ = {
+			isa = PBXGroup;
+			children = (
+				A3A5304D22004365003A8725 /* AboutItem.swift */,
+				A3A5304B22004353003A8725 /* AboutViewState.swift */,
+			);
+			path = viewData;
+			sourceTree = "<group>";
+		};
+		A3A5304F220047C3003A8725 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				A3A53050220047D3003A8725 /* AboutCell.swift */,
+				A3A530522200480B003A8725 /* AboutTitleCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		A3EC155D21FBB5CF00D29489 /* viewData */ = {
 			isa = PBXGroup;
 			children = (
@@ -1301,6 +1327,7 @@
 			children = (
 				A3EC15B521FE5EA400D29489 /* router */,
 				A3EC15B421FE5EA100D29489 /* view */,
+				A3A5304A22004336003A8725 /* viewData */,
 				A3EC15B321FE5E9F00D29489 /* viewModel */,
 			);
 			path = about;
@@ -1318,6 +1345,7 @@
 		A3EC15B421FE5EA100D29489 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				A3A5304F220047C3003A8725 /* cell */,
 				A3EC15C021FE5F4200D29489 /* AboutView.swift */,
 				A3EC15B621FE5EBB00D29489 /* About.storyboard */,
 			);
@@ -1550,6 +1578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A530532200480B003A8725 /* AboutTitleCell.swift in Sources */,
 				A34B649F21F37B9900DACC2F /* NetworkManager.swift in Sources */,
 				A3EC15BF21FE5EF800D29489 /* AboutRouter.swift in Sources */,
 				A34B646121F34B5A00DACC2F /* BookmarksRoutable.swift in Sources */,
@@ -1563,6 +1592,7 @@
 				A34B64D721F3A72200DACC2F /* ThemeCell.swift in Sources */,
 				A34B646321F34B9C00DACC2F /* BookmarksRouter.swift in Sources */,
 				A34B64D421F3A62500DACC2F /* ThemeItem.swift in Sources */,
+				A3A53051220047D3003A8725 /* AboutCell.swift in Sources */,
 				A3128D9C21F7A1D300F0BFDC /* RealmNewsItem.swift in Sources */,
 				A37EF3FD21F6706600691912 /* NewsCell.swift in Sources */,
 				A34B64DC21F3B74200DACC2F /* ServiceError.swift in Sources */,
@@ -1629,10 +1659,12 @@
 				A34B647B21F365FB00DACC2F /* BookmarksTabRouter.swift in Sources */,
 				A3860A7E21F4D4740030869A /* CategoriesViewState.swift in Sources */,
 				A3EC159321FC471600D29489 /* StartInitialSettingsRouter.swift in Sources */,
+				A3A5304C22004353003A8725 /* AboutViewState.swift in Sources */,
 				A3EC15BB21FE5ED300D29489 /* AboutViewModel.swift in Sources */,
 				A34B64BD21F3918F00DACC2F /* SettingsCityView.swift in Sources */,
 				A3860A7321F48E0E0030869A /* AppProviderEnum.swift in Sources */,
 				A34B643B21F27E2400DACC2F /* storyboards.swift in Sources */,
+				A3A5304E22004365003A8725 /* AboutItem.swift in Sources */,
 				A34B64BF21F391A800DACC2F /* SettingsThemeRoutable.swift in Sources */,
 				A34B647321F3652200DACC2F /* NewsView.swift in Sources */,
 				A3EC157B21FBBCC800D29489 /* SettingsProviderViewDelegate.swift in Sources */,

@@ -81,7 +81,7 @@ class HomeTabBarManager: HomeTabBarProtocol {
         btn3.sizeToFit()
         buttons.append(btn3)
         let btn4 = TabBarButton(frame: .zero)
-        btn4.image = Asset.Images.Icons.TabBar.settings.image
+        btn4.image = Asset.Images.Icons.TabBar.settingsTabBar.image
         btn4.text = L10n.Main.TabBar.Tab4.title
         btn4.sizeToFit()
         buttons.append(btn4)

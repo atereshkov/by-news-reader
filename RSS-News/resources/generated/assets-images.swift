@@ -89,7 +89,7 @@ internal enum Asset {
         internal static let bookmarks = ImageAsset(name: "bookmarks")
         internal static let categories = ImageAsset(name: "categories")
         internal static let feed = ImageAsset(name: "feed")
-        internal static let settings = ImageAsset(name: "settings")
+        internal static let settingsTabBar = ImageAsset(name: "settings-tab-bar")
       }
     }
     internal enum Providers {
@@ -125,7 +125,7 @@ internal enum Asset {
       Icons.TabBar.bookmarks,
       Icons.TabBar.categories,
       Icons.TabBar.feed,
-      Icons.TabBar.settings,
+      Icons.TabBar.settingsTabBar,
       Providers.Ico.onliner,
       Themes.Paper.testImgPaper,
       Themes.Red.testImgRed,
