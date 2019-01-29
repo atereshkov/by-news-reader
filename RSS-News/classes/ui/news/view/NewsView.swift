@@ -23,6 +23,10 @@ final class NewsView: BaseView<NewsViewModel>, UITableViewDelegate, UITableViewD
         
         setupView()
         setupPullToRefresh()
+        
+        // to avoid for already existing users
+        // TODO remove if onboarding setup is implemented
+        PreferenceService.shared.initialSetupPassed = true
     }
     
     deinit {
