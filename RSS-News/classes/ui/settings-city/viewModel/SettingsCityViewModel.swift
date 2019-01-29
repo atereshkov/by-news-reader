@@ -15,6 +15,7 @@ final class SettingsCityViewModel: BaseViewModel<SettingsCityRouter>, SettingsCi
     // MARK: Callbacks
     
     var updateState: ((SettingsCityViewState) -> Void)?
+    var showAlert: ((String, String, [UIAlertAction]) -> Void)?
     
     // MARK: Properties
     
@@ -44,7 +45,10 @@ final class SettingsCityViewModel: BaseViewModel<SettingsCityRouter>, SettingsCi
     // MARK: Actions
     
     func informationButtonAction() {
-        
+        let title = L10n.SettingsCity.Information.Alert.title
+        let msg = L10n.SettingsCity.Information.Alert.message
+        let ok = UIAlertAction(title: L10n.SettingsCity.Information.Alert.Action.ok, style: .cancel, handler: nil)
+        showAlert?(title, msg, [ok])
     }
     
     func itemSelected(at index: Int) {

@@ -90,6 +90,10 @@
 
 "settings-city.title" = "Выбор региона";
 
+"settings-city.information.alert.title" = "Регион";
+"settings-city.information.alert.message" = "К сожалению, пока что мы не смогли собрать достаточно данных и сайтов, чтобы покрыть большинство основных городов Беларуси, поэтому новости в этой версии приложения нельзя ранжировать по региону. Мы работаем над этой функцией.";
+"settings-city.information.alert.action.ok" = "OK";
+
 // MARK: Settings Theme
 
 "settings-theme.title" = "Выбор темы";
@@ -97,6 +101,10 @@
 // MARK: Settings Provider
 
 "settings-provider.title" = "Источники новостей";
+
+"settings-provider.information.alert.title" = "Источник новостей";
+"settings-provider.information.alert.message" = "Вы можете выбрать предпочитаемый источник новостей (пока что только один, но мы уже работаем над функцией выбора нескольких активных источников).";
+"settings-provider.information.alert.action.ok" = "OK";
 
 // MARK: Initial Settings
 

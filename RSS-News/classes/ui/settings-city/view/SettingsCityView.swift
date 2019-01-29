@@ -18,6 +18,10 @@ final class SettingsCityView: BaseView<SettingsCityViewModel>, UITableViewDelega
     
     override func bindViewModel() {
         super.bindViewModel()
+        
+        viewModel?.showAlert = { [weak self] title, msg, buttons in
+            self?.showAlert(title: title, message: msg, buttons: buttons)
+        }
     }
     
     // MARK: UITableViewDelegate, UITableViewDataSource

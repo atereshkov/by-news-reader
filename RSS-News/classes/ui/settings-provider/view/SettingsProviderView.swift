@@ -29,6 +29,9 @@ final class SettingsProviderView: BaseView<SettingsProviderViewModel>, UITableVi
                 }
             }
         }
+        viewModel?.showAlert = { [weak self] title, msg, buttons in
+            self?.showAlert(title: title, message: msg, buttons: buttons)
+        }
     }
     
     // MARK: UITableViewDelegate, UITableViewDataSource

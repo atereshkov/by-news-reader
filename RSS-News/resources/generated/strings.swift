@@ -212,11 +212,41 @@ internal enum L10n {
   internal enum SettingsCity {
     /// News region
     internal static let title = L10n.tr("Localizable", "settings-city.title")
+
+    internal enum Information {
+
+      internal enum Alert {
+        /// You can choose preferred news provider (so far only one, but we are already working on the function of selecting several active sources).
+        internal static let message = L10n.tr("Localizable", "settings-city.information.alert.message")
+        /// News provider
+        internal static let title = L10n.tr("Localizable", "settings-city.information.alert.title")
+
+        internal enum Action {
+          /// OK
+          internal static let ok = L10n.tr("Localizable", "settings-city.information.alert.action.ok")
+        }
+      }
+    }
   }
 
   internal enum SettingsProvider {
     /// News provider
     internal static let title = L10n.tr("Localizable", "settings-provider.title")
+
+    internal enum Information {
+
+      internal enum Alert {
+        /// You can choose preferred news provider (so far only one, but we are already working on the function of selecting several active sources).
+        internal static let message = L10n.tr("Localizable", "settings-provider.information.alert.message")
+        /// News provider
+        internal static let title = L10n.tr("Localizable", "settings-provider.information.alert.title")
+
+        internal enum Action {
+          /// OK
+          internal static let ok = L10n.tr("Localizable", "settings-provider.information.alert.action.ok")
+        }
+      }
+    }
   }
 
   internal enum SettingsTheme {

@@ -15,6 +15,7 @@ final class SettingsProviderViewModel: BaseViewModel<SettingsProviderRouter>, Se
     // MARK: Callbacks
     
     var updateState: ((SettingsProviderViewState) -> Void)?
+    var showAlert: ((_ title: String, _ msg: String, _ buttons: [UIAlertAction]) -> Void)?
     
     // MARK: Properties
     
@@ -50,7 +51,10 @@ final class SettingsProviderViewModel: BaseViewModel<SettingsProviderRouter>, Se
     // MARK: Actions
     
     func informationButtonAction() {
-        
+        let title = L10n.SettingsProvider.Information.Alert.title
+        let msg = L10n.SettingsProvider.Information.Alert.message
+        let ok = UIAlertAction(title: L10n.SettingsProvider.Information.Alert.Action.ok, style: .cancel, handler: nil)
+        showAlert?(title, msg, [ok])
     }
     
     func itemSelected(at index: Int) {

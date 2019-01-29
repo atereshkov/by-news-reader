@@ -92,6 +92,10 @@
 
 "settings-city.title" = "News region";
 
+"settings-city.information.alert.title" = "News provider";
+"settings-city.information.alert.message" = "You can choose preferred news provider (so far only one, but we are already working on the function of selecting several active sources).";
+"settings-city.information.alert.action.ok" = "OK";
+
 // MARK: Settings Theme
 
 "settings-theme.title" = "Theme";
@@ -99,6 +103,10 @@
 // MARK: Settings Provider
 
 "settings-provider.title" = "News provider";
+
+"settings-provider.information.alert.title" = "News provider";
+"settings-provider.information.alert.message" = "You can choose preferred news provider (so far only one, but we are already working on the function of selecting several active sources).";
+"settings-provider.information.alert.action.ok" = "OK";
 
 // MARK: Initial Settings
 

@@ -20,6 +20,7 @@ protocol SettingsProviderViewModelType: ViewModelType {
     // MARK: Callbacks
     
     var updateState: ((_ state: SettingsProviderViewState) -> Void)? { get set }
+    var showAlert: ((_ title: String, _ msg: String, _ buttons: [UIAlertAction]) -> Void)? { get set }
     
     // MARK: Properies
     
