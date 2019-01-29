@@ -14,6 +14,7 @@ protocol NewsProviderItemProtocol {
     var main: NewsCategoryProtocol { get }
     var latest: NewsCategoryProtocol { get }
     var order: Int? { get }
+    var enabled: Bool { get }
 }
 
 struct NewsProviderItem: NewsProviderItemProtocol {
@@ -23,5 +24,6 @@ struct NewsProviderItem: NewsProviderItemProtocol {
     let main: NewsCategoryProtocol
     let latest: NewsCategoryProtocol
     let order: Int?
+    let enabled: Bool
     
 }

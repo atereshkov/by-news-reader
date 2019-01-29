@@ -40,6 +40,7 @@ final class SettingsProviderViewModel: BaseViewModel<SettingsProviderRouter>, Se
         
         let providers = providerService
             .getProviderItems()
+            .filter({ $0.enabled })
             .sorted(by: { $0.order ?? 0 < $1.order ?? 1 })
         items.value.append(contentsOf: providers)
         

@@ -4,6 +4,8 @@
 <dict>
 	<key>TUT.by</key>
 	<dict>
+		<key>enabled</key>
+		<true/>
 		<key>order</key>
 		<integer>1</integer>
 		<key>Information</key>
@@ -132,6 +134,8 @@
 	</dict>
 	<key>Onliner.by</key>
 	<dict>
+		<key>enabled</key>
+		<true/>
 		<key>order</key>
 		<integer>2</integer>
 		<key>Information</key>
@@ -197,6 +201,8 @@
 	</dict>
 	<key>Belta.by</key>
 	<dict>
+		<key>enabled</key>
+		<false/>
 		<key>order</key>
 		<integer>3</integer>
 		<key>Information</key>
@@ -225,6 +231,8 @@
 	</dict>
 	<key>Sputnik.by</key>
 	<dict>
+		<key>enabled</key>
+		<true/>
 		<key>order</key>
 		<integer>4</integer>
 		<key>Information</key>
