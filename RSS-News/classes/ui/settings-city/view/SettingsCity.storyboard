@@ -35,7 +35,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="SettingsTheme.Cell.TitleColor"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="SettingsCity.Cell.TitleColor"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mark-check" translatesAutoresizingMaskIntoConstraints="NO" id="bO6-n2-6jC">

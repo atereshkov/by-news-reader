@@ -15,21 +15,21 @@ internal enum L10n {
     internal enum Information {
 
       internal enum About {
-        /// Новости Беларуси - приложение-агрегатор новостей с белорусских информационных порталов и агентств.
+        /// Belarus News is news aggregator application from Belarusian information portals.
         internal static let text = L10n.tr("Localizable", "about.information.about.text")
         /// ABOUT APP
         internal static let title = L10n.tr("Localizable", "about.information.about.title")
       }
 
       internal enum CopyrightInfo {
-        /// Все права на материалы, размещенные в приложении, принадлежат источникам, ссылкой на которые сопровождается публикация. Размещенные новости в приложении ведут только на сайт-источник. Приложение использует общедоступные материалы, размещенные информационными порталами или агентствами через обогащенную сводку сайта - RSS.
+        /// All rights to the materials contained in the application belong to the sources, a link to which is accompanied by the application. Placed news in the application lead only to the source site. The application uses publicly available materials posted by information portals or agencies through an Rich Site Summary - RSS.
         internal static let text = L10n.tr("Localizable", "about.information.copyright-info.text")
         /// RESTRICTION INFORMATION
         internal static let title = L10n.tr("Localizable", "about.information.copyright-info.title")
       }
 
       internal enum Developer {
-        /// Developed by Alexander Tereshkov © 2019
+        /// Alexander Tereshkov © 2019\nE-mail: n1cs@bk.ru
         internal static let text = L10n.tr("Localizable", "about.information.developer.text")
         /// DEVELOPER
         internal static let title = L10n.tr("Localizable", "about.information.developer.title")

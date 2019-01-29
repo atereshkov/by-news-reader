@@ -145,11 +145,11 @@ private extension CategoryNewsViewModel {
 extension CategoryNewsViewModel: NewsDetailViewDelegate {
     
     func addedToBookmarks(_ item: NewsItemProtocol) {
-        parseItems()
+        updateState?(.reloadItems)
     }
     
     func removedFromBookmarks(_ item: NewsItemProtocol) {
-        parseItems()
+        updateState?(.reloadItems)
     }
     
 }
