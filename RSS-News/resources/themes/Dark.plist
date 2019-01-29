@@ -84,7 +84,7 @@
 		<key>Cell</key>
 		<dict>
 			<key>TitleColor</key>
-			<string>#EDEDED</string>
+			<string>#e0e0e0</string>
 			<key>TextColor</key>
 			<string>#EDEDED</string>
 			<key>SeparatorColor</key>

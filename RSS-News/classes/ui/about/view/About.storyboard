@@ -64,7 +64,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Von-yE-Z0B">
-                                                    <rect key="frame" x="15" y="8" width="345" height="32"/>
+                                                    <rect key="frame" x="15" y="4" width="345" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="Von-yE-Z0B" secondAttribute="bottom" constant="4" id="ciU-fQ-sp2"/>
                                                 <constraint firstItem="Von-yE-Z0B" firstAttribute="leading" secondItem="2eg-lB-iok" secondAttribute="leading" constant="15" id="ehC-a8-WP9"/>
                                                 <constraint firstAttribute="trailing" secondItem="Von-yE-Z0B" secondAttribute="trailing" constant="15" id="ezr-ff-C8w"/>
-                                                <constraint firstItem="Von-yE-Z0B" firstAttribute="top" secondItem="2eg-lB-iok" secondAttribute="top" constant="8" id="nYo-zv-vwR"/>
+                                                <constraint firstItem="Von-yE-Z0B" firstAttribute="top" secondItem="2eg-lB-iok" secondAttribute="top" constant="4" id="nYo-zv-vwR"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="About.BackgroundColor"/>
