@@ -13,14 +13,26 @@ internal enum L10n {
     internal static let title = L10n.tr("Localizable", "about.title")
 
     internal enum Information {
-      /// © 2019
-      internal static let copyright = L10n.tr("Localizable", "about.information.copyright")
 
       internal enum About {
-        /// Новости Беларуси - приложение-агрегатор новостей с белорусских информационных порталов и агенств.
+        /// Новости Беларуси - приложение-агрегатор новостей с белорусских информационных порталов и агентств.
         internal static let text = L10n.tr("Localizable", "about.information.about.text")
-        /// About
+        /// ABOUT APP
         internal static let title = L10n.tr("Localizable", "about.information.about.title")
+      }
+
+      internal enum CopyrightInfo {
+        /// Все права на материалы, размещенные в приложении, принадлежат источникам, ссылкой на которые сопровождается публикация. Размещенные новости в приложении ведут только на сайт-источник. Приложение использует общедоступные материалы, размещенные информационными порталами или агентствами через обогащенную сводку сайта - RSS.
+        internal static let text = L10n.tr("Localizable", "about.information.copyright-info.text")
+        /// RESTRICTION INFORMATION
+        internal static let title = L10n.tr("Localizable", "about.information.copyright-info.title")
+      }
+
+      internal enum Developer {
+        /// Developed by Alexander Tereshkov © 2019
+        internal static let text = L10n.tr("Localizable", "about.information.developer.text")
+        /// DEVELOPER
+        internal static let title = L10n.tr("Localizable", "about.information.developer.title")
       }
     }
   }

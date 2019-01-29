@@ -79,8 +79,14 @@
 	</dict>
 	<key>About</key>
 	<dict>
+		<key>BackgroundColor</key>
+		<string>#424242</string>
 		<key>Cell</key>
 		<dict>
+			<key>TitleColor</key>
+			<string>#EDEDED</string>
+			<key>TextColor</key>
+			<string>#EDEDED</string>
 			<key>SeparatorColor</key>
 			<string>#363636</string>
 		</dict>

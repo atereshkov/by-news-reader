@@ -37,7 +37,10 @@ final class AboutViewModel: BaseViewModel<AboutRouter>, AboutViewModelType {
         
         items.value.append(AboutTitleItem(title: L10n.About.Information.About.title))
         items.value.append(AboutListItem(text: L10n.About.Information.About.text, showSeparator: false))
-        items.value.append(AboutTitleItem(title: "Test"))
+        items.value.append(AboutTitleItem(title: L10n.About.Information.CopyrightInfo.title))
+        items.value.append(AboutListItem(text: L10n.About.Information.CopyrightInfo.text, showSeparator: false))
+        items.value.append(AboutTitleItem(title: L10n.About.Information.Developer.title))
+        items.value.append(AboutListItem(text: L10n.About.Information.Developer.text, showSeparator: false))
         
         updateState?(.reloadItems)
     }

@@ -115,6 +115,12 @@
 // MARK: About Screen
 
 "about.title" = "About";
-"about.information.about.title" = "About";
-"about.information.about.text" = "Новости Беларуси - приложение-агрегатор новостей с белорусских информационных порталов и агенств.";
-"about.information.copyright" = "© 2019";
+
+"about.information.about.title" = "ABOUT APP";
+"about.information.about.text" = "Belarus News is news aggregator application from Belarusian information portals.";
+
+"about.information.copyright-info.title" = "RESTRICTION INFORMATION";
+"about.information.copyright-info.text" = "All rights to the materials contained in the application belong to the sources, a link to which is accompanied by the application. Placed news in the application lead only to the source site. The application uses publicly available materials posted by information portals or agencies through an Rich Site Summary - RSS.";
+
+"about.information.developer.title" = "DEVELOPER";
+"about.information.developer.text" = "Alexander Tereshkov © 2019\nE-mail: n1cs@bk.ru";

@@ -31,9 +31,15 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEV-Km-oj4">
                                                     <rect key="frame" x="15" y="12" width="345" height="26"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="About.Cell.TitleColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -42,6 +48,9 @@
                                                 <constraint firstItem="eEV-Km-oj4" firstAttribute="leading" secondItem="Gs4-R5-mpJ" secondAttribute="leading" constant="15" id="swv-KF-Wpz"/>
                                                 <constraint firstItem="eEV-Km-oj4" firstAttribute="top" secondItem="Gs4-R5-mpJ" secondAttribute="top" constant="12" id="zES-z6-w9b"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="About.BackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="titleLabel" destination="eEV-Km-oj4" id="pId-Bu-olI"/>
@@ -59,6 +68,12 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="About.Cell.TextColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <variation key="heightClass=regular-widthClass=regular">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    </variation>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTw-3h-XVY">
                                                     <rect key="frame" x="0.0" y="43" width="375" height="1"/>
@@ -80,6 +95,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="Von-yE-Z0B" secondAttribute="trailing" constant="15" id="ezr-ff-C8w"/>
                                                 <constraint firstItem="Von-yE-Z0B" firstAttribute="top" secondItem="2eg-lB-iok" secondAttribute="top" constant="8" id="nYo-zv-vwR"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="About.BackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="infoLabel" destination="Von-yE-Z0B" id="9bo-6i-aNk"/>
@@ -87,6 +105,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="About.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="PHt-c9-6oE" id="aEW-40-Qcx"/>
                                     <outlet property="delegate" destination="PHt-c9-6oE" id="DiG-Cz-KXb"/>
@@ -101,6 +122,9 @@
                             <constraint firstItem="mba-ej-TUO" firstAttribute="trailing" secondItem="TBD-Dz-QYx" secondAttribute="trailing" id="lm7-Q8-dXP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mba-ej-TUO"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="About.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="TBD-Dz-QYx" id="Njf-4o-RP1"/>
