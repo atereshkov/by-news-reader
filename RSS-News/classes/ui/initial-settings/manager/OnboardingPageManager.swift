@@ -14,6 +14,9 @@ protocol OnboardingPageManagerProtocol: class {
     var views: [ViewType] { get }
     
     func initialize()
+    
+    func viewBefore(_ viewController: UIViewController) -> UIViewController?
+    func viewAfter(_ viewController: UIViewController) -> UIViewController?
 }
 
 protocol OnboardingPageManagerDelegate: class {
@@ -39,6 +42,27 @@ class OnboardingPageManager: OnboardingPageManagerProtocol {
         
         views.append(contentsOf: [page1, page2])
         delegate?.setupPages(views)
+    }
+    
+    func viewBefore(_ viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = views.firstIndex(of: viewController) else { return nil }
+        
+        let previousIndex = viewControllerIndex - 1
+        guard previousIndex >= 0 else { return views.last }
+        guard views.count > previousIndex else { return nil }
+        
+        return views[previousIndex]
+    }
+    
+    func viewAfter(_ viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = views.firstIndex(of: viewController) else { return nil }
+        
+        let nextIndex = viewControllerIndex + 1
+        let orderedViewControllersCount = views.count
+        guard orderedViewControllersCount != nextIndex else { return views.first }
+        guard orderedViewControllersCount > nextIndex else { return nil }
+        
+        return views[nextIndex]
     }
     
 }

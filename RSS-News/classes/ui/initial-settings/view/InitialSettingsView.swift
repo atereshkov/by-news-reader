@@ -75,36 +75,11 @@ private extension InitialSettingsView {
 extension InitialSettingsView: UIPageViewControllerDataSource {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = pageManager?.views.firstIndex(of: viewController) else {
-            return nil
-        }
-        
-        let previousIndex = viewControllerIndex - 1
-        
-        // User is on the first view controller and swiped left to loop to
-        // the last view controller.
-        guard previousIndex >= 0 else { return pageManager?.views.last }
-        
-        guard pageManager?.views.count ?? 0 > previousIndex else { return nil }
-        
-        return pageManager?.views[previousIndex]
+        return pageManager?.viewBefore(viewController)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = pageManager?.views.firstIndex(of: viewController) else {
-            return nil
-        }
-        
-        let nextIndex = viewControllerIndex + 1
-        let orderedViewControllersCount = pageManager?.views.count ?? 0
-        
-        // User is on the last view controller and swiped right to loop to
-        // the first view controller.
-        guard orderedViewControllersCount != nextIndex else { return pageManager?.views.first }
-        
-        guard orderedViewControllersCount > nextIndex else { return nil }
-        
-        return pageManager?.views[nextIndex]
+        return pageManager?.viewAfter(viewController)
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
