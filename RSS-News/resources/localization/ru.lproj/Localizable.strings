@@ -63,8 +63,11 @@
 "time.day-ago" = "%d день назад";
 "time.days-ago" = "%d дней назад";
 
+// MARK: News Details
+
 "news.preview.action.add-to-bookmarks" = "Добавить в закладки";
 "news.preview.action.remove-from-bookmarks" = "Удалить из закладок";
+"news.item.link.source" = "Источник: %@";
 
 // MARK: Settings Screen
 

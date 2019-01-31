@@ -168,6 +168,16 @@ internal enum L10n {
 
   internal enum News {
 
+    internal enum Item {
+
+      internal enum Link {
+        /// From: %@
+        internal static func source(_ p1: String) -> String {
+          return L10n.tr("Localizable", "news.item.link.source", p1)
+        }
+      }
+    }
+
     internal enum Preview {
 
       internal enum Action {

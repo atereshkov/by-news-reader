@@ -67,6 +67,7 @@
 
 "news.preview.action.add-to-bookmarks" = "Add to Bookmarks";
 "news.preview.action.remove-from-bookmarks" = "Remove from Bookmarks";
+"news.item.link.source" = "From: %@";
 
 // MARK: Settings Screen
 

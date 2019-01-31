@@ -78,7 +78,9 @@ final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailView
     
     var itemSource: Property<NSAttributedString?> {
         guard let source = item.value?.source else { return Property(value: nil) }
-        let result = NSAttributedString(string: source, attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        let hostRaw = URL(string: source)?.host ?? ""
+        let host = L10n.News.Item.Link.source(hostRaw)
+        let result = NSAttributedString(string: host, attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         return Property(value: result)
     }
     
