@@ -200,7 +200,7 @@ internal enum L10n {
   internal enum Onboarding {
 
     internal enum Provider {
-      /// Please choose news provider to use it as default one. You can change it anytime in the Settings.
+      /// Please choose default news provider. You can change it anytime in the Settings.
       internal static let informationText = L10n.tr("Localizable", "onboarding.provider.information-text")
     }
 

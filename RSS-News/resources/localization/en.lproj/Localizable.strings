@@ -140,4 +140,4 @@
 
 // MARK: Onboarding Provider
 
-"onboarding.provider.information-text" = "Please choose news provider to use it as default one. You can change it anytime in the Settings.";
+"onboarding.provider.information-text" = "Please choose default news provider. You can change it anytime in the Settings.";
