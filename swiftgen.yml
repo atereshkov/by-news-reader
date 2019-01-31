@@ -28,6 +28,8 @@ storyboards:
           'RSS-NEWS/classes/ui/settings-provider/view/SettingsProvider.storyboard',
           'RSS-NEWS/classes/ui/settings-provider/view/SettingsProviderIPad.storyboard',
           'RSS-NEWS/classes/ui/initial-settings/view/InitialSettings.storyboard',
-          'RSS-NEWS/classes/ui/about/view/About.storyboard']
+          'RSS-NEWS/classes/ui/about/view/About.storyboard',
+          'RSS-NEWS/classes/ui/initial-settings-provider/view/OnboardingPageProvider.storyboard',
+          'RSS-NEWS/classes/ui/initial-settings-theme/view/OnboardingPageTheme.storyboard']
   templateName: swift4
   output: storyboards.swift

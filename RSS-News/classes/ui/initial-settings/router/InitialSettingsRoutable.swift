@@ -21,6 +21,9 @@ extension InitialSettingsRoutable where Self: RouterType {
         let router = InitialSettingsRouter(session: session, view: view)
         viewModel.router = router
         
+        let pageManager: OnboardingPageManagerProtocol = OnboardingPageManager(session: session)
+        view.pageManager = pageManager
+        
         let rootVC = UINavigationController(rootViewController: view)
         AppDelegate.shared.window?.setRootViewController(rootVC, animated: animated, completion: nil)
     }

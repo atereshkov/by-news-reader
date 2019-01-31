@@ -118,6 +118,16 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<RSS_News.NewsView>(storyboard: NewsIPad.self)
   }
+  internal enum OnboardingPageProvider: StoryboardType {
+    internal static let storyboardName = "OnboardingPageProvider"
+
+    internal static let initialScene = InitialSceneType<RSS_News.OnboardingPageProviderView>(storyboard: OnboardingPageProvider.self)
+  }
+  internal enum OnboardingPageTheme: StoryboardType {
+    internal static let storyboardName = "OnboardingPageTheme"
+
+    internal static let initialScene = InitialSceneType<RSS_News.OnboardingPageThemeView>(storyboard: OnboardingPageTheme.self)
+  }
   internal enum Settings: StoryboardType {
     internal static let storyboardName = "Settings"
 

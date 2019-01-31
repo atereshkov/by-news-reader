@@ -32,8 +32,7 @@ final class AppRouter: AppRouterProtocol {
         if PreferenceService.shared.initialSetupPassed {
             goToMain(animated: false)
         } else {
-            goToMain(animated: false)
-            //goToInitialSettings(animated: false)
+            goToInitialSettings(animated: false)
         }
     }
     
