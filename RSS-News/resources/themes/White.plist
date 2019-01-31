@@ -23,6 +23,13 @@
 	</dict>
 	<key>Onboarding</key>
 	<dict>
+		<key>PageControl</key>
+		<dict>
+			<key>CurrentPageIndicatorColor</key>
+			<string>#FFFFFF</string>
+			<key>BackgroundColor</key>
+			<string>#62A0CD</string>
+		</dict>
 		<key>Provider</key>
 		<dict>
 			<key>InformationLabelColor</key>

@@ -82,11 +82,11 @@ extension InitialSettingsView: UIPageViewControllerDataSource {
         return pageManager?.viewAfter(viewController)
     }
     
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return pageManager?.views.count ?? 0
     }
     
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         guard let firstViewController = viewControllers?.first,
             let firstViewControllerIndex = pageManager?.views.firstIndex(of: firstViewController) else {
                 return 0

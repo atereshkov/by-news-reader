@@ -43,6 +43,9 @@ struct AppSkin {
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [.font: Fonts.navBarTitle.uiFont, .foregroundColor: UIColor.white]
+        
+        UIPageControl.appearance().themeBackgroundColor = "Onboarding.PageControl.BackgroundColor"
+        UIPageControl.appearance().theme_currentPageIndicatorTintColor = "Onboarding.PageControl.CurrentPageIndicatorColor"
     }
     
     static func setup() {
