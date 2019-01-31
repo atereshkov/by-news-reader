@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 final class OnboardingPageThemeView: BaseView<OnboardingPageThemeViewModel> {
+    
+    @IBOutlet weak var themeSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,16 @@ final class OnboardingPageThemeView: BaseView<OnboardingPageThemeViewModel> {
     
     override func bindViewModel() {
         super.bindViewModel()
+        
+        themeSwitch.isOn = viewModel?.isSwitchOn ?? false
+        
+        themeSwitch.theme_tintColor = "Onboarding.Theme.Switch.TintColor"
+        themeSwitch.theme_onTintColor = "Onboarding.Theme.Switch.OnTintColor"
+        themeSwitch.theme_thumbTintColor = "Onboarding.Theme.Switch.ThumbColor"
+    }
+    
+    @IBAction func themeSwitchValueChanged(_ sender: Any) {
+        viewModel?.themeSwitchAction()
     }
     
 }

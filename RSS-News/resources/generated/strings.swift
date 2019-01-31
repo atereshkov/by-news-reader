@@ -197,6 +197,14 @@ internal enum L10n {
     }
   }
 
+  internal enum Onboarding {
+
+    internal enum Theme {
+      /// You could change default white theme to the dark one if you want. You can change it anytime in the Settings.
+      internal static let informationText = L10n.tr("Localizable", "onboarding.theme.information-text")
+    }
+  }
+
   internal enum Provider {
 
     internal enum TutBy {

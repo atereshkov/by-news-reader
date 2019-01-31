@@ -21,6 +21,29 @@
 			<string>#000000</string>
 		</dict>
 	</dict>
+	<key>Onboarding</key>
+	<dict>
+		<key>Provider</key>
+		<dict/>
+		<key>Theme</key>
+		<dict>
+			<key>BackgroundColor</key>
+			<string>#FFFFFF</string>
+			<key>Switch</key>
+			<dict>
+				<key>TintColor</key>
+				<string>#D3D3D3</string>
+				<key>OnTintColor</key>
+				<string>#FFFFFF</string>
+				<key>ThumbColor</key>
+				<string>#62A0CD</string>
+			</dict>
+			<key>ThemeLabelColor</key>
+			<string>#000000</string>
+			<key>InformationLabelColor</key>
+			<string>#000000</string>
+		</dict>
+	</dict>
 	<key>Main</key>
 	<dict>
 		<key>BackgroundColor</key>

@@ -14,6 +14,20 @@ final class OnboardingPageThemeViewModel: BaseViewModel<OnboardingPageThemeRoute
         super.init(session: session, delegate: delegate)
     }
     
+    // MARK: Properties
+    
+    var isSwitchOn: Bool {
+        return AppSkin.currentTheme == .dark
+    }
+    
+    // MARK: Actions
+    
+    func themeSwitchAction() {
+        let currentTheme = AppSkin.currentTheme
+        let newTheme: AppTheme = currentTheme == .dark ? .white : .dark
+        AppSkin.setTheme(newTheme)
+    }
+    
 }
 
 private extension OnboardingPageThemeViewModel {

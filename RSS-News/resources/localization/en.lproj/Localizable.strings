@@ -133,3 +133,7 @@
 
 "about.information.developer.title" = "DEVELOPER";
 "about.information.developer.text" = "Alexander Tereshkov © 2019\nE-mail: n1cs@bk.ru";
+
+// MARK: Onboarding Theme
+
+"onboarding.theme.information-text" = "You could change default white theme to the dark one if you want. You can change it anytime in the Settings.";

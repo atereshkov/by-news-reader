@@ -21,6 +21,29 @@
 			<string>#EDEDED</string>
 		</dict>
 	</dict>
+	<key>Onboarding</key>
+	<dict>
+		<key>Provider</key>
+		<dict/>
+		<key>Theme</key>
+		<dict>
+			<key>BackgroundColor</key>
+			<string>#424242</string>
+			<key>Switch</key>
+			<dict>
+				<key>TintColor</key>
+				<string>#353535</string>
+				<key>OnTintColor</key>
+				<string>#353535</string>
+				<key>ThumbColor</key>
+				<string>#f7dd82</string>
+			</dict>
+			<key>ThemeLabelColor</key>
+			<string>#EDEDED</string>
+			<key>InformationLabelColor</key>
+			<string>#EDEDED</string>
+		</dict>
+	</dict>
 	<key>Main</key>
 	<dict>
 		<key>BackgroundColor</key>

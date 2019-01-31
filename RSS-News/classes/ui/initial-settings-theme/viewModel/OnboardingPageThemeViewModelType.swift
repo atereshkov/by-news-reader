@@ -10,4 +10,12 @@ import Foundation
 
 protocol OnboardingPageThemeViewModelType: ViewModelType {
     
+    // MARK: Actions
+    
+    func themeSwitchAction()
+    
+    // MARK: Properties
+    
+    var isSwitchOn: Bool { get }
+    
 }

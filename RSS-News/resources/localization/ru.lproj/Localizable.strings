@@ -133,3 +133,7 @@
 
 "about.information.developer.title" = "РАЗРАБОТЧИК";
 "about.information.developer.text" = "Александр Терешков © 2019\nЭлектронный адрес: n1cs@bk.ru";
+
+// MARK: Onboarding Theme
+
+"onboarding.theme.information-text" = "Вы можете изменить тему приложения на темную, если хотите. Вы можете сменить тему в любой момент в Настройках.";

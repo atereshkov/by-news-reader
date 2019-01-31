@@ -1249,8 +1249,8 @@
 		A3A530592203817A003A8725 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				A3A5306222039453003A8725 /* OnboardingPageProvider.storyboard */,
 				A3A5306422039462003A8725 /* OnboardingPageProviderView.swift */,
+				A3A5306222039453003A8725 /* OnboardingPageProvider.storyboard */,
 			);
 			path = view;
 			sourceTree = "<group>";

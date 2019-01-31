@@ -17,9 +17,54 @@
                     <view key="view" contentMode="scaleToFill" id="GjY-g0-cTw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bs8-sa-ye8">
+                                <rect key="frame" x="16" y="88" width="284" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="theme.dark"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="Onboarding.Theme.ThemeLabelColor"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-Dk-Lmr">
+                                <rect key="frame" x="310" y="83" width="51" height="31"/>
+                                <color key="onTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="themeSwitchValueChanged:" destination="JBF-Uc-cUl" eventType="valueChanged" id="ch8-4k-dID"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtX-9c-obu">
+                                <rect key="frame" x="10" y="40" width="355" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="onboarding.theme.information-text"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="Onboarding.Theme.InformationLabelColor"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QoQ-OM-4eZ" firstAttribute="trailing" secondItem="XtX-9c-obu" secondAttribute="trailing" constant="10" id="87u-0h-9Ly"/>
+                            <constraint firstItem="QoQ-OM-4eZ" firstAttribute="trailing" secondItem="qTm-Dk-Lmr" secondAttribute="trailing" constant="16" id="BxX-5Q-wC9"/>
+                            <constraint firstItem="qTm-Dk-Lmr" firstAttribute="top" secondItem="XtX-9c-obu" secondAttribute="bottom" constant="25" id="TDJ-li-6gC"/>
+                            <constraint firstItem="bs8-sa-ye8" firstAttribute="leading" secondItem="QoQ-OM-4eZ" secondAttribute="leading" constant="16" id="oDw-6c-meF"/>
+                            <constraint firstItem="XtX-9c-obu" firstAttribute="leading" secondItem="QoQ-OM-4eZ" secondAttribute="leading" constant="10" id="pCB-j3-5Ya"/>
+                            <constraint firstItem="XtX-9c-obu" firstAttribute="top" secondItem="QoQ-OM-4eZ" secondAttribute="top" constant="20" id="rxR-WV-QuW"/>
+                            <constraint firstItem="bs8-sa-ye8" firstAttribute="centerY" secondItem="qTm-Dk-Lmr" secondAttribute="centerY" id="wAW-aw-M7h"/>
+                            <constraint firstItem="qTm-Dk-Lmr" firstAttribute="leading" secondItem="bs8-sa-ye8" secondAttribute="trailing" constant="10" id="wIJ-zL-7a3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QoQ-OM-4eZ"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Onboarding.Theme.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="themeSwitch" destination="qTm-Dk-Lmr" id="81C-tZ-ZWB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jvm-cf-3CI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
