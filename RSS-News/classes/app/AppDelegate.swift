@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func configureRealm() {
-        let version: UInt64 = 2
+        let version: UInt64 = 3
         Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: version)
     }
 

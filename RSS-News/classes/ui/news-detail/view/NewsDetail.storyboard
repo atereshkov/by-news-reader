@@ -18,36 +18,100 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hWB-1e-RUF">
+                                <rect key="frame" x="169" y="335" width="37" height="37"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-VX-pCc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7N7-Ho-0sd">
+                                        <rect key="frame" x="10" y="0.0" width="37.5" height="20"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="NewsDetail.TopTextColor"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="4tP-Y4-Wzr" appends="YES" id="ZkL-Tl-afP"/>
+                                        </connections>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rel-4X-U5u">
+                                        <rect key="frame" x="332" y="0.0" width="33" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="NewsDetail.TopTextColor"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rel-4X-U5u" secondAttribute="trailing" constant="10" id="6Sn-Jz-tEx"/>
+                                    <constraint firstItem="rel-4X-U5u" firstAttribute="bottom" secondItem="7N7-Ho-0sd" secondAttribute="bottom" id="9nd-NA-VAp"/>
+                                    <constraint firstItem="7N7-Ho-0sd" firstAttribute="leading" secondItem="bWW-VX-pCc" secondAttribute="leading" constant="10" id="MPe-cz-0W7"/>
+                                    <constraint firstAttribute="height" constant="20" id="bG1-W8-xmC">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="rel-4X-U5u" secondAttribute="bottom" id="daW-Dt-YDZ"/>
+                                    <constraint firstItem="7N7-Ho-0sd" firstAttribute="top" secondItem="bWW-VX-pCc" secondAttribute="top" id="e5c-v6-LJf"/>
+                                    <constraint firstItem="rel-4X-U5u" firstAttribute="top" secondItem="bWW-VX-pCc" secondAttribute="top" id="gFc-jq-bOL"/>
+                                    <constraint firstAttribute="bottom" secondItem="7N7-Ho-0sd" secondAttribute="bottom" id="moN-Uv-Qb8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="NewsDetail.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8S-x6-VLJ">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="hWB-1e-RUF">
-                                <rect key="frame" x="169" y="325" width="37" height="37"/>
-                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hWB-1e-RUF" firstAttribute="centerX" secondItem="k8S-x6-VLJ" secondAttribute="centerX" id="C1t-sj-vfA"/>
+                            <constraint firstItem="bWW-VX-pCc" firstAttribute="trailing" secondItem="seE-mb-TKh" secondAttribute="trailing" id="Cxy-XQ-yYF"/>
+                            <constraint firstItem="k8S-x6-VLJ" firstAttribute="top" secondItem="bWW-VX-pCc" secondAttribute="bottom" id="LUP-HH-hat"/>
                             <constraint firstItem="k8S-x6-VLJ" firstAttribute="leading" secondItem="seE-mb-TKh" secondAttribute="leading" id="RUI-yp-w7H"/>
                             <constraint firstAttribute="bottom" secondItem="k8S-x6-VLJ" secondAttribute="bottom" id="YhV-pM-F7r"/>
                             <constraint firstItem="seE-mb-TKh" firstAttribute="trailing" secondItem="k8S-x6-VLJ" secondAttribute="trailing" id="f3Y-2m-PZT"/>
-                            <constraint firstItem="k8S-x6-VLJ" firstAttribute="top" secondItem="seE-mb-TKh" secondAttribute="top" id="fhv-21-rz4"/>
                             <constraint firstItem="hWB-1e-RUF" firstAttribute="centerY" secondItem="k8S-x6-VLJ" secondAttribute="centerY" id="j09-HR-Fl9"/>
+                            <constraint firstItem="seE-mb-TKh" firstAttribute="leading" secondItem="bWW-VX-pCc" secondAttribute="leading" id="lBc-I1-pAA"/>
+                            <constraint firstItem="seE-mb-TKh" firstAttribute="top" secondItem="bWW-VX-pCc" secondAttribute="top" id="vBp-RU-NUW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="seE-mb-TKh"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="NewsDetail.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="hWB-1e-RUF" id="5OV-7X-dkx"/>
+                        <outlet property="pubDateLabel" destination="rel-4X-U5u" id="8Zr-sw-VyE"/>
+                        <outlet property="sourceLinkLabel" destination="7N7-Ho-0sd" id="qZb-BG-se7"/>
+                        <outlet property="topView" destination="bWW-VX-pCc" id="wjC-jz-aS0"/>
+                        <outlet property="topViewTopConstraint" destination="vBp-RU-NUW" id="fug-vi-bNf"/>
                         <outlet property="webView" destination="k8S-x6-VLJ" id="ZeX-zS-NsD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vyh-lE-Apa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4tP-Y4-Wzr">
+                    <connections>
+                        <action selector="sourceLinkLabelTapAction:" destination="51c-ue-hku" id="lK2-cm-nlH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="424.80000000000001" y="-253.2233883058471"/>
         </scene>

@@ -186,6 +186,13 @@
 			<string>#363636</string>
 		</dict>
 	</dict>
+	<key>NewsDetail</key>
+	<dict>
+		<key>TopTextColor</key>
+		<string>#EDEDED</string>
+		<key>BackgroundColor</key>
+		<string>#424242</string>
+	</dict>
 	<key>Images</key>
 	<dict>
 		<key>Test</key>

@@ -11,8 +11,12 @@ import WebKit
 import ReactiveCocoa
 import ReactiveSwift
 
-final class NewsDetailView: BaseView<NewsDetailViewModel>, WKNavigationDelegate, WKUIDelegate {
+final class NewsDetailView: BaseView<NewsDetailViewModel>, WKNavigationDelegate, WKUIDelegate, UIScrollViewDelegate {
     
+    @IBOutlet weak var topViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var pubDateLabel: UILabel!
+    @IBOutlet weak var sourceLinkLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var webView: WKWebView!
     
@@ -30,6 +34,8 @@ final class NewsDetailView: BaseView<NewsDetailViewModel>, WKNavigationDelegate,
         super.bindViewModel()
         guard let viewModel = viewModel else { return }
         
+        pubDateLabel.reactive.text <~ viewModel.pubDate
+        sourceLinkLabel.reactive.attributedText <~ viewModel.itemSource
         activityIndicator.reactive.isAnimating <~ viewModel.isLoading
         //webView.reactive.isHidden <~ viewModel.isLoading
         
@@ -39,6 +45,12 @@ final class NewsDetailView: BaseView<NewsDetailViewModel>, WKNavigationDelegate,
         
         guard let itemURL = viewModel.itemURL else { return }
         webView.load(itemURL)
+    }
+    
+    // MARK: Actions
+    
+    @IBAction func sourceLinkLabelTapAction(_ sender: Any) {
+        viewModel?.sourceLinkTapAction()
     }
     
     // MARK: WKNavigationDelegate
@@ -60,6 +72,17 @@ final class NewsDetailView: BaseView<NewsDetailViewModel>, WKNavigationDelegate,
         return viewModel?.previewActionItems ?? []
     }
     
+    // MARK: UIScrollViewDelegate
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        if offsetY > topView.frame.size.height {
+            topViewTopConstraint.constant = topView.frame.size.height
+        } else {
+            topViewTopConstraint.constant = 0
+        }
+    }
+    
 }
 
 private extension NewsDetailView {
@@ -67,6 +90,7 @@ private extension NewsDetailView {
     func setupView() {
         self.title = viewModel?.viewTitle
         
+        webView.scrollView.delegate = self
         webView.navigationDelegate = self
         webView.uiDelegate = self
         

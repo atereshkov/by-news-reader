@@ -186,6 +186,13 @@
 			<string>#D3D3D3</string>
 		</dict>
 	</dict>
+	<key>NewsDetail</key>
+	<dict>
+		<key>TopTextColor</key>
+		<string>#000000</string>
+		<key>BackgroundColor</key>
+		<string>#FFFFFF</string>
+	</dict>
 	<key>Images</key>
 	<dict>
 		<key>Test</key>

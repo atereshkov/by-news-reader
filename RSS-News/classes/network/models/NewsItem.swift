@@ -14,6 +14,7 @@ protocol NewsItemProtocol {
     var pubDate: Date? { get }
     var link: String? { get }
     var category: String? { get }
+    var source: String? { get }
 }
 
 struct NewsItem: NewsItemProtocol {
@@ -23,13 +24,14 @@ struct NewsItem: NewsItemProtocol {
     let pubDate: Date?
     let link: String?
     let category: String?
+    let source: String?
     
 }
 
 extension NewsItem {
     
     static func from(item: RealmNewsItem) -> NewsItemProtocol {
-        let newsItem = NewsItem(title: item.title, iconURL: item.iconURL, pubDate: item.pubDate, link: item.link, category: item.category)
+        let newsItem = NewsItem(title: item.title, iconURL: item.iconURL, pubDate: item.pubDate, link: item.link, category: item.category, source: item.source)
         return newsItem
     }
     

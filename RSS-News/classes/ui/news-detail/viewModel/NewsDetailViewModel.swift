@@ -12,6 +12,10 @@ import ReactiveCocoa
 
 final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailViewModelType {
     
+    private struct Constants {
+        static let fullTimeFormat = "dd-MM-yyyy HH:mm"
+    }
+    
     // MARK: Callbacks
     
     var bookmarkStateChanged: ((Bool) -> Void)?
@@ -72,9 +76,26 @@ final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailView
         return realmService.isBookmarked(item)
     }
     
+    var itemSource: Property<NSAttributedString?> {
+        guard let source = item.value?.source else { return Property(value: nil) }
+        let result = NSAttributedString(string: source, attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        return Property(value: result)
+    }
+    
+    var pubDate: Property<String?> {
+        guard let date = item.value?.pubDate else { return Property(value: nil) }
+        let timeAgo = DateUtils.timeAgo(from: date, fullTimeFormat: Constants.fullTimeFormat)
+        return Property(value: timeAgo)
+    }
+    
     var isLoading: MutableProperty<Bool> = MutableProperty(false)
     
     // MARK: Actions
+    
+    func sourceLinkTapAction() {
+        guard let link = item.value?.link else { return }
+        router?.openLink(link)
+    }
     
     func shareAction() {
         guard let shareLink = item.value?.link else { return }

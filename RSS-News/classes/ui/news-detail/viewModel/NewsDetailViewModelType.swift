@@ -22,6 +22,7 @@ protocol NewsDetailViewModelType: ViewModelType {
     func bookmarkAction()
     func addToBookmarksAction()
     func removeFromBookmarksAction()
+    func sourceLinkTapAction()
     
     func webViewLoadingDidChange(_ isLoading: Bool)
     func webViewDidFailLoad(error: Error)
@@ -31,6 +32,8 @@ protocol NewsDetailViewModelType: ViewModelType {
     var itemURL: URLRequest? { get }
     var viewTitle: String? { get }
     var isItemInBookmarks: Bool { get }
+    var itemSource: Property<NSAttributedString?> { get }
+    var pubDate: Property<String?> { get }
     
     var isLoading: MutableProperty<Bool> { get }
     

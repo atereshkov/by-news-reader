@@ -16,6 +16,7 @@ class RealmNewsItem: Object {
     @objc dynamic var link: String = ""
     @objc dynamic var pubDate: Date = Date()
     @objc dynamic var category: String = ""
+    @objc dynamic var source: String = ""
     
     @objc dynamic var isBookmarked: Bool = false
     @objc dynamic var bookmarkDate: Date = Date()
@@ -24,13 +25,14 @@ class RealmNewsItem: Object {
         return "link"
     }
     
-    convenience init(title: String, iconURL: String, link: String, pubDate: Date, category: String, isBookmarked: Bool, bookmarkDate: Date = Date()) {
+    convenience init(title: String, iconURL: String, link: String, pubDate: Date, category: String, source: String, isBookmarked: Bool, bookmarkDate: Date = Date()) {
         self.init()
         self.title = title
         self.iconURL = iconURL
         self.link = link
         self.pubDate = pubDate
         self.category = category
+        self.source = source
         self.isBookmarked = isBookmarked
         self.bookmarkDate = bookmarkDate
     }
@@ -46,6 +48,7 @@ extension RealmNewsItem {
         wallpaper.title = item.title
         wallpaper.pubDate = item.pubDate ?? Date()
         wallpaper.category = item.category ?? ""
+        wallpaper.source = item.source ?? ""
         wallpaper.isBookmarked = isBookmarked
         wallpaper.bookmarkDate = Date()
         return wallpaper
