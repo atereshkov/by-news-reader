@@ -17,6 +17,7 @@ final class InitialSettingsViewModel: BaseViewModel<InitialSettingsRouter>, Init
     }
     
     func skipAction() {
+        PreferenceService.shared.initialSetupPassed = true
         router?.goToMain(animated: false)
     }
     
