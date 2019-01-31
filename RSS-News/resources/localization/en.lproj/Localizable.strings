@@ -137,3 +137,7 @@
 // MARK: Onboarding Theme
 
 "onboarding.theme.information-text" = "You could change default white theme to the dark one if you want. You can change it anytime in the Settings.";
+
+// MARK: Onboarding Provider
+
+"onboarding.provider.information-text" = "Please choose news provider to use it as default one. You can change it anytime in the Settings.";

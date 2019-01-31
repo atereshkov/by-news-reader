@@ -24,7 +24,12 @@
 	<key>Onboarding</key>
 	<dict>
 		<key>Provider</key>
-		<dict/>
+		<dict>
+			<key>InformationLabelColor</key>
+			<string>#000000</string>
+			<key>BackgroundColor</key>
+			<string>#FFFFFF</string>
+		</dict>
 		<key>Theme</key>
 		<dict>
 			<key>BackgroundColor</key>

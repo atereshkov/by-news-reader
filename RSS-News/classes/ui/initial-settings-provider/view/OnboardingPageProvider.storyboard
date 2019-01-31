@@ -17,13 +17,110 @@
                     <view key="view" contentMode="scaleToFill" id="uzv-2G-O8L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhf-Ld-WJO">
+                                <rect key="frame" x="10" y="40" width="355" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="onboarding.provider.information-text"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="Onboarding.Provider.InformationLabelColor"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                </variation>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TSg-Rr-bDz">
+                                <rect key="frame" x="0.0" y="78" width="375" height="589"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="ProviderCell" id="M9c-20-Wn9" customClass="ProviderCell" customModule="RSS_News" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M9c-20-Wn9" id="l9v-Je-XOf">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNz-UT-aOE">
+                                                    <rect key="frame" x="15" y="11.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="SettingsProvider.Cell.TitleColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mark-check" translatesAutoresizingMaskIntoConstraints="NO" id="5oS-F6-mHc">
+                                                    <rect key="frame" x="336" y="10" width="24" height="24"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTintColor" value="SettingsProvider.Cell.MarkImageTintColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHi-EV-bDB">
+                                                    <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="ja9-Z4-WrH"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="SettingsProvider.Cell.SeparatorColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SNz-UT-aOE" firstAttribute="centerY" secondItem="l9v-Je-XOf" secondAttribute="centerY" id="ISt-Lc-qMI"/>
+                                                <constraint firstAttribute="bottom" secondItem="GHi-EV-bDB" secondAttribute="bottom" id="Sd5-cu-4f4"/>
+                                                <constraint firstAttribute="trailing" secondItem="GHi-EV-bDB" secondAttribute="trailing" id="ZZF-oL-01m"/>
+                                                <constraint firstItem="5oS-F6-mHc" firstAttribute="centerY" secondItem="l9v-Je-XOf" secondAttribute="centerY" id="flb-9S-G3W"/>
+                                                <constraint firstItem="SNz-UT-aOE" firstAttribute="leading" secondItem="l9v-Je-XOf" secondAttribute="leading" constant="15" id="l2O-3S-wOI"/>
+                                                <constraint firstAttribute="trailing" secondItem="5oS-F6-mHc" secondAttribute="trailing" constant="15" id="o2Y-F9-iiJ"/>
+                                                <constraint firstItem="GHi-EV-bDB" firstAttribute="leading" secondItem="l9v-Je-XOf" secondAttribute="leading" id="s3N-k8-EBP"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Onboarding.Provider.BackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftLabel" destination="SNz-UT-aOE" id="cB0-iG-J1H"/>
+                                            <outlet property="markImageView" destination="5oS-F6-mHc" id="uFg-J2-Gua"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Onboarding.Provider.BackgroundColor"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="1tg-i6-z7r" id="koD-2o-K02"/>
+                                    <outlet property="delegate" destination="1tg-i6-z7r" id="pU0-bc-0wX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TSg-Rr-bDz" firstAttribute="top" secondItem="Qhf-Ld-WJO" secondAttribute="bottom" constant="20" id="2rb-di-0OM"/>
+                            <constraint firstItem="TSg-Rr-bDz" firstAttribute="leading" secondItem="YiR-z9-b0t" secondAttribute="leading" id="KGQ-TB-1bA"/>
+                            <constraint firstItem="Qhf-Ld-WJO" firstAttribute="leading" secondItem="YiR-z9-b0t" secondAttribute="leading" constant="10" id="QRV-06-hOa"/>
+                            <constraint firstItem="Qhf-Ld-WJO" firstAttribute="top" secondItem="YiR-z9-b0t" secondAttribute="top" constant="20" id="TUB-to-3UA"/>
+                            <constraint firstItem="YiR-z9-b0t" firstAttribute="bottom" secondItem="TSg-Rr-bDz" secondAttribute="bottom" id="UuR-51-bdg"/>
+                            <constraint firstItem="YiR-z9-b0t" firstAttribute="trailing" secondItem="TSg-Rr-bDz" secondAttribute="trailing" id="pVG-wn-pGb"/>
+                            <constraint firstItem="YiR-z9-b0t" firstAttribute="trailing" secondItem="Qhf-Ld-WJO" secondAttribute="trailing" constant="10" id="xjN-cw-A3b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YiR-z9-b0t"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Onboarding.Provider.BackgroundColor"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="TSg-Rr-bDz" id="8uY-xj-xr8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e0k-j8-Gvc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="260" y="-158"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mark-check" width="24" height="24"/>
+    </resources>
 </document>

@@ -27,6 +27,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="theme.dark"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="Onboarding.Theme.ThemeLabelColor"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                </variation>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-Dk-Lmr">
                                 <rect key="frame" x="310" y="83" width="51" height="31"/>
@@ -44,6 +47,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="localizedTitle" value="onboarding.theme.information-text"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="Onboarding.Theme.InformationLabelColor"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

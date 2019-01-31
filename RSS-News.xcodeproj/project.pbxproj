@@ -154,6 +154,7 @@
 		A3A5307A220397D1003A8725 /* OnboardingPageThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A53079220397D1003A8725 /* OnboardingPageThemeViewModel.swift */; };
 		A3A5307C220397FD003A8725 /* OnboardingPageThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A5307B220397FD003A8725 /* OnboardingPageThemeView.swift */; };
 		A3A5307E22039824003A8725 /* OnboardingPageTheme.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A5307D22039824003A8725 /* OnboardingPageTheme.storyboard */; };
+		A3A530812203A1A4003A8725 /* OnboardingProviderViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A530802203A1A4003A8725 /* OnboardingProviderViewState.swift */; };
 		A3EC155F21FBB5E800D29489 /* SettingsCityViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC155E21FBB5E800D29489 /* SettingsCityViewState.swift */; };
 		A3EC156121FBB62200D29489 /* RegionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC156021FBB62200D29489 /* RegionItem.swift */; };
 		A3EC156321FBB68F00D29489 /* SettingsCityViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC156221FBB68F00D29489 /* SettingsCityViewDelegate.swift */; };
@@ -346,6 +347,7 @@
 		A3A53079220397D1003A8725 /* OnboardingPageThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageThemeViewModel.swift; sourceTree = "<group>"; };
 		A3A5307B220397FD003A8725 /* OnboardingPageThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageThemeView.swift; sourceTree = "<group>"; };
 		A3A5307D22039824003A8725 /* OnboardingPageTheme.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingPageTheme.storyboard; sourceTree = "<group>"; };
+		A3A530802203A1A4003A8725 /* OnboardingProviderViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProviderViewState.swift; sourceTree = "<group>"; };
 		A3EC155E21FBB5E800D29489 /* SettingsCityViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewState.swift; sourceTree = "<group>"; };
 		A3EC156021FBB62200D29489 /* RegionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionItem.swift; sourceTree = "<group>"; };
 		A3EC156221FBB68F00D29489 /* SettingsCityViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewDelegate.swift; sourceTree = "<group>"; };
@@ -1232,6 +1234,7 @@
 			children = (
 				A3A5305A2203817B003A8725 /* router */,
 				A3A530592203817A003A8725 /* view */,
+				A3A5307F2203A190003A8725 /* viewData */,
 				A3A5305822038178003A8725 /* viewModel */,
 			);
 			path = "initial-settings-provider";
@@ -1309,6 +1312,14 @@
 				A3A530752203976D003A8725 /* OnboardingPageThemeTabRouter.swift */,
 			);
 			path = router;
+			sourceTree = "<group>";
+		};
+		A3A5307F2203A190003A8725 /* viewData */ = {
+			isa = PBXGroup;
+			children = (
+				A3A530802203A1A4003A8725 /* OnboardingProviderViewState.swift */,
+			);
+			path = viewData;
 			sourceTree = "<group>";
 		};
 		A3EC155D21FBB5CF00D29489 /* viewData */ = {
@@ -1725,6 +1736,7 @@
 				A34B64A921F3862700DACC2F /* SettingsViewModelType.swift in Sources */,
 				A36DC45A21F27BA100B0BE72 /* MainView.swift in Sources */,
 				A34B648321F372CA00DACC2F /* SettingsRoutable.swift in Sources */,
+				A3A530812203A1A4003A8725 /* OnboardingProviderViewState.swift in Sources */,
 				A34B64C321F391E000DACC2F /* SettingsThemeViewModelType.swift in Sources */,
 				A34B64D921F3B70E00DACC2F /* ParseService.swift in Sources */,
 				A37EF40921F6757200691912 /* DGElasticPullToRefreshView.swift in Sources */,

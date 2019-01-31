@@ -199,6 +199,11 @@ internal enum L10n {
 
   internal enum Onboarding {
 
+    internal enum Provider {
+      /// Please choose news provider to use it as default one. You can change it anytime in the Settings.
+      internal static let informationText = L10n.tr("Localizable", "onboarding.provider.information-text")
+    }
+
     internal enum Theme {
       /// You could change default white theme to the dark one if you want. You can change it anytime in the Settings.
       internal static let informationText = L10n.tr("Localizable", "onboarding.theme.information-text")
