@@ -15,6 +15,7 @@ final class NewsViewModel: BaseViewModel<NewsRouter>, NewsViewModelType {
     // MARK: Callbacks
     
     var updateState: ((NewsViewState) -> Void)?
+    var scrollListToTop: (() -> Void)?
     
     // MARK: Properties
     
@@ -166,6 +167,7 @@ extension NewsViewModel {
         self.provider = providerService.getCurrentProviderItem()
         
         guard let actualProvider = self.provider else { return }
+        scrollListToTop?()
         parseItems(provider: actualProvider)
     }
     

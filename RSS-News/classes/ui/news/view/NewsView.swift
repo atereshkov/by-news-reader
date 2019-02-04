@@ -58,6 +58,9 @@ final class NewsView: BaseView<NewsViewModel>, UITableViewDelegate, UITableViewD
                 }
             }
         }
+        viewModel.scrollListToTop = { [weak self] in
+            self?.tableView.setContentOffset(.zero, animated: false)
+        }
     }
     
     // MARK: UITableViewDelegate, UITableViewDataSource

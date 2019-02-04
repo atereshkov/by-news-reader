@@ -23,6 +23,12 @@ final class ProvidersService: ProvidersServiceProtocol {
     
     init(_ plistParserService: PlistParserServiceProtocol) {
         self.plistParserService = plistParserService
+        
+        // set current provider from userdefaults
+        let savedProvider = PreferenceService.shared.provider
+        if !savedProvider.isEmpty, let rawProvider = AppProviderEnum(rawValue: savedProvider) {
+            provider = MutableProperty(rawProvider)
+        }
     }
     
     // MARK: Provider DataSources

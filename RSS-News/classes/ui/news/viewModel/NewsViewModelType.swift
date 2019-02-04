@@ -23,6 +23,7 @@ protocol NewsViewModelType: ViewModelType {
     // MARK: Callbacks
     
     var updateState: ((_ state: NewsViewState) -> Void)? { get set }
+    var scrollListToTop: (() -> Void)? { get set }
     
     // MARK: Properies
     
