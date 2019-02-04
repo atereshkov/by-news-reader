@@ -14,6 +14,7 @@ import FeedKit
 
 protocol ParseServiceProtocol {
     func parse(providerURL: URL) -> SignalProducer<RSSFeed, ServiceError>
+    func parse(providerURL: URL, completion: @escaping ((RSSFeed?, Error?) -> Void))
 }
 
 final class ParseService: ParseServiceProtocol {
@@ -30,6 +31,17 @@ final class ParseService: ParseServiceProtocol {
                 observer.send(value: feed)
                 observer.sendCompleted()
             }
+        }
+    }
+    
+    func parse(providerURL: URL, completion: @escaping ((RSSFeed?, Error?) -> Void)) {
+        let parser = FeedParser(URL: providerURL)
+        parser.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in
+            guard let feed = result.rssFeed, result.isSuccess else {
+                completion(nil, result.error)
+                return
+            }
+            completion(feed, nil)
         }
     }
     

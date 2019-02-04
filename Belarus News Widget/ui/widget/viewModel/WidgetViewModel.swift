@@ -9,6 +9,7 @@
 import Foundation
 import ReactiveSwift
 import FeedKit
+import NotificationCenter
 
 final class WidgetViewModel: BaseViewModel<WidgetRouter>, WidgetViewModelType {
     
@@ -58,8 +59,17 @@ final class WidgetViewModel: BaseViewModel<WidgetRouter>, WidgetViewModelType {
         context?.open(url, completionHandler: nil)
     }
     
-    func viewDidAppear() {
-        
+    func fetchNewDataAction(completionHandler: @escaping ((NCUpdateResult) -> Void)) {
+        guard let strUrl = provider?.latest.url else { return }
+        guard let url = URL(string: strUrl) else { return }
+        return parseService.parse(providerURL: url, completion: { [weak self] feed, _ in
+            if let feed = feed {
+                self?.handleRSSFeedResponse(feed)
+                completionHandler(NCUpdateResult.newData)
+            } else {
+                completionHandler(NCUpdateResult.failed)
+            }
+        })
     }
     
     // MARK: DataSource
