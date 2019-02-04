@@ -64,7 +64,7 @@ extension TodayViewController: NCWidgetProviding {
     
     func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
         let expanded = activeDisplayMode == .expanded
-        let rowHeight: CGFloat = UIDevice.isPhone ? 110.0 : 160.0
+        let rowHeight: CGFloat = UIDevice.isPhone ? 110.0 : 110.0
         preferredContentSize = expanded ? CGSize(width: maxSize.width, height: CGFloat(Constants.expandedNewsCount) * rowHeight) : maxSize
     }
     
@@ -89,7 +89,7 @@ extension TodayViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let rowHeight: CGFloat = UIDevice.isPhone ? 110.0 : 160
+        let rowHeight: CGFloat = UIDevice.isPhone ? 110.0 : 110.0
         return rowHeight
     }
     
