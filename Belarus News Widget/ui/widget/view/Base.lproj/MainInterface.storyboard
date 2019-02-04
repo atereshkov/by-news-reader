@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="Belarus_News_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jSu-sa-JrE">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="WidgetNewsCell" rowHeight="110" id="QH8-ut-uvh" customClass="WidgetNewsCell" customModule="Belarus_News_Widget" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QH8-ut-uvh" id="eXP-JE-d9X">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QD6-wZ-aYG">
+                                                    <rect key="frame" x="10" y="7.5" width="90" height="95"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="UdB-3t-2U2"/>
+                                                        <constraint firstAttribute="height" constant="95" id="zmz-YA-brt"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYC-re-eGN">
+                                                    <rect key="frame" x="110" y="88.5" width="200" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="h87-T5-3o8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="Feed.Cell.PublishDateLabelColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwH-Jy-mwp">
+                                                    <rect key="frame" x="110" y="7.5" width="200" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="themeTextColor" value="Feed.Cell.TitleColor"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="VwH-Jy-mwp" secondAttribute="trailing" constant="10" id="8vr-TH-G2P"/>
+                                                <constraint firstAttribute="trailing" secondItem="yYC-re-eGN" secondAttribute="trailing" constant="10" id="KHp-bU-Nin"/>
+                                                <constraint firstItem="yYC-re-eGN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VwH-Jy-mwp" secondAttribute="bottom" constant="2" id="Lla-8e-7J7"/>
+                                                <constraint firstItem="yYC-re-eGN" firstAttribute="bottom" secondItem="QD6-wZ-aYG" secondAttribute="bottom" id="Zx8-ef-rw5"/>
+                                                <constraint firstItem="QD6-wZ-aYG" firstAttribute="centerY" secondItem="eXP-JE-d9X" secondAttribute="centerY" id="aDf-VY-5kS"/>
+                                                <constraint firstItem="yYC-re-eGN" firstAttribute="leading" secondItem="QD6-wZ-aYG" secondAttribute="trailing" constant="10" id="c5r-nx-ZzF"/>
+                                                <constraint firstItem="VwH-Jy-mwp" firstAttribute="top" secondItem="QD6-wZ-aYG" secondAttribute="top" id="ijx-tz-Lai"/>
+                                                <constraint firstItem="QD6-wZ-aYG" firstAttribute="leading" secondItem="eXP-JE-d9X" secondAttribute="leading" constant="10" id="m6k-VH-a2a"/>
+                                                <constraint firstItem="VwH-Jy-mwp" firstAttribute="leading" secondItem="QD6-wZ-aYG" secondAttribute="trailing" constant="10" id="u4R-sv-6Gk"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="themeBackgroundColor" value="Feed.BackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconImageView" destination="QD6-wZ-aYG" id="J7S-Ia-6N5"/>
+                                            <outlet property="timeLabel" destination="yYC-re-eGN" id="5LB-0b-y01"/>
+                                            <outlet property="titleLabel" destination="VwH-Jy-mwp" id="NZ4-A3-DJh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="M4Y-Lb-cyx" id="kul-bT-qhX"/>
+                                    <outlet property="delegate" destination="M4Y-Lb-cyx" id="eGE-1e-mvF"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="m91-aL-wX5">
+                                <rect key="frame" x="141" y="81" width="37" height="37"/>
+                                <color key="color" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="m91-aL-wX5" firstAttribute="centerY" secondItem="ssy-KU-ocm" secondAttribute="centerY" id="hgO-Ik-m8r"/>
+                            <constraint firstItem="jSu-sa-JrE" firstAttribute="top" secondItem="ssy-KU-ocm" secondAttribute="top" id="hul-dz-4ZB"/>
+                            <constraint firstItem="jSu-sa-JrE" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" id="kvm-up-pSR"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" secondItem="jSu-sa-JrE" secondAttribute="bottom" id="py5-tt-BvN"/>
+                            <constraint firstItem="m91-aL-wX5" firstAttribute="centerX" secondItem="ssy-KU-ocm" secondAttribute="centerX" id="sQP-Ub-Y9L"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="jSu-sa-JrE" secondAttribute="trailing" id="vH0-Ob-JdW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="200"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="m91-aL-wX5" id="giU-im-qN2"/>
+                        <outlet property="tableView" destination="jSu-sa-JrE" id="vS6-SS-baj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.19999999999999" y="133.13343328335833"/>
+        </scene>
+    </scenes>
+</document>

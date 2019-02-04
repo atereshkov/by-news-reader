@@ -31,10 +31,23 @@ end
 target 'Belarus-News-Widget' do
     use_frameworks!
     
-    # Pods for Widget
+    # Core
     pod 'Alamofire', '~> 4.7'
+    pod 'ReactiveCocoa', '~> 8.0', :inhibit_warnings => true
+    pod 'ReactiveSwift', '~> 4.0', :inhibit_warnings => true
     pod 'Kingfisher', '~> 5.0'
+    pod 'ReachabilitySwift', '~> 4.1.0'
     pod 'Swinject', '~> 2.5'
     pod 'FeedKit', '~> 8.0'
+    pod 'RealmSwift', '~> 3.0'
+    
+    # Support
+    pod 'EXPLogger', '~> 1.0.3'
+    pod 'SwiftTheme', '~> 0.4'
+    pod 'PinLayout', '~> 1.8'
+    
+    # Code improvements
+    pod 'SwiftLint'
+    pod 'SwiftGen', '~> 5.3'
     
 end
