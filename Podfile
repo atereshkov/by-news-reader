@@ -27,3 +27,14 @@ target 'RSS-News' do
   pod 'SwiftGen', '~> 5.3'
 
 end
+
+target 'Belarus-News-Widget' do
+    use_frameworks!
+    
+    # Pods for Widget
+    pod 'Alamofire', '~> 4.7'
+    pod 'Kingfisher', '~> 5.0'
+    pod 'Swinject', '~> 2.5'
+    pod 'FeedKit', '~> 8.0'
+    
+end
