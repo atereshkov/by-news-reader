@@ -25,6 +25,11 @@ target 'RSS-News' do
   # Code improvements
   pod 'SwiftLint'
   pod 'SwiftGen', '~> 5.3'
+  
+  # Analytics, app stability reports, etc
+  pod 'Firebase/Core'
+  pod 'Fabric', '~> 1.9.0'
+  pod 'Crashlytics', '~> 3.12.0'
 
 end
 

@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -37,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         router = AppRouter(window: window, session: session)
         router?.start()
         
+        FirebaseApp.configure()
         configureRealm()
         
         return true

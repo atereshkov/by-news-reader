@@ -1,8 +1,60 @@
 PODS:
   - Alamofire (4.8.0)
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
   - EXPLogger (1.0.3)
+  - Fabric (1.9.0)
   - FeedKit (8.0.0)
+  - Firebase/Core (5.16.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.5.0)
+  - Firebase/CoreOnly (5.16.0):
+    - FirebaseCore (= 5.2.0)
+  - FirebaseAnalytics (5.5.0):
+    - FirebaseCore (~> 5.2)
+    - FirebaseInstanceID (~> 3.4)
+    - GoogleAppMeasurement (= 5.5.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - FirebaseCore (5.2.0):
+    - GoogleUtilities/Logger (~> 5.2)
+  - FirebaseInstanceID (3.4.0):
+    - FirebaseCore (~> 5.2)
+    - GoogleUtilities/Environment (~> 5.3)
+    - GoogleUtilities/UserDefaults (~> 5.3)
+  - GoogleAppMeasurement (5.5.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
+    - GoogleUtilities/MethodSwizzler (~> 5.2)
+    - GoogleUtilities/Network (~> 5.2)
+    - "GoogleUtilities/NSData+zlib (~> 5.2)"
+    - nanopb (~> 0.3)
+  - GoogleUtilities/AppDelegateSwizzler (5.3.7):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (5.3.7)
+  - GoogleUtilities/Logger (5.3.7):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (5.3.7):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (5.3.7):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (5.3.7)"
+  - GoogleUtilities/Reachability (5.3.7):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (5.3.7):
+    - GoogleUtilities/Logger
   - Kingfisher (5.0.1)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
   - PinLayout (1.8.6)
   - ReachabilitySwift (4.1.0)
   - ReactiveCocoa (8.0.2):
@@ -22,8 +74,11 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - Crashlytics (~> 3.12.0)
   - EXPLogger (~> 1.0.3)
+  - Fabric (~> 1.9.0)
   - FeedKit (~> 8.0)
+  - Firebase/Core
   - Kingfisher (~> 5.0)
   - PinLayout (~> 1.8)
   - ReachabilitySwift (~> 4.1.0)
@@ -38,9 +93,18 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Crashlytics
     - EXPLogger
+    - Fabric
     - FeedKit
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - GoogleAppMeasurement
+    - GoogleUtilities
     - Kingfisher
+    - nanopb
     - PinLayout
     - ReachabilitySwift
     - ReactiveCocoa
@@ -55,9 +119,18 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
   EXPLogger: 206c906c0eb65f1eb679c210adf7029ebf04e10f
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   FeedKit: 4a78f07adf7f0a224b904014678f1de82a7ffc21
+  Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67
+  FirebaseAnalytics: d35d47c03c50c73c14a7fd31463c5775843e78a9
+  FirebaseCore: ea2d1816723ef21492b8e9113303e1350db5e08c
+  FirebaseInstanceID: 97ea7a5dca9afd72c79bfcdddb7a44aa1cbb42a1
+  GoogleAppMeasurement: 621f3bc6211d5ba548debe01fafad30cf5ab6859
+  GoogleUtilities: 111a012f4c3a29c9e7c954c082fafd6ee3c999c0
   Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   PinLayout: fe2a2432d6982588e208572005c941aeeae417ab
   ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
   ReactiveCocoa: fbd26e9ba60e98417ee47433e59465a98ed9da0f
@@ -70,6 +143,6 @@ SPEC CHECKSUMS:
   SwiftTheme: 628345b948068a48d330d76dffb1a990ea5f90aa
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
 
-PODFILE CHECKSUM: eda959a5a073ac15bd6139f9021d97ce0f556127
+PODFILE CHECKSUM: 61cc12103bc6579321b50aa114c6949853e3479b
 
 COCOAPODS: 1.5.3

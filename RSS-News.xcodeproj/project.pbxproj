@@ -179,6 +179,8 @@
 		A3860AAF21F639F00030869A /* NewsDetailViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860AAE21F639F00030869A /* NewsDetailViewModelType.swift */; };
 		A3860AB121F63A050030869A /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860AB021F63A050030869A /* NewsDetailViewModel.swift */; };
 		A3860AB321F63D1E0030869A /* PopTouchNewsDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860AB221F63D1E0030869A /* PopTouchNewsDetailRouter.swift */; };
+		A39DE049220B2FA000CD8999 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A39DE048220B2FA000CD8999 /* GoogleService-Info.plist */; };
+		A39DE04A220B2FA000CD8999 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A39DE048220B2FA000CD8999 /* GoogleService-Info.plist */; };
 		A3A5304C22004353003A8725 /* AboutViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A5304B22004353003A8725 /* AboutViewState.swift */; };
 		A3A5304E22004365003A8725 /* AboutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A5304D22004365003A8725 /* AboutItem.swift */; };
 		A3A53051220047D3003A8725 /* AboutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A53050220047D3003A8725 /* AboutCell.swift */; };
@@ -408,6 +410,7 @@
 		A3860AAE21F639F00030869A /* NewsDetailViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModelType.swift; sourceTree = "<group>"; };
 		A3860AB021F63A050030869A /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
 		A3860AB221F63D1E0030869A /* PopTouchNewsDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTouchNewsDetailRouter.swift; sourceTree = "<group>"; };
+		A39DE048220B2FA000CD8999 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3A5304B22004353003A8725 /* AboutViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewState.swift; sourceTree = "<group>"; };
 		A3A5304D22004365003A8725 /* AboutItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutItem.swift; sourceTree = "<group>"; };
 		A3A53050220047D3003A8725 /* AboutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCell.swift; sourceTree = "<group>"; };
@@ -976,6 +979,7 @@
 				A36DC42B21F278C900B0BE72 /* classes */,
 				A36DC42F21F278F400B0BE72 /* resources */,
 				A36DC42321F277E300B0BE72 /* Info.plist */,
+				A39DE048220B2FA000CD8999 /* GoogleService-Info.plist */,
 			);
 			path = "RSS-News";
 			sourceTree = "<group>";
@@ -1696,6 +1700,7 @@
 				A36DC42921F278A600B0BE72 /* SwiftLint */,
 				A36DC42A21F278B600B0BE72 /* SwiftGen */,
 				A33A98D52208A82E00834782 /* Embed App Extensions */,
+				A39DE04B220B31AB00CD8999 /* Crashlytics Fabric */,
 			);
 			buildRules = (
 			);
@@ -1751,6 +1756,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A33A98CD2208A82E00834782 /* MainInterface.storyboard in Resources */,
+				A39DE04A220B2FA000CD8999 /* GoogleService-Info.plist in Resources */,
 				A33A99112208C39400834782 /* Localizable.strings in Resources */,
 				A33A99102208C36300834782 /* Providers.plist in Resources */,
 			);
@@ -1775,6 +1781,7 @@
 				A3A5306322039453003A8725 /* OnboardingPageProvider.storyboard in Resources */,
 				A3EC15AD21FE59CB00D29489 /* SettingsIPad.storyboard in Resources */,
 				A34B647721F3656B00DACC2F /* Bookmarks.storyboard in Resources */,
+				A39DE049220B2FA000CD8999 /* GoogleService-Info.plist in Resources */,
 				A34B647121F3651900DACC2F /* News.storyboard in Resources */,
 				A3EC15A921FE591000D29489 /* CategoriesIPad.storyboard in Resources */,
 				A36DC43B21F2797900B0BE72 /* Images.xcassets in Resources */,
@@ -1830,6 +1837,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/EXPLogger/EXPLogger.framework",
 				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
@@ -1840,6 +1848,7 @@
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -1848,6 +1857,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EXPLogger.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
@@ -1858,6 +1868,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1939,6 +1950,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\n";
+		};
+		A39DE04B220B31AB00CD8999 /* Crashlytics Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Crashlytics Fabric";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
