@@ -99,9 +99,9 @@ final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailView
         router?.openLink(link)
     }
     
-    func shareAction() {
+    func shareAction(sender: UIView?) {
         guard let shareLink = item.value?.link else { return }
-        router?.share(link: shareLink, sender: nil)
+        router?.share(link: shareLink, sender: sender)
     }
     
     func bookmarkAction() {

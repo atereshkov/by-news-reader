@@ -100,7 +100,8 @@ private extension NewsDetailView {
     
     func addRightBarButtons(isBookmarked: Bool) {
         let shareButton: UIBarButtonItem = .shareButton { [weak self] in
-            self?.viewModel?.shareAction()
+            let sender = self?.navigationItem.rightBarButtonItems?.first?.customView
+            self?.viewModel?.shareAction(sender: sender)
         }
         var bookmarkButton: UIBarButtonItem = UIBarButtonItem()
         if isBookmarked {

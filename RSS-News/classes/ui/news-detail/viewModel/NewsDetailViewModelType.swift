@@ -18,7 +18,7 @@ protocol NewsDetailViewModelType: ViewModelType {
     
     // MARK: Actions
     
-    func shareAction()
+    func shareAction(sender: UIView?)
     func bookmarkAction()
     func addToBookmarksAction()
     func removeFromBookmarksAction()
