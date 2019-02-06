@@ -1,0 +1,123 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+
+  ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+
+  before_all do
+    ensure_git_status_clean
+  end
+
+  desc "Push a new build to TestFlight"
+  lane :deploy_testflight do
+
+    disable_automatic_code_signing(
+      use_automatic_signing: false,
+      targets: [ENV['TARGET']]
+    )
+
+    update_project_provisioning(
+      xcodeproj: ENV['PROJ_NAME'],
+      profile: ENV['APP_STORE_PROVISION_PATH'], # optional if you use sigh
+      target_filter: ENV['TARGET'], # matches name or type of a target
+      build_configuration: "Release"
+    )
+
+    update_project_team(
+      path: ENV['PROJ_NAME'],
+      teamid: CredentialsManager::AppfileConfig.try_fetch_value(:team_id)
+    )
+
+    increment_build_number_in_plist(
+      target: ENV['TARGET']
+    )
+
+    build_app(
+      workspace: ENV['WORKSPACE_NAME'],
+      scheme: ENV['SCHEME'],
+      skip_profile_detection: true,
+      codesigning_identity: ENV['CODESIGN_IDENTITY_KEYCHAIN'],
+      export_team_id: CredentialsManager::AppfileConfig.try_fetch_value(:team_id),
+      export_method: "app-store",
+      export_options: {
+        teamID: CredentialsManager::AppfileConfig.try_fetch_value(:team_id),
+        method: "app-store",
+        signingStyle: "manual",
+        provisioningProfiles: {
+          ENV['BUNDLE_IDENTIFIER'] => ENV['APP_STORE_PROVISION_NAME']
+        }
+    })
+
+    upload_to_testflight(
+      skip_submission: true, # external testing
+      skip_waiting_for_build_processing: true
+    )
+
+    reset_git_repo(force: true)
+
+    clean_build_artifacts
+
+    sh("git", "fetch")
+    sh("git", "checkout", "develop")
+    git_pull
+
+    increment_build_number_in_plist(
+      target: ENV['TARGET']
+    )
+
+    build_number = get_build_number_from_plist(
+      xcodeproj: ENV['PROJ_NAME'], # optional
+      target: ENV['TARGET'], # optional, or `scheme`
+      build_configuration_name: 'Release' # optional, must be specified if you have different Info.plist build settings for different build configurations
+    )
+
+    add_git_tag(
+      grouping: "fastlane-builds",
+      prefix: "build-",
+      postfix: ENV['TARGET'],
+      build_number: build_number
+    )
+
+    commit_version_bump(
+      message: "Bump '#{ENV['TARGET']}' build number to '#{build_number}'",
+      force: true # Forces the commit, even if other files than the ones containing the version number have been modified
+    )
+
+    push_to_git_remote
+  end
+
+  after_all do |lane|
+      slack(
+        message: "Fastlane - TestFlight build has been successfuly uploaded :rocket:",
+        success: true,
+        payload: {  # Optional, lets you specify any number of your own Slack attachments.
+          "Build Date" => Time.new.to_s,
+          "Built by" => "Locale",
+        },
+        default_payloads: [:lane, :git_branch, :git_author]
+      )
+    end
+
+    error do |lane, exception|
+      slack(
+        message: exception.message,
+        success: false
+      )
+    end
+
+end
