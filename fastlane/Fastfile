@@ -73,7 +73,7 @@ platform :ios do
     clean_build_artifacts
 
     sh("git", "fetch")
-    sh("git", "checkout", "develop")
+    sh("git", "checkout", ENV['WORKING_BRANCH'])
     git_pull
 
     increment_build_number_in_plist(
