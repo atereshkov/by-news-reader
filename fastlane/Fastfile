@@ -31,10 +31,22 @@ platform :ios do
       targets: [ENV['TARGET']]
     )
 
+    disable_automatic_code_signing(
+      use_automatic_signing: false,
+      targets: [ENV['WIDGET_TARGET']]
+    )
+
     update_project_provisioning(
       xcodeproj: ENV['PROJ_NAME'],
       profile: ENV['APP_STORE_PROVISION_PATH'], # optional if you use sigh
       target_filter: ENV['TARGET'], # matches name or type of a target
+      build_configuration: "Release"
+    )
+
+    update_project_provisioning(
+      xcodeproj: ENV['PROJ_NAME'],
+      profile: ENV['APP_STORE_PROVISION_PATH'], # optional if you use sigh
+      target_filter: ENV['WIDGET_TARGET'], # matches name or type of a target
       build_configuration: "Release"
     )
 
