@@ -45,7 +45,7 @@ platform :ios do
 
     update_project_provisioning(
       xcodeproj: ENV['PROJ_NAME'],
-      profile: ENV['APP_STORE_PROVISION_PATH'], # optional if you use sigh
+      profile: ENV['WIDGET_APP_STORE_PROVISION_PATH'], # optional if you use sigh
       target_filter: ENV['WIDGET_TARGET'], # matches name or type of a target
       build_configuration: "Release"
     )
@@ -71,7 +71,8 @@ platform :ios do
         method: "app-store",
         signingStyle: "manual",
         provisioningProfiles: {
-          ENV['BUNDLE_IDENTIFIER'] => ENV['APP_STORE_PROVISION_NAME']
+          ENV['BUNDLE_IDENTIFIER'] => ENV['APP_STORE_PROVISION_NAME'],
+          ENV['WIDGET_BUNDLE_IDENTIFIER'] => ENV['WIDGET_APP_STORE_PROVISION_NAME']
         }
     })
 
