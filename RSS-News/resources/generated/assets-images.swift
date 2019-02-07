@@ -92,11 +92,6 @@ internal enum Asset {
         internal static let settingsTabBar = ImageAsset(name: "settings-tab-bar")
       }
     }
-    internal enum Providers {
-      internal enum Ico {
-        internal static let onliner = ImageAsset(name: "onliner")
-      }
-    }
     internal enum Themes {
       internal enum Paper {
         internal static let testImgPaper = ImageAsset(name: "test_img_paper")
@@ -127,7 +122,6 @@ internal enum Asset {
       Icons.TabBar.categories,
       Icons.TabBar.feed,
       Icons.TabBar.settingsTabBar,
-      Providers.Ico.onliner,
       Themes.Paper.testImgPaper,
       Themes.Red.testImgRed,
       Themes.White.testImgWhite,
