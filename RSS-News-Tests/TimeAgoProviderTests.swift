@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import RSS_News
 
 class TimeAgoProviderTests: XCTestCase {
     

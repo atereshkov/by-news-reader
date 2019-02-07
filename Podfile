@@ -30,6 +30,11 @@ target 'RSS-News' do
   pod 'Firebase/Core'
   pod 'Fabric', '~> 1.9.0'
   pod 'Crashlytics', '~> 3.12.0'
+  
+  target 'RSS-News-Tests' do
+      inherit! :search_paths
+      pod 'Firebase/Core'
+  end
 
 end
 
