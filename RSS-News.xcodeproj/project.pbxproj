@@ -13,9 +13,6 @@
 		A3128D9F21F7AEBE00F0BFDC /* BookmarksViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9E21F7AEBE00F0BFDC /* BookmarksViewState.swift */; };
 		A3128DA121F7B6B300F0BFDC /* NewsDetailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128DA021F7B6B300F0BFDC /* NewsDetailViewDelegate.swift */; };
 		A3329202220CABCC00BDC442 /* TimeAgoProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3329201220CABCC00BDC442 /* TimeAgoProviderTests.swift */; };
-		A3329209220CAF3600BDC442 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43821F2795F00B0BE72 /* Localizable.strings */; };
-		A332920A220CAF3E00BDC442 /* assets-images.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B643721F27E2400DACC2F /* assets-images.swift */; };
-		A332920C220CAF4300BDC442 /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B643621F27E2400DACC2F /* strings.swift */; };
 		A3329215220CBA1200BDC442 /* RealmServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3329212220CBA1200BDC442 /* RealmServiceTests.swift */; };
 		A33A98C72208A82E00834782 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33A98C62208A82E00834782 /* NotificationCenter.framework */; };
 		A33A98CA2208A82E00834782 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A98C92208A82E00834782 /* TodayViewController.swift */; };
@@ -1833,7 +1830,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3329209220CAF3600BDC442 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2108,10 +2104,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A332920A220CAF3E00BDC442 /* assets-images.swift in Sources */,
 				A3329202220CABCC00BDC442 /* TimeAgoProviderTests.swift in Sources */,
 				A3329215220CBA1200BDC442 /* RealmServiceTests.swift in Sources */,
-				A332920C220CAF4300BDC442 /* strings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
