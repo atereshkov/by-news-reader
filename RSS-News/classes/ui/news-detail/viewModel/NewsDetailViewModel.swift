@@ -86,7 +86,9 @@ final class NewsDetailViewModel: BaseViewModel<NewsDetailRouter>, NewsDetailView
     
     var pubDate: Property<String?> {
         guard let date = item.value?.pubDate else { return Property(value: nil) }
-        let timeAgo = DateUtils.timeAgo(from: date, fullTimeFormat: Constants.fullTimeFormat)
+        let formatter = DateFormatters.with(format: Constants.fullTimeFormat)
+        let timeAgoProvider = TimeAgoProvider(date: date, fullTimeFormatter: formatter)
+        let timeAgo = timeAgoProvider.timeAgo()
         return Property(value: timeAgo)
     }
     

@@ -8,9 +8,21 @@
 
 import Foundation
 
-final class DateUtils {
+protocol TimeAgoProviderProtocol {
+    func timeAgo() -> String
+}
+
+final class TimeAgoProvider: TimeAgoProviderProtocol {
     
-    static func timeAgo(from date: Date, fullTimeFormat: String) -> String {
+    private var date: Date
+    private var fullTimeFormatter: DateFormatter
+    
+    init(date: Date, fullTimeFormatter: DateFormatter) {
+        self.date = date
+        self.fullTimeFormatter = fullTimeFormatter
+    }
+    
+    func timeAgo() -> String {
         var secondsAgo = Int(Date().timeIntervalSince(date))
         if secondsAgo < 0 {
             secondsAgo *= (-1)
@@ -49,8 +61,7 @@ final class DateUtils {
                 return L10n.Time.daysAgo(day)
             }
         } else {
-            let formatter = DateFormatters.with(format: fullTimeFormat)
-            let strDate: String = formatter.string(from: date)
+            let strDate: String = fullTimeFormatter.string(from: date)
             return strDate
         }
     }

@@ -31,7 +31,9 @@ class NewsCell: UITableViewCell {
         bookmarkIcon.isHidden = !bookmarked
         
         if let date = item.pubDate {
-            let timeAgo = DateUtils.timeAgo(from: date, fullTimeFormat: Constants.fullTimeFormat)
+            let formatter = DateFormatters.with(format: Constants.fullTimeFormat)
+            let timeAgoProvider = TimeAgoProvider(date: date, fullTimeFormatter: formatter)
+            let timeAgo = timeAgoProvider.timeAgo()
             timeLabel.text = timeAgo
         } else {
             timeLabel.text = ""
