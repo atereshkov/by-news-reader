@@ -12,6 +12,7 @@
 		A3128D9C21F7A1D300F0BFDC /* RealmNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9B21F7A1D300F0BFDC /* RealmNewsItem.swift */; };
 		A3128D9F21F7AEBE00F0BFDC /* BookmarksViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9E21F7AEBE00F0BFDC /* BookmarksViewState.swift */; };
 		A3128DA121F7B6B300F0BFDC /* NewsDetailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128DA021F7B6B300F0BFDC /* NewsDetailViewDelegate.swift */; };
+		A33291FA220CA95F00BDC442 /* RSS_News_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33291F9220CA95F00BDC442 /* RSS_News_Tests.swift */; };
 		A33A98C72208A82E00834782 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33A98C62208A82E00834782 /* NotificationCenter.framework */; };
 		A33A98CA2208A82E00834782 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A98C92208A82E00834782 /* TodayViewController.swift */; };
 		A33A98CD2208A82E00834782 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33A98CB2208A82E00834782 /* MainInterface.storyboard */; };
@@ -244,6 +245,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A33291FC220CA95F00BDC442 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A36DC40C21F277E100B0BE72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A36DC41321F277E100B0BE72;
+			remoteInfo = "RSS-News";
+		};
 		A33A98CF2208A82E00834782 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A36DC40C21F277E100B0BE72 /* Project object */;
@@ -275,6 +283,9 @@
 		A3128D9B21F7A1D300F0BFDC /* RealmNewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNewsItem.swift; sourceTree = "<group>"; };
 		A3128D9E21F7AEBE00F0BFDC /* BookmarksViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewState.swift; sourceTree = "<group>"; };
 		A3128DA021F7B6B300F0BFDC /* NewsDetailViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewDelegate.swift; sourceTree = "<group>"; };
+		A33291F7220CA95F00BDC442 /* RSS-News-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RSS-News-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33291F9220CA95F00BDC442 /* RSS_News_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSS_News_Tests.swift; sourceTree = "<group>"; };
+		A33291FB220CA95F00BDC442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A33A98C52208A82E00834782 /* Belarus-News-Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Belarus-News-Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33A98C62208A82E00834782 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A33A98C92208A82E00834782 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -476,6 +487,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A33291F4220CA95F00BDC442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A33A98C22208A82E00834782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -528,6 +546,15 @@
 				A3128D9E21F7AEBE00F0BFDC /* BookmarksViewState.swift */,
 			);
 			path = viewData;
+			sourceTree = "<group>";
+		};
+		A33291F8220CA95F00BDC442 /* RSS-News-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A33291F9220CA95F00BDC442 /* RSS_News_Tests.swift */,
+				A33291FB220CA95F00BDC442 /* Info.plist */,
+			);
+			path = "RSS-News-Tests";
 			sourceTree = "<group>";
 		};
 		A33A98C82208A82E00834782 /* Belarus News Widget */ = {
@@ -958,6 +985,7 @@
 			children = (
 				A36DC41621F277E100B0BE72 /* RSS-News */,
 				A33A98C82208A82E00834782 /* Belarus News Widget */,
+				A33291F8220CA95F00BDC442 /* RSS-News-Tests */,
 				A36DC41521F277E100B0BE72 /* Products */,
 				C4C2E5947F892FC777152D79 /* Pods */,
 				9DCB60AFA9998D5B4DA4E9E8 /* Frameworks */,
@@ -969,6 +997,7 @@
 			children = (
 				A36DC41421F277E100B0BE72 /* RSS-News.app */,
 				A33A98C52208A82E00834782 /* Belarus-News-Widget.appex */,
+				A33291F7220CA95F00BDC442 /* RSS-News-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1669,6 +1698,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A33291F6220CA95F00BDC442 /* RSS-News-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3329200220CA95F00BDC442 /* Build configuration list for PBXNativeTarget "RSS-News-Tests" */;
+			buildPhases = (
+				A33291F3220CA95F00BDC442 /* Sources */,
+				A33291F4220CA95F00BDC442 /* Frameworks */,
+				A33291F5220CA95F00BDC442 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A33291FD220CA95F00BDC442 /* PBXTargetDependency */,
+			);
+			name = "RSS-News-Tests";
+			productName = "RSS-News-Tests";
+			productReference = A33291F7220CA95F00BDC442 /* RSS-News-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A33A98C42208A82E00834782 /* Belarus-News-Widget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A33A98D42208A82E00834782 /* Build configuration list for PBXNativeTarget "Belarus-News-Widget" */;
@@ -1722,6 +1769,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = AT;
 				TargetAttributes = {
+					A33291F6220CA95F00BDC442 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = A36DC41321F277E100B0BE72;
+					};
 					A33A98C42208A82E00834782 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -1746,11 +1797,19 @@
 			targets = (
 				A36DC41321F277E100B0BE72 /* RSS-News */,
 				A33A98C42208A82E00834782 /* Belarus-News-Widget */,
+				A33291F6220CA95F00BDC442 /* RSS-News-Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A33291F5220CA95F00BDC442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A33A98C32208A82E00834782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1972,6 +2031,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A33291F3220CA95F00BDC442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33291FA220CA95F00BDC442 /* RSS_News_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A33A98C12208A82E00834782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2184,6 +2251,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A33291FD220CA95F00BDC442 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A36DC41321F277E100B0BE72 /* RSS-News */;
+			targetProxy = A33291FC220CA95F00BDC442 /* PBXContainerItemProxy */;
+		};
 		A33A98D02208A82E00834782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A33A98C42208A82E00834782 /* Belarus-News-Widget */;
@@ -2220,6 +2292,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A33291FE220CA95F00BDC442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8EF4CLU9HX;
+				INFOPLIST_FILE = "RSS-News-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "at.by.RSS-News-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSS-News.app/RSS-News";
+			};
+			name = Debug;
+		};
+		A33291FF220CA95F00BDC442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8EF4CLU9HX;
+				INFOPLIST_FILE = "RSS-News-Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "at.by.RSS-News-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSS-News.app/RSS-News";
+			};
+			name = Release;
+		};
 		A33A98D22208A82E00834782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E5E4E7FACD55DB3D49BF1F0 /* Pods-Belarus-News-Widget.debug.xcconfig */;
@@ -2425,6 +2537,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A3329200220CA95F00BDC442 /* Build configuration list for PBXNativeTarget "RSS-News-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A33291FE220CA95F00BDC442 /* Debug */,
+				A33291FF220CA95F00BDC442 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A33A98D42208A82E00834782 /* Build configuration list for PBXNativeTarget "Belarus-News-Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

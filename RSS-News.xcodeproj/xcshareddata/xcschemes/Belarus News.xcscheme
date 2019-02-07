@@ -43,13 +43,23 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A33291F6220CA95F00BDC442"
+               BuildableName = "RSS-News-Tests.xctest"
+               BlueprintName = "RSS-News-Tests"
+               ReferencedContainer = "container:RSS-News.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A33A98C42208A82E00834782"
-            BuildableName = "Belarus-News-Widget.appex"
-            BlueprintName = "Belarus-News-Widget"
+            BlueprintIdentifier = "A36DC41321F277E100B0BE72"
+            BuildableName = "RSS-News.app"
+            BlueprintName = "RSS-News"
             ReferencedContainer = "container:RSS-News.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
