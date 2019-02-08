@@ -56,12 +56,16 @@
 
 "time.just-now" = "Just now";
 "time.secs-ago" = "%d secs ago";
+"time.secs-ago-mult" = "%d secs ago";
 "time.min-ago" = "%d min ago";
 "time.mins-ago" = "%d mins ago";
+"time.mins-ago-mult" = "%d mins ago";
 "time.hr-ago" = "%d hr ago";
 "time.hrs-ago" = "%d hrs ago";
+"time.hrs-ago-mult" = "%d hrs ago";
 "time.day-ago" = "%d day ago";
 "time.days-ago" = "%d days ago";
+"time.days-ago-mult" = "%d days ago";
 
 // MARK: News Details
 

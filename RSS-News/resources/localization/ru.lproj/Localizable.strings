@@ -56,12 +56,16 @@
 
 "time.just-now" = "Только что";
 "time.secs-ago" = "%d секунд назад";
+"time.secs-ago-mult" = "%d секунды назад";
 "time.min-ago" = "%d минуту назад";
 "time.mins-ago" = "%d минут назад";
+"time.mins-ago-mult" = "%d минуты назад";
 "time.hr-ago" = "%d час назад";
 "time.hrs-ago" = "%d часов назад";
+"time.hrs-ago-mult" = "%d часа назад";
 "time.day-ago" = "%d день назад";
 "time.days-ago" = "%d дней назад";
+"time.days-ago-mult" = "%d дня назад";
 
 // MARK: News Details
 

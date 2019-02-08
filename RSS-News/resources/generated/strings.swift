@@ -295,6 +295,10 @@ internal enum L10n {
     internal static func daysAgo(_ p1: Int) -> String {
       return L10n.tr("Localizable", "time.days-ago", p1)
     }
+    /// %d days ago
+    internal static func daysAgoMult(_ p1: Int) -> String {
+      return L10n.tr("Localizable", "time.days-ago-mult", p1)
+    }
     /// %d hr ago
     internal static func hrAgo(_ p1: Int) -> String {
       return L10n.tr("Localizable", "time.hr-ago", p1)
@@ -302,6 +306,10 @@ internal enum L10n {
     /// %d hrs ago
     internal static func hrsAgo(_ p1: Int) -> String {
       return L10n.tr("Localizable", "time.hrs-ago", p1)
+    }
+    /// %d hrs ago
+    internal static func hrsAgoMult(_ p1: Int) -> String {
+      return L10n.tr("Localizable", "time.hrs-ago-mult", p1)
     }
     /// Just now
     internal static let justNow = L10n.tr("Localizable", "time.just-now")
@@ -313,9 +321,17 @@ internal enum L10n {
     internal static func minsAgo(_ p1: Int) -> String {
       return L10n.tr("Localizable", "time.mins-ago", p1)
     }
+    /// %d mins ago
+    internal static func minsAgoMult(_ p1: Int) -> String {
+      return L10n.tr("Localizable", "time.mins-ago-mult", p1)
+    }
     /// %d secs ago
     internal static func secsAgo(_ p1: Int) -> String {
       return L10n.tr("Localizable", "time.secs-ago", p1)
+    }
+    /// %d secs ago
+    internal static func secsAgoMult(_ p1: Int) -> String {
+      return L10n.tr("Localizable", "time.secs-ago-mult", p1)
     }
   }
 }
