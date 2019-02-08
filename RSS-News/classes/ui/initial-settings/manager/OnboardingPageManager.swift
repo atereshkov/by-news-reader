@@ -39,7 +39,10 @@ class OnboardingPageManager: OnboardingPageManagerProtocol {
         views.append(contentsOf: providedViews)
     }
     
-    /// Call it when the view that uses the Manager is initialied
+    /**
+     Call it when the view that uses the Manager is initialied.
+     It invokes the setupPages() method of OnboardingPageManagerDelegate
+     */
     func viewInitialized() {
         delegate?.setupPages(views)
     }
