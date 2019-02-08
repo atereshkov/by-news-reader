@@ -11,6 +11,7 @@ import SwiftTheme
 
 protocol AppThemeServiceProtocol {
     var currentTheme: AppTheme { get }
+    var defaultTheme: AppTheme { get }
     
     func setupTheme()
     func setTheme(_ theme: AppTheme)
@@ -46,6 +47,10 @@ class AppThemeService: AppThemeServiceProtocol {
         let userTheme = preferenceService.theme
         let theme = AppTheme.init(rawValue: userTheme) ?? Constants.defaultTheme
         return theme
+    }
+    
+    var defaultTheme: AppTheme {
+        return Constants.defaultTheme
     }
     
 }

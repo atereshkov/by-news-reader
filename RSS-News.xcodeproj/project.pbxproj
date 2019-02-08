@@ -135,6 +135,7 @@
 		A34B64E121F3BA0D00DACC2F /* NewsViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64E021F3BA0D00DACC2F /* NewsViewModelType.swift */; };
 		A34B64E321F3BACE00DACC2F /* CategoriesViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64E221F3BACE00DACC2F /* CategoriesViewModelType.swift */; };
 		A34B64E521F3BAE400DACC2F /* BookmarksViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64E421F3BAE400DACC2F /* BookmarksViewModelType.swift */; };
+		A368CD29220E004C00C4F23C /* AppThemeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A368CD28220E004C00C4F23C /* AppThemeServiceTests.swift */; };
 		A36DC41821F277E100B0BE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC41721F277E100B0BE72 /* AppDelegate.swift */; };
 		A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DC42021F277E300B0BE72 /* LaunchScreen.storyboard */; };
 		A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43821F2795F00B0BE72 /* Localizable.strings */; };
@@ -383,6 +384,7 @@
 		A34B64E021F3BA0D00DACC2F /* NewsViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModelType.swift; sourceTree = "<group>"; };
 		A34B64E221F3BACE00DACC2F /* CategoriesViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModelType.swift; sourceTree = "<group>"; };
 		A34B64E421F3BAE400DACC2F /* BookmarksViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewModelType.swift; sourceTree = "<group>"; };
+		A368CD28220E004C00C4F23C /* AppThemeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeServiceTests.swift; sourceTree = "<group>"; };
 		A36DC41421F277E100B0BE72 /* RSS-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36DC41721F277E100B0BE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A36DC42121F277E300B0BE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -560,6 +562,7 @@
 			children = (
 				A3329212220CBA1200BDC442 /* RealmServiceTests.swift */,
 				A304E88D220DF211009F1E00 /* PreferenceServiceTests.swift */,
+				A368CD28220E004C00C4F23C /* AppThemeServiceTests.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -2172,6 +2175,7 @@
 				A3329202220CABCC00BDC442 /* TimeAgoProviderTests.swift in Sources */,
 				A3329215220CBA1200BDC442 /* RealmServiceTests.swift in Sources */,
 				A304E88E220DF211009F1E00 /* PreferenceServiceTests.swift in Sources */,
+				A368CD29220E004C00C4F23C /* AppThemeServiceTests.swift in Sources */,
 				A304E882220D5F4E009F1E00 /* NewsItemTests.swift in Sources */,
 				A304E884220D635B009F1E00 /* RealmNewsItem.swift in Sources */,
 			);
