@@ -11,9 +11,10 @@ import UIKit
 
 protocol OnboardingPageManagerProtocol: class {
     var delegate: OnboardingPageManagerDelegate? { get set }
+    var session: SessionType { get }
     var views: [ViewType] { get }
     
-    func initialize()
+    func initializeViews()
     
     func viewBefore(_ viewController: UIViewController) -> UIViewController?
     func viewAfter(_ viewController: UIViewController) -> UIViewController?
@@ -26,17 +27,15 @@ protocol OnboardingPageManagerDelegate: class {
 class OnboardingPageManager: OnboardingPageManagerProtocol {
     
     weak var delegate: OnboardingPageManagerDelegate?
-    private var session: SessionType?
     
+    private(set) var session: SessionType
     private(set) var views: [ViewType] = []
     
     init(session: SessionType) {
         self.session = session
     }
     
-    func initialize() {
-        guard let session = session else { return }
-        
+    func initializeViews() {        
         let page1 = OnboardingPageProviderTabRouter.initialize(session: session)
         let page2 = OnboardingPageThemeTabRouter.initialize(session: session)
         
