@@ -42,7 +42,7 @@ final class AppRouter: AppRouterProtocol {
     }
     
     // Use MainRouable instead if accessing from ViewModel router
-    func goToMain(animated: Bool) {
+    private func goToMain(animated: Bool) {
         guard let session = session else { return }
         let vc = UIViewController()
         window.rootViewController = vc
@@ -53,7 +53,7 @@ final class AppRouter: AppRouterProtocol {
     }
     
     // Use InitialSettingsRoutable instead if accessing from ViewModel router
-    func goToInitialSettings(animated: Bool) {
+    private func goToInitialSettings(animated: Bool) {
         guard let session = session else { return }
         let vc = UIViewController()
         window.rootViewController = vc
