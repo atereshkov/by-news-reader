@@ -20,12 +20,14 @@ final class ProvidersService: ProvidersServiceProtocol {
     private var provider: MutableProperty<AppProviderEnum> = MutableProperty(Constants.defaulProvider)
     
     private let plistParserService: PlistParserServiceProtocol
+    private var preferenceService: AppPreferenceServiceProtocol
     
-    init(_ plistParserService: PlistParserServiceProtocol) {
+    init(_ plistParserService: PlistParserServiceProtocol, _ preferenceService: AppPreferenceServiceProtocol) {
         self.plistParserService = plistParserService
+        self.preferenceService = preferenceService
         
         // set current provider from userdefaults
-        let savedProvider = PreferenceService.shared.provider
+        let savedProvider = preferenceService.provider
         if !savedProvider.isEmpty, let rawProvider = AppProviderEnum(rawValue: savedProvider) {
             provider = MutableProperty(rawProvider)
         }
@@ -58,7 +60,7 @@ final class ProvidersService: ProvidersServiceProtocol {
     // MARK: Interaction
     
     func changeProvider(to provider: AppProviderEnum) {
-        PreferenceService.shared.provider = provider.rawValue
+        preferenceService.provider = provider.rawValue
         self.provider.value = provider
     }
     

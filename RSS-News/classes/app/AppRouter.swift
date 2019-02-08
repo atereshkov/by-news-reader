@@ -29,7 +29,12 @@ final class AppRouter: AppRouterProtocol {
     }
     
     func start() {
-        if PreferenceService.shared.initialSetupPassed {
+        guard let preferenceService: AppPreferenceServiceProtocol = session?.resolve() else {
+            goToInitialSettings(animated: false)
+            return
+        }
+        
+        if preferenceService.initialSetupPassed {
             goToMain(animated: false)
         } else {
             goToInitialSettings(animated: false)

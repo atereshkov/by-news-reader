@@ -7,35 +7,8 @@
 //
 
 import UIKit
-import SwiftTheme
-
-enum AppTheme: String {
-    case white = "theme.white"
-    case dark = "theme.dark"
-    case paper = "theme.paper"
-    
-    func plistName() -> String {
-        switch self {
-        case .white:
-            return "White"
-        case .dark:
-            return "Dark"
-        case .paper:
-            return "Paper"
-        }
-    }
-    
-    var localized: String {
-        return self.rawValue.localized
-    }
-    
-}
 
 struct AppSkin {
-    
-    private struct Constants {
-        static let defaultTheme: AppTheme = .white
-    }
     
     static func applyAppearance() {
         UINavigationBar.appearance().theme_tintColor = "Global.NavigationBarButtonsColor"
@@ -46,26 +19,6 @@ struct AppSkin {
         
         UIPageControl.appearance().themeBackgroundColor = "Onboarding.PageControl.BackgroundColor"
         UIPageControl.appearance().theme_currentPageIndicatorTintColor = "Onboarding.PageControl.CurrentPageIndicatorColor"
-    }
-    
-    static func setup() {
-        let userTheme = PreferenceService.shared.theme
-        if let appTheme = AppTheme.init(rawValue: userTheme) {
-            setTheme(appTheme)
-        } else {
-            setTheme(Constants.defaultTheme)
-        }
-    }
-    
-    static func setTheme(_ theme: AppTheme) {
-        PreferenceService.shared.theme = theme.rawValue
-        ThemeManager.setTheme(plistName: theme.plistName(), path: .mainBundle)
-    }
-    
-    static var currentTheme: AppTheme {
-        let userTheme = PreferenceService.shared.theme
-        let theme = AppTheme.init(rawValue: userTheme) ?? Constants.defaultTheme
-        return theme
     }
     
 }

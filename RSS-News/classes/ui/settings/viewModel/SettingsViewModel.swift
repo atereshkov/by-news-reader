@@ -25,11 +25,13 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
     }
     
     private let providerService: ProvidersServiceProtocol
+    private let appThemeService: AppThemeServiceProtocol
     
     // MARK: Init
     
     override init(session: SessionType, delegate: BaseViewDelegate?) {
         self.providerService = session.resolve()
+        self.appThemeService = session.resolve()
         super.init(session: session, delegate: delegate)
         
         setup()
@@ -67,7 +69,7 @@ final class SettingsViewModel: BaseViewModel<SettingsRouter>, SettingsViewModelT
     // MARK: Private
     
     private func fetchSettings() {
-        let theme = AppSkin.currentTheme.localized
+        let theme = appThemeService.currentTheme.localized
         let source = providerService.currentProvider.value.rawValue
         let region = "Беларусь"
         

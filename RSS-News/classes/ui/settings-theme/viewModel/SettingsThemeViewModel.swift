@@ -12,9 +12,12 @@ import ReactiveCocoa
 
 final class SettingsThemeViewModel: BaseViewModel<SettingsThemeRouter>, SettingsThemeViewModelType {
     
+    private var appThemeService: AppThemeServiceProtocol
+    
     // MARK: Init
     
     override init(session: SessionType, delegate: BaseViewDelegate?) {
+        self.appThemeService = session.resolve()
         super.init(session: session, delegate: delegate)
         
         setup()
@@ -27,15 +30,15 @@ final class SettingsThemeViewModel: BaseViewModel<SettingsThemeRouter>, Settings
     // MARK: Properties
     
     var isSwitchOn: Bool {
-        return AppSkin.currentTheme == .dark
+        return appThemeService.currentTheme == .dark
     }
     
     // MARK: Actions
     
     func themeSwitchAction() {
-        let currentTheme = AppSkin.currentTheme
+        let currentTheme = appThemeService.currentTheme
         let newTheme: AppTheme = currentTheme == .dark ? .white : .dark
-        AppSkin.setTheme(newTheme)
+        appThemeService.setTheme(newTheme)
         (delegate as? SettingsThemeViewDelegate)?.themeChanged(to: newTheme)
     }
     

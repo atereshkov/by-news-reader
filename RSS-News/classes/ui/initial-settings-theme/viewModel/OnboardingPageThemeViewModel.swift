@@ -10,22 +10,25 @@ import Foundation
 
 final class OnboardingPageThemeViewModel: BaseViewModel<OnboardingPageThemeRouter>, OnboardingPageThemeViewModelType {
     
+    private var appThemeService: AppThemeServiceProtocol
+    
     override init(session: SessionType, delegate: BaseViewDelegate?) {
+        self.appThemeService = session.resolve()
         super.init(session: session, delegate: delegate)
     }
     
     // MARK: Properties
     
     var isSwitchOn: Bool {
-        return AppSkin.currentTheme == .dark
+        return appThemeService.currentTheme == .dark
     }
     
     // MARK: Actions
     
     func themeSwitchAction() {
-        let currentTheme = AppSkin.currentTheme
+        let currentTheme = appThemeService.currentTheme
         let newTheme: AppTheme = currentTheme == .dark ? .white : .dark
-        AppSkin.setTheme(newTheme)
+        appThemeService.setTheme(newTheme)
     }
     
 }

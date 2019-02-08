@@ -10,14 +10,17 @@ import Foundation
 
 final class InitialSettingsViewModel: BaseViewModel<InitialSettingsRouter>, InitialSettingsViewModelType {
     
+    private var preferenceService: AppPreferenceServiceProtocol
+    
     override init(session: SessionType, delegate: BaseViewDelegate?) {
+        self.preferenceService = session.resolve()
         super.init(session: session, delegate: delegate)
         
         setup()
     }
     
     func skipAction() {
-        PreferenceService.shared.initialSetupPassed = true
+        preferenceService.initialSetupPassed = true
         router?.goToMain(animated: false)
     }
     

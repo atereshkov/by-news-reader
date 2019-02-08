@@ -16,64 +16,74 @@ private enum PreferenceKeys: String {
     case onboardingPassed = "rss-news.OnboardingPassed"
 }
 
-class PreferenceService: NSObject {
+protocol AppPreferenceServiceProtocol {
+    var theme: String { get set }
+    var provider: String { get set }
+    var initialSetupPassed: Bool { get set }
+}
+
+class AppPreferenceService: AppPreferenceServiceProtocol {
     
-    static let shared = PreferenceService()
-    
-    fileprivate static let initApp = "initializeApp"
+    private let userDefaults: UserDefaults
     
     // MARK: Init
     
-    func initialize() {
+    init(userDefaults: UserDefaults) {
+        self.userDefaults = userDefaults
+        
+        initialize()
+    }
+    
+    private func initialize() {
         if isFirstRunApp() {
             clear()
             initializeApp()
         }
     }
     
-    func initializeApp() {
-        UserDefaults.standard.set(PreferenceService.initApp, forKey: PreferenceKeys.initApp.rawValue)
-    }
-    
     // MARK: Properties
     
     var theme: String {
         get {
-            return UserDefaults.standard.string(forKey: PreferenceKeys.theme.rawValue) ?? ""
+            return userDefaults.string(forKey: PreferenceKeys.theme.rawValue) ?? ""
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: PreferenceKeys.theme.rawValue)
+            userDefaults.set(newValue, forKey: PreferenceKeys.theme.rawValue)
         }
     }
     
     var provider: String {
         get {
-            return UserDefaults.standard.string(forKey: PreferenceKeys.provider.rawValue) ?? ""
+            return userDefaults.string(forKey: PreferenceKeys.provider.rawValue) ?? ""
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: PreferenceKeys.provider.rawValue)
+            userDefaults.set(newValue, forKey: PreferenceKeys.provider.rawValue)
         }
     }
     
     var initialSetupPassed: Bool {
         get {
-            return UserDefaults.standard.bool(forKey: PreferenceKeys.onboardingPassed.rawValue)
+            return userDefaults.bool(forKey: PreferenceKeys.onboardingPassed.rawValue)
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: PreferenceKeys.onboardingPassed.rawValue)
+            userDefaults.set(newValue, forKey: PreferenceKeys.onboardingPassed.rawValue)
         }
-    }
-    
-    // MARK: Clear
-    
-    func clear() {
-        UserDefaults.standard.removeObject(forKey: PreferenceKeys.theme.rawValue)
     }
     
     // MARK: Init app
     
-    func isFirstRunApp() -> Bool {
-        return UserDefaults.standard.string(forKey: PreferenceKeys.initApp.rawValue) == nil
+    func initializeApp() {
+        userDefaults.set("InitializedApp", forKey: PreferenceKeys.initApp.rawValue)
+    }
+    
+    private func isFirstRunApp() -> Bool {
+        return userDefaults.string(forKey: PreferenceKeys.initApp.rawValue) == nil
+    }
+    
+    // MARK: Clear
+    
+    private func clear() {
+        userDefaults.removeObject(forKey: PreferenceKeys.theme.rawValue)
     }
     
 }

@@ -42,7 +42,21 @@ final class Session: SessionType {
             guard let plistParserService = resolver.resolve(PlistParserServiceProtocol.self) else {
                 fatalError("PlistParserServiceProtocol is not registered")
             }
-            return ProvidersService(plistParserService)
+            guard let preferenceService = resolver.resolve(AppPreferenceServiceProtocol.self) else {
+                fatalError("AppPreferenceServiceProtocol is not registered")
+            }
+            return ProvidersService(plistParserService, preferenceService)
+        }.inObjectScope(.container)
+        
+        container.register(AppPreferenceServiceProtocol.self) { _ -> AppPreferenceServiceProtocol in
+            return AppPreferenceService(userDefaults: UserDefaults.standard)
+        }.inObjectScope(.container)
+        
+        container.register(AppThemeServiceProtocol.self) { resolver -> AppThemeServiceProtocol in
+            guard let preferenceService = resolver.resolve(AppPreferenceServiceProtocol.self) else {
+                fatalError("AppPreferenceServiceProtocol is not registered")
+            }
+            return AppThemeService(preferenceService)
         }.inObjectScope(.container)
     }
     

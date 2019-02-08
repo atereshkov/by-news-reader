@@ -10,6 +10,10 @@
 		4FA99947CF8B4639C1175259 /* Pods_RSS_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1976B87D0FEEDA6128FD16 /* Pods_RSS_News.framework */; };
 		A304E882220D5F4E009F1E00 /* NewsItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E881220D5F4E009F1E00 /* NewsItemTests.swift */; };
 		A304E884220D635B009F1E00 /* RealmNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E883220D635B009F1E00 /* RealmNewsItem.swift */; };
+		A304E886220DC973009F1E00 /* AppThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E885220DC973009F1E00 /* AppThemeService.swift */; };
+		A304E887220DC973009F1E00 /* AppThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E885220DC973009F1E00 /* AppThemeService.swift */; };
+		A304E88B220DC9FD009F1E00 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E88A220DC9FD009F1E00 /* AppTheme.swift */; };
+		A304E88C220DC9FD009F1E00 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E88A220DC9FD009F1E00 /* AppTheme.swift */; };
 		A3128D9821F79DDB00F0BFDC /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9721F79DDB00F0BFDC /* RealmService.swift */; };
 		A3128D9C21F7A1D300F0BFDC /* RealmNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9B21F7A1D300F0BFDC /* RealmNewsItem.swift */; };
 		A3128D9F21F7AEBE00F0BFDC /* BookmarksViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9E21F7AEBE00F0BFDC /* BookmarksViewState.swift */; };
@@ -287,6 +291,8 @@
 		5C928150E44659054DE6BC93 /* Pods-RSS-News-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS-News-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSS-News-Tests/Pods-RSS-News-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A304E881220D5F4E009F1E00 /* NewsItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemTests.swift; sourceTree = "<group>"; };
 		A304E883220D635B009F1E00 /* RealmNewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNewsItem.swift; sourceTree = "<group>"; };
+		A304E885220DC973009F1E00 /* AppThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeService.swift; sourceTree = "<group>"; };
+		A304E88A220DC9FD009F1E00 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		A3128D9721F79DDB00F0BFDC /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		A3128D9B21F7A1D300F0BFDC /* RealmNewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNewsItem.swift; sourceTree = "<group>"; };
 		A3128D9E21F7AEBE00F0BFDC /* BookmarksViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewState.swift; sourceTree = "<group>"; };
@@ -568,6 +574,22 @@
 				A3329201220CABCC00BDC442 /* TimeAgoProviderTests.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		A304E888220DC9EF009F1E00 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				A304E889220DC9F5009F1E00 /* enums */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		A304E889220DC9F5009F1E00 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				A304E88A220DC9FD009F1E00 /* AppTheme.swift */,
+			);
+			path = enums;
 			sourceTree = "<group>";
 		};
 		A3128D9921F7A1C500F0BFDC /* db */ = {
@@ -1074,6 +1096,7 @@
 			isa = PBXGroup;
 			children = (
 				A36DC42C21F278CD00B0BE72 /* app */,
+				A304E888220DC9EF009F1E00 /* models */,
 				A3128D9921F7A1C500F0BFDC /* db */,
 				A34B649B21F37B6A00DACC2F /* network */,
 				A36DC42D21F278D200B0BE72 /* ui */,
@@ -1129,6 +1152,7 @@
 				A34B64A021F37CBC00DACC2F /* PreferenceService.swift */,
 				A3128D9721F79DDB00F0BFDC /* RealmService.swift */,
 				A3EC159E21FCADBE00D29489 /* ReachabilityService.swift */,
+				A304E885220DC973009F1E00 /* AppThemeService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -2156,6 +2180,7 @@
 				A33A99092208BD2C00834782 /* ProvidersService.swift in Sources */,
 				A33A990F2208BE2200834782 /* ProviderServiceExtensions.swift in Sources */,
 				A33A98FB2208BCA200834782 /* BaseViewDelegate.swift in Sources */,
+				A304E88C220DC9FD009F1E00 /* AppTheme.swift in Sources */,
 				A33A990A2208BDB100834782 /* LoggerService.swift in Sources */,
 				A33A98EA2208BB1600834782 /* assets-images.swift in Sources */,
 				A33A98E62208BAAD00834782 /* WidgetNewsCell.swift in Sources */,
@@ -2170,6 +2195,7 @@
 				A33A99012208BCEB00834782 /* AppProviderEnum.swift in Sources */,
 				A33A98FD2208BCC200834782 /* ParseService.swift in Sources */,
 				A33A98ED2208BBD900834782 /* DateFormatters.swift in Sources */,
+				A304E887220DC973009F1E00 /* AppThemeService.swift in Sources */,
 				A33A98FE2208BCCC00834782 /* ProvidersServiceProtocol.swift in Sources */,
 				A33A98FC2208BCBA00834782 /* NewsProviderItem.swift in Sources */,
 				A33A99082208BD2700834782 /* PlistParserService.swift in Sources */,
@@ -2234,6 +2260,7 @@
 				A34B646921F34C3A00DACC2F /* NewsRoutable.swift in Sources */,
 				A34B647921F3658A00DACC2F /* BookmarksViewModel.swift in Sources */,
 				A3EC155F21FBB5E800D29489 /* SettingsCityViewState.swift in Sources */,
+				A304E88B220DC9FD009F1E00 /* AppTheme.swift in Sources */,
 				A3860A9B21F4F16F0030869A /* RSSResponseConverter.swift in Sources */,
 				A3A530762203976D003A8725 /* OnboardingPageThemeTabRouter.swift in Sources */,
 				A36DC45621F27B8200B0BE72 /* MainRoutable.swift in Sources */,
@@ -2347,6 +2374,7 @@
 				A3A53061220393B3003A8725 /* OnboardingPageProviderRouter.swift in Sources */,
 				A34B64C921F3936300DACC2F /* SettingsCityRouter.swift in Sources */,
 				A3EC15BD21FE5EE700D29489 /* AboutRoutable.swift in Sources */,
+				A304E886220DC973009F1E00 /* AppThemeService.swift in Sources */,
 				A3860AAD21F639DC0030869A /* NewsDetailView.swift in Sources */,
 				A3A5306722039478003A8725 /* OnboardingPageProviderViewModelType.swift in Sources */,
 				A3A530552200AE0D003A8725 /* UIViewController+Alert.swift in Sources */,

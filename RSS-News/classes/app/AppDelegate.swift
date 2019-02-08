@@ -29,11 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
         
-        AppSkin.setup()
-        AppSkin.applyAppearance()
-        
         let session = Session()
         self.session = session
+        
+        let themeService: AppThemeServiceProtocol = session.resolve()
+        themeService.setupTheme()
+        AppSkin.applyAppearance()
         
         router = AppRouter(window: window, session: session)
         router?.start()
