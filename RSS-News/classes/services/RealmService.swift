@@ -10,6 +10,8 @@ import Foundation
 import RealmSwift
 
 protocol RealmServiceProtocol {
+    var isInWriteTransaction: Bool { get }
+    
     func allNews() -> Results<RealmNewsItem>
     func allBookmarks() -> Results<RealmNewsItem>
     func newsItem(with url: String) -> RealmNewsItem?
@@ -18,6 +20,8 @@ protocol RealmServiceProtocol {
     
     func addBookmarks(_ items: [NewsItemProtocol])
     func removeBookmarks(_ items: [NewsItemProtocol])
+    
+    func deleteAll()
 }
 
 class RealmService: RealmServiceProtocol {
@@ -41,6 +45,12 @@ class RealmService: RealmServiceProtocol {
         } catch let error {
             LoggerService.log.error("Failed to execute write transaction: \(error)")
         }
+    }
+    
+    func deleteAll() {
+        writeTransaction({ realm in
+            realm.deleteAll()
+        })
     }
     
 }
