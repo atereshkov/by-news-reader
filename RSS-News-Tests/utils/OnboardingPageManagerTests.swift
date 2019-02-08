@@ -95,4 +95,19 @@ class OnboardingPageManagerTests: XCTestCase {
         XCTAssertNotEqual(viewBeforeView2, view1)
     }
     
+    // MARK: OnboardingPageManagerDelegate
+    
+    func testDelegate() {
+        let session: SessionType = Session()
+        let mockProvider = MockRoutesProvider()
+        let manager = OnboardingPageManager(session: session, provider: mockProvider)
+        
+        let delegatedMockClass = OnboardingPageDelegateMock()
+        XCTAssertEqual(delegatedMockClass.views.count, 0)
+        
+        manager.delegate = delegatedMockClass
+        manager.viewInitialized()
+        XCTAssertEqual(delegatedMockClass.views, manager.views)
+    }
+    
 }

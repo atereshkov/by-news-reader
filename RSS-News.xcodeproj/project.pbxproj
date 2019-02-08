@@ -140,6 +140,7 @@
 		A368CD2E220E0CBF00C4F23C /* RoutesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A368CD2D220E0CBF00C4F23C /* RoutesProvider.swift */; };
 		A368CD30220E0D3B00C4F23C /* OnboardingRoutesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A368CD2F220E0D3B00C4F23C /* OnboardingRoutesProvider.swift */; };
 		A368CD32220E24E400C4F23C /* MockRoutesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A368CD31220E24E400C4F23C /* MockRoutesProvider.swift */; };
+		A368CD34220E29C300C4F23C /* OnboardingPageDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A368CD33220E29C300C4F23C /* OnboardingPageDelegateMock.swift */; };
 		A36DC41821F277E100B0BE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC41721F277E100B0BE72 /* AppDelegate.swift */; };
 		A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DC42021F277E300B0BE72 /* LaunchScreen.storyboard */; };
 		A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43821F2795F00B0BE72 /* Localizable.strings */; };
@@ -393,6 +394,7 @@
 		A368CD2D220E0CBF00C4F23C /* RoutesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesProvider.swift; sourceTree = "<group>"; };
 		A368CD2F220E0D3B00C4F23C /* OnboardingRoutesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRoutesProvider.swift; sourceTree = "<group>"; };
 		A368CD31220E24E400C4F23C /* MockRoutesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRoutesProvider.swift; sourceTree = "<group>"; };
+		A368CD33220E29C300C4F23C /* OnboardingPageDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageDelegateMock.swift; sourceTree = "<group>"; };
 		A36DC41421F277E100B0BE72 /* RSS-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36DC41721F277E100B0BE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A36DC42121F277E300B0BE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1079,6 +1081,7 @@
 			isa = PBXGroup;
 			children = (
 				A368CD31220E24E400C4F23C /* MockRoutesProvider.swift */,
+				A368CD33220E29C300C4F23C /* OnboardingPageDelegateMock.swift */,
 			);
 			path = mocks;
 			sourceTree = "<group>";
@@ -2194,6 +2197,7 @@
 			files = (
 				A3329202220CABCC00BDC442 /* TimeAgoProviderTests.swift in Sources */,
 				A3329215220CBA1200BDC442 /* RealmServiceTests.swift in Sources */,
+				A368CD34220E29C300C4F23C /* OnboardingPageDelegateMock.swift in Sources */,
 				A368CD32220E24E400C4F23C /* MockRoutesProvider.swift in Sources */,
 				A304E88E220DF211009F1E00 /* PreferenceServiceTests.swift in Sources */,
 				A368CD29220E004C00C4F23C /* AppThemeServiceTests.swift in Sources */,
