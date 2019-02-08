@@ -13,10 +13,10 @@ class RealmNewsItem: Object {
     
     @objc dynamic var title: String = ""
     @objc dynamic var iconURL: String = ""
-    @objc dynamic var link: String = ""
-    @objc dynamic var pubDate: Date = Date()
-    @objc dynamic var category: String = ""
-    @objc dynamic var source: String = ""
+    @objc dynamic var link: String?
+    @objc dynamic var pubDate: Date?
+    @objc dynamic var category: String?
+    @objc dynamic var source: String?
     
     @objc dynamic var isBookmarked: Bool = false
     @objc dynamic var bookmarkDate: Date = Date()
@@ -43,12 +43,12 @@ extension RealmNewsItem {
     
     static func from(item: NewsItemProtocol, isBookmarked: Bool = false) -> RealmNewsItem {
         let wallpaper = RealmNewsItem()
-        wallpaper.link = item.link ?? ""
+        wallpaper.link = item.link
         wallpaper.iconURL = item.iconURL
         wallpaper.title = item.title
-        wallpaper.pubDate = item.pubDate ?? Date()
-        wallpaper.category = item.category ?? ""
-        wallpaper.source = item.source ?? ""
+        wallpaper.pubDate = item.pubDate
+        wallpaper.category = item.category
+        wallpaper.source = item.source
         wallpaper.isBookmarked = isBookmarked
         wallpaper.bookmarkDate = Date()
         return wallpaper

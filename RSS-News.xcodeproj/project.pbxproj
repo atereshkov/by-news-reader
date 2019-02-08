@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4FA99947CF8B4639C1175259 /* Pods_RSS_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1976B87D0FEEDA6128FD16 /* Pods_RSS_News.framework */; };
+		A304E882220D5F4E009F1E00 /* NewsItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E881220D5F4E009F1E00 /* NewsItemTests.swift */; };
+		A304E884220D635B009F1E00 /* RealmNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E883220D635B009F1E00 /* RealmNewsItem.swift */; };
 		A3128D9821F79DDB00F0BFDC /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9721F79DDB00F0BFDC /* RealmService.swift */; };
 		A3128D9C21F7A1D300F0BFDC /* RealmNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9B21F7A1D300F0BFDC /* RealmNewsItem.swift */; };
 		A3128D9F21F7AEBE00F0BFDC /* BookmarksViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9E21F7AEBE00F0BFDC /* BookmarksViewState.swift */; };
@@ -283,6 +285,8 @@
 		3352DD7162B01E2312C60145 /* Pods_RSS_News_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSS_News_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1028F8A0B44004AC55A23D /* Pods-RSS-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS-News.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSS-News/Pods-RSS-News.release.xcconfig"; sourceTree = "<group>"; };
 		5C928150E44659054DE6BC93 /* Pods-RSS-News-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS-News-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSS-News-Tests/Pods-RSS-News-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A304E881220D5F4E009F1E00 /* NewsItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemTests.swift; sourceTree = "<group>"; };
+		A304E883220D635B009F1E00 /* RealmNewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNewsItem.swift; sourceTree = "<group>"; };
 		A3128D9721F79DDB00F0BFDC /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		A3128D9B21F7A1D300F0BFDC /* RealmNewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNewsItem.swift; sourceTree = "<group>"; };
 		A3128D9E21F7AEBE00F0BFDC /* BookmarksViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewState.swift; sourceTree = "<group>"; };
@@ -534,6 +538,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A304E87D220D5F26009F1E00 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				A304E881220D5F4E009F1E00 /* NewsItemTests.swift */,
+				A304E883220D635B009F1E00 /* RealmNewsItem.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		A304E87E220D5F2F009F1E00 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				A3329212220CBA1200BDC442 /* RealmServiceTests.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		A304E87F220D5F33009F1E00 /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
+		A304E880220D5F3B009F1E00 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A3329201220CABCC00BDC442 /* TimeAgoProviderTests.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		A3128D9921F7A1C500F0BFDC /* db */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,8 +597,10 @@
 		A33291F8220CA95F00BDC442 /* RSS-News-Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A3329201220CABCC00BDC442 /* TimeAgoProviderTests.swift */,
-				A3329212220CBA1200BDC442 /* RealmServiceTests.swift */,
+				A304E880220D5F3B009F1E00 /* utils */,
+				A304E87F220D5F33009F1E00 /* viewModels */,
+				A304E87E220D5F2F009F1E00 /* services */,
+				A304E87D220D5F26009F1E00 /* models */,
 				A33291FB220CA95F00BDC442 /* Info.plist */,
 			);
 			path = "RSS-News-Tests";
@@ -2106,6 +2144,8 @@
 			files = (
 				A3329202220CABCC00BDC442 /* TimeAgoProviderTests.swift in Sources */,
 				A3329215220CBA1200BDC442 /* RealmServiceTests.swift in Sources */,
+				A304E882220D5F4E009F1E00 /* NewsItemTests.swift in Sources */,
+				A304E884220D635B009F1E00 /* RealmNewsItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
