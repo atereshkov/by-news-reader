@@ -37,7 +37,8 @@ class OnboardingPageManagerTests: XCTestCase {
     
     func testViewAfter() {
         let session: SessionType = Session()
-        let mockProvider = MockRoutesProvider()
+        let mockViews = [UIViewController(), UIViewController()]
+        let mockProvider = MockRoutesProvider(views: mockViews)
         let manager = OnboardingPageManager(session: session, provider: mockProvider)
         let view1 = manager.views[0]
         let view2 = manager.views[1]
@@ -47,7 +48,8 @@ class OnboardingPageManagerTests: XCTestCase {
     
     func testViewAfterCycle() {
         let session: SessionType = Session()
-        let mockProvider = MockRoutesProvider()
+        let mockViews = [UIViewController(), UIViewController()]
+        let mockProvider = MockRoutesProvider(views: mockViews)
         let manager = OnboardingPageManager(session: session, provider: mockProvider)
         let view1 = manager.views[0]
         let view2 = manager.views[1]
@@ -57,7 +59,8 @@ class OnboardingPageManagerTests: XCTestCase {
     
     func testViewAfterNegative() {
         let session: SessionType = Session()
-        let mockProvider = MockRoutesProvider()
+        let mockViews = [UIViewController(), UIViewController()]
+        let mockProvider = MockRoutesProvider(views: mockViews)
         let manager = OnboardingPageManager(session: session, provider: mockProvider)
         let view2 = manager.views[0]
         let viewAfterView1 = manager.viewAfter(UIViewController())
@@ -68,7 +71,8 @@ class OnboardingPageManagerTests: XCTestCase {
     
     func testViewBefore() {
         let session: SessionType = Session()
-        let mockProvider = MockRoutesProvider()
+        let mockViews = [UIViewController(), UIViewController()]
+        let mockProvider = MockRoutesProvider(views: mockViews)
         let manager = OnboardingPageManager(session: session, provider: mockProvider)
         let view1 = manager.views[0]
         let view2 = manager.views[1]
@@ -78,7 +82,8 @@ class OnboardingPageManagerTests: XCTestCase {
     
     func testViewBeforeCycle() {
         let session: SessionType = Session()
-        let mockProvider = MockRoutesProvider()
+        let mockViews = [UIViewController(), UIViewController()]
+        let mockProvider = MockRoutesProvider(views: mockViews)
         let manager = OnboardingPageManager(session: session, provider: mockProvider)
         let view1 = manager.views[0]
         let view2 = manager.views[1]
@@ -88,7 +93,8 @@ class OnboardingPageManagerTests: XCTestCase {
     
     func testViewBeforeNegative() {
         let session: SessionType = Session()
-        let mockProvider = MockRoutesProvider()
+        let mockViews = [UIViewController(), UIViewController()]
+        let mockProvider = MockRoutesProvider(views: mockViews)
         let manager = OnboardingPageManager(session: session, provider: mockProvider)
         let view1 = manager.views[0]
         let viewBeforeView2 = manager.viewBefore(UIViewController())
@@ -99,7 +105,8 @@ class OnboardingPageManagerTests: XCTestCase {
     
     func testDelegate() {
         let session: SessionType = Session()
-        let mockProvider = MockRoutesProvider()
+        let mockViews = [UIViewController(), UIViewController()]
+        let mockProvider = MockRoutesProvider(views: mockViews)
         let manager = OnboardingPageManager(session: session, provider: mockProvider)
         
         let delegatedMockClass = OnboardingPageDelegateMock()

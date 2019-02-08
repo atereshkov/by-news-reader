@@ -12,11 +12,14 @@ import UIKit
 
 class MockRoutesProvider: RoutesProviderProtocol {
     
+    private(set) var views: [ViewType] = []
+    
+    init(views: [ViewType]) {
+        self.views = views
+    }
+    
     func getViews() -> [ViewType] {
-        let page1 = UIViewController()
-        let page2 = UIViewController()
-        
-        return [page1, page2]
+        return views
     }
     
 }

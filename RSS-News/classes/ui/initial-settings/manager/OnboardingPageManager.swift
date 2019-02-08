@@ -52,7 +52,6 @@ class OnboardingPageManager: OnboardingPageManagerProtocol {
         
         let previousIndex = viewControllerIndex - 1
         guard previousIndex >= 0 else { return views.last }
-        guard views.count > previousIndex else { return nil }
         
         return views[previousIndex]
     }
@@ -63,7 +62,6 @@ class OnboardingPageManager: OnboardingPageManagerProtocol {
         let nextIndex = viewControllerIndex + 1
         let orderedViewControllersCount = views.count
         guard orderedViewControllersCount != nextIndex else { return views.first }
-        guard orderedViewControllersCount > nextIndex else { return nil }
         
         return views[nextIndex]
     }
