@@ -21,7 +21,8 @@ extension InitialSettingsRoutable where Self: RouterType {
         let router = InitialSettingsRouter(session: session, view: view)
         viewModel.router = router
         
-        let pageManager: OnboardingPageManagerProtocol = OnboardingPageManager(session: session)
+        let routesProvider: RoutesProviderProtocol = OnboardingRoutesProvider(session: session)
+        let pageManager: OnboardingPageManagerProtocol = OnboardingPageManager(session: session, provider: routesProvider)
         view.pageManager = pageManager
         
         let rootVC = UINavigationController(rootViewController: view)

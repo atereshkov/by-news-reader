@@ -14,7 +14,8 @@ protocol OnboardingPageManagerProtocol: class {
     var session: SessionType { get }
     var views: [ViewType] { get }
     
-    func initializeViews()
+    //func initialize(_ viewsProvider: RoutesProviderProtocol)
+    func viewInitialized()
     
     func viewBefore(_ viewController: UIViewController) -> UIViewController?
     func viewAfter(_ viewController: UIViewController) -> UIViewController?
@@ -31,15 +32,15 @@ class OnboardingPageManager: OnboardingPageManagerProtocol {
     private(set) var session: SessionType
     private(set) var views: [ViewType] = []
     
-    init(session: SessionType) {
+    init(session: SessionType, provider: RoutesProviderProtocol) {
         self.session = session
+        
+        let providedViews = provider.getViews()
+        views.append(contentsOf: providedViews)
     }
     
-    func initializeViews() {        
-        let page1 = OnboardingPageProviderTabRouter.initialize(session: session)
-        let page2 = OnboardingPageThemeTabRouter.initialize(session: session)
-        
-        views.append(contentsOf: [page1, page2])
+    /// Call it when the view that uses the Manager is initialied
+    func viewInitialized() {
         delegate?.setupPages(views)
     }
     

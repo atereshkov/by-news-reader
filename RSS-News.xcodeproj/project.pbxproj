@@ -137,6 +137,8 @@
 		A34B64E521F3BAE400DACC2F /* BookmarksViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64E421F3BAE400DACC2F /* BookmarksViewModelType.swift */; };
 		A368CD29220E004C00C4F23C /* AppThemeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A368CD28220E004C00C4F23C /* AppThemeServiceTests.swift */; };
 		A368CD2B220E08CF00C4F23C /* OnboardingPageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A368CD2A220E08CF00C4F23C /* OnboardingPageManagerTests.swift */; };
+		A368CD2E220E0CBF00C4F23C /* RoutesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A368CD2D220E0CBF00C4F23C /* RoutesProvider.swift */; };
+		A368CD30220E0D3B00C4F23C /* OnboardingRoutesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A368CD2F220E0D3B00C4F23C /* OnboardingRoutesProvider.swift */; };
 		A36DC41821F277E100B0BE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC41721F277E100B0BE72 /* AppDelegate.swift */; };
 		A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DC42021F277E300B0BE72 /* LaunchScreen.storyboard */; };
 		A36DC43621F2795F00B0BE72 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43821F2795F00B0BE72 /* Localizable.strings */; };
@@ -387,6 +389,8 @@
 		A34B64E421F3BAE400DACC2F /* BookmarksViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewModelType.swift; sourceTree = "<group>"; };
 		A368CD28220E004C00C4F23C /* AppThemeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeServiceTests.swift; sourceTree = "<group>"; };
 		A368CD2A220E08CF00C4F23C /* OnboardingPageManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageManagerTests.swift; sourceTree = "<group>"; };
+		A368CD2D220E0CBF00C4F23C /* RoutesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesProvider.swift; sourceTree = "<group>"; };
+		A368CD2F220E0D3B00C4F23C /* OnboardingRoutesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRoutesProvider.swift; sourceTree = "<group>"; };
 		A36DC41421F277E100B0BE72 /* RSS-News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS-News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36DC41721F277E100B0BE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A36DC42121F277E300B0BE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1228,6 +1232,7 @@
 				A36DC44A21F27B1A00B0BE72 /* BaseRouter.swift */,
 				A36DC44C21F27B2500B0BE72 /* BaseView.swift */,
 				A36DC44E21F27B3100B0BE72 /* BaseViewDelegate.swift */,
+				A368CD2D220E0CBF00C4F23C /* RoutesProvider.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -1562,6 +1567,7 @@
 			isa = PBXGroup;
 			children = (
 				A3A5305C22038E76003A8725 /* OnboardingPageManager.swift */,
+				A368CD2F220E0D3B00C4F23C /* OnboardingRoutesProvider.swift */,
 			);
 			path = manager;
 			sourceTree = "<group>";
@@ -2291,6 +2297,7 @@
 				A34B64A421F382C800DACC2F /* MenuCell.swift in Sources */,
 				A34B643921F27E2400DACC2F /* strings.swift in Sources */,
 				A37EF40121F674F200691912 /* DGElasticPullToRefreshConstants.swift in Sources */,
+				A368CD2E220E0CBF00C4F23C /* RoutesProvider.swift in Sources */,
 				A34B648D21F3733E00DACC2F /* SettingsView.swift in Sources */,
 				A34B649521F3741A00DACC2F /* CategoriesRoutable.swift in Sources */,
 				A34B643A21F27E2400DACC2F /* assets-images.swift in Sources */,
@@ -2329,6 +2336,7 @@
 				A34B64AD21F3887000DACC2F /* MenuEmptyCell.swift in Sources */,
 				A34B647B21F365FB00DACC2F /* BookmarksTabRouter.swift in Sources */,
 				A3A53078220397BA003A8725 /* OnboardingPageThemeViewModelType.swift in Sources */,
+				A368CD30220E0D3B00C4F23C /* OnboardingRoutesProvider.swift in Sources */,
 				A3860A7E21F4D4740030869A /* CategoriesViewState.swift in Sources */,
 				A3EC159321FC471600D29489 /* StartInitialSettingsRouter.swift in Sources */,
 				A3A5304C22004353003A8725 /* AboutViewState.swift in Sources */,

@@ -21,16 +21,17 @@ class OnboardingPageManagerTests: XCTestCase {
     
     func testInitializationWithSession() {
         let session: SessionType = Session()
-        let manager = OnboardingPageManager(session: session)
+        let provider: RoutesProviderProtocol = OnboardingRoutesProvider(session: session)
+        let manager = OnboardingPageManager(session: session, provider: provider)
         XCTAssertNotNil(manager.session)
     }
     
     func testViewsInitializationPositive() {
         let session: SessionType = Session()
-        let manager: OnboardingPageManagerProtocol = OnboardingPageManager(session: session)
-        XCTAssertEqual(manager.views.count, 0)
-        manager.initializeViews()
-        XCTAssertGreaterThan(manager.views.count, 0)
+        let provider: RoutesProviderProtocol = OnboardingRoutesProvider(session: session)
+        let manager: OnboardingPageManagerProtocol = OnboardingPageManager(session: session, provider: provider)
+        let viewsCount = provider.getViews().count
+        XCTAssertEqual(manager.views.count, viewsCount)
     }
     
 }

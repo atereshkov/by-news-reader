@@ -67,7 +67,7 @@ private extension InitialSettingsView {
         navigationItem.rightBarButtonItem = button
         
         pageManager?.delegate = self
-        pageManager?.initializeViews()
+        pageManager?.viewInitialized()
     }
     
 }
