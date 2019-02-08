@@ -14,6 +14,7 @@
 		A304E887220DC973009F1E00 /* AppThemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E885220DC973009F1E00 /* AppThemeService.swift */; };
 		A304E88B220DC9FD009F1E00 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E88A220DC9FD009F1E00 /* AppTheme.swift */; };
 		A304E88C220DC9FD009F1E00 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E88A220DC9FD009F1E00 /* AppTheme.swift */; };
+		A304E88E220DF211009F1E00 /* PreferenceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E88D220DF211009F1E00 /* PreferenceServiceTests.swift */; };
 		A3128D9821F79DDB00F0BFDC /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9721F79DDB00F0BFDC /* RealmService.swift */; };
 		A3128D9C21F7A1D300F0BFDC /* RealmNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9B21F7A1D300F0BFDC /* RealmNewsItem.swift */; };
 		A3128D9F21F7AEBE00F0BFDC /* BookmarksViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9E21F7AEBE00F0BFDC /* BookmarksViewState.swift */; };
@@ -293,6 +294,7 @@
 		A304E883220D635B009F1E00 /* RealmNewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNewsItem.swift; sourceTree = "<group>"; };
 		A304E885220DC973009F1E00 /* AppThemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeService.swift; sourceTree = "<group>"; };
 		A304E88A220DC9FD009F1E00 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		A304E88D220DF211009F1E00 /* PreferenceServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceServiceTests.swift; sourceTree = "<group>"; };
 		A3128D9721F79DDB00F0BFDC /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		A3128D9B21F7A1D300F0BFDC /* RealmNewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNewsItem.swift; sourceTree = "<group>"; };
 		A3128D9E21F7AEBE00F0BFDC /* BookmarksViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewState.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				A3329212220CBA1200BDC442 /* RealmServiceTests.swift */,
+				A304E88D220DF211009F1E00 /* PreferenceServiceTests.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -2168,6 +2171,7 @@
 			files = (
 				A3329202220CABCC00BDC442 /* TimeAgoProviderTests.swift in Sources */,
 				A3329215220CBA1200BDC442 /* RealmServiceTests.swift in Sources */,
+				A304E88E220DF211009F1E00 /* PreferenceServiceTests.swift in Sources */,
 				A304E882220D5F4E009F1E00 /* NewsItemTests.swift in Sources */,
 				A304E884220D635B009F1E00 /* RealmNewsItem.swift in Sources */,
 			);
