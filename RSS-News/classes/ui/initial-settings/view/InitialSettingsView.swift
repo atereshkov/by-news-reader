@@ -40,16 +40,7 @@ final class InitialSettingsView: UIPageViewController {
     
     private func scrollToViewController(viewController: UIViewController,
                                         direction: UIPageViewController.NavigationDirection = .forward) {
-        setViewControllers([viewController], direction: direction, animated: true, completion: { [weak self] (_) in
-            self?.notifyTutorialDelegateOfNewIndex()
-        })
-    }
-    
-    private func notifyTutorialDelegateOfNewIndex() {
-        guard let pageManager = pageManager else { return }
-        if let firstViewController = viewControllers?.first, let index = pageManager.views.firstIndex(of: firstViewController) {
-            //tutorialDelegate?.tutorialPageViewController(tutorialPageViewController: self, didUpdatePageIndex: index)
-        }
+        setViewControllers([viewController], direction: direction, animated: true, completion: nil)
     }
     
 }
@@ -100,7 +91,7 @@ extension InitialSettingsView: UIPageViewControllerDataSource {
 extension InitialSettingsView: UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        notifyTutorialDelegateOfNewIndex()
+        // nothing to control here atm
     }
     
 }
