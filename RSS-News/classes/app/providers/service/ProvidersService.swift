@@ -19,11 +19,11 @@ final class ProvidersService: ProvidersServiceProtocol {
     
     private var provider: MutableProperty<AppProviderEnum> = MutableProperty(Constants.defaulProvider)
     
-    private let plistParserService: PlistParserServiceProtocol
+    private let providersParser: ProvidersParserProtocol
     private var preferenceService: AppPreferenceServiceProtocol
     
-    init(_ plistParserService: PlistParserServiceProtocol, _ preferenceService: AppPreferenceServiceProtocol) {
-        self.plistParserService = plistParserService
+    init(_ providersParser: ProvidersParserProtocol, _ preferenceService: AppPreferenceServiceProtocol) {
+        self.providersParser = providersParser
         self.preferenceService = preferenceService
         
         // set current provider from userdefaults
@@ -42,14 +42,14 @@ final class ProvidersService: ProvidersServiceProtocol {
     func getProviderItems(_ plistName: String = Constants.providerListFileName) -> [NewsProviderItemProtocol] {
         guard let path = Bundle.main.path(forResource: plistName, ofType: "plist") else { return [] }
         guard let json = NSDictionary(contentsOfFile: path) as? [String: Any] else { return [] }
-        let items: [NewsProviderItemProtocol] = plistParserService.parseItems(from: json)
+        let items: [NewsProviderItemProtocol] = providersParser.parseItems(from: json)
         return items
     }
     
     func getProviderItem(_ provider: AppProviderEnum, plistName: String) -> NewsProviderItemProtocol? {
         guard let path = Bundle.main.path(forResource: plistName, ofType: "plist") else { return nil }
         guard let json = NSDictionary(contentsOfFile: path) as? [String: Any] else { return nil }
-        let item = plistParserService.parseItem(provider.rawValue, json: json)
+        let item = providersParser.parseItem(provider.rawValue, json: json)
         return item
     }
     

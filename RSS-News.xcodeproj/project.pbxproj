@@ -21,6 +21,8 @@
 		A3128DA121F7B6B300F0BFDC /* NewsDetailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128DA021F7B6B300F0BFDC /* NewsDetailViewDelegate.swift */; };
 		A3329202220CABCC00BDC442 /* TimeAgoProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3329201220CABCC00BDC442 /* TimeAgoProviderTests.swift */; };
 		A3329215220CBA1200BDC442 /* RealmServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3329212220CBA1200BDC442 /* RealmServiceTests.swift */; };
+		A33A83DA22106976000C0D11 /* ProvidersParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A83D922106976000C0D11 /* ProvidersParserTests.swift */; };
+		A33A83DC221069B4000C0D11 /* FakeProviders.plist in Resources */ = {isa = PBXBuildFile; fileRef = A33A83DB221069B4000C0D11 /* FakeProviders.plist */; };
 		A33A98C72208A82E00834782 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33A98C62208A82E00834782 /* NotificationCenter.framework */; };
 		A33A98CA2208A82E00834782 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A98C92208A82E00834782 /* TodayViewController.swift */; };
 		A33A98CD2208A82E00834782 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33A98CB2208A82E00834782 /* MainInterface.storyboard */; };
@@ -56,7 +58,7 @@
 		A33A99052208BD1300834782 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B649E21F37B9900DACC2F /* NetworkManager.swift */; };
 		A33A99062208BD1800834782 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3128D9721F79DDB00F0BFDC /* RealmService.swift */; };
 		A33A99072208BD2200834782 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159E21FCADBE00D29489 /* ReachabilityService.swift */; };
-		A33A99082208BD2700834782 /* PlistParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7721F49B460030869A /* PlistParserService.swift */; };
+		A33A99082208BD2700834782 /* ProvidersParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7721F49B460030869A /* ProvidersParserService.swift */; };
 		A33A99092208BD2C00834782 /* ProvidersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7421F4902E0030869A /* ProvidersService.swift */; };
 		A33A990A2208BDB100834782 /* LoggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC45F21F27BE700B0BE72 /* LoggerService.swift */; };
 		A33A990B2208BDBA00834782 /* PreferenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64A021F37CBC00DACC2F /* PreferenceService.swift */; };
@@ -172,7 +174,7 @@
 		A3860A6E21F48A500030869A /* Providers.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3860A6D21F48A500030869A /* Providers.plist */; };
 		A3860A7321F48E0E0030869A /* AppProviderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7221F48E0E0030869A /* AppProviderEnum.swift */; };
 		A3860A7521F4902E0030869A /* ProvidersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7421F4902E0030869A /* ProvidersService.swift */; };
-		A3860A7821F49B460030869A /* PlistParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7721F49B460030869A /* PlistParserService.swift */; };
+		A3860A7821F49B460030869A /* ProvidersParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7721F49B460030869A /* ProvidersParserService.swift */; };
 		A3860A7A21F4C37A0030869A /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7921F4C37A0030869A /* CategoryCell.swift */; };
 		A3860A7E21F4D4740030869A /* CategoriesViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7D21F4D4740030869A /* CategoriesViewState.swift */; };
 		A3860A8521F4E6660030869A /* CategoryNewsRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A8421F4E6660030869A /* CategoryNewsRoutable.swift */; };
@@ -310,6 +312,8 @@
 		A3329201220CABCC00BDC442 /* TimeAgoProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAgoProviderTests.swift; sourceTree = "<group>"; };
 		A3329212220CBA1200BDC442 /* RealmServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServiceTests.swift; sourceTree = "<group>"; };
 		A3329216220CC69900BDC442 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A33A83D922106976000C0D11 /* ProvidersParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersParserTests.swift; sourceTree = "<group>"; };
+		A33A83DB221069B4000C0D11 /* FakeProviders.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FakeProviders.plist; sourceTree = "<group>"; };
 		A33A98C52208A82E00834782 /* Belarus-News-Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Belarus-News-Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33A98C62208A82E00834782 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A33A98C92208A82E00834782 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -429,7 +433,7 @@
 		A3860A6D21F48A500030869A /* Providers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Providers.plist; sourceTree = "<group>"; };
 		A3860A7221F48E0E0030869A /* AppProviderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProviderEnum.swift; sourceTree = "<group>"; };
 		A3860A7421F4902E0030869A /* ProvidersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersService.swift; sourceTree = "<group>"; };
-		A3860A7721F49B460030869A /* PlistParserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistParserService.swift; sourceTree = "<group>"; };
+		A3860A7721F49B460030869A /* ProvidersParserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersParserService.swift; sourceTree = "<group>"; };
 		A3860A7921F4C37A0030869A /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		A3860A7D21F4D4740030869A /* CategoriesViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewState.swift; sourceTree = "<group>"; };
 		A3860A8421F4E6660030869A /* CategoryNewsRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryNewsRoutable.swift; sourceTree = "<group>"; };
@@ -573,6 +577,7 @@
 				A3329212220CBA1200BDC442 /* RealmServiceTests.swift */,
 				A304E88D220DF211009F1E00 /* PreferenceServiceTests.swift */,
 				A368CD28220E004C00C4F23C /* AppThemeServiceTests.swift */,
+				A33A83D922106976000C0D11 /* ProvidersParserTests.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -636,7 +641,7 @@
 		A33291F8220CA95F00BDC442 /* RSS-News-Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A368CD2C220E095100C4F23C /* mocks */,
+				A368CD2C220E095100C4F23C /* doubles */,
 				A304E880220D5F3B009F1E00 /* utils */,
 				A304E87F220D5F33009F1E00 /* viewModels */,
 				A304E87E220D5F2F009F1E00 /* services */,
@@ -652,6 +657,14 @@
 				A3860A9F21F500050030869A /* TimeAgoProvider.swift */,
 			);
 			path = Date;
+			sourceTree = "<group>";
+		};
+		A33A83D822106963000C0D11 /* files */ = {
+			isa = PBXGroup;
+			children = (
+				A33A83DB221069B4000C0D11 /* FakeProviders.plist */,
+			);
+			path = files;
 			sourceTree = "<group>";
 		};
 		A33A98C82208A82E00834782 /* Belarus News Widget */ = {
@@ -1077,12 +1090,14 @@
 			path = provider;
 			sourceTree = "<group>";
 		};
-		A368CD2C220E095100C4F23C /* mocks */ = {
+		A368CD2C220E095100C4F23C /* doubles */ = {
 			isa = PBXGroup;
 			children = (
+				A33A83D822106963000C0D11 /* files */,
 				A368CD31220E24E400C4F23C /* MockRoutesProvider.swift */,
 				A368CD33220E29C300C4F23C /* OnboardingPageDelegateMock.swift */,
 			);
+			name = doubles;
 			path = mocks;
 			sourceTree = "<group>";
 		};
@@ -1371,7 +1386,7 @@
 		A3860A7621F49B300030869A /* parser */ = {
 			isa = PBXGroup;
 			children = (
-				A3860A7721F49B460030869A /* PlistParserService.swift */,
+				A3860A7721F49B460030869A /* ProvidersParserService.swift */,
 			);
 			path = parser;
 			sourceTree = "<group>";
@@ -1921,6 +1936,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33A83DC221069B4000C0D11 /* FakeProviders.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2204,6 +2220,7 @@
 				A304E882220D5F4E009F1E00 /* NewsItemTests.swift in Sources */,
 				A304E884220D635B009F1E00 /* RealmNewsItem.swift in Sources */,
 				A368CD2B220E08CF00C4F23C /* OnboardingPageManagerTests.swift in Sources */,
+				A33A83DA22106976000C0D11 /* ProvidersParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2232,7 +2249,7 @@
 				A304E887220DC973009F1E00 /* AppThemeService.swift in Sources */,
 				A33A98FE2208BCCC00834782 /* ProvidersServiceProtocol.swift in Sources */,
 				A33A98FC2208BCBA00834782 /* NewsProviderItem.swift in Sources */,
-				A33A99082208BD2700834782 /* PlistParserService.swift in Sources */,
+				A33A99082208BD2700834782 /* ProvidersParserService.swift in Sources */,
 				A33A98E82208BAFA00834782 /* NewsItem.swift in Sources */,
 				A33A98E92208BB0400834782 /* TimeAgoProvider.swift in Sources */,
 				A33A98EF2208BBF500834782 /* WidgetViewModel.swift in Sources */,
@@ -2398,7 +2415,7 @@
 				A3860AA021F500050030869A /* TimeAgoProvider.swift in Sources */,
 				A3EC156621FBB80E00D29489 /* RegionCell.swift in Sources */,
 				A34B648121F3725C00DACC2F /* String.swift in Sources */,
-				A3860A7821F49B460030869A /* PlistParserService.swift in Sources */,
+				A3860A7821F49B460030869A /* ProvidersParserService.swift in Sources */,
 				A3A5305D22038E76003A8725 /* OnboardingPageManager.swift in Sources */,
 				A34B64CD21F393A200DACC2F /* SettingsCityViewModel.swift in Sources */,
 				A3A5307322039749003A8725 /* OnboardingPageThemeRouter.swift in Sources */,

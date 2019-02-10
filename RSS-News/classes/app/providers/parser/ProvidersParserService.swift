@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol PlistParserServiceProtocol {
+protocol ProvidersParserProtocol {
     func parseItems(from json: [String: Any]) -> [NewsProviderItemProtocol]
     func parseItem(_ name: String, json: [String: Any]) -> NewsProviderItemProtocol?
 }
 
-final class PlistParserService: PlistParserServiceProtocol {
+final class ProvidersParser: ProvidersParserProtocol {
     
     // MARK: Public
     
