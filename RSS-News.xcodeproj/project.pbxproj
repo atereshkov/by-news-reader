@@ -23,6 +23,7 @@
 		A3329215220CBA1200BDC442 /* RealmServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3329212220CBA1200BDC442 /* RealmServiceTests.swift */; };
 		A33A83DA22106976000C0D11 /* ProvidersParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A83D922106976000C0D11 /* ProvidersParserTests.swift */; };
 		A33A83DC221069B4000C0D11 /* FakeProviders.plist in Resources */ = {isa = PBXBuildFile; fileRef = A33A83DB221069B4000C0D11 /* FakeProviders.plist */; };
+		A33A83DE22106B73000C0D11 /* ProvidersServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A83DD22106B73000C0D11 /* ProvidersServiceTests.swift */; };
 		A33A98C72208A82E00834782 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33A98C62208A82E00834782 /* NotificationCenter.framework */; };
 		A33A98CA2208A82E00834782 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A98C92208A82E00834782 /* TodayViewController.swift */; };
 		A33A98CD2208A82E00834782 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A33A98CB2208A82E00834782 /* MainInterface.storyboard */; };
@@ -314,6 +315,7 @@
 		A3329216220CC69900BDC442 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33A83D922106976000C0D11 /* ProvidersParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersParserTests.swift; sourceTree = "<group>"; };
 		A33A83DB221069B4000C0D11 /* FakeProviders.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FakeProviders.plist; sourceTree = "<group>"; };
+		A33A83DD22106B73000C0D11 /* ProvidersServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersServiceTests.swift; sourceTree = "<group>"; };
 		A33A98C52208A82E00834782 /* Belarus-News-Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Belarus-News-Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A33A98C62208A82E00834782 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		A33A98C92208A82E00834782 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -578,6 +580,7 @@
 				A304E88D220DF211009F1E00 /* PreferenceServiceTests.swift */,
 				A368CD28220E004C00C4F23C /* AppThemeServiceTests.swift */,
 				A33A83D922106976000C0D11 /* ProvidersParserTests.swift */,
+				A33A83DD22106B73000C0D11 /* ProvidersServiceTests.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -2216,6 +2219,7 @@
 				A368CD34220E29C300C4F23C /* OnboardingPageDelegateMock.swift in Sources */,
 				A368CD32220E24E400C4F23C /* MockRoutesProvider.swift in Sources */,
 				A304E88E220DF211009F1E00 /* PreferenceServiceTests.swift in Sources */,
+				A33A83DE22106B73000C0D11 /* ProvidersServiceTests.swift in Sources */,
 				A368CD29220E004C00C4F23C /* AppThemeServiceTests.swift in Sources */,
 				A304E882220D5F4E009F1E00 /* NewsItemTests.swift in Sources */,
 				A304E884220D635B009F1E00 /* RealmNewsItem.swift in Sources */,
