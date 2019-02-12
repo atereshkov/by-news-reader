@@ -9,31 +9,39 @@
 import Foundation
 
 protocol ProvidersParserProtocol {
-    func parseItems(from json: [String: Any]) -> [NewsProviderItemProtocol]
-    func parseItem(_ name: String, json: [String: Any]) -> NewsProviderItemProtocol?
+    func parseItems() -> [NewsProviderItemProtocol]
+    func parseItem(_ name: String) -> NewsProviderItemProtocol?
 }
 
 final class ProvidersParser: ProvidersParserProtocol {
     
+    private let repository: ProvidersRepositoryProtocol
+    
+    init(_ repository: ProvidersRepositoryProtocol) {
+        self.repository = repository
+    }
+    
     // MARK: Public
     
-    func parseItems(from json: [String : Any]) -> [NewsProviderItemProtocol] {
+    func parseItems() -> [NewsProviderItemProtocol] {
         var items: [NewsProviderItemProtocol] = []
+        let json = repository.getProvidersJSON()
         for item in json {
-            guard let providerItem = parse(item.key, from: json) else { continue }
+            guard let providerItem = parse(item.key) else { continue }
             items.append(providerItem)
         }
         return items
     }
     
-    func parseItem(_ name: String, json: [String : Any]) -> NewsProviderItemProtocol? {
-        let providerItem = parse(name, from: json)
+    func parseItem(_ name: String) -> NewsProviderItemProtocol? {
+        let providerItem = parse(name)
         return providerItem
     }
     
     // MARK: Private
     
-    private func parse(_ item: String, from json: [String: Any]) -> NewsProviderItemProtocol? {
+    private func parse(_ item: String) -> NewsProviderItemProtocol? {
+        let json = repository.getProvidersJSON()
         guard let jsonItem = json[item] as? [String: Any] else { return nil }
         let categories: [NewsCategoryProtocol] = parseCategories(from: jsonItem)
         

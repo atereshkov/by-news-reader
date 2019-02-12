@@ -14,7 +14,6 @@ final class ProvidersService: ProvidersServiceProtocol {
     
     struct Constants {
         static let defaulProvider: AppProviderEnum = .tutBy
-        static let providerListFileName = "Providers"
     }
     
     private var provider: MutableProperty<AppProviderEnum> = MutableProperty(Constants.defaulProvider)
@@ -39,17 +38,13 @@ final class ProvidersService: ProvidersServiceProtocol {
         return Property(provider)
     }
     
-    func getProviderItems(_ plistName: String = Constants.providerListFileName) -> [NewsProviderItemProtocol] {
-        guard let path = Bundle.main.path(forResource: plistName, ofType: "plist") else { return [] }
-        guard let json = NSDictionary(contentsOfFile: path) as? [String: Any] else { return [] }
-        let items: [NewsProviderItemProtocol] = providersParser.parseItems(from: json)
+    func getProviderItems() -> [NewsProviderItemProtocol] {
+        let items: [NewsProviderItemProtocol] = providersParser.parseItems()
         return items
     }
     
-    func getProviderItem(_ provider: AppProviderEnum, plistName: String) -> NewsProviderItemProtocol? {
-        guard let path = Bundle.main.path(forResource: plistName, ofType: "plist") else { return nil }
-        guard let json = NSDictionary(contentsOfFile: path) as? [String: Any] else { return nil }
-        let item = providersParser.parseItem(provider.rawValue, json: json)
+    func getProviderItem(_ provider: AppProviderEnum) -> NewsProviderItemProtocol? {
+        let item = providersParser.parseItem(provider.rawValue)
         return item
     }
     

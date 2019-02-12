@@ -66,7 +66,6 @@
 		A33A990C2208BDED00834782 /* WidgetViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A98DE2208B75C00834782 /* WidgetViewModelType.swift */; };
 		A33A990D2208BDEF00834782 /* WidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A98DC2208B75200834782 /* WidgetViewModel.swift */; };
 		A33A990E2208BE0100834782 /* WidgetViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A98E02208B80F00834782 /* WidgetViewState.swift */; };
-		A33A990F2208BE2200834782 /* ProviderServiceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159821FC66B500D29489 /* ProviderServiceExtensions.swift */; };
 		A33A99102208C36300834782 /* Providers.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3860A6D21F48A500030869A /* Providers.plist */; };
 		A33A99112208C39400834782 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A36DC43821F2795F00B0BE72 /* Localizable.strings */; };
 		A33BCFFA21F8FB8300FB6F98 /* SettingsThemeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33BCFF921F8FB8300FB6F98 /* SettingsThemeViewDelegate.swift */; };
@@ -171,6 +170,8 @@
 		A37EF40521F6754F00691912 /* DGElasticPullToRefreshLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF40421F6754F00691912 /* DGElasticPullToRefreshLoadingView.swift */; };
 		A37EF40721F6756000691912 /* DGElasticPullToRefreshLoadingViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF40621F6756000691912 /* DGElasticPullToRefreshLoadingViewCircle.swift */; };
 		A37EF40921F6757200691912 /* DGElasticPullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF40821F6757200691912 /* DGElasticPullToRefreshView.swift */; };
+		A382ED1F2211B95200F412D7 /* PlistProvidersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382ED1E2211B95200F412D7 /* PlistProvidersRepository.swift */; };
+		A382ED212211B96500F412D7 /* ProvidersRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382ED202211B96500F412D7 /* ProvidersRepositoryProtocol.swift */; };
 		A3860A6821F46BE70030869A /* NewsCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A6721F46BE70030869A /* NewsCategory.swift */; };
 		A3860A6E21F48A500030869A /* Providers.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3860A6D21F48A500030869A /* Providers.plist */; };
 		A3860A7321F48E0E0030869A /* AppProviderEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7221F48E0E0030869A /* AppProviderEnum.swift */; };
@@ -220,6 +221,10 @@
 		A3A5307C220397FD003A8725 /* OnboardingPageThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A5307B220397FD003A8725 /* OnboardingPageThemeView.swift */; };
 		A3A5307E22039824003A8725 /* OnboardingPageTheme.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3A5307D22039824003A8725 /* OnboardingPageTheme.storyboard */; };
 		A3A530812203A1A4003A8725 /* OnboardingProviderViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A530802203A1A4003A8725 /* OnboardingProviderViewState.swift */; };
+		A3B2FF5A2211C74C0055F841 /* ProvidersRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382ED202211B96500F412D7 /* ProvidersRepositoryProtocol.swift */; };
+		A3B2FF5B2211C74E0055F841 /* PlistProvidersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382ED1E2211B95200F412D7 /* PlistProvidersRepository.swift */; };
+		A3B2FF612211C7D30055F841 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B2FF602211C7D30055F841 /* AppConfiguration.swift */; };
+		A3B2FF622211C7D30055F841 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B2FF602211C7D30055F841 /* AppConfiguration.swift */; };
 		A3EC155F21FBB5E800D29489 /* SettingsCityViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC155E21FBB5E800D29489 /* SettingsCityViewState.swift */; };
 		A3EC156121FBB62200D29489 /* RegionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC156021FBB62200D29489 /* RegionItem.swift */; };
 		A3EC156321FBB68F00D29489 /* SettingsCityViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC156221FBB68F00D29489 /* SettingsCityViewDelegate.swift */; };
@@ -241,7 +246,6 @@
 		A3EC159121FC45BA00D29489 /* InitialSettingsRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159021FC45BA00D29489 /* InitialSettingsRoutable.swift */; };
 		A3EC159321FC471600D29489 /* StartInitialSettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159221FC471600D29489 /* StartInitialSettingsRouter.swift */; };
 		A3EC159721FC669A00D29489 /* ProvidersServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159621FC669A00D29489 /* ProvidersServiceProtocol.swift */; };
-		A3EC159921FC66B500D29489 /* ProviderServiceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159821FC66B500D29489 /* ProviderServiceExtensions.swift */; };
 		A3EC159F21FCADBE00D29489 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159E21FCADBE00D29489 /* ReachabilityService.swift */; };
 		A3EC15A121FE55A800D29489 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC15A021FE55A800D29489 /* UIDevice.swift */; };
 		A3EC15A321FE563500D29489 /* MainIPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EC15A221FE563500D29489 /* MainIPad.storyboard */; };
@@ -431,6 +435,8 @@
 		A37EF40421F6754F00691912 /* DGElasticPullToRefreshLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingView.swift; sourceTree = "<group>"; };
 		A37EF40621F6756000691912 /* DGElasticPullToRefreshLoadingViewCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshLoadingViewCircle.swift; sourceTree = "<group>"; };
 		A37EF40821F6757200691912 /* DGElasticPullToRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGElasticPullToRefreshView.swift; sourceTree = "<group>"; };
+		A382ED1E2211B95200F412D7 /* PlistProvidersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistProvidersRepository.swift; sourceTree = "<group>"; };
+		A382ED202211B96500F412D7 /* ProvidersRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersRepositoryProtocol.swift; sourceTree = "<group>"; };
 		A3860A6721F46BE70030869A /* NewsCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCategory.swift; sourceTree = "<group>"; };
 		A3860A6D21F48A500030869A /* Providers.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Providers.plist; sourceTree = "<group>"; };
 		A3860A7221F48E0E0030869A /* AppProviderEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProviderEnum.swift; sourceTree = "<group>"; };
@@ -479,6 +485,7 @@
 		A3A5307B220397FD003A8725 /* OnboardingPageThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageThemeView.swift; sourceTree = "<group>"; };
 		A3A5307D22039824003A8725 /* OnboardingPageTheme.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardingPageTheme.storyboard; sourceTree = "<group>"; };
 		A3A530802203A1A4003A8725 /* OnboardingProviderViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProviderViewState.swift; sourceTree = "<group>"; };
+		A3B2FF602211C7D30055F841 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		A3EC155E21FBB5E800D29489 /* SettingsCityViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewState.swift; sourceTree = "<group>"; };
 		A3EC156021FBB62200D29489 /* RegionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionItem.swift; sourceTree = "<group>"; };
 		A3EC156221FBB68F00D29489 /* SettingsCityViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCityViewDelegate.swift; sourceTree = "<group>"; };
@@ -500,7 +507,6 @@
 		A3EC159021FC45BA00D29489 /* InitialSettingsRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialSettingsRoutable.swift; sourceTree = "<group>"; };
 		A3EC159221FC471600D29489 /* StartInitialSettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInitialSettingsRouter.swift; sourceTree = "<group>"; };
 		A3EC159621FC669A00D29489 /* ProvidersServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvidersServiceProtocol.swift; sourceTree = "<group>"; };
-		A3EC159821FC66B500D29489 /* ProviderServiceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderServiceExtensions.swift; sourceTree = "<group>"; };
 		A3EC159E21FCADBE00D29489 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		A3EC15A021FE55A800D29489 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
 		A3EC15A221FE563500D29489 /* MainIPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainIPad.storyboard; sourceTree = "<group>"; };
@@ -1156,7 +1162,7 @@
 			isa = PBXGroup;
 			children = (
 				A36DC43E21F2798F00B0BE72 /* core */,
-				A36DC43F21F2799400B0BE72 /* configuration */,
+				A3B2FF5F2211C7C10055F841 /* configuration */,
 				A3860A6F21F48A5B0030869A /* providers */,
 				A36DC41721F277E100B0BE72 /* AppDelegate.swift */,
 				A36DC44021F27A9300B0BE72 /* AppRouter.swift */,
@@ -1261,13 +1267,6 @@
 			path = core;
 			sourceTree = "<group>";
 		};
-		A36DC43F21F2799400B0BE72 /* configuration */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = configuration;
-			sourceTree = "<group>";
-		};
 		A36DC44421F27AAD00B0BE72 /* main */ = {
 			isa = PBXGroup;
 			children = (
@@ -1366,6 +1365,15 @@
 			path = ElasticPullToRefresh;
 			sourceTree = "<group>";
 		};
+		A382ED1D2211B93200F412D7 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				A382ED202211B96500F412D7 /* ProvidersRepositoryProtocol.swift */,
+				A382ED1E2211B95200F412D7 /* PlistProvidersRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
 		A3860A6C21F46F7D0030869A /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1378,6 +1386,7 @@
 		A3860A6F21F48A5B0030869A /* providers */ = {
 			isa = PBXGroup;
 			children = (
+				A382ED1D2211B93200F412D7 /* repository */,
 				A3EC159421FC667B00D29489 /* service */,
 				A3EC159521FC668500D29489 /* model */,
 				A3860A7621F49B300030869A /* parser */,
@@ -1642,6 +1651,14 @@
 			path = viewData;
 			sourceTree = "<group>";
 		};
+		A3B2FF5F2211C7C10055F841 /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				A3B2FF602211C7D30055F841 /* AppConfiguration.swift */,
+			);
+			path = configuration;
+			sourceTree = "<group>";
+		};
 		A3EC155D21FBB5CF00D29489 /* viewData */ = {
 			isa = PBXGroup;
 			children = (
@@ -1760,7 +1777,6 @@
 			children = (
 				A3860A7421F4902E0030869A /* ProvidersService.swift */,
 				A3EC159621FC669A00D29489 /* ProvidersServiceProtocol.swift */,
-				A3EC159821FC66B500D29489 /* ProviderServiceExtensions.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -2233,7 +2249,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A33A99092208BD2C00834782 /* ProvidersService.swift in Sources */,
-				A33A990F2208BE2200834782 /* ProviderServiceExtensions.swift in Sources */,
 				A33A98FB2208BCA200834782 /* BaseViewDelegate.swift in Sources */,
 				A304E88C220DC9FD009F1E00 /* AppTheme.swift in Sources */,
 				A33A990A2208BDB100834782 /* LoggerService.swift in Sources */,
@@ -2253,10 +2268,12 @@
 				A304E887220DC973009F1E00 /* AppThemeService.swift in Sources */,
 				A33A98FE2208BCCC00834782 /* ProvidersServiceProtocol.swift in Sources */,
 				A33A98FC2208BCBA00834782 /* NewsProviderItem.swift in Sources */,
+				A3B2FF5B2211C74E0055F841 /* PlistProvidersRepository.swift in Sources */,
 				A33A99082208BD2700834782 /* ProvidersParserService.swift in Sources */,
 				A33A98E82208BAFA00834782 /* NewsItem.swift in Sources */,
 				A33A98E92208BB0400834782 /* TimeAgoProvider.swift in Sources */,
 				A33A98EF2208BBF500834782 /* WidgetViewModel.swift in Sources */,
+				A3B2FF622211C7D30055F841 /* AppConfiguration.swift in Sources */,
 				A33A990B2208BDBA00834782 /* PreferenceService.swift in Sources */,
 				A33A98F72208BC9600834782 /* BaseRouter.swift in Sources */,
 				A33A99072208BD2200834782 /* ReachabilityService.swift in Sources */,
@@ -2264,6 +2281,7 @@
 				A33A98FF2208BCD400834782 /* ServiceError.swift in Sources */,
 				A33A99022208BCF500834782 /* NewsCategory.swift in Sources */,
 				A33A99062208BD1800834782 /* RealmService.swift in Sources */,
+				A3B2FF5A2211C74C0055F841 /* ProvidersRepositoryProtocol.swift in Sources */,
 				A33A98F12208BBFF00834782 /* WidgetRouter.swift in Sources */,
 				A33A99052208BD1300834782 /* NetworkManager.swift in Sources */,
 				A33A98E72208BAEA00834782 /* UIDevice.swift in Sources */,
@@ -2298,6 +2316,7 @@
 				A3128D9C21F7A1D300F0BFDC /* RealmNewsItem.swift in Sources */,
 				A37EF3FD21F6706600691912 /* NewsCell.swift in Sources */,
 				A34B64DC21F3B74200DACC2F /* ServiceError.swift in Sources */,
+				A382ED212211B96500F412D7 /* ProvidersRepositoryProtocol.swift in Sources */,
 				A346E42121FA31C50009C3C9 /* UIBarButtonItem.swift in Sources */,
 				A3128DA121F7B6B300F0BFDC /* NewsDetailViewDelegate.swift in Sources */,
 				A34B64A921F3862700DACC2F /* SettingsViewModelType.swift in Sources */,
@@ -2354,8 +2373,8 @@
 				A3EC156321FBB68F00D29489 /* SettingsCityViewDelegate.swift in Sources */,
 				A34B64C721F3934000DACC2F /* SettingsCityRoutable.swift in Sources */,
 				A33BCFFA21F8FB8300FB6F98 /* SettingsThemeViewDelegate.swift in Sources */,
+				A382ED1F2211B95200F412D7 /* PlistProvidersRepository.swift in Sources */,
 				A3860AB121F63A050030869A /* NewsDetailViewModel.swift in Sources */,
-				A3EC159921FC66B500D29489 /* ProviderServiceExtensions.swift in Sources */,
 				A33A98F52208BC2200834782 /* WidgetNewsCell.swift in Sources */,
 				A3EC157D21FBBD0400D29489 /* SettingsProviderViewModelType.swift in Sources */,
 				A34B64A721F383E200DACC2F /* MenuItem.swift in Sources */,
@@ -2423,6 +2442,7 @@
 				A3A5305D22038E76003A8725 /* OnboardingPageManager.swift in Sources */,
 				A34B64CD21F393A200DACC2F /* SettingsCityViewModel.swift in Sources */,
 				A3A5307322039749003A8725 /* OnboardingPageThemeRouter.swift in Sources */,
+				A3B2FF612211C7D30055F841 /* AppConfiguration.swift in Sources */,
 				A37EF3FA21F66E5800691912 /* NewsViewState.swift in Sources */,
 				A3860A8D21F4E6F10030869A /* CategoryNewsViewModelType.swift in Sources */,
 				A3128D9F21F7AEBE00F0BFDC /* BookmarksViewState.swift in Sources */,

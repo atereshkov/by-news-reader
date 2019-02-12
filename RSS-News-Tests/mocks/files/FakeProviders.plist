@@ -17,14 +17,14 @@
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
-				<string>https://news.tut.by/rss/index.rss</string>
+				<string>https://test.com/rss/main.rss</string>
 			</dict>
 			<key>Latest</key>
 			<dict>
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
-				<string>https://news.tut.by/rss/all.rss</string>
+				<string>https://test.com/rss/latest.rss</string>
 			</dict>
 		</dict>
 		<key>Categories</key>
@@ -36,7 +36,7 @@
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
-				<string>https://news.tut.by/rss/economics.rss</string>
+				<string>https://test.com/rss/economics.rss</string>
 			</dict>
 			<key>category.society</key>
 			<dict>
@@ -45,7 +45,7 @@
 				<key>icon</key>
 				<string></string>
 				<key>url</key>
-				<string>https://news.tut.by/rss/society.rss</string>
+				<string>https://test.com/rss/society.rss</string>
 			</dict>
 		</dict>
 		<key>Regions</key>
@@ -69,12 +69,7 @@
 				<string>https://news.tut.by/rss/index.rss</string>
 			</dict>
 			<key>Latest</key>
-			<dict>
-				<key>icon</key>
-				<string></string>
-				<key>url</key>
-				<string>https://news.tut.by/rss/all.rss</string>
-			</dict>
+			<dict/>
 		</dict>
 		<key>Categories</key>
 		<dict>
@@ -111,12 +106,7 @@
 		<key>General</key>
 		<dict>
 			<key>Main</key>
-			<dict>
-				<key>icon</key>
-				<string></string>
-				<key>url</key>
-				<string>https://news.tut.by/rss/index.rss</string>
-			</dict>
+			<dict/>
 			<key>Latest</key>
 			<dict>
 				<key>icon</key>

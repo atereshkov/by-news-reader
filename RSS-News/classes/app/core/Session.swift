@@ -38,7 +38,9 @@ final class Session: SessionType {
             guard let preferenceService = resolver.resolve(AppPreferenceServiceProtocol.self) else {
                 fatalError("AppPreferenceServiceProtocol is not registered")
             }
-            let providersParser: ProvidersParserProtocol = ProvidersParser()
+            // TODO inject AppConfig
+            let repository = PlistProvidersRepository(plistName: "Providers")
+            let providersParser: ProvidersParserProtocol = ProvidersParser(repository)
             return ProvidersService(providersParser, preferenceService)
         }.inObjectScope(.container)
         

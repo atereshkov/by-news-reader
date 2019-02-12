@@ -18,7 +18,8 @@ class ProvidersServiceTests: XCTestCase {
         let mockUserDefaults = UserDefaults(suiteName: #file)!
         
         let preferenceService: AppPreferenceServiceProtocol = AppPreferenceService(userDefaults: mockUserDefaults)
-        let providersParser: ProvidersParserProtocol = ProvidersParser()
+        let repository = PlistProvidersRepository(plistName: "FakeProviders")
+        let providersParser: ProvidersParserProtocol = ProvidersParser(repository)
         providersService = ProvidersService(providersParser, preferenceService)
     }
     

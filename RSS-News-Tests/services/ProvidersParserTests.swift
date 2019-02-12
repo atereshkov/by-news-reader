@@ -14,15 +14,19 @@ class ProvidersParserTests: XCTestCase {
     private var providersParser: ProvidersParserProtocol!
     
     override func setUp() {
-        providersParser = ProvidersParser()
+        let repository = PlistProvidersRepository(plistName: "FakeProviders")
+        providersParser = ProvidersParser(repository)
     }
     
     override func tearDown() {
         
     }
     
-    func testSetupThemePositive() {
+    func testParseFullProvider() {
+        let providerName = "FullProvider"
+        let item = providersParser.parseItem(providerName)
         
+        XCTAssertNotNil(item)
     }
     
 }
