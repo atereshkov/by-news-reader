@@ -122,7 +122,14 @@ platform :ios do
     push_to_git_remote
   end
 
+  lane :tests do
+    run_tests(scheme: ENV['SCHEME'])
+    reset_git_repo(force: true)
+    clean_build_artifacts
+  end
+
   after_all do |lane|
+    if lane == :deploy_testflight
       slack(
         message: "['#{ENV['TARGET']}'] TestFlight build has been successfuly uploaded :rocket:",
         success: true,
@@ -133,6 +140,7 @@ platform :ios do
         default_payloads: [:lane, :git_branch, :git_author]
       )
     end
+  end
 
     error do |lane, exception|
       slack(
