@@ -225,6 +225,7 @@
 		A3B2FF5B2211C74E0055F841 /* PlistProvidersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A382ED1E2211B95200F412D7 /* PlistProvidersRepository.swift */; };
 		A3B2FF612211C7D30055F841 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B2FF602211C7D30055F841 /* AppConfiguration.swift */; };
 		A3B2FF622211C7D30055F841 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B2FF602211C7D30055F841 /* AppConfiguration.swift */; };
+		A3CCA571223C3D1A009C96C8 /* FakeProviders.plist in Resources */ = {isa = PBXBuildFile; fileRef = A33A83DB221069B4000C0D11 /* FakeProviders.plist */; };
 		A3EC155F21FBB5E800D29489 /* SettingsCityViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC155E21FBB5E800D29489 /* SettingsCityViewState.swift */; };
 		A3EC156121FBB62200D29489 /* RegionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC156021FBB62200D29489 /* RegionItem.swift */; };
 		A3EC156321FBB68F00D29489 /* SettingsCityViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC156221FBB68F00D29489 /* SettingsCityViewDelegate.swift */; };
@@ -1976,6 +1977,7 @@
 			files = (
 				A3860AAB21F639D30030869A /* NewsDetail.storyboard in Resources */,
 				A3EC15A321FE563500D29489 /* MainIPad.storyboard in Resources */,
+				A3CCA571223C3D1A009C96C8 /* FakeProviders.plist in Resources */,
 				A36DC42221F277E300B0BE72 /* LaunchScreen.storyboard in Resources */,
 				A3EC15AB21FE594200D29489 /* CategoryNewsIPad.storyboard in Resources */,
 				A34B644421F32DDD00DACC2F /* White.plist in Resources */,
