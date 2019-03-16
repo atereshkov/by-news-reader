@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import BugfenderSDK
 
 protocol RealmServiceProtocol {
     var isInWriteTransaction: Bool { get }
@@ -43,7 +44,7 @@ class RealmService: RealmServiceProtocol {
                 block(realm)
             }
         } catch let error {
-            LoggerService.log.error("Failed to execute write transaction: \(error)")
+            BFLog("Failed to execute write transaction: \(error)")
         }
     }
     

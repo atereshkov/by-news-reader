@@ -61,7 +61,6 @@
 		A33A99072208BD2200834782 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EC159E21FCADBE00D29489 /* ReachabilityService.swift */; };
 		A33A99082208BD2700834782 /* ProvidersParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7721F49B460030869A /* ProvidersParserService.swift */; };
 		A33A99092208BD2C00834782 /* ProvidersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3860A7421F4902E0030869A /* ProvidersService.swift */; };
-		A33A990A2208BDB100834782 /* LoggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC45F21F27BE700B0BE72 /* LoggerService.swift */; };
 		A33A990B2208BDBA00834782 /* PreferenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34B64A021F37CBC00DACC2F /* PreferenceService.swift */; };
 		A33A990C2208BDED00834782 /* WidgetViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A98DE2208B75C00834782 /* WidgetViewModelType.swift */; };
 		A33A990D2208BDEF00834782 /* WidgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33A98DC2208B75200834782 /* WidgetViewModel.swift */; };
@@ -161,7 +160,6 @@
 		A36DC45A21F27BA100B0BE72 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC45921F27BA100B0BE72 /* MainView.swift */; };
 		A36DC45C21F27BAF00B0BE72 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC45B21F27BAF00B0BE72 /* MainViewModel.swift */; };
 		A36DC45E21F27BB800B0BE72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A36DC45D21F27BB800B0BE72 /* Main.storyboard */; };
-		A36DC46021F27BE700B0BE72 /* LoggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC45F21F27BE700B0BE72 /* LoggerService.swift */; };
 		A36DC46321F27C0100B0BE72 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36DC46221F27C0100B0BE72 /* UIWindow.swift */; };
 		A37EF3FA21F66E5800691912 /* NewsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF3F921F66E5800691912 /* NewsViewState.swift */; };
 		A37EF3FD21F6706600691912 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37EF3FC21F6706600691912 /* NewsCell.swift */; };
@@ -427,7 +425,6 @@
 		A36DC45921F27BA100B0BE72 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A36DC45B21F27BAF00B0BE72 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		A36DC45D21F27BB800B0BE72 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A36DC45F21F27BE700B0BE72 /* LoggerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerService.swift; sourceTree = "<group>"; };
 		A36DC46221F27C0100B0BE72 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		A37EF3F921F66E5800691912 /* NewsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewState.swift; sourceTree = "<group>"; };
 		A37EF3FC21F6706600691912 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
@@ -1200,7 +1197,6 @@
 		A36DC42E21F278EB00B0BE72 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				A36DC45F21F27BE700B0BE72 /* LoggerService.swift */,
 				A34B64A021F37CBC00DACC2F /* PreferenceService.swift */,
 				A3128D9721F79DDB00F0BFDC /* RealmService.swift */,
 				A3EC159E21FCADBE00D29489 /* ReachabilityService.swift */,
@@ -2067,7 +2063,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RSS-News/Pods-RSS-News-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/EXPLogger/EXPLogger.framework",
+				"${BUILT_PRODUCTS_DIR}/BugfenderSDK/BugfenderSDK.framework",
 				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -2087,7 +2083,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EXPLogger.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BugfenderSDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -2253,7 +2249,6 @@
 				A33A99092208BD2C00834782 /* ProvidersService.swift in Sources */,
 				A33A98FB2208BCA200834782 /* BaseViewDelegate.swift in Sources */,
 				A304E88C220DC9FD009F1E00 /* AppTheme.swift in Sources */,
-				A33A990A2208BDB100834782 /* LoggerService.swift in Sources */,
 				A33A98EA2208BB1600834782 /* assets-images.swift in Sources */,
 				A33A98E62208BAAD00834782 /* WidgetNewsCell.swift in Sources */,
 				A33A99042208BD0600834782 /* String.swift in Sources */,
@@ -2351,7 +2346,6 @@
 				A34B648D21F3733E00DACC2F /* SettingsView.swift in Sources */,
 				A34B649521F3741A00DACC2F /* CategoriesRoutable.swift in Sources */,
 				A34B643A21F27E2400DACC2F /* assets-images.swift in Sources */,
-				A36DC46021F27BE700B0BE72 /* LoggerService.swift in Sources */,
 				A3860A8F21F4E70B0030869A /* CategoryNewsViewState.swift in Sources */,
 				A34B64D221F3A5FD00DACC2F /* SettingsThemeViewState.swift in Sources */,
 				A3860A8521F4E6660030869A /* CategoryNewsRoutable.swift in Sources */,

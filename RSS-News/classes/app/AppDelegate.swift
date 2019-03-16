@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import Firebase
+import BugfenderSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -46,8 +47,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupSharedServices() {
-        // Debug logger setup
-        LoggerService.shared.initialize()
+        // Logger setup
+        Bugfender.activateLogger("rmJwSCw94YtTfFGlFB8zSCtCvcEDSB0V")
+        Bugfender.enableCrashReporting()
     }
     
     private func configureRealm() {

@@ -144,7 +144,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/EXPLogger/EXPLogger.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BugfenderSDK/BugfenderSDK.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
@@ -161,7 +161,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/EXPLogger/EXPLogger.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BugfenderSDK/BugfenderSDK.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"

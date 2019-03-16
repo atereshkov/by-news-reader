@@ -1,8 +1,10 @@
 PODS:
   - Alamofire (4.8.0)
+  - BugfenderSDK (1.6.2):
+    - BugfenderSDK/Swift (= 1.6.2)
+  - BugfenderSDK/Swift (1.6.2)
   - Crashlytics (3.12.0):
     - Fabric (~> 1.9.0)
-  - EXPLogger (1.0.3)
   - Fabric (1.9.0)
   - FeedKit (8.0.0)
   - Firebase/Core (5.16.0):
@@ -74,8 +76,8 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - BugfenderSDK (~> 1.6)
   - Crashlytics (~> 3.12.0)
-  - EXPLogger (~> 1.0.3)
   - Fabric (~> 1.9.0)
   - FeedKit (~> 8.0)
   - Firebase/Core
@@ -93,8 +95,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - BugfenderSDK
     - Crashlytics
-    - EXPLogger
     - Fabric
     - FeedKit
     - Firebase
@@ -119,8 +121,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  BugfenderSDK: 4cf788204d45c2a343af624a23713f5febc3db20
   Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
-  EXPLogger: 206c906c0eb65f1eb679c210adf7029ebf04e10f
   Fabric: f988e33c97f08930a413e08123064d2e5f68d655
   FeedKit: 4a78f07adf7f0a224b904014678f1de82a7ffc21
   Firebase: 749a8ff4962f9d8c79dda1966de20f6f77583d67
@@ -143,6 +145,6 @@ SPEC CHECKSUMS:
   SwiftTheme: 628345b948068a48d330d76dffb1a990ea5f90aa
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
 
-PODFILE CHECKSUM: 6ce3923fe0dc66a1999a356eadf87a3daa3d4f08
+PODFILE CHECKSUM: e96349703d080045b299b57c592da5dc06f6deb4
 
 COCOAPODS: 1.5.3

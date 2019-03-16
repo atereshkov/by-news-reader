@@ -18,7 +18,7 @@ target 'RSS-News' do
   pod 'RealmSwift', '~> 3.0'
   
   # Support
-  pod 'EXPLogger', '~> 1.0.3'
+  pod 'BugfenderSDK', '~> 1.6'
   pod 'SwiftTheme', '~> 0.4'
   pod 'PinLayout', '~> 1.8'
   
@@ -52,7 +52,7 @@ target 'Belarus-News-Widget' do
     pod 'RealmSwift', '~> 3.0'
     
     # Support
-    pod 'EXPLogger', '~> 1.0.3'
+    pod 'BugfenderSDK', '~> 1.6'
     pod 'SwiftTheme', '~> 0.4'
     pod 'PinLayout', '~> 1.8'
     

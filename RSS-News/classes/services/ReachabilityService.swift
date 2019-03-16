@@ -9,6 +9,7 @@
 import Foundation
 import Reachability
 import ReactiveSwift
+import BugfenderSDK
 
 protocol ReachabilityServiceProtocol {
     var isReachable: MutableProperty<Bool> { get set }
@@ -40,26 +41,21 @@ class ReachabilityService: ReachabilityServiceProtocol {
     private func start() {
         do {
             try self.reachability.startNotifier()
-            LoggerService.log.debug("Started.")
-            
             if reachability.connection != .none {
-                LoggerService.log.debug("Reachable at startup")
                 isReachable.value = true
             }
         } catch {
-            LoggerService.log.debug("Unable to start notifier.")
+            Bugfender.error("Unable to start notifier: \(error)")
         }
         
         // main thread closure
         reachability.whenReachable = { [weak self] _ in
             self?.isReachable.value = true
-            LoggerService.log.debug("WhenReachable")
         }
         
         // main thread closure
         reachability.whenUnreachable = { [weak self] _ in
             self?.isReachable.value = false
-            LoggerService.log.debug("WhenUnReachable")
         }
     }
     
