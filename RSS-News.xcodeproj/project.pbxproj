@@ -2496,6 +2496,7 @@
 			baseConfigurationReference = 2E5E4E7FACD55DB3D49BF1F0 /* Pods-Belarus-News-Widget.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 8EF4CLU9HX;
 				INFOPLIST_FILE = "$(SRCROOT)/Belarus News Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -2504,6 +2505,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = at.by.news.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2517,6 +2519,7 @@
 			baseConfigurationReference = C8D3C24BE01D6DF67D736DD2 /* Pods-Belarus-News-Widget.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 8EF4CLU9HX;
 				INFOPLIST_FILE = "$(SRCROOT)/Belarus News Widget/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -2525,6 +2528,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 1.1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = at.by.news.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
