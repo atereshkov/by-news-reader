@@ -11,6 +11,7 @@ Swinject
 [![License](https://img.shields.io/cocoapods/l/Swinject.svg?style=flat)](http://cocoapods.org/pods/Swinject)
 [![Platforms](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20Linux-lightgrey.svg)](http://cocoapods.org/pods/Swinject)
 [![Swift Version](https://img.shields.io/badge/Swift-2.2--3.1.x-F16D39.svg?style=flat)](https://developer.apple.com/swift)
+[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
 Swinject is a lightweight [dependency injection](https://en.wikipedia.org/wiki/Dependency_injection) framework for Swift.
 
@@ -271,7 +272,8 @@ A guide to [submit issues](https://github.com/Swinject/Swinject/issues), to ask 
 
 ## Question?
 
-If you have a general question and are feeling hesitant about submitting a Github issue, feel free to ask the question at [Stack Overflow](http://stackoverflow.com). The author of Swinject monitors the `swinject` tag so as to answer as quickly as possible.
+- [Slack](https://join.slack.com/t/swinject/shared_invite/enQtNjk0NjE0NjMzOTIyLTI5NWJiNDU5NGI1MTUwZDI3MDU2ZTM2YTMwMWRhMjI0ZmFlODk4MDI5OWUwNzY1YjlhOTRjYWM2NjZmOTVhNTU) feel free to discuss anything Swinject related.
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/swinject) we are trying to monitor questions tagged `swinject`
 
 ## Credits
 

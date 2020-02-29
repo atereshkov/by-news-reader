@@ -4,7 +4,7 @@
 //
 //  Created by Wei Wang on 2018/11/1.
 //
-//  Copyright (c) 2018年 Wei Wang <onevcat@gmail.com>
+//  Copyright (c) 2019 Wei Wang <onevcat@gmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -34,7 +34,6 @@ public class SessionDataTask {
     public typealias CancelToken = Int
 
     struct TaskCallback {
-        let onProgress: Delegate<(Int64, Int64), Void>?
         let onCompleted: Delegate<Result<ImageLoadingResult, KingfisherError>, Void>?
         let options: KingfisherParsedOptionsInfo
     }
@@ -47,8 +46,10 @@ public class SessionDataTask {
     public let task: URLSessionDataTask
     private var callbacksStore = [CancelToken: TaskCallback]()
 
-    var callbacks: Dictionary<SessionDataTask.CancelToken, SessionDataTask.TaskCallback>.Values {
-        return callbacksStore.values
+    var callbacks: [SessionDataTask.TaskCallback] {
+        lock.lock()
+        defer { lock.unlock() }
+        return Array(callbacksStore.values)
     }
 
     private var currentToken = 0

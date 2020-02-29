@@ -133,6 +133,7 @@ enum RSSPath: String {
     case rssChannelItunesSubtitle                               = "/rss/channel/itunes:subtitle"
     case rssChannelItunesSummary                                = "/rss/channel/itunes:summary"
     case rssChannelItunesKeywords                               = "/rss/channel/itunes:keywords"
+    case rssChannelItunesType                                   = "/rss/channel/itunes:type"
     
     case rssChannelItemItunesAuthor                             = "/rss/channel/item/itunes:author"
     case rssChannelItemItunesBlock                              = "/rss/channel/item/itunes:block"
@@ -144,11 +145,20 @@ enum RSSPath: String {
     case rssChannelItemItunesSubtitle                           = "/rss/channel/item/itunes:subtitle"
     case rssChannelItemItunesSummary                            = "/rss/channel/item/itunes:summary"
     case rssChannelItemItunesKeywords                           = "/rss/channel/item/itunes:keywords"
+    case rssChannelItemItunesEpisodeType                        = "/rss/channel/item/itunes:episodeType"
+    case rssChannelItemItunesSeason                             = "/rss/channel/item/itunes:season"
+    case rssChannelItemItunesEpisode                            = "/rss/channel/item/itunes:episode"
     
     // MARK: Media
     
     case rssChannelItemMediaThumbnail                           = "/rss/channel/item/media:thumbnail"
     case rssChannelItemMediaContent                             = "/rss/channel/item/media:content"
+    case rssChannelItemMediaContentTitle                        = "/rss/channel/item/media:content/media:title"
+    case rssChannelItemMediaContentDescription                  = "/rss/channel/item/media:content/media:description"
+    case rssChannelItemMediaContentPlayer                       = "/rss/channel/item/media:content/media:player"
+    case rssChannelItemMediaContentThumbnail                    = "/rss/channel/item/media:content/media:thumbnail"
+    case rssChannelItemMediaContentKeywords                     = "/rss/channel/item/media:content/media:keywords"
+    case rssChannelItemMediaContentCategory                     = "/rss/channel/item/media:content/media:category"
     case rssChannelItemMediaCommunity                           = "/rss/channel/item/media:community"
     case rssChannelItemMediaCommunityMediaStarRating            = "/rss/channel/item/media:community/media:starRating"
     case rssChannelItemMediaCommunityMediaStatistics            = "/rss/channel/item/media:community/media:statistics"

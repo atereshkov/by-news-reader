@@ -8,17 +8,17 @@ target 'RSS-News' do
   # Pods for RSS-News
 
   # Core
-  pod 'Alamofire', '~> 4.7'
+  pod 'Alamofire', '~> 5.0'
   pod 'ReactiveCocoa', '~> 8.0', :inhibit_warnings => true
   pod 'ReactiveSwift', '~> 4.0', :inhibit_warnings => true
-  pod 'Kingfisher', '~> 5.0'
-  pod 'ReachabilitySwift', '~> 4.1.0'
-  pod 'Swinject', '~> 2.5'
-  pod 'FeedKit', '~> 8.0'
-  pod 'RealmSwift', '~> 3.0'
+  pod 'Kingfisher', '~> 5.13'
+  pod 'ReachabilitySwift', '~> 5.0'
+  pod 'Swinject', '~> 2.7'
+  pod 'FeedKit', '~> 9.0'
+  pod 'RealmSwift', '~> 4.3'
   
   # Support
-  pod 'BugfenderSDK', '~> 1.6'
+  pod 'BugfenderSDK', '~> 1.8'
   pod 'SwiftTheme', '~> 0.4'
   pod 'PinLayout', '~> 1.8'
   
@@ -42,17 +42,17 @@ target 'Belarus-News-Widget' do
     use_frameworks!
     
     # Core
-    pod 'Alamofire', '~> 4.7'
+    pod 'Alamofire', '~> 5.0'
     pod 'ReactiveCocoa', '~> 8.0', :inhibit_warnings => true
     pod 'ReactiveSwift', '~> 4.0', :inhibit_warnings => true
     pod 'Kingfisher', '~> 5.0'
-    pod 'ReachabilitySwift', '~> 4.1.0'
-    pod 'Swinject', '~> 2.5'
-    pod 'FeedKit', '~> 8.0'
-    pod 'RealmSwift', '~> 3.0'
+    pod 'ReachabilitySwift', '~> 5.0'
+    pod 'Swinject', '~> 2.7'
+    pod 'FeedKit', '~> 9.0'
+    pod 'RealmSwift', '~> 4.3'
     
     # Support
-    pod 'BugfenderSDK', '~> 1.6'
+    pod 'BugfenderSDK', '~> 1.8'
     pod 'SwiftTheme', '~> 0.4'
     pod 'PinLayout', '~> 1.8'
     

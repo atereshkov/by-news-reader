@@ -78,7 +78,7 @@ extension RealmService {
     func addBookmarks(_ items: [NewsItemProtocol]) {
         let objects = items.map({ RealmNewsItem.from(item: $0, isBookmarked: true) })
         writeTransaction { realm in
-            realm.add(objects, update: true)
+            realm.add(objects, update: .all)
         }
     }
     

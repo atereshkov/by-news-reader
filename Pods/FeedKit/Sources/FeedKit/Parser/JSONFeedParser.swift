@@ -36,24 +36,14 @@ class JSONFeedParser: FeedParserProtocol {
         self.data = data
     }
     
-    func parse() -> Result {
-        
+    func parse() -> Result<Feed, ParserError> {
         do {
-            
-            let jsonObject = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-            
-            guard let jsonDictionary = jsonObject as? [String: Any?] else {
-                return Result.failure(ParserError.internalError(reason: "Unable to cast serialized json.").value)
-            }
-            
-            guard let jsonFeed = JSONFeed(dictionary: jsonDictionary) else {
-                return Result.failure(ParserError.feedNotFound.value)
-            }
-            
-            return Result.json(jsonFeed)
-            
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .formatted(RFC3339DateFormatter())
+            let decoded = try decoder.decode(JSONFeed.self, from: data)
+            return .success(.json(decoded))
         } catch {
-            return Result.failure(NSError(domain: error.localizedDescription, code: -1))
+            return .failure(.internalError(reason: error.localizedDescription))
         }
         
     }

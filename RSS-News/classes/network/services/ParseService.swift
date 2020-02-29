@@ -23,13 +23,21 @@ final class ParseService: ParseServiceProtocol {
         return SignalProducer { observer, _ in
             let parser = FeedParser(URL: providerURL)
             parser.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in
-                guard let feed = result.rssFeed, result.isSuccess else {
-                    observer.send(error: .parseError(result.error))
+                switch result {
+                case .success(let feed):
+                    guard let feed = feed.rssFeed else {
+                        observer.send(error: .unknown)
+                        observer.sendCompleted()
+                        return
+                    }
+                    
+                    observer.send(value: feed)
+                    observer.sendCompleted()
+                case .failure(let error):
+                    observer.send(error: .parseError(error))
                     observer.sendCompleted()
                     return
                 }
-                observer.send(value: feed)
-                observer.sendCompleted()
             }
         }
     }
@@ -37,11 +45,17 @@ final class ParseService: ParseServiceProtocol {
     func parse(providerURL: URL, completion: @escaping ((RSSFeed?, Error?) -> Void)) {
         let parser = FeedParser(URL: providerURL)
         parser.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in
-            guard let feed = result.rssFeed, result.isSuccess else {
-                completion(nil, result.error)
+            switch result {
+            case .success(let feed):
+                guard let feed = feed.rssFeed else {
+                    completion(nil, ServiceError.unknown)
+                    return
+                }
+                completion(feed, nil)
+            case .failure(let error):
+                completion(nil, error)
                 return
             }
-            completion(feed, nil)
         }
     }
     

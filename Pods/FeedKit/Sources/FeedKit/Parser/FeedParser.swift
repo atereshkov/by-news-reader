@@ -61,36 +61,31 @@ public class FeedParser {
     /// Starts parsing the feed.
     ///
     /// - Returns: The parsed `Result`.
-    public func parse() -> Result {
+    public func parse() -> Result<Feed, ParserError> {
         
         if let url = url {
             // The `Data(contentsOf:)` initializer doesn't handle the `feed` URI scheme. As such,
             // it's sanitized first, in case it's in fact a `feed` scheme.
-            let sanitizedSchemeUrl = url.replacing(scheme: "feed", with: "http")
+            guard let sanitizedSchemeUrl = url.replacing(scheme: "feed", with: "http") else {
+                return .failure(.internalError(reason: "Failed url sanitizing."))
+            }
 
             do {
                 data = try Data(contentsOf: sanitizedSchemeUrl)
             } catch {
-                return Result.failure(error as NSError)
+                return .failure(.internalError(reason: error.localizedDescription))
             }
         }
         
         if let data = data {
-            guard let decoded = data.toUtf8() else {
-                return Result.failure(ParserError.internalError(reason: "Failed conversion to utf8 encoding.").value)
+            guard let feedDataType = FeedDataType(data: data) else {
+                return .failure(.feedNotFound)
             }
-            
-            guard let feedDataType = FeedDataType(data: decoded) else {
-                return Result.failure(ParserError.feedNotFound.value)
-            }
-            
             switch feedDataType {
-            case .json: parser = JSONFeedParser(data: decoded)
-            case .xml:  parser = XMLFeedParser(data: decoded)
+            case .json: parser = JSONFeedParser(data: data)
+            case .xml:  parser = XMLFeedParser(data: data)
             }
-            
             return parser!.parse()
-            
         }
         
         if let xmlStream = xmlStream {
@@ -98,7 +93,7 @@ public class FeedParser {
             return parser!.parse()
         }
         
-        return Result.failure(ParserError.internalError(reason: "Fatal error. Unable to parse from the initialized state.").value)
+        return .failure(.internalError(reason: "Fatal error. Unable to parse from the initialized state."))
         
     }
     
@@ -117,7 +112,7 @@ public class FeedParser {
     ///   - result: The parsed `Result`.
     public func parseAsync(
         queue: DispatchQueue = DispatchQueue.global(),
-        result: @escaping (Result) -> Void)
+        result: @escaping (Result<Feed, ParserError>) -> Void)
     {
         queue.async {
             result(self.parse())

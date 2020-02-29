@@ -52,6 +52,8 @@ public class MediaPlayer {
     /// The element's value.
     public var value: String?
     
+    public init() { }
+
 }
 
 // MARK: - Initializers
@@ -76,7 +78,7 @@ extension MediaPlayer.Attributes {
         
         self.init()
         
-        self.url = attributeDict["algo"]
+        self.url = attributeDict["url"]
         self.height = Int(attributeDict["height"] ?? "")
         self.width = Int(attributeDict["width"] ?? "")
         

@@ -13,12 +13,13 @@ import BugfenderSDK
 
 protocol ReachabilityServiceProtocol {
     var isReachable: MutableProperty<Bool> { get set }
-    var isReachableViaWiFi: Bool { get }
 }
 
 class ReachabilityService: ReachabilityServiceProtocol {
     
-    private let reachability = Reachability()!
+    // swiftlint:disable force_try
+    private let reachability = try! Reachability()
+    // swiftlint:enable force_try
     
     init() {
         start()
@@ -32,22 +33,9 @@ class ReachabilityService: ReachabilityServiceProtocol {
     
     var isReachable: MutableProperty<Bool> = MutableProperty(false)
     
-    var isReachableViaWiFi: Bool {
-        return reachability.connection == .wifi
-    }
-    
     // MARK: Private
     
     private func start() {
-        do {
-            try self.reachability.startNotifier()
-            if reachability.connection != .none {
-                isReachable.value = true
-            }
-        } catch {
-            Bugfender.error("Unable to start notifier: \(error)")
-        }
-        
         // main thread closure
         reachability.whenReachable = { [weak self] _ in
             self?.isReachable.value = true
@@ -57,9 +45,19 @@ class ReachabilityService: ReachabilityServiceProtocol {
         reachability.whenUnreachable = { [weak self] _ in
             self?.isReachable.value = false
         }
+        
+        do {
+            try reachability.startNotifier()
+            
+            if reachability.connection != .unavailable {
+                isReachable.value = true
+            }
+        } catch {
+           Bugfender.error("Unable to start notifier: \(error)")
+        }
     }
     
-    private func stop() {
+    func stop() {
         reachability.stopNotifier()
     }
     

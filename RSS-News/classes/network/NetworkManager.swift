@@ -11,7 +11,7 @@ import Alamofire
 
 protocol NetworkManagerProtocol {
     
-    var sessionManager: SessionManager { get }
+    var sessionManager: Alamofire.Session { get }
     
 }
 
@@ -22,13 +22,13 @@ final class NetworkManager: NetworkManagerProtocol {
         static let resourceTimeout: TimeInterval = 40 // sec
     }
     
-    private(set) var sessionManager = SessionManager()
+    private(set) var sessionManager = Alamofire.Session()
     
     init() {
         let configuration: URLSessionConfiguration = .default
         configuration.timeoutIntervalForRequest = Constants.requestTimeout
         configuration.timeoutIntervalForResource = Constants.resourceTimeout
-        sessionManager = SessionManager(configuration: configuration)
+        sessionManager = Alamofire.Session(configuration: configuration)
     }
     
 }
