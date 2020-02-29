@@ -26,14 +26,12 @@ target 'RSS-News' do
   pod 'SwiftLint'
   pod 'SwiftGen', '~> 5.3'
   
-  # Analytics, app stability reports, etc
-  pod 'Firebase/Core'
-  pod 'Fabric', '~> 1.9.0'
-  pod 'Crashlytics', '~> 3.12.0'
+  # Analytics, app stability reports, Firebase, etc
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Analytics'
   
   target 'RSS-News-Tests' do
       inherit! :search_paths
-      pod 'Firebase/Core'
   end
 
 end
